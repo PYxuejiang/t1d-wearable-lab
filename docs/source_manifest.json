@@ -1,0 +1,176 @@
+{
+  "brist1d": [
+    {
+      "name": "P01.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P01.csv",
+      "sha256": "a14cac5b11f2f2d2f010052109f772bef9711aa1c1617cded71bf3530aca56f0"
+    },
+    {
+      "name": "P02.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P02.csv",
+      "sha256": "ac37859e99e86b49c466bb75744d246a801b4b6d0f29e731cacf18ab669eaebc"
+    },
+    {
+      "name": "P03.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P03.csv",
+      "sha256": "fa604dbaf91576677cabba3d38144d3500315218b9f727247b6a871073e7308d"
+    },
+    {
+      "name": "P04.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P04.csv",
+      "sha256": "8663cc0bb601792c9212930f309fb7d9fe2069b40eb89cb9c4022c05f34ffe6d"
+    },
+    {
+      "name": "P05.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P05.csv",
+      "sha256": "fd23a02913ac00c096e0c7549e7a16a49e3a06024b62d05442f0be4c3bcca0ad"
+    },
+    {
+      "name": "P06.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P06.csv",
+      "sha256": "35559087510270eb6f52ca3f70d6c84db60f68936719b0e22362b99f7b8a2880"
+    },
+    {
+      "name": "P07.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P07.csv",
+      "sha256": "20264778c16dcb5067ed97693d9d356b00f4ae1a1b9dfc73d2d0d45a7db6a51a"
+    },
+    {
+      "name": "P10.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P10.csv",
+      "sha256": "878e2f42db11970875324f2279f49623b7c775b75b231586a6727e61db26f067"
+    },
+    {
+      "name": "P11.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P11.csv",
+      "sha256": "62ecb1d75a9d83c92c3b8ce55291ab009f6b9c516bcfb856acc212df76086659"
+    },
+    {
+      "name": "P12.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P12.csv",
+      "sha256": "9874fcddc6e8d2607d47de0c45aeca4dd8a80501f9e9848349d8c8e25587246f"
+    },
+    {
+      "name": "P13.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P13.csv",
+      "sha256": "ccb38467896d6d69095c2daa30363225baed3b9dd52c008b3ad5f8ad83a86aa7"
+    },
+    {
+      "name": "P15.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P15.csv",
+      "sha256": "6410abe3f984655cd85286128b7a4ce5c770f0d474d0d9789ccd1c885c889b4f"
+    },
+    {
+      "name": "P16.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P16.csv",
+      "sha256": "79d893a44c04ecc9066f2c0028d40bbb6f28616d32ae5e360724b0785ac613ab"
+    },
+    {
+      "name": "P17.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P17.csv",
+      "sha256": "55ac3a72e8d3d38178f6610e193dfc8c29435971c1dfe1df08b5a0d64346fcd4"
+    },
+    {
+      "name": "P18.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P18.csv",
+      "sha256": "fcb2b943fd694f69b5043ac3b5d763906e955a8c308584655a27451fa9ddc92b"
+    },
+    {
+      "name": "P19.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P19.csv",
+      "sha256": "c78038709cf260e1edfc1ec248ab99358280b09ad2b6c4b2d8c31fcd56459754"
+    },
+    {
+      "name": "P21.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P21.csv",
+      "sha256": "e98bf13853a22c7f6d8241a2c6c8a6494b3fe5af0692127461d53541ee817496"
+    },
+    {
+      "name": "P22.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P22.csv",
+      "sha256": "26fb87cbc9f030b58f1363e1a759534b80e31876ac09032283da3b75484db288"
+    },
+    {
+      "name": "P23.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P23.csv",
+      "sha256": "e8b19fe33be9f7094c3ab44154e0d7213324e428e87bbfa50f71796ba02c5fff"
+    },
+    {
+      "name": "P24.csv",
+      "url": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/device_data/processed_state/P24.csv",
+      "sha256": "7e6c2a6f300d8f64c8567fdb09acc3966f15a88fa0a9a0871eccdd332a5446b6"
+    }
+  ],
+  "physiocgm": [
+    {
+      "name": "c1s01_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51652388",
+      "size": 809903768,
+      "md5": "0d0fc1af21a0f4be9434c87a7defa27f",
+      "sha256": "cb64315ec17b751b2e2616b35ff4b59d422766e391f1263115a7f2cefdfb0f38"
+    },
+    {
+      "name": "c1s02_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51653204",
+      "size": 898491548,
+      "md5": "346c5ae5ca4d5c01943440e2f3c1a27b",
+      "sha256": "1dc9fa2715442c5855d9e7672aadcb31b9b3c0faea9f170383cdb516babe809d"
+    },
+    {
+      "name": "c1s03_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51653708",
+      "size": 844420157,
+      "md5": "363509be1b999dd0688b1b15e11f7393",
+      "sha256": "5a58a7d9d10e4fbe139757f3e2ac6ad629b560aec6538c2991c6c816592d5740"
+    },
+    {
+      "name": "c1s04_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51655547",
+      "size": 882489348,
+      "md5": "ac2d3ed844dd807bcf1c44c55ea5e92a",
+      "sha256": "c0654223400558b9b1aa1c29f137f372ee70866f2e29c184173184fa9aaa7a34"
+    },
+    {
+      "name": "c1s05_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51655562",
+      "size": 1017767759,
+      "md5": "5584f839cfe4bf20dfcd014494942fae",
+      "sha256": "9a546fde6a3efbea107769d6467ad8e9de1aa3bdd37229191f36545989d35cfa"
+    },
+    {
+      "name": "c2s01_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51655571",
+      "size": 955264831,
+      "md5": "94e85f2774ed05cccde424b8cda58b18",
+      "sha256": "631aa466340248f10cb0e6e6d674bb1f6d13cb3e7ec0743106d9dfd3b597e9e1"
+    },
+    {
+      "name": "c2s02_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51655574",
+      "size": 937407974,
+      "md5": "600ecefa7e74d1e53a5d9bfaaf0afc3d",
+      "sha256": "629e78b57dcf9a33054c79853f4a5117385e6c8335f273ab727ba0e7baa01517"
+    },
+    {
+      "name": "c2s03_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51655595",
+      "size": 785106838,
+      "md5": "a0150560653849193799ce1c837e0e07",
+      "sha256": "c60e3c45df0e061e7901b84cb308149264301f946fa8483f7fae98d5599d163b"
+    },
+    {
+      "name": "c2s04_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51655601",
+      "size": 1024655895,
+      "md5": "8e7d066414d3ae5db441b6c211b536aa",
+      "sha256": "61fc69bab6ae12f19e164e7f573c0b9012b5f820be8f4de17f2e6e159c6249dc"
+    },
+    {
+      "name": "c2s05_raw.zip",
+      "url": "https://ndownloader.figshare.com/files/51655613",
+      "size": 1010895920,
+      "md5": "47cd034ce7980992d4a83da7c3035548",
+      "sha256": "b8189320cde4c59de77be2aae1edff1234b0fe2102c318d3144eaa997a49da80"
+    }
+  ]
+}

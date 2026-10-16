@@ -1,0 +1,90 @@
+{
+  "stage": "S1b",
+  "engineering_status": "passed",
+  "evaluation_status": "source_clock_and_feature_audit_passed",
+  "effect_status": "not_tested",
+  "source_archives_accounted": 10,
+  "included_subjects": 7,
+  "audit": [
+    {
+      "subject": "c1s01",
+      "status": "extracted",
+      "reference_anchors": 5566,
+      "low_anchors": 455,
+      "common_anchors": 2498,
+      "clock_shift_hours": -5,
+      "boundary_crossing_events_excluded": []
+    },
+    {
+      "subject": "c1s02",
+      "status": "extracted",
+      "reference_anchors": 4839,
+      "low_anchors": 34,
+      "common_anchors": 3116,
+      "clock_shift_hours": -5,
+      "boundary_crossing_events_excluded": []
+    },
+    {
+      "subject": "c1s03",
+      "status": "extracted",
+      "reference_anchors": 4018,
+      "low_anchors": 119,
+      "common_anchors": 3077,
+      "clock_shift_hours": -5,
+      "boundary_crossing_events_excluded": []
+    },
+    {
+      "subject": "c1s04",
+      "status": "clock_quarantined"
+    },
+    {
+      "subject": "c1s05",
+      "status": "extracted",
+      "reference_anchors": 4822,
+      "low_anchors": 153,
+      "common_anchors": 3318,
+      "clock_shift_hours": -5,
+      "boundary_crossing_events_excluded": []
+    },
+    {
+      "subject": "c2s01",
+      "status": "clock_quarantined"
+    },
+    {
+      "subject": "c2s02",
+      "status": "extracted",
+      "reference_anchors": 4642,
+      "low_anchors": 366,
+      "common_anchors": 2697,
+      "clock_shift_hours": -5,
+      "boundary_crossing_events_excluded": []
+    },
+    {
+      "subject": "c2s03",
+      "status": "clock_quarantined"
+    },
+    {
+      "subject": "c2s04",
+      "status": "extracted",
+      "reference_anchors": 6129,
+      "low_anchors": 215,
+      "common_anchors": 3655,
+      "clock_shift_hours": -5,
+      "boundary_crossing_events_excluded": []
+    },
+    {
+      "subject": "c2s05",
+      "status": "extracted",
+      "reference_anchors": 4202,
+      "low_anchors": 271,
+      "common_anchors": 3624,
+      "clock_shift_hours": -6,
+      "boundary_crossing_events_excluded": []
+    }
+  ],
+  "limitations": [
+    "CGM/chest wall-clock alignment is a declared source assumption.",
+    "No archives were expanded; features read directly from CSV members.",
+    "Quarantined clocks are not assigned labels by optimizing disease prediction."
+  ]
+}
