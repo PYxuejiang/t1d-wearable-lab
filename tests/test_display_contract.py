@@ -31,9 +31,11 @@ def test_exported_cards_match_manifest_and_show_run_id():
     folder=ROOT/'showcase/public/cards'
     manifest=json.loads((folder/'manifest.json').read_text())
     assert len(manifest['cards'])==10
-    assert manifest['source_sha256']==hashlib.sha256((ROOT/'showcase/public/demo/project_data.json').read_bytes()).hexdigest()
+    data=json.loads((ROOT/'showcase/public/demo/project_data.json').read_text(encoding='utf-8'))
+    assert manifest['source_sha256']==hashlib.sha256(json.dumps(data,sort_keys=True,separators=(',',':')).encode()).hexdigest()
     for name,digest in manifest['cards'].items():
-        content=(folder/name).read_bytes();assert hashlib.sha256(content).hexdigest()==digest
+        content=(folder/name).read_text(encoding='utf-8').encode() if name.endswith('.svg') else (folder/name).read_bytes()
+        assert hashlib.sha256(content).hexdigest()==digest
         if name.endswith('.png'):
             assert content[:8]==b'\x89PNG\r\n\x1a\n'
             assert struct.unpack('>II',content[16:24])==(1800,1200)
