@@ -1,0 +1,15 @@
+{
+  "id": "smartwatch-replication-v1",
+  "dataset": "Zenodo 15309060, 11 processed participant CSVs, CC BY 4.0",
+  "task": "Source-defined hypoglycemia point classification; not event alarm evaluation",
+  "protocol": "leave_one_subject_out",
+  "training_validation": "Remaining subjects in original CSV row order: first60% train, next20% validate; 120 row purge around each boundary. Row order is not claimed to be verified chronological time.",
+  "test": "Entire unseen participant, no patient-specific calibration or test threshold tuning",
+  "features": ["clock", "wearable", "wearable_time"],
+  "excluded": ["cgm", "hypoglycemia", "hour", "IOB", "time_since_lastmeal", "time_since_lastmeal_ord"],
+  "learners": ["logistic", "random_forest", "hgb"],
+  "selection": "validation macro AP across training subjects; select model within each feature set",
+  "threshold": "validation pooled Youden J with specificity >=0.8; point classification operating point only",
+  "seed": 20261016,
+  "notes": "Published files lack timestamps/day identifiers; no event durations, false alarms/day or prospective validation claims. Missing source reference labels are excluded rather than imputed. Zero-coded absent wearable samples converted to NA, missingness not itself a feature. Sensors differ from PhysioCGM so this is independent cohort methodology exploration, not an external validation of the identical trained model."
+}

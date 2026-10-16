@@ -1,0 +1,223 @@
+{
+  "stage": "V2.1",
+  "engineering_status": "passed",
+  "evaluation_status": "independently_reconstructed_events_and_temporal_boundaries_passed",
+  "effect_status": "failed",
+  "scope": "Exploratory same-cohort temporal tests, not independent confirmation",
+  "groups_verified": 63,
+  "count_mismatches": 0,
+  "results": {
+    "clock_baseline": {
+      "1": {
+        "event_recall": 0.047619047619047616,
+        "event_precision": 0.3333333333333333,
+        "coverage": 0.7280071247120125,
+        "ap": 0.138332547003945,
+        "roc_auc": 0.5232168131447386,
+        "brier": 0.17130605820021153,
+        "offset_median_minutes": 10.0,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 1,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 2,
+        "offset_iqr_minutes": [
+          10.0,
+          10.0
+        ],
+        "false_alerts_per_person_day": 0.08446879005301786,
+        "effect_status": "failed"
+      },
+      "2": {
+        "event_recall": 0.047619047619047616,
+        "event_precision": 0.1111111111111111,
+        "coverage": 0.7280071247120125,
+        "ap": 0.138332547003945,
+        "roc_auc": 0.5232168131447386,
+        "brier": 0.17130605820021153,
+        "offset_median_minutes": 10.0,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 1,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 11,
+        "offset_iqr_minutes": [
+          10.0,
+          10.0
+        ],
+        "false_alerts_per_person_day": 0.4645783452915982,
+        "effect_status": "failed"
+      },
+      "4": {
+        "event_recall": 0.047619047619047616,
+        "event_precision": 0.08333333333333333,
+        "coverage": 0.7280071247120125,
+        "ap": 0.138332547003945,
+        "roc_auc": 0.5096923557427302,
+        "brier": 0.1694335416592038,
+        "offset_median_minutes": 10.0,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 1,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 22,
+        "offset_iqr_minutes": [
+          10.0,
+          10.0
+        ],
+        "false_alerts_per_person_day": 0.9291566905831964,
+        "effect_status": "failed"
+      }
+    },
+    "static_selected": {
+      "1": {
+        "event_recall": 0.017857142857142856,
+        "event_precision": 0.125,
+        "coverage": 0.7280071247120125,
+        "ap": 0.0919939131486304,
+        "roc_auc": 0.5630446315810246,
+        "brier": 0.1251390909087962,
+        "offset_median_minutes": 45.0,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 1,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 7,
+        "offset_iqr_minutes": [
+          45.0,
+          45.0
+        ],
+        "false_alerts_per_person_day": 0.2956407651855625,
+        "effect_status": "failed"
+      },
+      "2": {
+        "event_recall": 0.017857142857142856,
+        "event_precision": 0.0625,
+        "coverage": 0.7280071247120125,
+        "ap": 0.09191027321854674,
+        "roc_auc": 0.5630065971979423,
+        "brier": 0.12355473558440065,
+        "offset_median_minutes": 45.0,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 1,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 10,
+        "offset_iqr_minutes": [
+          45.0,
+          45.0
+        ],
+        "false_alerts_per_person_day": 0.42234395026508925,
+        "effect_status": "failed"
+      },
+      "4": {
+        "event_recall": 0.017857142857142856,
+        "event_precision": 0.0625,
+        "coverage": 0.7280071247120125,
+        "ap": 0.09191027321854674,
+        "roc_auc": 0.5630065971979423,
+        "brier": 0.12355473558440065,
+        "offset_median_minutes": 45.0,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 1,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 10,
+        "offset_iqr_minutes": [
+          45.0,
+          45.0
+        ],
+        "false_alerts_per_person_day": 0.42234395026508925,
+        "effect_status": "failed"
+      }
+    },
+    "temporal_selected": {
+      "1": {
+        "event_recall": 0.0,
+        "event_precision": 0.0,
+        "coverage": 0.7280071247120125,
+        "ap": 0.09487305056567316,
+        "roc_auc": 0.5455348875631133,
+        "brier": 0.10070026888133313,
+        "offset_median_minutes": null,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 0,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 1,
+        "offset_iqr_minutes": null,
+        "false_alerts_per_person_day": 0.04223439502650893,
+        "effect_status": "failed"
+      },
+      "2": {
+        "event_recall": 0.0,
+        "event_precision": 0.0,
+        "coverage": 0.7280071247120125,
+        "ap": 0.09487305056567316,
+        "roc_auc": 0.5455348875631133,
+        "brier": 0.10070026888133313,
+        "offset_median_minutes": null,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 0,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 8,
+        "offset_iqr_minutes": null,
+        "false_alerts_per_person_day": 0.3378751602120714,
+        "effect_status": "failed"
+      },
+      "4": {
+        "event_recall": 0.03571428571428571,
+        "event_precision": 0.045454545454545456,
+        "coverage": 0.7280071247120125,
+        "ap": 0.09487305056567316,
+        "roc_auc": 0.5455348875631133,
+        "brier": 0.10070026888133313,
+        "offset_median_minutes": 22.5,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 2,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 26,
+        "offset_iqr_minutes": [
+          11.25,
+          33.75
+        ],
+        "false_alerts_per_person_day": 1.098094270689232,
+        "effect_status": "failed"
+      }
+    }
+  },
+  "same_opportunity_v1_wrist_multimodal": {
+    "event_recall": 0.0,
+    "event_precision": null,
+    "coverage": 0.7280071247120125,
+    "ap": 0.07332306341180121,
+    "roc_auc": 0.5353946649855245,
+    "brier": 0.05947260752501308,
+    "offset_median_minutes": null,
+    "subjects": 7,
+    "event_subjects": 7,
+    "reference_events": 30,
+    "matched_events": 0,
+    "observation_hours": 568.2572222222223,
+    "unmatched_alarms": 0,
+    "offset_iqr_minutes": null,
+    "false_alerts_per_person_day": 0.0,
+    "effect_status": "failed"
+  },
+  "limitations": [
+    "Longer history changes eligible event count from 31 to 30; v1 is recomputed on the identical opportunities.",
+    "Static model sparse hits do not establish improvement over the clock baseline.",
+    "Temporal features did not achieve primary event-detection target."
+  ]
+}

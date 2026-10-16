@@ -1,0 +1,20 @@
+{
+  "id": "v2.2-device-physiology",
+  "scope": "Exploratory PhysioCGM temporal reuse; add source device HR, respiration and quality summaries",
+  "seed": 20261016,
+  "protocol": "temporal_60_20_20",
+  "history_minutes": 65,
+  "confirmation_minutes": 15,
+  "feature_sets": ["clock", "static", "dynamic", "dynamic_time"],
+  "learners": ["logistic", "random_forest", "extra_trees", "hgb"],
+  "selection": "highest validation average precision, tie earlier candidate",
+  "sensor_group": ["ppg", "acc", "eda", "temp", "device_chest_summary"],
+  "threshold_quantiles": 101,
+  "smoothing_spans": [1, 3],
+  "alarm_budgets_per_person_day": [1, 2, 4],
+  "primary_budget": 1,
+  "minimum_training_positives": 5,
+  "include_device_summaries": true,
+  "output_directory": "improvement_v2_2",
+  "notes": "Same source clock, no outcome-driven offset. Chest HR confidence >=80 for HR/HRV. E4 HR minute medians assigned bin end, trailing5min bins may span6min. Irregular source lags use ages <=5min at lags10/25/50, max auditable source support61min within65min purge. Device internal HRV horizon is not independently verified."
+}
