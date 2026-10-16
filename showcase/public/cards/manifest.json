@@ -1,7 +1,7 @@
 {
   "run_id": "t1d-26c297decb6a",
   "hash_format": "JSON canonical sorted compact; SVG UTF-8 with LF; PNG binary",
-  "source_sha256": "ede7161a7ff56a944e7d2c26500e1243eee5232dc2663db1747a3e8a860735ed",
+  "source_sha256": "2a6c73587359263775a8e13749e7900732ef99c260b446a571b0b444123a051c",
   "cards": {
     "module1-loso.png": "e5f6235b697f866b6c2d70a5ddc041e9e419c62bb8eb054d4cd8869b989e282d",
     "module1-loso.svg": "6d8b079be66a06c6dacaf2e0c9d3a0ed1d66b37320d8f6322e7d7cc8dce09880",

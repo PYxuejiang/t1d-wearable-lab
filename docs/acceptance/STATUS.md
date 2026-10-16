@@ -9,7 +9,16 @@
 | S2b module 1 incident-event prediction | Passed engineering/evaluation; effect failed | `S2b.json`, 80 independently reconstructed test groups |
 | S3 module 2 physiological signal and sensor comparison | Passed engineering/evaluation; effect failed | `S3.json`, 140 independently reconstructed evaluation groups |
 | S4 uncertainty, calibration and independent evaluation | Passed reporting; exploratory scope | `S4.json`, subject bootstrap, calibration, clock and dropout stress tests |
-| S5 interactive showcase and publication checks | Pending | Actual result exports, UI checks |
+| S5 interactive showcase and publication checks | Local display/exports passed; screen recording pending | `S5.json`, desktop/390px screenshots, result contracts and error/empty-state checks |
+
+## Improvement experiments
+
+| Stage | Evaluation | Effect |
+|---|---|---|
+| V2.1 personalized static/temporal features and dense thresholds | 63 groups independently verified | Event target failed |
+| V2.2 added device physiology summaries | 63 groups independently verified | Event target failed |
+| COHORT_SW1 new smartwatch cohort, unseen-subject tests | 33 groups independently verified | AUC/AP benefit inconclusive |
+| COHORT_SW_PERSONAL1 personalized source-row holdout | 33 groups independently verified; exact chronological time unavailable | AP gain exploratory positive; AUC and alarm target remain unresolved |
 
 Advance only after recording the current stage's engineering/evaluation checks. Predictive-effect targets may fail or be inconclusive; report that separately rather than changing the test protocol.
 
