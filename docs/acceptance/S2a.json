@@ -1,0 +1,148 @@
+{
+  "stage": "S2a",
+  "engineering_status": "passed",
+  "evaluation_status": "passed_regression_only",
+  "effect_status": {
+    "loso": "failed",
+    "temporal": "inconclusive"
+  },
+  "verified_test_predictions": 5080095,
+  "subject_count": 20,
+  "future_input_violations": 0,
+  "target_tolerance_violations": 0,
+  "paired_anchor_sets": "identical",
+  "independent_mae_max_difference": 6.661338147750939e-16,
+  "limitations": [
+    "Regression acceptance only; incident-event risk requires separate evaluation.",
+    "Missing wearable values are allowed in the model; availability subgroups must be reported.",
+    "Processed-record arrival times are unavailable."
+  ],
+  "results": {
+    "loso": {
+      "subject_equal_metrics": {
+        "cgm": {
+          "mae": 1.0260980664192934,
+          "rmse": 1.3946629834887243,
+          "bias": 0.003155771392611068
+        },
+        "context": {
+          "mae": 1.025154585356602,
+          "rmse": 1.3949214185656507,
+          "bias": 0.002538244817085833
+        },
+        "fusion": {
+          "mae": 1.0289571381682197,
+          "rmse": 1.3980391314887923,
+          "bias": -0.0029703989622664787
+        },
+        "persistence": {
+          "mae": 1.1709565403661721,
+          "rmse": 1.61298822764895,
+          "bias": 0.0031675330379204226
+        },
+        "selected_simple": {
+          "mae": 1.1709565403661721,
+          "rmse": 1.61298822764895,
+          "bias": 0.0031675330379204226
+        },
+        "trend": {
+          "mae": 1.4063462876111115,
+          "rmse": 1.9781205468923986,
+          "bias": 0.006094438444875221
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "selected_simple",
+          "comparison": "cgm",
+          "paired_subjects": 20,
+          "mae_difference_mmol_l": 0.14485847394687862,
+          "relative_mae_improvement_percent": 12.370952204731667,
+          "mae_difference_95_interval": [
+            0.12405085326003194,
+            0.1642059937586777
+          ],
+          "subjects_improved": 20,
+          "effect_status": "passed"
+        },
+        {
+          "baseline": "context",
+          "comparison": "fusion",
+          "paired_subjects": 20,
+          "mae_difference_mmol_l": -0.003802552811617471,
+          "relative_mae_improvement_percent": -0.3709248210887868,
+          "mae_difference_95_interval": [
+            -0.007084821394890773,
+            -0.0009355692680749778
+          ],
+          "subjects_improved": 5,
+          "effect_status": "failed"
+        }
+      ],
+      "n_subjects": 20
+    },
+    "temporal": {
+      "subject_equal_metrics": {
+        "cgm": {
+          "mae": 1.0303440946312477,
+          "rmse": 1.4001977157015308,
+          "bias": -0.043911974408159034
+        },
+        "context": {
+          "mae": 1.0276703268970626,
+          "rmse": 1.3975737034723357,
+          "bias": -0.036490917413050966
+        },
+        "fusion": {
+          "mae": 1.0252969938797911,
+          "rmse": 1.3936540106610167,
+          "bias": -0.03396049580224385
+        },
+        "persistence": {
+          "mae": 1.2011131760372462,
+          "rmse": 1.6421950096870315,
+          "bias": 0.0026870140631118063
+        },
+        "selected_simple": {
+          "mae": 1.2011131760372462,
+          "rmse": 1.6421950096870315,
+          "bias": 0.0026870140631118063
+        },
+        "trend": {
+          "mae": 1.427695654051752,
+          "rmse": 1.9929256711415924,
+          "bias": 0.0063399823696447324
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "selected_simple",
+          "comparison": "cgm",
+          "paired_subjects": 20,
+          "mae_difference_mmol_l": 0.1707690814059987,
+          "relative_mae_improvement_percent": 14.21756790391776,
+          "mae_difference_95_interval": [
+            0.14452372403798022,
+            0.19846385527850252
+          ],
+          "subjects_improved": 20,
+          "effect_status": "passed"
+        },
+        {
+          "baseline": "context",
+          "comparison": "fusion",
+          "paired_subjects": 20,
+          "mae_difference_mmol_l": 0.002373333017271584,
+          "relative_mae_improvement_percent": 0.2309430325226575,
+          "mae_difference_95_interval": [
+            -0.00042529537089284374,
+            0.005863653814224801
+          ],
+          "subjects_improved": 12,
+          "effect_status": "inconclusive"
+        }
+      ],
+      "n_subjects": 20
+    }
+  }
+}

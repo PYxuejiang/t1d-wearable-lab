@@ -9,7 +9,9 @@ This repository is a retrospective research project. Protocol compliance, predic
 
 ## Status
 
-Implementation is underway. See [stage acceptance](docs/acceptance/STATUS.md). No model performance is claimed before a frozen test run and independent metric verification.
+Implementation is underway. See [stage acceptance](docs/acceptance/STATUS.md). Numeric module-1 comparisons have passed independent metric recomputation; event and sensor results are separate stages.
+
+The initial **20-subject LOSO** numeric comparison finds CGM-only MAE 1.0261 mmol/L versus 1.1710 for the validation-selected simple baseline. Adding wearable summaries to the context model did **not** improve this held-out comparison (1.0290 versus 1.0252 mmol/L). Temporal results differ and are reported separately. These are retrospective fixed-model results, not medical efficacy or a general impossibility claim. See [S2a evidence](docs/acceptance/S2a.json).
 
 ## Setup
 
@@ -18,6 +20,11 @@ python -m pip install -e .
 python -m pytest -q
 python scripts/download_data.py --dataset brist1d
 python scripts/download_data.py --dataset physiocgm
+python scripts/audit_data.py --dataset brist1d
+python scripts/run_module1.py --build-only
+python scripts/run_module1.py --protocol both
+python scripts/verify_module1.py
+python scripts/extract_signals.py --watch
 ```
 
 Download commands save data locally under ignored `data/`, verify source checksums where available, and write a local manifest. PhysioCGM is processed directly from per-subject raw ZIP archives to avoid duplicating the full corpus on disk. Dataset access, source availability, and terms remain those of the original repositories.
