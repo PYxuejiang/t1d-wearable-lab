@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "t1d-wearable-lab"
+version = "0.1.0"
+description = "Auditable CGM forecasting and physiological sensor evaluation on public T1D cohorts"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "pandas>=2.1", "scipy>=1.11", "scikit-learn>=1.4", "pyarrow>=14", "PyYAML>=6", "requests>=2.31", "joblib>=1.3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

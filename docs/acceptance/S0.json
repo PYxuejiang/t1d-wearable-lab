@@ -1,0 +1,16 @@
+{
+  "stage": "S0",
+  "engineering_status": "passed",
+  "evaluation_status": "passed_primitives_only",
+  "effect_status": "not_tested",
+  "checks": {
+    "pytest": "11 passed",
+    "reference_threshold_and_duration": "passed",
+    "gap_and_censoring": "passed",
+    "alarm_state_and_cooldown": "passed",
+    "one_to_one_matching": "passed",
+    "purged_split_support": "passed",
+    "missing_future_reference": "passed"
+  },
+  "scope": "Evaluation primitives and frozen configuration only; no cohort/model acceptance is implied."
+}

@@ -1,0 +1,36 @@
+version: '1.2-implementation-1'
+seed: 20261016
+forecast:
+  history_minutes: 60
+  horizon_minutes: 30
+  target_tolerance_minutes: 2.5
+  max_cgm_age_minutes: 20
+  max_wearable_age_minutes: 10
+  model_iterations: 80
+  calibration: validation_sigmoid
+reference:
+  low_mmol_l: 3.9
+  very_low_mmol_l: 3.0
+  minimum_event_minutes: 15
+  max_gap_nominal_multiplier: 1.5
+  recovery_minutes: 15
+alarm:
+  cooldown_minutes: 30
+  false_alarms_per_person_day_budget: 1
+splits:
+  within_person_train_fraction: 0.6
+  within_person_validation_fraction: 0.2
+  outer: leave_one_subject_out
+  inner: chronological_per_training_subject
+signals:
+  history_minutes: 5
+  min_sample_completeness: 0.9
+acceptance:
+  improvement_percent: 5
+  recall: 0.8
+  coverage: 0.8
+  max_coverage_loss_percentage_points: 5
+  min_event_subjects: 5
+  min_reference_events: 20
+  bootstrap_repetitions: 2000
+
