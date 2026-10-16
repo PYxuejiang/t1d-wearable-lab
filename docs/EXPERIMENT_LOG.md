@@ -38,3 +38,6 @@
 - Four improvement batches are complete and independently verified (63+63+33+33 groups). Positive AP effect remains exploratory; overall detection efficacy is not complete. No training process needs polling.
 - Unified smartwatch downloader validated against all11 already downloaded files. Do not re-download here.
 - Main manual updated toversion1.3 and current results; report/site/card contracts preserved. Keep heartbeat `t1d` active and continue the listed research steps.
+
+
+Final verified publication: `b5b5e35` is pushed; GitHub Python tests and showcase build both passed. Local suite30 passed. Working tree was clean and tracked-data scan found no raw data, individual timelines, waveform excerpts or credentials. Owned preview server51420 stopped after QA. Heartbeat `t1d` remains active; all four experiment batches are complete, so the next run should start a new predeclared study rather than poll/re-run these finished commands.
