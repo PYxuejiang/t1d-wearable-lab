@@ -1,0 +1,28 @@
+{
+  "run_id": "t1d-26c297decb6a",
+  "python": "3.12.4",
+  "platform": "Windows",
+  "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+  "benchmark": "Single-thread sequential feature computation, 20 repeated 5-minute synthetic windows; excludes ZIP I/O and training. Not device battery cost.",
+  "milliseconds_per_window": {
+    "ppg": 2.607,
+    "acc": 0.496,
+    "eda": 0.152,
+    "temp": 0.16,
+    "ecg": 9.52
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.4.2",
+    "pyarrow": "14.0.2",
+    "PyYAML": "6.0.1",
+    "requests": "2.32.2",
+    "joblib": "1.4.2",
+    "threadpoolctl": "2.2.0",
+    "matplotlib": "3.8.4",
+    "Pillow": "10.3.0",
+    "pytest": "9.0.3"
+  }
+}

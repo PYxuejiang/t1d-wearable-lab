@@ -9,6 +9,9 @@ description = "Auditable CGM forecasting and physiological sensor evaluation on 
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26", "pandas>=2.1", "scipy>=1.11", "scikit-learn>=1.4", "pyarrow>=14", "PyYAML>=6", "requests>=2.31", "joblib>=1.3"]
 
+[project.optional-dependencies]
+reports = ["Pillow>=10", "matplotlib>=3.8"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

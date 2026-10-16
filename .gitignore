@@ -7,6 +7,7 @@ __pycache__/
 *.egg-info/
 node_modules/
 showcase/dist/
+*.tsbuildinfo
 .env*
 !.env.example
 *.zip

@@ -3,6 +3,7 @@
   "engineering_status": "passed",
   "evaluation_status": "fixed_test_predictions_uncertainty_and_sensitivity_reported",
   "effect_status": "inconclusive",
+  "analysis_scope": "exploratory_stress_tests",
   "bootstrap_repetitions": 2000,
   "bootstrap_unit": "subject",
   "uncertainty": {
@@ -4178,6 +4179,5 @@
     "No external independent cohort or prospective intervention validation.",
     "Wall-clock strata are not validated sleep stages.",
     "Quality thresholds 0.9/0.95/1 and deterministic score dropout 0/10/30% are post-primary engineering stress tests, not a second validation dataset."
-  ],
-  "analysis_scope": "exploratory_stress_tests"
+  ]
 }

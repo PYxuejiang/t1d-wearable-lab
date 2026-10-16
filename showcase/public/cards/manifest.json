@@ -1,0 +1,16 @@
+{
+  "run_id": "t1d-26c297decb6a",
+  "source_sha256": "e4d437ef9aefe4761dc69ea83349f50db351556fd399703b55c545d2d282d925",
+  "cards": {
+    "module1-loso.png": "e5f6235b697f866b6c2d70a5ddc041e9e419c62bb8eb054d4cd8869b989e282d",
+    "module1-loso.svg": "6d8b079be66a06c6dacaf2e0c9d3a0ed1d66b37320d8f6322e7d7cc8dce09880",
+    "module1-temporal.png": "3931801c36f30b4e0b4d1b692f59cc49e5b6cb838cd924ed6c177fc09703a872",
+    "module1-temporal.svg": "188366752591ff228575bad8fca64694f4f4d85bd5da4ebb820a6b21bff3d049",
+    "module2-loso.png": "676fabf83b34b7b2b638cb41612b7aef5e090ea2f561047c89bacaa960b0e357",
+    "module2-loso.svg": "598c3ba20c7ce463cc9a8f11d953f05fa1891da88b7d3763d7c32c5632ebd667",
+    "module2-temporal.png": "1e9f54344be9c7242d55e12d65746a02dfebb9a78a62ca684c3a22f00790af33",
+    "module2-temporal.svg": "1aae3c849103580623590594eaa0fe61a528c030b19d3d682983d9e765b30c0d",
+    "overview.png": "819fc6787bd1057753cf06aa265e2fd38b75b0004e91554f8f9da1df7c4df5ce",
+    "overview.svg": "25f94498623c5a7a70f089f286a7a12add955f20ad7ee5bda1b5fe1589707337"
+  }
+}

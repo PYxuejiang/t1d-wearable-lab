@@ -1,0 +1,5827 @@
+{
+  "project": "T1D Wearable Lab",
+  "run_id": "t1d-26c297decb6a",
+  "protocol": "1.2-implementation-1",
+  "repository": "https://github.com/PYxuejiang/t1d-wearable-lab",
+  "audit": {
+    "subjects": 20,
+    "rows": 2875613,
+    "signal_archives": 10,
+    "signal_subjects_extracted": 7
+  },
+  "regression": {
+    "task": "30-minute glucose forecasting",
+    "unit": "mmol/L",
+    "baseline_selection": "validation-only subject-equal MAE",
+    "results": {
+      "loso": {
+        "subject_equal_metrics": {
+          "cgm": {
+            "mae": 1.0260980664192934,
+            "rmse": 1.3946629834887243,
+            "bias": 0.003155771392611068
+          },
+          "context": {
+            "mae": 1.025154585356602,
+            "rmse": 1.3949214185656507,
+            "bias": 0.002538244817085833
+          },
+          "fusion": {
+            "mae": 1.0289571381682197,
+            "rmse": 1.3980391314887923,
+            "bias": -0.0029703989622664787
+          },
+          "persistence": {
+            "mae": 1.1709565403661721,
+            "rmse": 1.61298822764895,
+            "bias": 0.0031675330379204226
+          },
+          "selected_simple": {
+            "mae": 1.1709565403661721,
+            "rmse": 1.61298822764895,
+            "bias": 0.0031675330379204226
+          },
+          "trend": {
+            "mae": 1.4063462876111115,
+            "rmse": 1.9781205468923986,
+            "bias": 0.006094438444875221
+          }
+        },
+        "comparisons": [
+          {
+            "baseline": "selected_simple",
+            "comparison": "cgm",
+            "paired_subjects": 20,
+            "mae_difference_mmol_l": 0.14485847394687862,
+            "relative_mae_improvement_percent": 12.370952204731667,
+            "mae_difference_95_interval": [
+              0.12405085326003194,
+              0.1642059937586777
+            ],
+            "subjects_improved": 20,
+            "effect_status": "passed"
+          },
+          {
+            "baseline": "context",
+            "comparison": "fusion",
+            "paired_subjects": 20,
+            "mae_difference_mmol_l": -0.003802552811617471,
+            "relative_mae_improvement_percent": -0.3709248210887868,
+            "mae_difference_95_interval": [
+              -0.007084821394890773,
+              -0.0009355692680749778
+            ],
+            "subjects_improved": 5,
+            "effect_status": "failed"
+          }
+        ],
+        "n_subjects": 20
+      },
+      "temporal": {
+        "subject_equal_metrics": {
+          "cgm": {
+            "mae": 1.0303440946312477,
+            "rmse": 1.4001977157015308,
+            "bias": -0.043911974408159034
+          },
+          "context": {
+            "mae": 1.0276703268970626,
+            "rmse": 1.3975737034723357,
+            "bias": -0.036490917413050966
+          },
+          "fusion": {
+            "mae": 1.0252969938797911,
+            "rmse": 1.3936540106610167,
+            "bias": -0.03396049580224385
+          },
+          "persistence": {
+            "mae": 1.2011131760372462,
+            "rmse": 1.6421950096870315,
+            "bias": 0.0026870140631118063
+          },
+          "selected_simple": {
+            "mae": 1.2011131760372462,
+            "rmse": 1.6421950096870315,
+            "bias": 0.0026870140631118063
+          },
+          "trend": {
+            "mae": 1.427695654051752,
+            "rmse": 1.9929256711415924,
+            "bias": 0.0063399823696447324
+          }
+        },
+        "comparisons": [
+          {
+            "baseline": "selected_simple",
+            "comparison": "cgm",
+            "paired_subjects": 20,
+            "mae_difference_mmol_l": 0.1707690814059987,
+            "relative_mae_improvement_percent": 14.21756790391776,
+            "mae_difference_95_interval": [
+              0.14452372403798022,
+              0.19846385527850252
+            ],
+            "subjects_improved": 20,
+            "effect_status": "passed"
+          },
+          {
+            "baseline": "context",
+            "comparison": "fusion",
+            "paired_subjects": 20,
+            "mae_difference_mmol_l": 0.002373333017271584,
+            "relative_mae_improvement_percent": 0.2309430325226575,
+            "mae_difference_95_interval": [
+              -0.00042529537089284374,
+              0.005863653814224801
+            ],
+            "subjects_improved": 12,
+            "effect_status": "inconclusive"
+          }
+        ],
+        "n_subjects": 20
+      }
+    }
+  },
+  "incident": {
+    "temporal": {
+      "context": {
+        "event_recall": 0.39216544848309626,
+        "event_precision": 0.32710590970394887,
+        "coverage": 1.0,
+        "ap": 0.21954282428196578,
+        "roc_auc": 0.8994604562501536,
+        "brier": 0.008967925995527506,
+        "offset_median_minutes": 15.0,
+        "subjects": 20,
+        "event_subjects": 20,
+        "reference_events": 378,
+        "matched_events": 152,
+        "observation_hours": 16920.79888888889,
+        "unmatched_alarms": 374,
+        "offset_iqr_minutes": [
+          5.0,
+          20.0
+        ],
+        "false_alerts_per_person_day": 0.5304714073455554,
+        "effect_status": "failed"
+      },
+      "fusion": {
+        "event_recall": 0.37028341211728766,
+        "event_precision": 0.2714279368595228,
+        "coverage": 1.0,
+        "ap": 0.20659204166324732,
+        "roc_auc": 0.9165384099012905,
+        "brier": 0.009021643183941812,
+        "offset_median_minutes": 15.0,
+        "subjects": 20,
+        "event_subjects": 20,
+        "reference_events": 378,
+        "matched_events": 136,
+        "observation_hours": 16920.79888888889,
+        "unmatched_alarms": 349,
+        "offset_iqr_minutes": [
+          5.0,
+          15.0
+        ],
+        "false_alerts_per_person_day": 0.49501208867272417,
+        "effect_status": "failed"
+      }
+    },
+    "loso": {
+      "context": {
+        "event_recall": 0.4944935457208407,
+        "event_precision": 0.34024839262244083,
+        "coverage": 1.0,
+        "ap": 0.21609887075238196,
+        "roc_auc": 0.9550471008099395,
+        "brier": 0.008915403033307324,
+        "offset_median_minutes": 10.0,
+        "subjects": 20,
+        "event_subjects": 20,
+        "reference_events": 1842,
+        "matched_events": 896,
+        "observation_hours": 81700.55111111111,
+        "unmatched_alarms": 1739,
+        "offset_iqr_minutes": [
+          5.0,
+          15.0
+        ],
+        "false_alerts_per_person_day": 0.5108411073413676,
+        "effect_status": "failed"
+      },
+      "fusion": {
+        "event_recall": 0.47535684306700093,
+        "event_precision": 0.33520516764218133,
+        "coverage": 1.0,
+        "ap": 0.21508352726491514,
+        "roc_auc": 0.9549883382595871,
+        "brier": 0.008960104813350248,
+        "offset_median_minutes": 10.0,
+        "subjects": 20,
+        "event_subjects": 20,
+        "reference_events": 1842,
+        "matched_events": 873,
+        "observation_hours": 81700.55111111111,
+        "unmatched_alarms": 1818,
+        "offset_iqr_minutes": [
+          5.0,
+          15.0
+        ],
+        "false_alerts_per_person_day": 0.5340478051446845,
+        "effect_status": "failed"
+      }
+    }
+  },
+  "detection": {
+    "temporal": {
+      "end_to_end": {
+        "ppg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7314627740757469,
+          "ap": 0.07898703128292636,
+          "roc_auc": 0.5380045191537866,
+          "brier": 0.059029242668857104,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7314627740757469,
+          "ap": 0.07590795750777495,
+          "roc_auc": 0.5643066305591941,
+          "brier": 0.05906989352842194,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist_eda_temp": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7309808916160312,
+          "ap": 0.07258205236698369,
+          "roc_auc": 0.5319956763394836,
+          "brier": 0.05940525921897148,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "ecg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7537798093004489,
+          "ap": 0.0669436781632584,
+          "roc_auc": 0.5374255565043495,
+          "brier": 0.05505419769705498,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "all": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.08077983663759462,
+          "roc_auc": 0.4899959772250441,
+          "brier": 0.06105896516893888,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        }
+      },
+      "paired_common": {
+        "ppg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.0941076878157945,
+          "roc_auc": 0.5584206773201225,
+          "brier": 0.06095974138441101,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.09032187689732211,
+          "roc_auc": 0.5579129526255423,
+          "brier": 0.06100355026958266,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist_eda_temp": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.08283608546019557,
+          "roc_auc": 0.5126184854023806,
+          "brier": 0.061328925013661474,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "ecg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.07423135792111364,
+          "roc_auc": 0.5421557900820284,
+          "brier": 0.060994415143375336,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "all": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.08077983663759462,
+          "roc_auc": 0.4899959772250441,
+          "brier": 0.06105896516893888,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        }
+      }
+    },
+    "loso": {
+      "end_to_end": {
+        "ppg": {
+          "event_recall": 0.0,
+          "event_precision": 0.0,
+          "coverage": 0.7577974645436198,
+          "ap": 0.04264378557259326,
+          "roc_auc": 0.47204655266512796,
+          "brier": 0.04250559207525166,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 10,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.08462761839957224,
+          "effect_status": "failed"
+        },
+        "wrist": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7577974645436198,
+          "ap": 0.049200248951522085,
+          "roc_auc": 0.47814180365031816,
+          "brier": 0.04248259942994751,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist_eda_temp": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7571516168296094,
+          "ap": 0.04107146442423113,
+          "roc_auc": 0.44507368699813643,
+          "brier": 0.04252395227589746,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "ecg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.697610357867204,
+          "ap": 0.0450908703425929,
+          "roc_auc": 0.5114927860542395,
+          "brier": 0.041466050626359476,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "all": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.036730260314477854,
+          "roc_auc": 0.4216858659839363,
+          "brier": 0.03972331886506108,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        }
+      },
+      "paired_common": {
+        "ppg": {
+          "event_recall": 0.0,
+          "event_precision": 0.0,
+          "coverage": 0.6501805162148242,
+          "ap": 0.03892826373952516,
+          "roc_auc": 0.4726226239766918,
+          "brier": 0.03969256199705695,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 10,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.08462761839957224,
+          "effect_status": "failed"
+        },
+        "wrist": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.044717536464773736,
+          "roc_auc": 0.48142706111678246,
+          "brier": 0.03966658825923353,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist_eda_temp": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.03570086493673035,
+          "roc_auc": 0.41537063885959524,
+          "brier": 0.039680848514605835,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "ecg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.04306862096827697,
+          "roc_auc": 0.5148569630879603,
+          "brier": 0.039618020196498134,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "all": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.036730260314477854,
+          "roc_auc": 0.4216858659839363,
+          "brier": 0.03972331886506108,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        }
+      }
+    }
+  },
+  "acceptance": {
+    "S0": {
+      "stage": "S0",
+      "engineering_status": "passed",
+      "evaluation_status": "passed_primitives_only",
+      "effect_status": "not_tested",
+      "checks": {
+        "pytest": "11 passed",
+        "reference_threshold_and_duration": "passed",
+        "gap_and_censoring": "passed",
+        "alarm_state_and_cooldown": "passed",
+        "one_to_one_matching": "passed",
+        "purged_split_support": "passed",
+        "missing_future_reference": "passed"
+      },
+      "scope": "Evaluation primitives and frozen configuration only; no cohort/model acceptance is implied."
+    },
+    "S1a": {
+      "stage": "S1a",
+      "engineering_status": "passed",
+      "evaluation_status": "data_adapter_audit_passed",
+      "effect_status": "not_tested",
+      "source_files_verified": 20,
+      "subjects_audited": 20,
+      "raw_rows": 2875613,
+      "observed_low_readings": 15555,
+      "observed_low_runs_including_censored": 1885,
+      "conflicting_channel_timestamps_excluded": 418,
+      "invalid_numeric_values": 0,
+      "nominal_cgm_intervals_minutes": [
+        5.0,
+        15.0
+      ],
+      "limitations": [
+        "Event-run count is not the final incident prediction denominator.",
+        "Sampling is 5 or 15 minutes; no uniform 5-minute assumption.",
+        "Data are retrospective processed records with no arrival timestamps."
+      ]
+    },
+    "S1b": {
+      "stage": "S1b",
+      "engineering_status": "passed",
+      "evaluation_status": "source_clock_and_feature_audit_passed",
+      "effect_status": "not_tested",
+      "source_archives_accounted": 10,
+      "included_subjects": 7,
+      "audit": [
+        {
+          "subject": "c1s01",
+          "status": "extracted",
+          "reference_anchors": 5566,
+          "low_anchors": 455,
+          "common_anchors": 2498,
+          "clock_shift_hours": -5,
+          "boundary_crossing_events_excluded": []
+        },
+        {
+          "subject": "c1s02",
+          "status": "extracted",
+          "reference_anchors": 4839,
+          "low_anchors": 34,
+          "common_anchors": 3116,
+          "clock_shift_hours": -5,
+          "boundary_crossing_events_excluded": []
+        },
+        {
+          "subject": "c1s03",
+          "status": "extracted",
+          "reference_anchors": 4018,
+          "low_anchors": 119,
+          "common_anchors": 3077,
+          "clock_shift_hours": -5,
+          "boundary_crossing_events_excluded": []
+        },
+        {
+          "subject": "c1s04",
+          "status": "clock_quarantined"
+        },
+        {
+          "subject": "c1s05",
+          "status": "extracted",
+          "reference_anchors": 4822,
+          "low_anchors": 153,
+          "common_anchors": 3318,
+          "clock_shift_hours": -5,
+          "boundary_crossing_events_excluded": []
+        },
+        {
+          "subject": "c2s01",
+          "status": "clock_quarantined"
+        },
+        {
+          "subject": "c2s02",
+          "status": "extracted",
+          "reference_anchors": 4642,
+          "low_anchors": 366,
+          "common_anchors": 2697,
+          "clock_shift_hours": -5,
+          "boundary_crossing_events_excluded": []
+        },
+        {
+          "subject": "c2s03",
+          "status": "clock_quarantined"
+        },
+        {
+          "subject": "c2s04",
+          "status": "extracted",
+          "reference_anchors": 6129,
+          "low_anchors": 215,
+          "common_anchors": 3655,
+          "clock_shift_hours": -5,
+          "boundary_crossing_events_excluded": []
+        },
+        {
+          "subject": "c2s05",
+          "status": "extracted",
+          "reference_anchors": 4202,
+          "low_anchors": 271,
+          "common_anchors": 3624,
+          "clock_shift_hours": -6,
+          "boundary_crossing_events_excluded": []
+        }
+      ],
+      "limitations": [
+        "CGM/chest wall-clock alignment is a declared source assumption.",
+        "No archives were expanded; features read directly from CSV members.",
+        "Quarantined clocks are not assigned labels by optimizing disease prediction."
+      ]
+    },
+    "S2a": {
+      "stage": "S2a",
+      "engineering_status": "passed",
+      "evaluation_status": "passed_regression_only",
+      "effect_status": {
+        "loso": "failed",
+        "temporal": "inconclusive"
+      },
+      "verified_test_predictions": 5080095,
+      "subject_count": 20,
+      "future_input_violations": 0,
+      "target_tolerance_violations": 0,
+      "paired_anchor_sets": "identical",
+      "independent_mae_max_difference": 6.661338147750939e-16,
+      "limitations": [
+        "Regression acceptance only; incident-event risk requires separate evaluation.",
+        "Missing wearable values are allowed in the model; availability subgroups must be reported.",
+        "Processed-record arrival times are unavailable."
+      ],
+      "results": {
+        "loso": {
+          "subject_equal_metrics": {
+            "cgm": {
+              "mae": 1.0260980664192934,
+              "rmse": 1.3946629834887243,
+              "bias": 0.003155771392611068
+            },
+            "context": {
+              "mae": 1.025154585356602,
+              "rmse": 1.3949214185656507,
+              "bias": 0.002538244817085833
+            },
+            "fusion": {
+              "mae": 1.0289571381682197,
+              "rmse": 1.3980391314887923,
+              "bias": -0.0029703989622664787
+            },
+            "persistence": {
+              "mae": 1.1709565403661721,
+              "rmse": 1.61298822764895,
+              "bias": 0.0031675330379204226
+            },
+            "selected_simple": {
+              "mae": 1.1709565403661721,
+              "rmse": 1.61298822764895,
+              "bias": 0.0031675330379204226
+            },
+            "trend": {
+              "mae": 1.4063462876111115,
+              "rmse": 1.9781205468923986,
+              "bias": 0.006094438444875221
+            }
+          },
+          "comparisons": [
+            {
+              "baseline": "selected_simple",
+              "comparison": "cgm",
+              "paired_subjects": 20,
+              "mae_difference_mmol_l": 0.14485847394687862,
+              "relative_mae_improvement_percent": 12.370952204731667,
+              "mae_difference_95_interval": [
+                0.12405085326003194,
+                0.1642059937586777
+              ],
+              "subjects_improved": 20,
+              "effect_status": "passed"
+            },
+            {
+              "baseline": "context",
+              "comparison": "fusion",
+              "paired_subjects": 20,
+              "mae_difference_mmol_l": -0.003802552811617471,
+              "relative_mae_improvement_percent": -0.3709248210887868,
+              "mae_difference_95_interval": [
+                -0.007084821394890773,
+                -0.0009355692680749778
+              ],
+              "subjects_improved": 5,
+              "effect_status": "failed"
+            }
+          ],
+          "n_subjects": 20
+        },
+        "temporal": {
+          "subject_equal_metrics": {
+            "cgm": {
+              "mae": 1.0303440946312477,
+              "rmse": 1.4001977157015308,
+              "bias": -0.043911974408159034
+            },
+            "context": {
+              "mae": 1.0276703268970626,
+              "rmse": 1.3975737034723357,
+              "bias": -0.036490917413050966
+            },
+            "fusion": {
+              "mae": 1.0252969938797911,
+              "rmse": 1.3936540106610167,
+              "bias": -0.03396049580224385
+            },
+            "persistence": {
+              "mae": 1.2011131760372462,
+              "rmse": 1.6421950096870315,
+              "bias": 0.0026870140631118063
+            },
+            "selected_simple": {
+              "mae": 1.2011131760372462,
+              "rmse": 1.6421950096870315,
+              "bias": 0.0026870140631118063
+            },
+            "trend": {
+              "mae": 1.427695654051752,
+              "rmse": 1.9929256711415924,
+              "bias": 0.0063399823696447324
+            }
+          },
+          "comparisons": [
+            {
+              "baseline": "selected_simple",
+              "comparison": "cgm",
+              "paired_subjects": 20,
+              "mae_difference_mmol_l": 0.1707690814059987,
+              "relative_mae_improvement_percent": 14.21756790391776,
+              "mae_difference_95_interval": [
+                0.14452372403798022,
+                0.19846385527850252
+              ],
+              "subjects_improved": 20,
+              "effect_status": "passed"
+            },
+            {
+              "baseline": "context",
+              "comparison": "fusion",
+              "paired_subjects": 20,
+              "mae_difference_mmol_l": 0.002373333017271584,
+              "relative_mae_improvement_percent": 0.2309430325226575,
+              "mae_difference_95_interval": [
+                -0.00042529537089284374,
+                0.005863653814224801
+              ],
+              "subjects_improved": 12,
+              "effect_status": "inconclusive"
+            }
+          ],
+          "n_subjects": 20
+        }
+      }
+    },
+    "S2b": {
+      "stage": "S2b",
+      "engineering_status": "passed",
+      "evaluation_status": "independently_reconstructed_events_and_alarms_passed",
+      "effect_status": {
+        "temporal": {
+          "context": "failed",
+          "fusion": "failed"
+        },
+        "loso": {
+          "context": "failed",
+          "fusion": "failed"
+        }
+      },
+      "groups_verified": 80,
+      "count_mismatches": 0,
+      "observation_hours_max_difference": 0,
+      "results": {
+        "temporal": {
+          "context": {
+            "event_recall": 0.39216544848309626,
+            "event_precision": 0.32710590970394887,
+            "coverage": 1.0,
+            "ap": 0.21954282428196578,
+            "roc_auc": 0.8994604562501536,
+            "brier": 0.008967925995527506,
+            "offset_median_minutes": 15.0,
+            "subjects": 20,
+            "event_subjects": 20,
+            "reference_events": 378,
+            "matched_events": 152,
+            "observation_hours": 16920.79888888889,
+            "unmatched_alarms": 374,
+            "offset_iqr_minutes": [
+              5.0,
+              20.0
+            ],
+            "false_alerts_per_person_day": 0.5304714073455554,
+            "effect_status": "failed"
+          },
+          "fusion": {
+            "event_recall": 0.37028341211728766,
+            "event_precision": 0.2714279368595228,
+            "coverage": 1.0,
+            "ap": 0.20659204166324732,
+            "roc_auc": 0.9165384099012905,
+            "brier": 0.009021643183941812,
+            "offset_median_minutes": 15.0,
+            "subjects": 20,
+            "event_subjects": 20,
+            "reference_events": 378,
+            "matched_events": 136,
+            "observation_hours": 16920.79888888889,
+            "unmatched_alarms": 349,
+            "offset_iqr_minutes": [
+              5.0,
+              15.0
+            ],
+            "false_alerts_per_person_day": 0.49501208867272417,
+            "effect_status": "failed"
+          }
+        },
+        "loso": {
+          "context": {
+            "event_recall": 0.4944935457208407,
+            "event_precision": 0.34024839262244083,
+            "coverage": 1.0,
+            "ap": 0.21609887075238196,
+            "roc_auc": 0.9550471008099395,
+            "brier": 0.008915403033307324,
+            "offset_median_minutes": 10.0,
+            "subjects": 20,
+            "event_subjects": 20,
+            "reference_events": 1842,
+            "matched_events": 896,
+            "observation_hours": 81700.55111111111,
+            "unmatched_alarms": 1739,
+            "offset_iqr_minutes": [
+              5.0,
+              15.0
+            ],
+            "false_alerts_per_person_day": 0.5108411073413676,
+            "effect_status": "failed"
+          },
+          "fusion": {
+            "event_recall": 0.47535684306700093,
+            "event_precision": 0.33520516764218133,
+            "coverage": 1.0,
+            "ap": 0.21508352726491514,
+            "roc_auc": 0.9549883382595871,
+            "brier": 0.008960104813350248,
+            "offset_median_minutes": 10.0,
+            "subjects": 20,
+            "event_subjects": 20,
+            "reference_events": 1842,
+            "matched_events": 873,
+            "observation_hours": 81700.55111111111,
+            "unmatched_alarms": 1818,
+            "offset_iqr_minutes": [
+              5.0,
+              15.0
+            ],
+            "false_alerts_per_person_day": 0.5340478051446845,
+            "effect_status": "failed"
+          }
+        }
+      },
+      "paired_sensor_gain": {
+        "temporal": {
+          "recall_difference_percentage_points": -2.1882036365808615,
+          "95_interval_percentage_points": [
+            -6.3730698471252385,
+            2.131620783881181
+          ],
+          "subjects": 20
+        },
+        "loso": {
+          "recall_difference_percentage_points": -1.9136702653839797,
+          "95_interval_percentage_points": [
+            -6.5063792340823365,
+            4.07740868511985
+          ],
+          "subjects": 20
+        }
+      },
+      "limitations": [
+        "Retrospective event definition with 5/15-minute reference sampling.",
+        "Coverage is conditional on a reference-observable eligible decision opportunity.",
+        "Not a clinical alarm or an intervention benefit study."
+      ]
+    },
+    "S3": {
+      "stage": "S3",
+      "engineering_status": "passed",
+      "evaluation_status": "independent_counts_source_labels_and_fold_checks_passed",
+      "effect_status": {
+        "temporal": {
+          "ppg": "failed",
+          "wrist": "failed",
+          "wrist_eda_temp": "failed",
+          "ecg": "failed",
+          "all": "failed"
+        },
+        "loso": {
+          "ppg": "failed",
+          "wrist": "failed",
+          "wrist_eda_temp": "failed",
+          "ecg": "failed",
+          "all": "failed"
+        }
+      },
+      "verified_groups": 140,
+      "future_input_violations": 0,
+      "count_mismatches": 0,
+      "observation_hours_max_difference": 0,
+      "results": {
+        "temporal": {
+          "end_to_end": {
+            "ppg": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.7314627740757469,
+              "ap": 0.07898703128292636,
+              "roc_auc": 0.5380045191537866,
+              "brier": 0.059029242668857104,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "wrist": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.7314627740757469,
+              "ap": 0.07590795750777495,
+              "roc_auc": 0.5643066305591941,
+              "brier": 0.05906989352842194,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "wrist_eda_temp": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.7309808916160312,
+              "ap": 0.07258205236698369,
+              "roc_auc": 0.5319956763394836,
+              "brier": 0.05940525921897148,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "ecg": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.7537798093004489,
+              "ap": 0.0669436781632584,
+              "roc_auc": 0.5374255565043495,
+              "brier": 0.05505419769705498,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "all": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6544876555042229,
+              "ap": 0.08077983663759462,
+              "roc_auc": 0.4899959772250441,
+              "brier": 0.06105896516893888,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            }
+          },
+          "paired_common": {
+            "ppg": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6544876555042229,
+              "ap": 0.0941076878157945,
+              "roc_auc": 0.5584206773201225,
+              "brier": 0.06095974138441101,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "wrist": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6544876555042229,
+              "ap": 0.09032187689732211,
+              "roc_auc": 0.5579129526255423,
+              "brier": 0.06100355026958266,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "wrist_eda_temp": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6544876555042229,
+              "ap": 0.08283608546019557,
+              "roc_auc": 0.5126184854023806,
+              "brier": 0.061328925013661474,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "ecg": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6544876555042229,
+              "ap": 0.07423135792111364,
+              "roc_auc": 0.5421557900820284,
+              "brier": 0.060994415143375336,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "all": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6544876555042229,
+              "ap": 0.08077983663759462,
+              "roc_auc": 0.4899959772250441,
+              "brier": 0.06105896516893888,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 31,
+              "matched_events": 0,
+              "observation_hours": 574.6741666666667,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            }
+          }
+        },
+        "loso": {
+          "end_to_end": {
+            "ppg": {
+              "event_recall": 0.0,
+              "event_precision": 0.0,
+              "coverage": 0.7577974645436198,
+              "ap": 0.04264378557259326,
+              "roc_auc": 0.47204655266512796,
+              "brier": 0.04250559207525166,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 10,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.08462761839957224,
+              "effect_status": "failed"
+            },
+            "wrist": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.7577974645436198,
+              "ap": 0.049200248951522085,
+              "roc_auc": 0.47814180365031816,
+              "brier": 0.04248259942994751,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "wrist_eda_temp": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.7571516168296094,
+              "ap": 0.04107146442423113,
+              "roc_auc": 0.44507368699813643,
+              "brier": 0.04252395227589746,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "ecg": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.697610357867204,
+              "ap": 0.0450908703425929,
+              "roc_auc": 0.5114927860542395,
+              "brier": 0.041466050626359476,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "all": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6501805162148242,
+              "ap": 0.036730260314477854,
+              "roc_auc": 0.4216858659839363,
+              "brier": 0.03972331886506108,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            }
+          },
+          "paired_common": {
+            "ppg": {
+              "event_recall": 0.0,
+              "event_precision": 0.0,
+              "coverage": 0.6501805162148242,
+              "ap": 0.03892826373952516,
+              "roc_auc": 0.4726226239766918,
+              "brier": 0.03969256199705695,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 10,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.08462761839957224,
+              "effect_status": "failed"
+            },
+            "wrist": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6501805162148242,
+              "ap": 0.044717536464773736,
+              "roc_auc": 0.48142706111678246,
+              "brier": 0.03966658825923353,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "wrist_eda_temp": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6501805162148242,
+              "ap": 0.03570086493673035,
+              "roc_auc": 0.41537063885959524,
+              "brier": 0.039680848514605835,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "ecg": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6501805162148242,
+              "ap": 0.04306862096827697,
+              "roc_auc": 0.5148569630879603,
+              "brier": 0.039618020196498134,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            },
+            "all": {
+              "event_recall": 0.0,
+              "event_precision": null,
+              "coverage": 0.6501805162148242,
+              "ap": 0.036730260314477854,
+              "roc_auc": 0.4216858659839363,
+              "brier": 0.03972331886506108,
+              "offset_median_minutes": null,
+              "subjects": 7,
+              "event_subjects": 7,
+              "reference_events": 146,
+              "matched_events": 0,
+              "observation_hours": 2835.953611111111,
+              "unmatched_alarms": 0,
+              "offset_iqr_minutes": null,
+              "false_alerts_per_person_day": 0.0,
+              "effect_status": "failed"
+            }
+          }
+        }
+      },
+      "paired_gain": {
+        "temporal": {
+          "ppg__to__wrist": {
+            "subjects": 7,
+            "recall_difference_percentage_points": 0.0,
+            "95_interval_percentage_points": [
+              0.0,
+              0.0
+            ],
+            "end_to_end_coverage_loss_percentage_points": 0.0,
+            "comparison_false_alerts_per_person_day": 0.0,
+            "status": "failed"
+          },
+          "wrist__to__wrist_eda_temp": {
+            "subjects": 7,
+            "recall_difference_percentage_points": 0.0,
+            "95_interval_percentage_points": [
+              0.0,
+              0.0
+            ],
+            "end_to_end_coverage_loss_percentage_points": 0.0481882459715699,
+            "comparison_false_alerts_per_person_day": 0.0,
+            "status": "failed"
+          },
+          "wrist__to__all": {
+            "subjects": 7,
+            "recall_difference_percentage_points": 0.0,
+            "95_interval_percentage_points": [
+              0.0,
+              0.0
+            ],
+            "end_to_end_coverage_loss_percentage_points": 7.697511857152395,
+            "comparison_false_alerts_per_person_day": 0.0,
+            "status": "failed"
+          }
+        },
+        "loso": {
+          "ppg__to__wrist": {
+            "subjects": 7,
+            "recall_difference_percentage_points": 0.0,
+            "95_interval_percentage_points": [
+              0.0,
+              0.0
+            ],
+            "end_to_end_coverage_loss_percentage_points": 0.0,
+            "comparison_false_alerts_per_person_day": 0.0,
+            "status": "failed"
+          },
+          "wrist__to__wrist_eda_temp": {
+            "subjects": 7,
+            "recall_difference_percentage_points": 0.0,
+            "95_interval_percentage_points": [
+              0.0,
+              0.0
+            ],
+            "end_to_end_coverage_loss_percentage_points": 0.0645847714010439,
+            "comparison_false_alerts_per_person_day": 0.0,
+            "status": "failed"
+          },
+          "wrist__to__all": {
+            "subjects": 7,
+            "recall_difference_percentage_points": 0.0,
+            "95_interval_percentage_points": [
+              0.0,
+              0.0
+            ],
+            "end_to_end_coverage_loss_percentage_points": 10.761694832879565,
+            "comparison_false_alerts_per_person_day": 0.0,
+            "status": "failed"
+          }
+        }
+      },
+      "skipped_folds": [],
+      "coverage_definition": "Supported elapsed intervals with finite scores at BOTH endpoints / observed elapsed reference intervals (gaps <=7.5 minutes); macro over subjects.",
+      "limitations": [
+        "CGM versus chest clock remains a source assumption; +/-5 minute sensitivity is separate.",
+        "Low/High censored values are classification labels only.",
+        "Quality screening is an engineering heuristic, not a clinically validated SQI.",
+        "Common-channel validation conditions threshold selection; missing test data count against end-to-end event recall and coverage."
+      ]
+    },
+    "S4": {
+      "stage": "S4",
+      "engineering_status": "passed",
+      "evaluation_status": "fixed_test_predictions_uncertainty_and_sensitivity_reported",
+      "effect_status": "inconclusive",
+      "analysis_scope": "exploratory_stress_tests",
+      "bootstrap_repetitions": 2000,
+      "bootstrap_unit": "subject",
+      "uncertainty": {
+        "incident": {
+          "temporal": {
+            "context": {
+              "event_recall": {
+                "subjects": 20,
+                "mean": 0.39216544848309626,
+                "95_interval": [
+                  0.28613902232666594,
+                  0.4922478875291375
+                ]
+              },
+              "coverage": {
+                "subjects": 20,
+                "mean": 1.0,
+                "95_interval": [
+                  1.0,
+                  1.0
+                ]
+              },
+              "ap": {
+                "subjects": 20,
+                "mean": 0.21954282428196578,
+                "95_interval": [
+                  0.16018304933679453,
+                  0.28485385383554257
+                ]
+              },
+              "brier": {
+                "subjects": 20,
+                "mean": 0.008967925995527506,
+                "95_interval": [
+                  0.007006040119414023,
+                  0.0110177937125518
+                ]
+              }
+            },
+            "fusion": {
+              "event_recall": {
+                "subjects": 20,
+                "mean": 0.37028341211728766,
+                "95_interval": [
+                  0.26729772836016685,
+                  0.47577953116762634
+                ]
+              },
+              "coverage": {
+                "subjects": 20,
+                "mean": 1.0,
+                "95_interval": [
+                  1.0,
+                  1.0
+                ]
+              },
+              "ap": {
+                "subjects": 20,
+                "mean": 0.20659204166324732,
+                "95_interval": [
+                  0.15044499196715444,
+                  0.26618290842253095
+                ]
+              },
+              "brier": {
+                "subjects": 20,
+                "mean": 0.009021643183941812,
+                "95_interval": [
+                  0.007027143868886536,
+                  0.011112348827863673
+                ]
+              }
+            }
+          },
+          "loso": {
+            "context": {
+              "event_recall": {
+                "subjects": 20,
+                "mean": 0.4944935457208407,
+                "95_interval": [
+                  0.4206307326468953,
+                  0.5649072613877572
+                ]
+              },
+              "coverage": {
+                "subjects": 20,
+                "mean": 1.0,
+                "95_interval": [
+                  1.0,
+                  1.0
+                ]
+              },
+              "ap": {
+                "subjects": 20,
+                "mean": 0.21609887075238196,
+                "95_interval": [
+                  0.18180544547543437,
+                  0.24841978768857542
+                ]
+              },
+              "brier": {
+                "subjects": 20,
+                "mean": 0.008915403033307324,
+                "95_interval": [
+                  0.006997314604836607,
+                  0.010900260287926624
+                ]
+              }
+            },
+            "fusion": {
+              "event_recall": {
+                "subjects": 20,
+                "mean": 0.47535684306700093,
+                "95_interval": [
+                  0.3848219865687074,
+                  0.559564400928719
+                ]
+              },
+              "coverage": {
+                "subjects": 20,
+                "mean": 1.0,
+                "95_interval": [
+                  1.0,
+                  1.0
+                ]
+              },
+              "ap": {
+                "subjects": 20,
+                "mean": 0.21508352726491514,
+                "95_interval": [
+                  0.17927684302956745,
+                  0.24890057259489073
+                ]
+              },
+              "brier": {
+                "subjects": 20,
+                "mean": 0.008960104813350248,
+                "95_interval": [
+                  0.007043434542230904,
+                  0.010947916939537401
+                ]
+              }
+            }
+          }
+        },
+        "detection": {
+          "temporal": {
+            "all": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.6544876555042229,
+                "95_interval": [
+                  0.5598345614647575,
+                  0.7505964476830159
+                ]
+              },
+              "ap": {
+                "subjects": 6,
+                "mean": 0.08077983663759462,
+                "95_interval": [
+                  0.03973298930539316,
+                  0.12030723279771886
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.06105896516893888,
+                "95_interval": [
+                  0.025184905887621612,
+                  0.09934510274864393
+                ]
+              }
+            },
+            "ecg": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.7537798093004489,
+                "95_interval": [
+                  0.6632528128676904,
+                  0.842046315718802
+                ]
+              },
+              "ap": {
+                "subjects": 6,
+                "mean": 0.0669436781632584,
+                "95_interval": [
+                  0.037928573278465605,
+                  0.09673034093077146
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.05505419769705498,
+                "95_interval": [
+                  0.023416106555601217,
+                  0.08938361039121692
+                ]
+              }
+            },
+            "ppg": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.7314627740757469,
+                "95_interval": [
+                  0.6079192349695163,
+                  0.8373350852295905
+                ]
+              },
+              "ap": {
+                "subjects": 7,
+                "mean": 0.07898703128292636,
+                "95_interval": [
+                  0.03425222647205479,
+                  0.1282257194065964
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.059029242668857104,
+                "95_interval": [
+                  0.026253476010649708,
+                  0.09424414025705098
+                ]
+              }
+            },
+            "wrist": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.7314627740757469,
+                "95_interval": [
+                  0.6079192349695163,
+                  0.8373350852295905
+                ]
+              },
+              "ap": {
+                "subjects": 7,
+                "mean": 0.07590795750777495,
+                "95_interval": [
+                  0.03674287935318876,
+                  0.11508425392519414
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.05906989352842194,
+                "95_interval": [
+                  0.026292608206412407,
+                  0.09436307944160535
+                ]
+              }
+            },
+            "wrist_eda_temp": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.7309808916160312,
+                "95_interval": [
+                  0.6075895920929648,
+                  0.836571271693685
+                ]
+              },
+              "ap": {
+                "subjects": 7,
+                "mean": 0.07258205236698369,
+                "95_interval": [
+                  0.03677657300662185,
+                  0.1086846338122503
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.05940525921897148,
+                "95_interval": [
+                  0.026552544853646227,
+                  0.09457704279037253
+                ]
+              }
+            }
+          },
+          "loso": {
+            "all": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.6501805162148242,
+                "95_interval": [
+                  0.5587424607015984,
+                  0.7392229534633427
+                ]
+              },
+              "ap": {
+                "subjects": 7,
+                "mean": 0.036730260314477854,
+                "95_interval": [
+                  0.022739105856103215,
+                  0.05083062196529598
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.03972331886506108,
+                "95_interval": [
+                  0.025587329842649487,
+                  0.052906727224683356
+                ]
+              }
+            },
+            "ecg": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.697610357867204,
+                "95_interval": [
+                  0.6005796098424998,
+                  0.7858674356577668
+                ]
+              },
+              "ap": {
+                "subjects": 7,
+                "mean": 0.0450908703425929,
+                "95_interval": [
+                  0.0275422007330768,
+                  0.060075236512613456
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.041466050626359476,
+                "95_interval": [
+                  0.024618874345662622,
+                  0.055225900364900195
+                ]
+              }
+            },
+            "ppg": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.7577974645436198,
+                "95_interval": [
+                  0.6600406400416331,
+                  0.8427085176672432
+                ]
+              },
+              "ap": {
+                "subjects": 7,
+                "mean": 0.04264378557259326,
+                "95_interval": [
+                  0.02636758280705189,
+                  0.056940677898595256
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.04250559207525166,
+                "95_interval": [
+                  0.02615420563440428,
+                  0.05752062683617733
+                ]
+              }
+            },
+            "wrist": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.7577974645436198,
+                "95_interval": [
+                  0.6600406400416331,
+                  0.8427085176672432
+                ]
+              },
+              "ap": {
+                "subjects": 7,
+                "mean": 0.049200248951522085,
+                "95_interval": [
+                  0.027923051689069885,
+                  0.06945093128732499
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.04248259942994751,
+                "95_interval": [
+                  0.026144243060153134,
+                  0.05742134128020756
+                ]
+              }
+            },
+            "wrist_eda_temp": {
+              "event_recall": {
+                "subjects": 7,
+                "mean": 0.0,
+                "95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "coverage": {
+                "subjects": 7,
+                "mean": 0.7571516168296094,
+                "95_interval": [
+                  0.6595573105106391,
+                  0.8418950780694692
+                ]
+              },
+              "ap": {
+                "subjects": 7,
+                "mean": 0.04107146442423113,
+                "95_interval": [
+                  0.025003385052648187,
+                  0.05635440921588116
+                ]
+              },
+              "brier": {
+                "subjects": 7,
+                "mean": 0.04252395227589746,
+                "95_interval": [
+                  0.0261526017689584,
+                  0.057553661493859494
+                ]
+              }
+            }
+          }
+        }
+      },
+      "calibration": {
+        "incident": {
+          "loso/context": {
+            "point_metrics": {
+              "point_n": 795274,
+              "positive_fraction": 0.00976770270372224,
+              "ap": 0.20691677077570278,
+              "roc_auc": 0.9567139369455195,
+              "brier": 0.008333324849167847,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 769733,
+                "mean_score": 0.0038329453240644657,
+                "observed_fraction": 0.003827301155075851
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 15116,
+                "mean_score": 0.14215026047231416,
+                "observed_fraction": 0.13555173326276793
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 7320,
+                "mean_score": 0.2475947034719063,
+                "observed_fraction": 0.24959016393442623
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 3099,
+                "mean_score": 0.3238576187081852,
+                "observed_fraction": 0.30493707647628265
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 6,
+                "mean_score": 0.41912441080172186,
+                "observed_fraction": 0.16666666666666666
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "loso/fusion": {
+            "point_metrics": {
+              "point_n": 795274,
+              "positive_fraction": 0.00976770270372224,
+              "ap": 0.20357748952080576,
+              "roc_auc": 0.956045357778426,
+              "brier": 0.008368060037023683,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 769817,
+                "mean_score": 0.0038651471064848697,
+                "observed_fraction": 0.00387494690296525
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 15086,
+                "mean_score": 0.14254560719951104,
+                "observed_fraction": 0.1376773167174864
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 7389,
+                "mean_score": 0.24636415518104218,
+                "observed_fraction": 0.24685343077547706
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 2974,
+                "mean_score": 0.3250870066939486,
+                "observed_fraction": 0.2962340282447882
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 8,
+                "mean_score": 0.4198941684910974,
+                "observed_fraction": 0.375
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "temporal/context": {
+            "point_metrics": {
+              "point_n": 168033,
+              "positive_fraction": 0.009480280659156237,
+              "ap": 0.1865412643141407,
+              "roc_auc": 0.9213002376263734,
+              "brier": 0.008426767130979153,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 164226,
+                "mean_score": 0.0044500760009235215,
+                "observed_fraction": 0.005127080973780035
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 1905,
+                "mean_score": 0.14195972924572606,
+                "observed_fraction": 0.13543307086614173
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 900,
+                "mean_score": 0.24487528001209455,
+                "observed_fraction": 0.2011111111111111
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 532,
+                "mean_score": 0.34440432569073154,
+                "observed_fraction": 0.2894736842105263
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 287,
+                "mean_score": 0.4457504423005087,
+                "observed_fraction": 0.313588850174216
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 124,
+                "mean_score": 0.5394667072635075,
+                "observed_fraction": 0.4032258064516129
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 38,
+                "mean_score": 0.6386656038157044,
+                "observed_fraction": 0.42105263157894735
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 15,
+                "mean_score": 0.7503175722805877,
+                "observed_fraction": 0.13333333333333333
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 6,
+                "mean_score": 0.875517067867142,
+                "observed_fraction": 0.0
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "temporal/fusion": {
+            "point_metrics": {
+              "point_n": 168033,
+              "positive_fraction": 0.009480280659156237,
+              "ap": 0.17879470237158301,
+              "roc_auc": 0.9289630337937561,
+              "brier": 0.008481406546429088,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 164410,
+                "mean_score": 0.0044279627037189144,
+                "observed_fraction": 0.005297731281552217
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 1856,
+                "mean_score": 0.14141471282892074,
+                "observed_fraction": 0.1476293103448276
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 815,
+                "mean_score": 0.244393875490941,
+                "observed_fraction": 0.18773006134969325
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 477,
+                "mean_score": 0.346141559699024,
+                "observed_fraction": 0.3018867924528302
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 281,
+                "mean_score": 0.4434545760860715,
+                "observed_fraction": 0.3202846975088968
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 131,
+                "mean_score": 0.5415425884489621,
+                "observed_fraction": 0.35877862595419846
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 49,
+                "mean_score": 0.631632717036817,
+                "observed_fraction": 0.24489795918367346
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 11,
+                "mean_score": 0.7427574945174733,
+                "observed_fraction": 0.18181818181818182
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 3,
+                "mean_score": 0.8742696508897213,
+                "observed_fraction": 0.0
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          }
+        },
+        "detection": {
+          "loso/all": {
+            "point_metrics": {
+              "point_n": 21921,
+              "positive_fraction": 0.04069157428949409,
+              "ap": 0.030480532863247572,
+              "roc_auc": 0.3909928089908725,
+              "brier": 0.03965661336814705,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 21921,
+                "mean_score": 0.02141157830413711,
+                "observed_fraction": 0.04069157428949409
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "loso/ecg": {
+            "point_metrics": {
+              "point_n": 23495,
+              "positive_fraction": 0.042349436050223455,
+              "ap": 0.03633144441768866,
+              "roc_auc": 0.4407241541038526,
+              "brier": 0.04113577382633258,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 23495,
+                "mean_score": 0.019817173684403968,
+                "observed_fraction": 0.042349436050223455
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "loso/ppg": {
+            "point_metrics": {
+              "point_n": 25498,
+              "positive_fraction": 0.04267001333437917,
+              "ap": 0.037447915251696856,
+              "roc_auc": 0.46337316176470583,
+              "brier": 0.04148282446790669,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 25498,
+                "mean_score": 0.020217512341672145,
+                "observed_fraction": 0.04267001333437917
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "loso/wrist": {
+            "point_metrics": {
+              "point_n": 25498,
+              "positive_fraction": 0.04267001333437917,
+              "ap": 0.03761307836480803,
+              "roc_auc": 0.46736111947851655,
+              "brier": 0.04145891118910641,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 25498,
+                "mean_score": 0.020216562556258134,
+                "observed_fraction": 0.04267001333437917
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "loso/wrist_eda_temp": {
+            "point_metrics": {
+              "point_n": 25477,
+              "positive_fraction": 0.04270518506888566,
+              "ap": 0.03509906744780721,
+              "roc_auc": 0.4284362390349555,
+              "brier": 0.041497719378689873,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 25477,
+                "mean_score": 0.020433461277859475,
+                "observed_fraction": 0.04270518506888566
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "temporal/all": {
+            "point_metrics": {
+              "point_n": 4490,
+              "positive_fraction": 0.061247216035634745,
+              "ap": 0.0506768130923662,
+              "roc_auc": 0.3806526474711528,
+              "brier": 0.060199609291079,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 4443,
+                "mean_score": 0.023752254894240793,
+                "observed_fraction": 0.06076975016880486
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 47,
+                "mean_score": 0.12661158990451182,
+                "observed_fraction": 0.10638297872340426
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "temporal/ecg": {
+            "point_metrics": {
+              "point_n": 5172,
+              "positive_fraction": 0.057617942768754836,
+              "ap": 0.04373566402794095,
+              "roc_auc": 0.39381576809422963,
+              "brier": 0.05657351687382524,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 5172,
+                "mean_score": 0.024939440230441354,
+                "observed_fraction": 0.057617942768754836
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "temporal/ppg": {
+            "point_metrics": {
+              "point_n": 5005,
+              "positive_fraction": 0.05614385614385614,
+              "ap": 0.04555036789444138,
+              "roc_auc": 0.42751671633605637,
+              "brier": 0.05512150283510646,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 5005,
+                "mean_score": 0.02176988336444135,
+                "observed_fraction": 0.05614385614385614
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "temporal/wrist": {
+            "point_metrics": {
+              "point_n": 5005,
+              "positive_fraction": 0.05614385614385614,
+              "ap": 0.04532441759423869,
+              "roc_auc": 0.41989944585232974,
+              "brier": 0.055156617052118995,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 4997,
+                "mean_score": 0.021382141309334402,
+                "observed_fraction": 0.056233740244146485
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 8,
+                "mean_score": 0.10947899893288061,
+                "observed_fraction": 0.0
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          },
+          "temporal/wrist_eda_temp": {
+            "point_metrics": {
+              "point_n": 5002,
+              "positive_fraction": 0.05617752898840464,
+              "ap": 0.04420989889297005,
+              "roc_auc": 0.38477696006561135,
+              "brier": 0.05548605935719655,
+              "single_class": false
+            },
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 4931,
+                "mean_score": 0.020672752053075207,
+                "observed_fraction": 0.05617521800851754
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 70,
+                "mean_score": 0.1227554912294456,
+                "observed_fraction": 0.05714285714285714
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.30000000000000004,
+                "n": 1,
+                "mean_score": 0.2106398641579099,
+                "observed_fraction": 0.0
+              },
+              {
+                "lower": 0.30000000000000004,
+                "upper": 0.4,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.6000000000000001,
+                "upper": 0.7000000000000001,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.7000000000000001,
+                "upper": 0.8,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 0,
+                "mean_score": null,
+                "observed_fraction": null
+              }
+            ],
+            "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+          }
+        }
+      },
+      "robustness_summary": [
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7314627740757469,
+            "95_interval": [
+              0.6079192349695163,
+              0.8373350852295905
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587818667151031,
+            "95_interval": [
+              0.48999728084202937,
+              0.6733250406369481
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357576510395545,
+            "95_interval": [
+              0.2957938114029241,
+              0.4087500145336954
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7314627740757469,
+            "95_interval": [
+              0.6079192349695163,
+              0.8373350852295905
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587818667151031,
+            "95_interval": [
+              0.48999728084202937,
+              0.6733250406369481
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357576510395545,
+            "95_interval": [
+              0.2957938114029241,
+              0.4087500145336954
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7314627740757469,
+            "95_interval": [
+              0.6079192349695163,
+              0.8373350852295905
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587818667151031,
+            "95_interval": [
+              0.48999728084202937,
+              0.6733250406369481
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357576510395545,
+            "95_interval": [
+              0.2957938114029241,
+              0.4087500145336954
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7314627740757469,
+            "95_interval": [
+              0.6079192349695163,
+              0.8373350852295905
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587818667151031,
+            "95_interval": [
+              0.48999728084202937,
+              0.6733250406369481
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357576510395545,
+            "95_interval": [
+              0.2957938114029241,
+              0.4087500145336954
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7314627740757469,
+            "95_interval": [
+              0.6079192349695163,
+              0.8373350852295905
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587818667151031,
+            "95_interval": [
+              0.48999728084202937,
+              0.6733250406369481
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357576510395545,
+            "95_interval": [
+              0.2957938114029241,
+              0.4087500145336954
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7314627740757469,
+            "95_interval": [
+              0.6079192349695163,
+              0.8373350852295905
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587818667151031,
+            "95_interval": [
+              0.48999728084202937,
+              0.6733250406369481
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357576510395545,
+            "95_interval": [
+              0.2957938114029241,
+              0.4087500145336954
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7309808916160312,
+            "95_interval": [
+              0.6075895920929648,
+              0.836571271693685
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587661685304935,
+            "95_interval": [
+              0.4897602243704246,
+              0.6733211160907957
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357419528549449,
+            "95_interval": [
+              0.2956368295568281,
+              0.40833487053146034
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7309808916160312,
+            "95_interval": [
+              0.6075895920929648,
+              0.836571271693685
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587661685304935,
+            "95_interval": [
+              0.4897602243704246,
+              0.6733211160907957
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357419528549449,
+            "95_interval": [
+              0.2956368295568281,
+              0.40833487053146034
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7309808916160312,
+            "95_interval": [
+              0.6075895920929648,
+              0.836571271693685
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.587661685304935,
+            "95_interval": [
+              0.4897602243704246,
+              0.6733211160907957
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.357419528549449,
+            "95_interval": [
+              0.2956368295568281,
+              0.40833487053146034
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7537798093004489,
+            "95_interval": [
+              0.6632528128676904,
+              0.842046315718802
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.599163193118143,
+            "95_interval": [
+              0.5220099037032191,
+              0.6705102229950506
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.365307434348363,
+            "95_interval": [
+              0.31450544218178705,
+              0.4094261386812697
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7537798093004489,
+            "95_interval": [
+              0.6632528128676904,
+              0.842046315718802
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.599163193118143,
+            "95_interval": [
+              0.5220099037032191,
+              0.6705102229950506
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.365307434348363,
+            "95_interval": [
+              0.31450544218178705,
+              0.4094261386812697
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7530044233313195,
+            "95_interval": [
+              0.6622952828495643,
+              0.8415843701690443
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5983878071490137,
+            "95_interval": [
+              0.5210860126037039,
+              0.6699589708787183
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.36464724580990715,
+            "95_interval": [
+              0.3138158879609794,
+              0.4087722578313021
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6544876555042229,
+            "95_interval": [
+              0.5598345614647575,
+              0.7505964476830159
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5240750638147428,
+            "95_interval": [
+              0.44945203607220435,
+              0.6025359466877603
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.3206920788929476,
+            "95_interval": [
+              0.2700144975067077,
+              0.373745461999897
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6544876555042229,
+            "95_interval": [
+              0.5598345614647575,
+              0.7505964476830159
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5240750638147428,
+            "95_interval": [
+              0.44945203607220435,
+              0.6025359466877603
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.3206920788929476,
+            "95_interval": [
+              0.2700144975067077,
+              0.373745461999897
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6537122695350935,
+            "95_interval": [
+              0.5595211210453856,
+              0.749857198696413
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5232996778456135,
+            "95_interval": [
+              0.4488896242513817,
+              0.6025281106772761
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.32003189035449175,
+            "95_interval": [
+              0.2700135367986543,
+              0.37329977333806186
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7577974645436198,
+            "95_interval": [
+              0.6600406400416331,
+              0.8427085176672432
+            ]
+          },
+          "false_alerts_per_person_day": 0.08462761839957224
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6158713917078658,
+            "95_interval": [
+              0.537229670474186,
+              0.6850056236013192
+            ]
+          },
+          "false_alerts_per_person_day": 0.0677020947196578
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37434223621664614,
+            "95_interval": [
+              0.32383512197277503,
+              0.4165201339543586
+            ]
+          },
+          "false_alerts_per_person_day": 0.04231380919978612
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7577974645436198,
+            "95_interval": [
+              0.6600406400416331,
+              0.8427085176672432
+            ]
+          },
+          "false_alerts_per_person_day": 0.08462761839957224
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6158713917078658,
+            "95_interval": [
+              0.537229670474186,
+              0.6850056236013192
+            ]
+          },
+          "false_alerts_per_person_day": 0.0677020947196578
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37434223621664614,
+            "95_interval": [
+              0.32383512197277503,
+              0.4165201339543586
+            ]
+          },
+          "false_alerts_per_person_day": 0.04231380919978612
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7577974645436198,
+            "95_interval": [
+              0.6600406400416331,
+              0.8427085176672432
+            ]
+          },
+          "false_alerts_per_person_day": 0.08462761839957224
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6158713917078658,
+            "95_interval": [
+              0.537229670474186,
+              0.6850056236013192
+            ]
+          },
+          "false_alerts_per_person_day": 0.0677020947196578
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37434223621664614,
+            "95_interval": [
+              0.32383512197277503,
+              0.4165201339543586
+            ]
+          },
+          "false_alerts_per_person_day": 0.04231380919978612
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7577974645436198,
+            "95_interval": [
+              0.6600406400416331,
+              0.8427085176672432
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6158713917078658,
+            "95_interval": [
+              0.537229670474186,
+              0.6850056236013192
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37434223621664614,
+            "95_interval": [
+              0.32383512197277503,
+              0.4165201339543586
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7577974645436198,
+            "95_interval": [
+              0.6600406400416331,
+              0.8427085176672432
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6158713917078658,
+            "95_interval": [
+              0.537229670474186,
+              0.6850056236013192
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37434223621664614,
+            "95_interval": [
+              0.32383512197277503,
+              0.4165201339543586
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7577974645436198,
+            "95_interval": [
+              0.6600406400416331,
+              0.8427085176672432
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6158713917078658,
+            "95_interval": [
+              0.537229670474186,
+              0.6850056236013192
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37434223621664614,
+            "95_interval": [
+              0.32383512197277503,
+              0.4165201339543586
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7571516168296094,
+            "95_interval": [
+              0.6595573105106391,
+              0.8418950780694692
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6154103416845501,
+            "95_interval": [
+              0.536977288070414,
+              0.6843460365201928
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37405764856472423,
+            "95_interval": [
+              0.32366311728519354,
+              0.4161143783677588
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7571516168296094,
+            "95_interval": [
+              0.6595573105106391,
+              0.8418950780694692
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6154103416845501,
+            "95_interval": [
+              0.536977288070414,
+              0.6843460365201928
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37405764856472423,
+            "95_interval": [
+              0.32366311728519354,
+              0.4161143783677588
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7571516168296094,
+            "95_interval": [
+              0.6595573105106391,
+              0.8418950780694692
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6154103416845501,
+            "95_interval": [
+              0.536977288070414,
+              0.6843460365201928
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.37405764856472423,
+            "95_interval": [
+              0.32366311728519354,
+              0.4161143783677588
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.697610357867204,
+            "95_interval": [
+              0.6005796098424998,
+              0.7858674356577668
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5657359351665775,
+            "95_interval": [
+              0.48413140119994197,
+              0.6397080193507316
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.3446052581750906,
+            "95_interval": [
+              0.294243173595084,
+              0.38853029762975694
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.697610357867204,
+            "95_interval": [
+              0.6005796098424998,
+              0.7858674356577668
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5657359351665775,
+            "95_interval": [
+              0.48413140119994197,
+              0.6397080193507316
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.3446052581750906,
+            "95_interval": [
+              0.294243173595084,
+              0.38853029762975694
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6924717642098004,
+            "95_interval": [
+              0.5928708507123237,
+              0.7822349689573442
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5618592543789237,
+            "95_interval": [
+              0.4784111023076552,
+              0.6374521017548339
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.3423638325304733,
+            "95_interval": [
+              0.29093337939782277,
+              0.38759513700456644
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 0.9,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6501805162148242,
+            "95_interval": [
+              0.5587424607015984,
+              0.7392229534633427
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 0.9,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5275632912837863,
+            "95_interval": [
+              0.4514708618980637,
+              0.601287584912615
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 0.9,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.32174350065411245,
+            "95_interval": [
+              0.27438199929903184,
+              0.36832041059067366
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 0.95,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6501805162148242,
+            "95_interval": [
+              0.5587424607015984,
+              0.7392229534633427
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 0.95,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5275632912837863,
+            "95_interval": [
+              0.4514708618980637,
+              0.601287584912615
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 0.95,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.32174350065411245,
+            "95_interval": [
+              0.27438199929903184,
+              0.36832041059067366
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 1.0,
+          "dropout": 0.0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6451134512213723,
+            "95_interval": [
+              0.5510109891492926,
+              0.7363832827640783
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 1.0,
+          "dropout": 0.1,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.5237581391600841,
+            "95_interval": [
+              0.4454405801810381,
+              0.5989182634849453
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "quality": 1.0,
+          "dropout": 0.3,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.3195020750094951,
+            "95_interval": [
+              0.2711341572322902,
+              0.36695530378497254
+            ]
+          },
+          "false_alerts_per_person_day": 0.0
+        }
+      ],
+      "clock_sensitivity_summary": [
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "ppg",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "wrist_eda_temp",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "ecg",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "temporal",
+          "model": "all",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "ppg",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "wrist_eda_temp",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "ecg",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "label_shift_minutes": -5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "label_shift_minutes": 0,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "protocol": "loso",
+          "model": "all",
+          "label_shift_minutes": 5,
+          "recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "pulse_agreement": [
+        {
+          "subject": "c1s01",
+          "paired_windows": 2104,
+          "mae_bpm": 8.217238270068043,
+          "bias_bpm": 4.1940465886522365
+        },
+        {
+          "subject": "c1s02",
+          "paired_windows": 2821,
+          "mae_bpm": 6.6123423410953555,
+          "bias_bpm": -1.840258324269922
+        },
+        {
+          "subject": "c1s03",
+          "paired_windows": 1402,
+          "mae_bpm": 13.775352567507404,
+          "bias_bpm": -1.3565916904916473
+        },
+        {
+          "subject": "c1s05",
+          "paired_windows": 2525,
+          "mae_bpm": 11.829797011354946,
+          "bias_bpm": -6.9972492101603425
+        },
+        {
+          "subject": "c2s02",
+          "paired_windows": 1152,
+          "mae_bpm": 15.668137331540553,
+          "bias_bpm": -5.315711619660853
+        },
+        {
+          "subject": "c2s04",
+          "paired_windows": 3465,
+          "mae_bpm": 5.962622004883666,
+          "bias_bpm": -1.1399728408289154
+        },
+        {
+          "subject": "c2s05",
+          "paired_windows": 3359,
+          "mae_bpm": 12.108548213770844,
+          "bias_bpm": 4.514184669429762
+        }
+      ],
+      "limitations": [
+        "No test-driven parameter selection; these analyses do not upgrade failed primary targets.",
+        "Pooled reliability bins are descriptive and mix dependent observations.",
+        "PPG/ECG rates both use heuristic peak detection; ECG is not manually adjudicated ground truth.",
+        "No external independent cohort or prospective intervention validation.",
+        "Wall-clock strata are not validated sleep stages.",
+        "Quality thresholds 0.9/0.95/1 and deterministic score dropout 0/10/30% are post-primary engineering stress tests, not a second validation dataset."
+      ]
+    }
+  },
+  "subject_comparison": [
+    {
+      "label": "#01",
+      "cgm": 1.2419767056862392,
+      "context": 1.2476402890065428,
+      "fusion": 1.2499969974349,
+      "baseline": 1.414256077450928
+    },
+    {
+      "label": "#02",
+      "cgm": 1.0786634760188865,
+      "context": 1.0802816430284934,
+      "fusion": 1.0770703918925446,
+      "baseline": 1.2545457927929604
+    },
+    {
+      "label": "#03",
+      "cgm": 0.9708169016627156,
+      "context": 0.966976097974366,
+      "fusion": 0.9695104220484864,
+      "baseline": 1.127047155416697
+    },
+    {
+      "label": "#04",
+      "cgm": 1.0287258725845074,
+      "context": 1.0135390516018803,
+      "fusion": 1.0154609312097187,
+      "baseline": 1.1999463147686342
+    },
+    {
+      "label": "#05",
+      "cgm": 0.9730666367289494,
+      "context": 0.9732629308099868,
+      "fusion": 0.9739786389064796,
+      "baseline": 1.0406751097947091
+    },
+    {
+      "label": "#06",
+      "cgm": 1.051026753855946,
+      "context": 1.0691481207545446,
+      "fusion": 1.06792570270096,
+      "baseline": 1.178999831998656
+    },
+    {
+      "label": "#07",
+      "cgm": 1.256324033967152,
+      "context": 1.2589185110988594,
+      "fusion": 1.2657944625818742,
+      "baseline": 1.495238011992378
+    },
+    {
+      "label": "#08",
+      "cgm": 0.9411230446996532,
+      "context": 0.9294136632518674,
+      "fusion": 0.9249839356486816,
+      "baseline": 0.994299769142808
+    },
+    {
+      "label": "#09",
+      "cgm": 0.9684611550010024,
+      "context": 0.9583991861003288,
+      "fusion": 0.9640299875427942,
+      "baseline": 1.1190521891015182
+    },
+    {
+      "label": "#10",
+      "cgm": 0.8382895443118927,
+      "context": 0.8381862984137654,
+      "fusion": 0.8417843434925302,
+      "baseline": 0.8927674806315582
+    },
+    {
+      "label": "#11",
+      "cgm": 0.8089667651273014,
+      "context": 0.7961016243348068,
+      "fusion": 0.8198553081668538,
+      "baseline": 0.9100987797791982
+    },
+    {
+      "label": "#12",
+      "cgm": 1.1179392639500665,
+      "context": 1.1185095868671069,
+      "fusion": 1.128348690118909,
+      "baseline": 1.2749038461538464
+    },
+    {
+      "label": "#13",
+      "cgm": 0.8035705500172614,
+      "context": 0.828603111316529,
+      "fusion": 0.8245879599119985,
+      "baseline": 0.9164204236827812
+    },
+    {
+      "label": "#14",
+      "cgm": 0.9541374813404522,
+      "context": 0.979862613916045,
+      "fusion": 0.9881919203829314,
+      "baseline": 1.0647099016086212
+    },
+    {
+      "label": "#15",
+      "cgm": 1.337582580446617,
+      "context": 1.329379316227192,
+      "fusion": 1.3316323191310564,
+      "baseline": 1.521285063226138
+    },
+    {
+      "label": "#16",
+      "cgm": 0.8127723752606795,
+      "context": 0.8178283193015153,
+      "fusion": 0.818097107110213,
+      "baseline": 0.9911721916242336
+    },
+    {
+      "label": "#17",
+      "cgm": 1.244009269869575,
+      "context": 1.238028060948952,
+      "fusion": 1.2548653873770004,
+      "baseline": 1.423946506305255
+    },
+    {
+      "label": "#18",
+      "cgm": 1.080845328597485,
+      "context": 1.072400051349599,
+      "fusion": 1.0811541405803278,
+      "baseline": 1.242671841275112
+    },
+    {
+      "label": "#19",
+      "cgm": 1.0360547854656772,
+      "context": 1.0214744931689947,
+      "fusion": 1.0165920299253983,
+      "baseline": 1.2087179192081945
+    },
+    {
+      "label": "#20",
+      "cgm": 0.9776088037938075,
+      "context": 0.9651387376606652,
+      "fusion": 0.965282087200732,
+      "baseline": 1.1483766013692127
+    }
+  ],
+  "limitations": [
+    "回顾性公开小队列研究，结果不等于临床有效性。",
+    "事件预警与当前检测分别评价；负结果完整保留。",
+    "原始数据和个体预测未上传，本地示例需自行生成。"
+  ]
+}

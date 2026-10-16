@@ -10,3 +10,17 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install -e . pytest
       - run: python -m pytest -q
+  showcase:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: showcase
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: showcase/package-lock.json
+      - run: npm ci
+      - run: npm run build
