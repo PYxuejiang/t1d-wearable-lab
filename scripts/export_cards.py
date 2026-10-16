@@ -38,7 +38,7 @@ def main():
             card('module2-'+p,['T1D / MODULE 02','传感器当前状态检测',f'PhysioCGM · 7 人 · {p.upper()} · PPG + ACC',f"事件召回：{r['event_recall']*100:.1f}%（未达目标）",f"时间覆盖：{r['coverage']*100:.1f}% / 误报：{r['false_alerts_per_person_day']:.2f} 次/人日",'验证约束下工作点失效；不支持报警应用']+tail)
     manifest={'run_id':data['run_id'],'hash_format':'JSON canonical sorted compact; SVG UTF-8 with LF; PNG binary',
               'source_sha256':hashlib.sha256(json.dumps(data,sort_keys=True,separators=(',',':')).encode()).hexdigest(),
-              'cards':{p.name:hashlib.sha256(p.read_text(encoding='utf-8').encode() if p.suffix=='.svg' else p.read_bytes()).hexdigest() for p in sorted(dest.iterdir()) if p.suffix in ['.png','.svg']}}
+              'cards':{p.name:hashlib.sha256(p.read_text(encoding='utf-8').encode() if p.suffix=='.svg' else p.read_bytes()).hexdigest() for p in sorted(dest.iterdir()) if p.suffix in ['.png','.svg'] and p.stem in ['overview','module1-loso','module1-temporal','module2-loso','module2-temporal']}}
     (dest/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
     print('Exported traceable PNG/SVG cards',data['run_id'])
 

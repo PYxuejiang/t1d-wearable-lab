@@ -1,0 +1,1162 @@
+{
+  "stage": "COHORT_SW_PERSONAL1",
+  "engineering_status": "passed",
+  "evaluation_status": "independent_rank_metrics_confusions_and_split_checks_passed",
+  "effect_status": "inconclusive",
+  "scope": "Exploratory personalized source-row holdout, temporal order conditional on source",
+  "groups_verified": 33,
+  "subject_count": 11,
+  "maximum_metric_difference": 1.1102230246251565e-16,
+  "summary": {
+    "clock": {
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.5114970361604569,
+        "95_interval": [
+          0.3208929011347497,
+          0.7132011297845303
+        ]
+      },
+      "ap": {
+        "n": 8,
+        "mean": 0.09801994265943918,
+        "95_interval": [
+          0.03339192160699712,
+          0.17778928041123002
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": 0.17430555555555555,
+        "95_interval": [
+          0.0,
+          0.42430555555555555
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": 0.9113579692279731,
+        "95_interval": [
+          0.870339574610049,
+          0.9537756897123608
+        ]
+      },
+      "coverage": {
+        "n": 11,
+        "mean": 1.0,
+        "95_interval": [
+          1.0,
+          1.0
+        ]
+      },
+      "positive_fraction": {
+        "n": 11,
+        "mean": 0.02634212739273998,
+        "95_interval": [
+          0.010580371352945265,
+          0.04916174966044372
+        ]
+      }
+    },
+    "wearable": {
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.5330417987224285,
+        "95_interval": [
+          0.3474251713926696,
+          0.7235688323648483
+        ]
+      },
+      "ap": {
+        "n": 8,
+        "mean": 0.15179566165999747,
+        "95_interval": [
+          0.03748241860687509,
+          0.29552520070157795
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": 0.2479166666666667,
+        "95_interval": [
+          0.04375,
+          0.5041666666666667
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": 0.8848108247070765,
+        "95_interval": [
+          0.814902872611072,
+          0.9517807721394821
+        ]
+      },
+      "coverage": {
+        "n": 11,
+        "mean": 1.0,
+        "95_interval": [
+          1.0,
+          1.0
+        ]
+      },
+      "positive_fraction": {
+        "n": 11,
+        "mean": 0.02634212739273998,
+        "95_interval": [
+          0.010580371352945265,
+          0.04916174966044372
+        ]
+      }
+    },
+    "wearable_time": {
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.6131225612888407,
+        "95_interval": [
+          0.417264472397444,
+          0.7783136853566605
+        ]
+      },
+      "ap": {
+        "n": 8,
+        "mean": 0.18870115399698992,
+        "95_interval": [
+          0.030866817391851698,
+          0.34735488336683434
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": 0.21160714285714285,
+        "95_interval": [
+          0.030357142857142857,
+          0.45446428571428565
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": 0.9230861910697861,
+        "95_interval": [
+          0.8765715217356136,
+          0.9660743139998946
+        ]
+      },
+      "coverage": {
+        "n": 11,
+        "mean": 1.0,
+        "95_interval": [
+          1.0,
+          1.0
+        ]
+      },
+      "positive_fraction": {
+        "n": 11,
+        "mean": 0.02634212739273998,
+        "95_interval": [
+          0.010580371352945265,
+          0.04916174966044372
+        ]
+      }
+    }
+  },
+  "paired_gain": {
+    "clock__to__wearable": {
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.021544762561971582,
+        "95_interval": [
+          -0.2187617297413714,
+          0.25520125382759207
+        ]
+      },
+      "ap": {
+        "n": 8,
+        "mean": 0.05377571900055829,
+        "95_interval": [
+          -0.02767915041208777,
+          0.1459715404217459
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": 0.0736111111111111,
+        "95_interval": [
+          -0.09027777777777778,
+          0.26875
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": -0.02654714452089647,
+        "95_interval": [
+          -0.11241577113094653,
+          0.05800827969371771
+        ]
+      }
+    },
+    "clock__to__wearable_time": {
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.10162552512838385,
+        "95_interval": [
+          -0.09621876044270683,
+          0.2951203685725865
+        ]
+      },
+      "ap": {
+        "n": 8,
+        "mean": 0.09068121133755074,
+        "95_interval": [
+          0.002424793034793528,
+          0.1844866456762589
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": 0.0373015873015873,
+        "95_interval": [
+          -0.09255952380952379,
+          0.1875
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": 0.011728221841813224,
+        "95_interval": [
+          -0.050744846304426064,
+          0.07353430417262903
+        ]
+      }
+    },
+    "wearable__to__wearable_time": {
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.08008076256641225,
+        "95_interval": [
+          -0.04163786619792548,
+          0.21915837352678558
+        ]
+      },
+      "ap": {
+        "n": 8,
+        "mean": 0.03690549233699246,
+        "95_interval": [
+          -0.010877609184354504,
+          0.10610661311074553
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": -0.036309523809523805,
+        "95_interval": [
+          -0.2062723214285714,
+          0.08067708333333322
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": 0.038275366362709694,
+        "95_interval": [
+          -0.012677698664362077,
+          0.090018402663351
+        ]
+      }
+    }
+  },
+  "metrics_by_subject": [
+    {
+      "point_n": 1359,
+      "positive_fraction": 0.13245033112582782,
+      "ap": 0.20289859329737844,
+      "roc_auc": 0.6030958439355386,
+      "brier": 0.2332596405449206,
+      "single_class": false,
+      "subject": "01",
+      "feature_set": "clock",
+      "threshold": 0.7104742167298629,
+      "selected_learner": "hgb",
+      "reference_n": 1359,
+      "coverage": 1.0,
+      "tp": 71,
+      "fn": 109,
+      "fp": 169,
+      "tn": 1010,
+      "sensitivity": 0.39444444444444443,
+      "specificity": 0.8566581849024597,
+      "precision": 0.29583333333333334
+    },
+    {
+      "point_n": 1359,
+      "positive_fraction": 0.13245033112582782,
+      "ap": 0.08168923007174819,
+      "roc_auc": 0.2312034680991424,
+      "brier": 0.2910300292263328,
+      "single_class": false,
+      "subject": "01",
+      "feature_set": "wearable",
+      "threshold": 0.6335685503292485,
+      "selected_learner": "logistic",
+      "reference_n": 1359,
+      "coverage": 1.0,
+      "tp": 6,
+      "fn": 174,
+      "fp": 188,
+      "tn": 991,
+      "sensitivity": 0.03333333333333333,
+      "specificity": 0.8405428329092451,
+      "precision": 0.030927835051546393
+    },
+    {
+      "point_n": 1359,
+      "positive_fraction": 0.13245033112582782,
+      "ap": 0.35286837354256556,
+      "roc_auc": 0.7463740458015267,
+      "brier": 0.13615698922665528,
+      "single_class": false,
+      "subject": "01",
+      "feature_set": "wearable_time",
+      "threshold": 0.6666910743185397,
+      "selected_learner": "random_forest",
+      "reference_n": 1359,
+      "coverage": 1.0,
+      "tp": 18,
+      "fn": 162,
+      "fp": 26,
+      "tn": 1153,
+      "sensitivity": 0.1,
+      "specificity": 0.9779474130619169,
+      "precision": 0.4090909090909091
+    },
+    {
+      "point_n": 2692,
+      "positive_fraction": 0.022288261515601784,
+      "ap": 0.02162006885438693,
+      "roc_auc": 0.30440729483282675,
+      "brier": 0.24914891643841594,
+      "single_class": false,
+      "subject": "02",
+      "feature_set": "clock",
+      "threshold": 0.6790501956734342,
+      "selected_learner": "logistic",
+      "reference_n": 2692,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 60,
+      "fp": 480,
+      "tn": 2152,
+      "sensitivity": 0.0,
+      "specificity": 0.817629179331307,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2692,
+      "positive_fraction": 0.022288261515601784,
+      "ap": 0.012112436497549221,
+      "roc_auc": 0.09206560283687945,
+      "brier": 0.30475379283969506,
+      "single_class": false,
+      "subject": "02",
+      "feature_set": "wearable",
+      "threshold": 0.8969970266207984,
+      "selected_learner": "logistic",
+      "reference_n": 2692,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 60,
+      "fp": 0,
+      "tn": 2632,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2692,
+      "positive_fraction": 0.022288261515601784,
+      "ap": 0.012155322197445173,
+      "roc_auc": 0.09713779128672745,
+      "brier": 0.290356583736386,
+      "single_class": false,
+      "subject": "02",
+      "feature_set": "wearable_time",
+      "threshold": 0.8912652469380227,
+      "selected_learner": "logistic",
+      "reference_n": 2692,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 60,
+      "fp": 0,
+      "tn": 2632,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2518,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.22315807895585915,
+      "single_class": true,
+      "subject": "03",
+      "feature_set": "clock",
+      "threshold": 1.001,
+      "selected_learner": "logistic",
+      "reference_n": 2518,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2518,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2518,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.10895834326173397,
+      "single_class": true,
+      "subject": "03",
+      "feature_set": "wearable",
+      "threshold": 1.001,
+      "selected_learner": "logistic",
+      "reference_n": 2518,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2518,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2518,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.11458844155555746,
+      "single_class": true,
+      "subject": "03",
+      "feature_set": "wearable_time",
+      "threshold": 1.001,
+      "selected_learner": "logistic",
+      "reference_n": 2518,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2518,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2743,
+      "positive_fraction": 0.025519504192489974,
+      "ap": 0.01811665175472841,
+      "roc_auc": 0.19221848110737,
+      "brier": 0.2501158871483904,
+      "single_class": false,
+      "subject": "04",
+      "feature_set": "clock",
+      "threshold": 0.5956144027376545,
+      "selected_learner": "logistic",
+      "reference_n": 2743,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 70,
+      "fp": 480,
+      "tn": 2193,
+      "sensitivity": 0.0,
+      "specificity": 0.8204264870931538,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2743,
+      "positive_fraction": 0.025519504192489974,
+      "ap": 0.07168622940687139,
+      "roc_auc": 0.5755117310672866,
+      "brier": 0.06796683689272998,
+      "single_class": false,
+      "subject": "04",
+      "feature_set": "wearable",
+      "threshold": 0.8487247097433495,
+      "selected_learner": "random_forest",
+      "reference_n": 2743,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 70,
+      "fp": 0,
+      "tn": 2673,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2743,
+      "positive_fraction": 0.025519504192489974,
+      "ap": 0.028969697372737933,
+      "roc_auc": 0.38759553203997654,
+      "brier": 0.22297105642407397,
+      "single_class": false,
+      "subject": "04",
+      "feature_set": "wearable_time",
+      "threshold": 0.8386911461740303,
+      "selected_learner": "logistic",
+      "reference_n": 2743,
+      "coverage": 1.0,
+      "tp": 10,
+      "fn": 60,
+      "fp": 189,
+      "tn": 2484,
+      "sensitivity": 0.14285714285714285,
+      "specificity": 0.9292929292929293,
+      "precision": 0.05025125628140704
+    },
+    {
+      "point_n": 2696,
+      "positive_fraction": 0.01298219584569733,
+      "ap": 0.014982876712328766,
+      "roc_auc": 0.1512589252160842,
+      "brier": 0.25625801359236017,
+      "single_class": false,
+      "subject": "07",
+      "feature_set": "clock",
+      "threshold": 0.6307020276077732,
+      "selected_learner": "logistic",
+      "reference_n": 2696,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 35,
+      "fp": 396,
+      "tn": 2265,
+      "sensitivity": 0.0,
+      "specificity": 0.8511837655016911,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2696,
+      "positive_fraction": 0.01298219584569733,
+      "ap": 0.01952278226434663,
+      "roc_auc": 0.6167606163096581,
+      "brier": 0.0523202631842827,
+      "single_class": false,
+      "subject": "07",
+      "feature_set": "wearable",
+      "threshold": 0.43064120019074403,
+      "selected_learner": "random_forest",
+      "reference_n": 2696,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 35,
+      "fp": 216,
+      "tn": 2445,
+      "sensitivity": 0.0,
+      "specificity": 0.9188275084554679,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2696,
+      "positive_fraction": 0.01298219584569733,
+      "ap": 0.029737235340306895,
+      "roc_auc": 0.7619208675578462,
+      "brier": 0.047395958700035414,
+      "single_class": false,
+      "subject": "07",
+      "feature_set": "wearable_time",
+      "threshold": 0.5678628273690557,
+      "selected_learner": "hgb",
+      "reference_n": 2696,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 35,
+      "fp": 128,
+      "tn": 2533,
+      "sensitivity": 0.0,
+      "specificity": 0.9518977827884254,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2575,
+      "positive_fraction": 0.015533980582524271,
+      "ap": 0.3333333333333333,
+      "roc_auc": 0.9842209072978304,
+      "brier": 0.22976211545158354,
+      "single_class": false,
+      "subject": "08",
+      "feature_set": "clock",
+      "threshold": 0.8386184200723416,
+      "selected_learner": "logistic",
+      "reference_n": 2575,
+      "coverage": 1.0,
+      "tp": 40,
+      "fn": 0,
+      "fp": 80,
+      "tn": 2455,
+      "sensitivity": 1.0,
+      "specificity": 0.9684418145956607,
+      "precision": 0.3333333333333333
+    },
+    {
+      "point_n": 2575,
+      "positive_fraction": 0.015533980582524271,
+      "ap": 0.5820885251160076,
+      "roc_auc": 0.991819526627219,
+      "brier": 0.026403284937141655,
+      "single_class": false,
+      "subject": "08",
+      "feature_set": "wearable",
+      "threshold": 0.01798948698825051,
+      "selected_learner": "hgb",
+      "reference_n": 2575,
+      "coverage": 1.0,
+      "tp": 40,
+      "fn": 0,
+      "fp": 504,
+      "tn": 2031,
+      "sensitivity": 1.0,
+      "specificity": 0.8011834319526627,
+      "precision": 0.07352941176470588
+    },
+    {
+      "point_n": 2575,
+      "positive_fraction": 0.015533980582524271,
+      "ap": 0.6384201914276583,
+      "roc_auc": 0.9915976331360947,
+      "brier": 0.033512061706202335,
+      "single_class": false,
+      "subject": "08",
+      "feature_set": "wearable_time",
+      "threshold": 0.7452076443640131,
+      "selected_learner": "hgb",
+      "reference_n": 2575,
+      "coverage": 1.0,
+      "tp": 38,
+      "fn": 2,
+      "fp": 66,
+      "tn": 2469,
+      "sensitivity": 0.95,
+      "specificity": 0.9739644970414201,
+      "precision": 0.36538461538461536
+    },
+    {
+      "point_n": 2687,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.2460179949485796,
+      "single_class": true,
+      "subject": "10",
+      "feature_set": "clock",
+      "threshold": 1.001,
+      "selected_learner": "logistic",
+      "reference_n": 2687,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2687,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2687,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.13484790316987863,
+      "single_class": true,
+      "subject": "10",
+      "feature_set": "wearable",
+      "threshold": 1.001,
+      "selected_learner": "logistic",
+      "reference_n": 2687,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2687,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2687,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.13565193251415092,
+      "single_class": true,
+      "subject": "10",
+      "feature_set": "wearable_time",
+      "threshold": 1.001,
+      "selected_learner": "logistic",
+      "reference_n": 2687,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2687,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null
+    },
+    {
+      "point_n": 2721,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.23489611316570036,
+      "single_class": true,
+      "subject": "13",
+      "feature_set": "clock",
+      "threshold": 0.7154658145471354,
+      "selected_learner": "logistic",
+      "reference_n": 2721,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 120,
+      "tn": 2601,
+      "sensitivity": null,
+      "specificity": 0.9558985667034179,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2721,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.22861198307289915,
+      "single_class": true,
+      "subject": "13",
+      "feature_set": "wearable",
+      "threshold": 0.6140574268576824,
+      "selected_learner": "logistic",
+      "reference_n": 2721,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 931,
+      "tn": 1790,
+      "sensitivity": null,
+      "specificity": 0.6578463800073502,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2721,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.18621597291967534,
+      "single_class": true,
+      "subject": "13",
+      "feature_set": "wearable_time",
+      "threshold": 0.5916394561734795,
+      "selected_learner": "logistic",
+      "reference_n": 2721,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 0,
+      "fp": 578,
+      "tn": 2143,
+      "sensitivity": null,
+      "specificity": 0.7875780962881294,
+      "precision": 0.0
+    },
+    {
+      "point_n": 1634,
+      "positive_fraction": 0.030599755201958383,
+      "ap": 0.03422419705775771,
+      "roc_auc": 0.33223484848484847,
+      "brier": 0.20492991657157308,
+      "single_class": false,
+      "subject": "14",
+      "feature_set": "clock",
+      "threshold": 0.866128377058999,
+      "selected_learner": "hgb",
+      "reference_n": 1634,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 50,
+      "fp": 60,
+      "tn": 1524,
+      "sensitivity": 0.0,
+      "specificity": 0.9621212121212122,
+      "precision": 0.0
+    },
+    {
+      "point_n": 1634,
+      "positive_fraction": 0.030599755201958383,
+      "ap": 0.06882841885542057,
+      "roc_auc": 0.7949873737373738,
+      "brier": 0.15388342340789235,
+      "single_class": false,
+      "subject": "14",
+      "feature_set": "wearable",
+      "threshold": 0.43428117429973145,
+      "selected_learner": "random_forest",
+      "reference_n": 1634,
+      "coverage": 1.0,
+      "tp": 30,
+      "fn": 20,
+      "fp": 385,
+      "tn": 1199,
+      "sensitivity": 0.6,
+      "specificity": 0.7569444444444444,
+      "precision": 0.07228915662650602
+    },
+    {
+      "point_n": 1634,
+      "positive_fraction": 0.030599755201958383,
+      "ap": 0.052450181274866045,
+      "roc_auc": 0.7224494949494951,
+      "brier": 0.10556636827604086,
+      "single_class": false,
+      "subject": "14",
+      "feature_set": "wearable_time",
+      "threshold": 0.41607846354937533,
+      "selected_learner": "random_forest",
+      "reference_n": 1634,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 50,
+      "fp": 228,
+      "tn": 1356,
+      "sensitivity": 0.0,
+      "specificity": 0.8560606060606061,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2347,
+      "positive_fraction": 0.014912654452492544,
+      "ap": 0.06292536483214449,
+      "roc_auc": 0.8219537815126051,
+      "brier": 0.15338848846355577,
+      "single_class": false,
+      "subject": "15",
+      "feature_set": "clock",
+      "threshold": 0.6796166940619244,
+      "selected_learner": "random_forest",
+      "reference_n": 2347,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 35,
+      "fp": 352,
+      "tn": 1960,
+      "sensitivity": 0.0,
+      "specificity": 0.8477508650519031,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2347,
+      "positive_fraction": 0.014912654452492544,
+      "ap": 0.016977687895248224,
+      "roc_auc": 0.32619871478002965,
+      "brier": 0.0418665368522781,
+      "single_class": false,
+      "subject": "15",
+      "feature_set": "wearable",
+      "threshold": 0.09726544839138557,
+      "selected_learner": "hgb",
+      "reference_n": 2347,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 35,
+      "fp": 451,
+      "tn": 1861,
+      "sensitivity": 0.0,
+      "specificity": 0.8049307958477508,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2347,
+      "positive_fraction": 0.014912654452492544,
+      "ap": 0.018497098863745436,
+      "roc_auc": 0.43712926347009384,
+      "brier": 0.051088777772130646,
+      "single_class": false,
+      "subject": "15",
+      "feature_set": "wearable_time",
+      "threshold": 0.14210334111674686,
+      "selected_learner": "hgb",
+      "reference_n": 2347,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 35,
+      "fp": 370,
+      "tn": 1942,
+      "sensitivity": 0.0,
+      "specificity": 0.8399653979238755,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2255,
+      "positive_fraction": 0.03547671840354767,
+      "ap": 0.09605845543345544,
+      "roc_auc": 0.7025862068965517,
+      "brier": 0.2717643004792403,
+      "single_class": false,
+      "subject": "17",
+      "feature_set": "clock",
+      "threshold": 0.7638846273779487,
+      "selected_learner": "logistic",
+      "reference_n": 2255,
+      "coverage": 1.0,
+      "tp": 0,
+      "fn": 80,
+      "fp": 120,
+      "tn": 2055,
+      "sensitivity": 0.0,
+      "specificity": 0.9448275862068966,
+      "precision": 0.0
+    },
+    {
+      "point_n": 2255,
+      "positive_fraction": 0.03547671840354767,
+      "ap": 0.3614599831727879,
+      "roc_auc": 0.635787356321839,
+      "brier": 0.16033259015163273,
+      "single_class": false,
+      "subject": "17",
+      "feature_set": "wearable",
+      "threshold": 0.8790008805512807,
+      "selected_learner": "logistic",
+      "reference_n": 2255,
+      "coverage": 1.0,
+      "tp": 28,
+      "fn": 52,
+      "fp": 103,
+      "tn": 2072,
+      "sensitivity": 0.35,
+      "specificity": 0.9526436781609195,
+      "precision": 0.21374045801526717
+    },
+    {
+      "point_n": 2255,
+      "positive_fraction": 0.03547671840354767,
+      "ap": 0.376511131956594,
+      "roc_auc": 0.7607758620689655,
+      "brier": 0.13449685054615854,
+      "single_class": false,
+      "subject": "17",
+      "feature_set": "wearable_time",
+      "threshold": 0.5506385277227186,
+      "selected_learner": "logistic",
+      "reference_n": 2255,
+      "coverage": 1.0,
+      "tp": 40,
+      "fn": 40,
+      "fp": 354,
+      "tn": 1821,
+      "sensitivity": 0.5,
+      "specificity": 0.8372413793103448,
+      "precision": 0.10152284263959391
+    }
+  ],
+  "audit": [
+    {
+      "subject": "01",
+      "source_rows": 13463,
+      "unknown_reference_rows": 1355,
+      "known_positive_fraction": 0.11983812355467459,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 1.0
+    },
+    {
+      "subject": "02",
+      "source_rows": 14079,
+      "unknown_reference_rows": 181,
+      "known_positive_fraction": 0.11239027198158008,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 0.9958093614603309
+    },
+    {
+      "subject": "03",
+      "source_rows": 14731,
+      "unknown_reference_rows": 449,
+      "known_positive_fraction": 0.005251365354992298,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 1.0
+    },
+    {
+      "subject": "04",
+      "source_rows": 14312,
+      "unknown_reference_rows": 173,
+      "known_positive_fraction": 0.026522384892849565,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 0.9988820570150923
+    },
+    {
+      "subject": "07",
+      "source_rows": 14077,
+      "unknown_reference_rows": 327,
+      "known_positive_fraction": 0.03636363636363636,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 0.9904098884705548
+    },
+    {
+      "subject": "08",
+      "source_rows": 13486,
+      "unknown_reference_rows": 269,
+      "known_positive_fraction": 0.01883937353408489,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 1.0
+    },
+    {
+      "subject": "10",
+      "source_rows": 14467,
+      "unknown_reference_rows": 316,
+      "known_positive_fraction": 0.00847996608013568,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 1.0
+    },
+    {
+      "subject": "13",
+      "source_rows": 14328,
+      "unknown_reference_rows": 1519,
+      "known_positive_fraction": 0.031618393317198845,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 1.0
+    },
+    {
+      "subject": "14",
+      "source_rows": 9540,
+      "unknown_reference_rows": 367,
+      "known_positive_fraction": 0.11283113485228388,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 0.15241090146750524
+    },
+    {
+      "subject": "15",
+      "source_rows": 14936,
+      "unknown_reference_rows": 654,
+      "known_positive_fraction": 0.019255006301638428,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 1.0
+    },
+    {
+      "subject": "17",
+      "source_rows": 11874,
+      "unknown_reference_rows": 48,
+      "known_positive_fraction": 0.02748181971926264,
+      "no_wearable_rows": 0,
+      "minute_row_hour_agreement": 1.0
+    }
+  ],
+  "limitations": [
+    "Processed source CSVs lack timestamp and day identifiers; no verified chronological order, event matching, alarm/day or true time coverage claims.",
+    "Labels follow source <4 mmol/L plus duration rules and backfilled reference, unlike PhysioCGM native <70mg/dL.",
+    "Precomputed wearable feature causality is based on source code review, not full raw-data reconstruction.",
+    "No clinical or prospective efficacy conclusion; input sensors differ from PhysioCGM.",
+    "Patient-specific calibration not used; training/validation row partition is descriptive within other subjects and test subject is entirely unseen."
+  ],
+  "hour_agreement_subgroup": {
+    "clock": {
+      "roc_auc": {
+        "n": 7,
+        "mean": 0.5371059201141152,
+        "95_interval": [
+          0.3185442243033999,
+          0.7432487115218588
+        ]
+      },
+      "ap": {
+        "n": 7,
+        "mean": 0.10713362060253655,
+        "95_interval": [
+          0.03381449157360929,
+          0.19240942495948507
+        ]
+      },
+      "sensitivity": {
+        "n": 7,
+        "mean": 0.1992063492063492,
+        "95_interval": [
+          0.0,
+          0.4849206349206349
+        ]
+      },
+      "specificity": {
+        "n": 10,
+        "mean": 0.906281644938649,
+        "95_interval": [
+          0.8637884199853548,
+          0.9497069939834432
+        ]
+      }
+    },
+    "wearable": {
+      "roc_auc": {
+        "n": 7,
+        "mean": 0.49562100229172196,
+        "95_interval": [
+          0.28442692653500273,
+          0.7003668748330392
+        ]
+      },
+      "ap": {
+        "n": 7,
+        "mean": 0.16364812491779415,
+        "95_interval": [
+          0.032632717245427316,
+          0.32544736338715974
+        ]
+      },
+      "sensitivity": {
+        "n": 7,
+        "mean": 0.1976190476190476,
+        "95_interval": [
+          0.0,
+          0.48333333333333334
+        ]
+      },
+      "specificity": {
+        "n": 10,
+        "mean": 0.8975974627333396,
+        "95_interval": [
+          0.8237299824807752,
+          0.9617301375847471
+        ]
+      }
+    },
+    "wearable_time": {
+      "roc_auc": {
+        "n": 7,
+        "mean": 0.5975044279087474,
+        "95_interval": [
+          0.37676549617696004,
+          0.792024232199633
+        ]
+      },
+      "ap": {
+        "n": 7,
+        "mean": 0.20816557867157906,
+        "95_interval": [
+          0.025397761911199704,
+          0.38619243035645406
+        ]
+      },
+      "sensitivity": {
+        "n": 7,
+        "mean": 0.24183673469387754,
+        "95_interval": [
+          0.028571428571428574,
+          0.5
+        ]
+      },
+      "specificity": {
+        "n": 10,
+        "mean": 0.9297887495707041,
+        "95_interval": [
+          0.8788144192313163,
+          0.9723063275881899
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "smartwatch-personalized-v1",
+  "dataset": "Zenodo 15309060, all11 processed participant CSVs, CC BY 4.0",
+  "task": "Source-defined hypoglycemia point classification; not continuous-time alarm evaluation",
+  "protocol": "personalized_row_holdout",
+  "training_validation": "Within each participant, first60% source rows train, next20% validation, last20% test;120 row exclusion each side of boundaries. No random window splitting.",
+  "test": "Later source rows; exact timestamps absent so future chronological status remains conditional on source row order. Existing cohort used previously; exploratory.",
+  "features": ["clock", "wearable", "wearable_time"],
+  "excluded": ["cgm", "hypoglycemia", "hour", "IOB", "time_since_lastmeal", "time_since_lastmeal_ord"],
+  "learners": ["logistic", "random_forest", "hgb"],
+  "selection": "validation AP within feature set; no test-driven choice",
+  "threshold": "validation Youden J with specificity >=0.8; one-class validation disables alarm; classifier scores still reported",
+  "seed": 20261016,
+  "output_directory": "smartwatch_personalized_v1",
+  "subgroup_audit": "Report all11, and same-subject metrics among hour/minute row agreement >=0.99; this does not establish absence of whole-day gaps or create timestamps.",
+  "notes": "No event recall, alarm/day or prospective/clinical claims. Missing source labels are unknown. Physiological zero-coded HR/HRV/ox/respiration converted to NA. Personal early CGM labels used for training, unlike zero-shot unseen-person model."
+}

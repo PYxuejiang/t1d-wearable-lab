@@ -15,6 +15,8 @@ The initial **20-subject LOSO** numeric comparison finds CGM-only MAE 1.0261 mmo
 
 The separate incident-risk model reaches 47.5% subject-equal event recall at 0.53 unmatched alarms/person-day in LOSO, below the internal recall target. In the physiological module, 7/10 source clocks were eligible; the original five sensor configurations fail the event target, including zero event recall at their validation-selected test operating points. These negative results are retained while v2 explores personalized models, temporal features, and denser validation-only alarm selection. Reusing the already viewed cohort is explicitly exploratory.
 
+**Improvement ledger:** additional PhysioCGM temporal/device-summary experiments still fail the event target. A separate public smartwatch cohort now shows an exploratory personalized **AP increase from 0.098 to 0.189** versus a clock-only baseline (8 positive-test subjects; paired difference 0.091, unadjusted 95% subject-bootstrap interval 0.002–0.184). AUC improvement remains uncertain. Processed source rows lack complete timestamps, so this is point classification with source-row holdout, **not confirmed future-time or event-alarm validation**. All 11 people, single-class test partitions and unseen-subject negative results are retained. See the [improvement report](docs/IMPROVEMENT_REPORT.zh-CN.md) and the site's improvement page.
+
 ![Research showcase](docs/figures/showcase-overview.jpg)
 
 ## Try the local showcase
@@ -62,6 +64,7 @@ Download commands save data locally under ignored `data/`, verify source checksu
 
 - [BrisT1D-Open](https://data.bris.ac.uk/data/dataset/33z5jc8fa6tob21ptrugzqog08): processed device data, CC BY 4.0. [Schema](https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/README.txt).
 - [PhysioCGM](https://doi.org/10.6084/m9.figshare.28136294): raw physiological data and CGM, CC0. [Data descriptor](https://doi.org/10.1038/s41597-025-06090-6).
+- [Smartwatch hypoglycemia processed data](https://doi.org/10.5281/zenodo.15309060): 11 published participant CSVs, CC BY 4.0, [Mohamed et al., PLOS ONE 2025](https://doi.org/10.1371/journal.pone.0325956). Download with `python scripts/download_data.py --dataset smartwatch_hypo`; different sensors and endpoints are evaluated separately.
 - Own implementation: MIT. Public availability of an author's repository does not grant an unspecified code license; this project does not copy the original PhysioCGM implementation.
 
 Published cohort sizes are not treated as counts of eligible test subjects. Each input file and exclusion is audited. CGM is a reference measurement, not a clinical venous-glucose gold standard. Detection is not advance warning; sparse sampling limits event timing precision.

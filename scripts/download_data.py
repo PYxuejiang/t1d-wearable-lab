@@ -53,7 +53,7 @@ def download(item, folder):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--dataset', choices=['brist1d', 'physiocgm'], required=True)
+    parser.add_argument('--dataset', choices=['brist1d', 'physiocgm', 'smartwatch_hypo'], required=True)
     parser.add_argument('--limit', type=int)
     parser.add_argument('--workers', type=int, default=2)
     args = parser.parse_args()
@@ -66,7 +66,7 @@ def main():
         items = [{'name': Path(urlparse(url).path).name, 'url': url} for url in urls if urlparse(url).hostname == 'data.bris.ac.uk']
         if len(items) != 20:
             raise ValueError(f'Expected 20 source CSV links; found {len(items)}. Audit source changes.')
-    else:
+    elif args.dataset == 'physiocgm':
         response = requests.get(FIGSHARE, timeout=45)
         response.raise_for_status()
         metadata = response.json()
@@ -74,6 +74,14 @@ def main():
         items = [{'name': f['name'], 'url': f['download_url'], 'size': f['size'], 'md5': f.get('computed_md5')} for f in metadata['files'] if f['name'].endswith('_raw.zip')]
         if len(items) != 10:
             raise ValueError(f'Expected 10 raw subject archives, found {len(items)}')
+    else:
+        response=requests.get('https://zenodo.org/api/records/15309060',timeout=45)
+        response.raise_for_status();metadata=response.json()
+        if metadata['metadata'].get('license',{}).get('id')!='cc-by-4.0':
+            raise ValueError('Unexpected source license; re-audit source terms')
+        (folder/'source_metadata.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
+        items=[{'name':f['key'],'url':f['links']['self'],'size':f['size'],'md5':f['checksum'].removeprefix('md5:')} for f in metadata['files'] if re.fullmatch(r'\d{2}\.csv',f['key'])]
+        if len(items)!=11:raise ValueError(f'Expected 11 processed participant CSVs, found {len(items)}')
     if args.limit:
         items = items[:args.limit]
     manifest_path = folder / 'download_manifest.json'

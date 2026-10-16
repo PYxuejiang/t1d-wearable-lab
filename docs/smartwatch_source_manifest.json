@@ -1,0 +1,96 @@
+{
+  "dataset": "Zenodo15309060",
+  "license": "CC BY 4.0",
+  "doi": "https://doi.org/10.5281/zenodo.15309060",
+  "data_descriptor": "https://doi.org/10.1371/journal.pone.0325956",
+  "files": [
+    {
+      "name": "13.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/13.csv/content",
+      "size": 1648488,
+      "md5": "7bbb9444da2c929b4db346c8c0e5066b",
+      "sha256": "62a7d79684c979ceb850c9f929443ba4baf9c3ac4dc8161de3637fd1d852fffc",
+      "local": "data\\raw\\smartwatch_hypo\\13.csv"
+    },
+    {
+      "name": "02.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/02.csv/content",
+      "size": 2072942,
+      "md5": "87234c22806c0dd4a37eafacf3be2e8c",
+      "sha256": "e15e8612707df5bfc585df819ec7cb89bee45dc3ca6389e1301c803ac3fe4009",
+      "local": "data\\raw\\smartwatch_hypo\\02.csv"
+    },
+    {
+      "name": "15.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/15.csv/content",
+      "size": 2270453,
+      "md5": "cdb4e2eeabc419b0bdfe0663f28fc05b",
+      "sha256": "c8fe40e5dc1de6d64fe0c8b520e2d387a65d2df2bfaaf3b8accafa691ccf8279",
+      "local": "data\\raw\\smartwatch_hypo\\15.csv"
+    },
+    {
+      "name": "03.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/03.csv/content",
+      "size": 2225168,
+      "md5": "99cdcb55cbc2353271c17fe59c51e5a3",
+      "sha256": "18a176aa669217fc2c4c7e4b723fe6c96885233914486df0c8848d704ccaa3fa",
+      "local": "data\\raw\\smartwatch_hypo\\03.csv"
+    },
+    {
+      "name": "07.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/07.csv/content",
+      "size": 2032870,
+      "md5": "f62d74c53a03ee7b740ffeb2a90e6c2a",
+      "sha256": "025eb77777032861ba944536bca8ee1f8ffd68ad3b7166b873cd81fb0429bc83",
+      "local": "data\\raw\\smartwatch_hypo\\07.csv"
+    },
+    {
+      "name": "01.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/01.csv/content",
+      "size": 2045175,
+      "md5": "cea0c74e2da1a3baaccdf9bf5972ade4",
+      "sha256": "7eb74e27d1d831a737568ce7556433a8e2e1f32bb30395e16a54028732d1fd59",
+      "local": "data\\raw\\smartwatch_hypo\\01.csv"
+    },
+    {
+      "name": "08.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/08.csv/content",
+      "size": 1969884,
+      "md5": "da7f44435dd906b62583c3dbf82b2655",
+      "sha256": "86decf4a8585efd28b112890c5f61a1b2103fcc7d1f458ce09f6ea6d1f0b6acd",
+      "local": "data\\raw\\smartwatch_hypo\\08.csv"
+    },
+    {
+      "name": "04.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/04.csv/content",
+      "size": 2153946,
+      "md5": "c2ef94e7e09ed25ceb99d59056e86682",
+      "sha256": "dbb4e5fe75becd6b12bf06149940583d89fe04873e139779b79266569440abe4",
+      "local": "data\\raw\\smartwatch_hypo\\04.csv"
+    },
+    {
+      "name": "17.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/17.csv/content",
+      "size": 1833643,
+      "md5": "1bb7e43c16c478a810bc5e2ed19f77e8",
+      "sha256": "db07f87e9099f77b5cd9c1b99011575625e45ee2834ead474510e66e0f859ac7",
+      "local": "data\\raw\\smartwatch_hypo\\17.csv"
+    },
+    {
+      "name": "14.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/14.csv/content",
+      "size": 1453801,
+      "md5": "98fb13299cfead2cbe3f3a949976e43c",
+      "sha256": "677e9c105a829e4d5a69191d82588f492fda646aaf4fc76ea10cc2a224777504",
+      "local": "data\\raw\\smartwatch_hypo\\14.csv"
+    },
+    {
+      "name": "10.csv",
+      "url": "https://zenodo.org/api/records/15309060/files/10.csv/content",
+      "size": 2105638,
+      "md5": "4d4501157e2b6d61cb248f0454b60c7a",
+      "sha256": "3ca1b902f403cb19af4c877462d0da6fc3a7df286b491efc61a4081649ed620c",
+      "local": "data\\raw\\smartwatch_hypo\\10.csv"
+    }
+  ]
+}

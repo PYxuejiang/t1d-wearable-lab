@@ -1,0 +1,2661 @@
+{
+  "run_id": "improve-958805700b4a",
+  "scope": "Exploratory improvement ledger; separate from the original frozen v1 run",
+  "stages": {
+    "V2_1": {
+      "stage": "V2.1",
+      "engineering_status": "passed",
+      "evaluation_status": "independently_reconstructed_events_and_temporal_boundaries_passed",
+      "effect_status": "failed",
+      "scope": "Exploratory same-cohort temporal tests, not independent confirmation",
+      "groups_verified": 63,
+      "count_mismatches": 0,
+      "results": {
+        "clock_baseline": {
+          "1": {
+            "event_recall": 0.047619047619047616,
+            "event_precision": 0.3333333333333333,
+            "coverage": 0.7280071247120125,
+            "ap": 0.138332547003945,
+            "roc_auc": 0.5232168131447386,
+            "brier": 0.17130605820021153,
+            "offset_median_minutes": 10.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 2,
+            "offset_iqr_minutes": [
+              10.0,
+              10.0
+            ],
+            "false_alerts_per_person_day": 0.08446879005301786,
+            "effect_status": "failed"
+          },
+          "2": {
+            "event_recall": 0.047619047619047616,
+            "event_precision": 0.1111111111111111,
+            "coverage": 0.7280071247120125,
+            "ap": 0.138332547003945,
+            "roc_auc": 0.5232168131447386,
+            "brier": 0.17130605820021153,
+            "offset_median_minutes": 10.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 11,
+            "offset_iqr_minutes": [
+              10.0,
+              10.0
+            ],
+            "false_alerts_per_person_day": 0.4645783452915982,
+            "effect_status": "failed"
+          },
+          "4": {
+            "event_recall": 0.047619047619047616,
+            "event_precision": 0.08333333333333333,
+            "coverage": 0.7280071247120125,
+            "ap": 0.138332547003945,
+            "roc_auc": 0.5096923557427302,
+            "brier": 0.1694335416592038,
+            "offset_median_minutes": 10.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 22,
+            "offset_iqr_minutes": [
+              10.0,
+              10.0
+            ],
+            "false_alerts_per_person_day": 0.9291566905831964,
+            "effect_status": "failed"
+          }
+        },
+        "static_selected": {
+          "1": {
+            "event_recall": 0.017857142857142856,
+            "event_precision": 0.125,
+            "coverage": 0.7280071247120125,
+            "ap": 0.0919939131486304,
+            "roc_auc": 0.5630446315810246,
+            "brier": 0.1251390909087962,
+            "offset_median_minutes": 45.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 7,
+            "offset_iqr_minutes": [
+              45.0,
+              45.0
+            ],
+            "false_alerts_per_person_day": 0.2956407651855625,
+            "effect_status": "failed"
+          },
+          "2": {
+            "event_recall": 0.017857142857142856,
+            "event_precision": 0.0625,
+            "coverage": 0.7280071247120125,
+            "ap": 0.09191027321854674,
+            "roc_auc": 0.5630065971979423,
+            "brier": 0.12355473558440065,
+            "offset_median_minutes": 45.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 10,
+            "offset_iqr_minutes": [
+              45.0,
+              45.0
+            ],
+            "false_alerts_per_person_day": 0.42234395026508925,
+            "effect_status": "failed"
+          },
+          "4": {
+            "event_recall": 0.017857142857142856,
+            "event_precision": 0.0625,
+            "coverage": 0.7280071247120125,
+            "ap": 0.09191027321854674,
+            "roc_auc": 0.5630065971979423,
+            "brier": 0.12355473558440065,
+            "offset_median_minutes": 45.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 10,
+            "offset_iqr_minutes": [
+              45.0,
+              45.0
+            ],
+            "false_alerts_per_person_day": 0.42234395026508925,
+            "effect_status": "failed"
+          }
+        },
+        "temporal_selected": {
+          "1": {
+            "event_recall": 0.0,
+            "event_precision": 0.0,
+            "coverage": 0.7280071247120125,
+            "ap": 0.09487305056567316,
+            "roc_auc": 0.5455348875631133,
+            "brier": 0.10070026888133313,
+            "offset_median_minutes": null,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 0,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 1,
+            "offset_iqr_minutes": null,
+            "false_alerts_per_person_day": 0.04223439502650893,
+            "effect_status": "failed"
+          },
+          "2": {
+            "event_recall": 0.0,
+            "event_precision": 0.0,
+            "coverage": 0.7280071247120125,
+            "ap": 0.09487305056567316,
+            "roc_auc": 0.5455348875631133,
+            "brier": 0.10070026888133313,
+            "offset_median_minutes": null,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 0,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 8,
+            "offset_iqr_minutes": null,
+            "false_alerts_per_person_day": 0.3378751602120714,
+            "effect_status": "failed"
+          },
+          "4": {
+            "event_recall": 0.03571428571428571,
+            "event_precision": 0.045454545454545456,
+            "coverage": 0.7280071247120125,
+            "ap": 0.09487305056567316,
+            "roc_auc": 0.5455348875631133,
+            "brier": 0.10070026888133313,
+            "offset_median_minutes": 22.5,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 2,
+            "observation_hours": 568.2572222222223,
+            "unmatched_alarms": 26,
+            "offset_iqr_minutes": [
+              11.25,
+              33.75
+            ],
+            "false_alerts_per_person_day": 1.098094270689232,
+            "effect_status": "failed"
+          }
+        }
+      },
+      "same_opportunity_v1_wrist_multimodal": {
+        "event_recall": 0.0,
+        "event_precision": null,
+        "coverage": 0.7280071247120125,
+        "ap": 0.07332306341180121,
+        "roc_auc": 0.5353946649855245,
+        "brier": 0.05947260752501308,
+        "offset_median_minutes": null,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 0,
+        "observation_hours": 568.2572222222223,
+        "unmatched_alarms": 0,
+        "offset_iqr_minutes": null,
+        "false_alerts_per_person_day": 0.0,
+        "effect_status": "failed"
+      },
+      "limitations": [
+        "Longer history changes eligible event count from 31 to 30; v1 is recomputed on the identical opportunities.",
+        "Static model sparse hits do not establish improvement over the clock baseline.",
+        "Temporal features did not achieve primary event-detection target."
+      ]
+    },
+    "V2_2": {
+      "stage": "V2_2",
+      "engineering_status": "passed",
+      "evaluation_status": "independently_reconstructed_events_and_temporal_boundaries_passed",
+      "effect_status": "failed",
+      "scope": "Exploratory same-cohort temporal tests, not independent confirmation",
+      "groups_verified": 63,
+      "count_mismatches": 0,
+      "results": {
+        "clock_baseline": {
+          "1": {
+            "event_recall": 0.047619047619047616,
+            "event_precision": 0.3333333333333333,
+            "coverage": 0.7277334024678977,
+            "ap": 0.13618891747596323,
+            "roc_auc": 0.5226908862223224,
+            "brier": 0.17143761802786797,
+            "offset_median_minutes": 10.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 2,
+            "offset_iqr_minutes": [
+              10.0,
+              10.0
+            ],
+            "false_alerts_per_person_day": 0.08455563031378066,
+            "effect_status": "failed"
+          },
+          "2": {
+            "event_recall": 0.047619047619047616,
+            "event_precision": 0.1111111111111111,
+            "coverage": 0.7277334024678977,
+            "ap": 0.13618891747596323,
+            "roc_auc": 0.5226908862223224,
+            "brier": 0.17143761802786797,
+            "offset_median_minutes": 10.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 11,
+            "offset_iqr_minutes": [
+              10.0,
+              10.0
+            ],
+            "false_alerts_per_person_day": 0.46505596672579363,
+            "effect_status": "failed"
+          },
+          "4": {
+            "event_recall": 0.047619047619047616,
+            "event_precision": 0.08333333333333333,
+            "coverage": 0.7277334024678977,
+            "ap": 0.13618891747596323,
+            "roc_auc": 0.509151077563331,
+            "brier": 0.16956510340688405,
+            "offset_median_minutes": 10.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 1,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 22,
+            "offset_iqr_minutes": [
+              10.0,
+              10.0
+            ],
+            "false_alerts_per_person_day": 0.9301119334515873,
+            "effect_status": "failed"
+          }
+        },
+        "static_selected": {
+          "1": {
+            "event_recall": 0.03571428571428571,
+            "event_precision": 0.2222222222222222,
+            "coverage": 0.7277334024678977,
+            "ap": 0.06416295089630343,
+            "roc_auc": 0.5165221191689473,
+            "brier": 0.10563115787114899,
+            "offset_median_minutes": 25.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 2,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 7,
+            "offset_iqr_minutes": [
+              15.0,
+              35.0
+            ],
+            "false_alerts_per_person_day": 0.2959447060982323,
+            "effect_status": "failed"
+          },
+          "2": {
+            "event_recall": 0.03571428571428571,
+            "event_precision": 0.1111111111111111,
+            "coverage": 0.7277334024678977,
+            "ap": 0.06416295089630343,
+            "roc_auc": 0.5165221191689473,
+            "brier": 0.10563115787114899,
+            "offset_median_minutes": 25.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 2,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 10,
+            "offset_iqr_minutes": [
+              15.0,
+              35.0
+            ],
+            "false_alerts_per_person_day": 0.4227781515689033,
+            "effect_status": "failed"
+          },
+          "4": {
+            "event_recall": 0.0642857142857143,
+            "event_precision": 0.12169312169312169,
+            "coverage": 0.7277334024678977,
+            "ap": 0.06167046469345831,
+            "roc_auc": 0.5184476647401925,
+            "brier": 0.10524871767261224,
+            "offset_median_minutes": 5.0,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 3,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 16,
+            "offset_iqr_minutes": [
+              5.0,
+              25.0
+            ],
+            "false_alerts_per_person_day": 0.6764450425102453,
+            "effect_status": "failed"
+          }
+        },
+        "temporal_selected": {
+          "1": {
+            "event_recall": 0.0,
+            "event_precision": 0.0,
+            "coverage": 0.7277334024678977,
+            "ap": 0.09370180432557515,
+            "roc_auc": 0.5346154700243649,
+            "brier": 0.0697608317321866,
+            "offset_median_minutes": null,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 0,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 2,
+            "offset_iqr_minutes": null,
+            "false_alerts_per_person_day": 0.08455563031378066,
+            "effect_status": "failed"
+          },
+          "2": {
+            "event_recall": 0.0,
+            "event_precision": 0.0,
+            "coverage": 0.7277334024678977,
+            "ap": 0.09370180432557515,
+            "roc_auc": 0.5346154700243649,
+            "brier": 0.0697608317321866,
+            "offset_median_minutes": null,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 0,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 2,
+            "offset_iqr_minutes": null,
+            "false_alerts_per_person_day": 0.08455563031378066,
+            "effect_status": "failed"
+          },
+          "4": {
+            "event_recall": 0.05357142857142857,
+            "event_precision": 0.075,
+            "coverage": 0.7277334024678977,
+            "ap": 0.09370180432557515,
+            "roc_auc": 0.5346154700243649,
+            "brier": 0.0697608317321866,
+            "offset_median_minutes": 19.983333333333334,
+            "subjects": 7,
+            "event_subjects": 7,
+            "reference_events": 30,
+            "matched_events": 3,
+            "observation_hours": 567.6736111111111,
+            "unmatched_alarms": 19,
+            "offset_iqr_minutes": [
+              12.491666666666667,
+              32.49166666666667
+            ],
+            "false_alerts_per_person_day": 0.8032784879809163,
+            "effect_status": "failed"
+          }
+        }
+      },
+      "same_opportunity_v1_wrist_multimodal": {
+        "event_recall": 0.0,
+        "event_precision": null,
+        "coverage": 0.7277334024678977,
+        "ap": 0.07357379508835009,
+        "roc_auc": 0.5356029066787417,
+        "brier": 0.05956703164500986,
+        "offset_median_minutes": null,
+        "subjects": 7,
+        "event_subjects": 7,
+        "reference_events": 30,
+        "matched_events": 0,
+        "observation_hours": 567.6736111111111,
+        "unmatched_alarms": 0,
+        "offset_iqr_minutes": null,
+        "false_alerts_per_person_day": 0.0,
+        "effect_status": "failed"
+      },
+      "limitations": [
+        "Longer history changes eligible event count from 31 to 30; v1 is recomputed on the identical opportunities.",
+        "Static model sparse hits do not establish improvement over the clock baseline.",
+        "Temporal features did not achieve primary event-detection target."
+      ]
+    },
+    "COHORT_SW1": {
+      "stage": "COHORT_SW1",
+      "engineering_status": "passed",
+      "evaluation_status": "independent_rank_metrics_confusions_and_subject_holdout_passed",
+      "effect_status": "inconclusive",
+      "scope": "Independent cohort methodology exploration; source-defined point classification, not the v1 sensor configuration or event endpoint.",
+      "groups_verified": 33,
+      "subject_count": 11,
+      "maximum_metric_difference": 1.1102230246251565e-16,
+      "summary": {
+        "clock": {
+          "roc_auc": {
+            "n": 11,
+            "mean": 0.46342770722796284,
+            "95_interval": [
+              0.4088466716984882,
+              0.5129784336006213
+            ]
+          },
+          "ap": {
+            "n": 11,
+            "mean": 0.056907329489926314,
+            "95_interval": [
+              0.026801219103361085,
+              0.09245945151553159
+            ]
+          },
+          "sensitivity": {
+            "n": 11,
+            "mean": 0.10234777648238452,
+            "95_interval": [
+              0.03686416016761728,
+              0.16956315907187658
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": 0.871752147934168,
+            "95_interval": [
+              0.8461378402568906,
+              0.8964580444842821
+            ]
+          },
+          "coverage": {
+            "n": 11,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "positive_fraction": {
+            "n": 11,
+            "mean": 0.04717013417748521,
+            "95_interval": [
+              0.023819569656167026,
+              0.07381177105754161
+            ]
+          }
+        },
+        "wearable": {
+          "roc_auc": {
+            "n": 11,
+            "mean": 0.5124839823220744,
+            "95_interval": [
+              0.45539220282580056,
+              0.5663219714003542
+            ]
+          },
+          "ap": {
+            "n": 11,
+            "mean": 0.05856431658720136,
+            "95_interval": [
+              0.03258202812318324,
+              0.08948169245448125
+            ]
+          },
+          "sensitivity": {
+            "n": 11,
+            "mean": 0.1462171057537145,
+            "95_interval": [
+              0.06080545169567791,
+              0.24794891738547603
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": 0.8545142574744016,
+            "95_interval": [
+              0.7884116511031477,
+              0.9145512899172341
+            ]
+          },
+          "coverage": {
+            "n": 11,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "positive_fraction": {
+            "n": 11,
+            "mean": 0.04717013417748521,
+            "95_interval": [
+              0.023819569656167026,
+              0.07381177105754161
+            ]
+          }
+        },
+        "wearable_time": {
+          "roc_auc": {
+            "n": 11,
+            "mean": 0.5352176837705622,
+            "95_interval": [
+              0.478872779827283,
+              0.5853414463648334
+            ]
+          },
+          "ap": {
+            "n": 11,
+            "mean": 0.06266455250480706,
+            "95_interval": [
+              0.035069375707001985,
+              0.09678601578907593
+            ]
+          },
+          "sensitivity": {
+            "n": 11,
+            "mean": 0.22484976396766249,
+            "95_interval": [
+              0.15330342430224062,
+              0.2987660829179603
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": 0.8177279711624234,
+            "95_interval": [
+              0.7608232495939715,
+              0.8749964498000529
+            ]
+          },
+          "coverage": {
+            "n": 11,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "positive_fraction": {
+            "n": 11,
+            "mean": 0.04717013417748521,
+            "95_interval": [
+              0.023819569656167026,
+              0.07381177105754161
+            ]
+          }
+        }
+      },
+      "paired_gain": {
+        "clock__to__wearable": {
+          "roc_auc": {
+            "n": 11,
+            "mean": 0.04905627509411154,
+            "95_interval": [
+              -0.043432272996355194,
+              0.13724511900704614
+            ]
+          },
+          "ap": {
+            "n": 11,
+            "mean": 0.001656987097275058,
+            "95_interval": [
+              -0.018084207695497238,
+              0.018704507937479624
+            ]
+          },
+          "sensitivity": {
+            "n": 11,
+            "mean": 0.04386932927132998,
+            "95_interval": [
+              -0.0471984532184102,
+              0.1502170464750253
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": -0.017237890459766345,
+            "95_interval": [
+              -0.09315103811792787,
+              0.059016515799065326
+            ]
+          }
+        },
+        "clock__to__wearable_time": {
+          "roc_auc": {
+            "n": 11,
+            "mean": 0.07178997654259939,
+            "95_interval": [
+              -0.02710511826862926,
+              0.16459088988451445
+            ]
+          },
+          "ap": {
+            "n": 11,
+            "mean": 0.005757223014880728,
+            "95_interval": [
+              -0.015583625912562266,
+              0.026572790932515942
+            ]
+          },
+          "sensitivity": {
+            "n": 11,
+            "mean": 0.12250198748527798,
+            "95_interval": [
+              0.015333931765103745,
+              0.23827078358870324
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": -0.054024176771744405,
+            "95_interval": [
+              -0.11914594366599351,
+              0.014077140599858873
+            ]
+          }
+        },
+        "wearable__to__wearable_time": {
+          "roc_auc": {
+            "n": 11,
+            "mean": 0.022733701448487843,
+            "95_interval": [
+              -0.008318852844797978,
+              0.06083192494646634
+            ]
+          },
+          "ap": {
+            "n": 11,
+            "mean": 0.004100235917605669,
+            "95_interval": [
+              -0.0054768203036162305,
+              0.013671995248094286
+            ]
+          },
+          "sensitivity": {
+            "n": 11,
+            "mean": 0.078632658213948,
+            "95_interval": [
+              -0.018123351088486717,
+              0.15826142087498354
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": -0.03678628631197806,
+            "95_interval": [
+              -0.10092775568510945,
+              0.03832227594470747
+            ]
+          }
+        }
+      },
+      "metrics_by_subject": [
+        {
+          "point_n": 12108,
+          "positive_fraction": 0.11983812355467459,
+          "ap": 0.17574740395283472,
+          "roc_auc": 0.5150381803840537,
+          "brier": 0.2464272667097347,
+          "single_class": false,
+          "subject": "01",
+          "feature_set": "clock",
+          "threshold": 0.5483288829527561,
+          "selected_learner": "logistic",
+          "reference_n": 12108,
+          "coverage": 1.0,
+          "tp": 488,
+          "fn": 963,
+          "fp": 1432,
+          "tn": 9225,
+          "sensitivity": 0.3363197794624397,
+          "specificity": 0.8656282255794313,
+          "precision": 0.25416666666666665
+        },
+        {
+          "point_n": 12108,
+          "positive_fraction": 0.11983812355467459,
+          "ap": 0.15744172656679145,
+          "roc_auc": 0.5854866297357997,
+          "brier": 0.17687542435186077,
+          "single_class": false,
+          "subject": "01",
+          "feature_set": "wearable",
+          "threshold": 0.6007834117388604,
+          "selected_learner": "random_forest",
+          "reference_n": 12108,
+          "coverage": 1.0,
+          "tp": 310,
+          "fn": 1141,
+          "fp": 1729,
+          "tn": 8928,
+          "sensitivity": 0.2136457615437629,
+          "specificity": 0.8377592192924838,
+          "precision": 0.1520353114271702
+        },
+        {
+          "point_n": 12108,
+          "positive_fraction": 0.11983812355467459,
+          "ap": 0.15719572862652612,
+          "roc_auc": 0.5759746281956376,
+          "brier": 0.1800325693919832,
+          "single_class": false,
+          "subject": "01",
+          "feature_set": "wearable_time",
+          "threshold": 0.5986627544410255,
+          "selected_learner": "random_forest",
+          "reference_n": 12108,
+          "coverage": 1.0,
+          "tp": 286,
+          "fn": 1165,
+          "fp": 1456,
+          "tn": 9201,
+          "sensitivity": 0.19710544452102,
+          "specificity": 0.8633761846673548,
+          "precision": 0.16417910447761194
+        },
+        {
+          "point_n": 13898,
+          "positive_fraction": 0.11239027198158008,
+          "ap": 0.15515067591773135,
+          "roc_auc": 0.5936425466784909,
+          "brier": 0.23646169458779584,
+          "single_class": false,
+          "subject": "02",
+          "feature_set": "clock",
+          "threshold": 0.6294075025977601,
+          "selected_learner": "hgb",
+          "reference_n": 13898,
+          "coverage": 1.0,
+          "tp": 321,
+          "fn": 1241,
+          "fp": 1394,
+          "tn": 10942,
+          "sensitivity": 0.20550576184379002,
+          "specificity": 0.8869974059662775,
+          "precision": 0.18717201166180758
+        },
+        {
+          "point_n": 13898,
+          "positive_fraction": 0.11239027198158008,
+          "ap": 0.08458195944833746,
+          "roc_auc": 0.3809339351757283,
+          "brier": 0.3465472503377816,
+          "single_class": false,
+          "subject": "02",
+          "feature_set": "wearable",
+          "threshold": 0.7263699674842276,
+          "selected_learner": "logistic",
+          "reference_n": 13898,
+          "coverage": 1.0,
+          "tp": 108,
+          "fn": 1454,
+          "fp": 1889,
+          "tn": 10447,
+          "sensitivity": 0.06914212548015365,
+          "specificity": 0.8468709468223087,
+          "precision": 0.05408112168252378
+        },
+        {
+          "point_n": 13898,
+          "positive_fraction": 0.11239027198158008,
+          "ap": 0.08382772614109359,
+          "roc_auc": 0.37511713216452347,
+          "brier": 0.349034795820653,
+          "single_class": false,
+          "subject": "02",
+          "feature_set": "wearable_time",
+          "threshold": 0.720190337508972,
+          "selected_learner": "logistic",
+          "reference_n": 13898,
+          "coverage": 1.0,
+          "tp": 112,
+          "fn": 1450,
+          "fp": 2065,
+          "tn": 10271,
+          "sensitivity": 0.07170294494238157,
+          "specificity": 0.8326037613488976,
+          "precision": 0.05144694533762058
+        },
+        {
+          "point_n": 14282,
+          "positive_fraction": 0.005251365354992298,
+          "ap": 0.005963054453050756,
+          "roc_auc": 0.4266136411628071,
+          "brier": 0.2379551180226167,
+          "single_class": false,
+          "subject": "03",
+          "feature_set": "clock",
+          "threshold": 0.6416286676865172,
+          "selected_learner": "random_forest",
+          "reference_n": 14282,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 75,
+          "fp": 1179,
+          "tn": 13028,
+          "sensitivity": 0.0,
+          "specificity": 0.9170127401984937,
+          "precision": 0.0
+        },
+        {
+          "point_n": 14282,
+          "positive_fraction": 0.005251365354992298,
+          "ap": 0.004244624720920503,
+          "roc_auc": 0.37514370850050444,
+          "brier": 0.12739290931159664,
+          "single_class": false,
+          "subject": "03",
+          "feature_set": "wearable",
+          "threshold": 0.5655520041954851,
+          "selected_learner": "hgb",
+          "reference_n": 14282,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 75,
+          "fp": 879,
+          "tn": 13328,
+          "sensitivity": 0.0,
+          "specificity": 0.9381290912930246,
+          "precision": 0.0
+        },
+        {
+          "point_n": 14282,
+          "positive_fraction": 0.005251365354992298,
+          "ap": 0.006433178432627792,
+          "roc_auc": 0.551832664648882,
+          "brier": 0.1171508119151887,
+          "single_class": false,
+          "subject": "03",
+          "feature_set": "wearable_time",
+          "threshold": 0.517628979924301,
+          "selected_learner": "random_forest",
+          "reference_n": 14282,
+          "coverage": 1.0,
+          "tp": 2,
+          "fn": 73,
+          "fp": 1136,
+          "tn": 13071,
+          "sensitivity": 0.02666666666666667,
+          "specificity": 0.9200394171887097,
+          "precision": 0.0017574692442882249
+        },
+        {
+          "point_n": 14139,
+          "positive_fraction": 0.026522384892849565,
+          "ap": 0.030635257801906932,
+          "roc_auc": 0.4849928315412185,
+          "brier": 0.2395144506909423,
+          "single_class": false,
+          "subject": "04",
+          "feature_set": "clock",
+          "threshold": 0.6221943727199654,
+          "selected_learner": "hgb",
+          "reference_n": 14139,
+          "coverage": 1.0,
+          "tp": 69,
+          "fn": 306,
+          "fp": 1715,
+          "tn": 12049,
+          "sensitivity": 0.184,
+          "specificity": 0.8753995931415286,
+          "precision": 0.03867713004484305
+        },
+        {
+          "point_n": 14139,
+          "positive_fraction": 0.026522384892849565,
+          "ap": 0.05695767285893286,
+          "roc_auc": 0.596695631114986,
+          "brier": 0.2702300000030979,
+          "single_class": false,
+          "subject": "04",
+          "feature_set": "wearable",
+          "threshold": 0.5295694720702891,
+          "selected_learner": "logistic",
+          "reference_n": 14139,
+          "coverage": 1.0,
+          "tp": 189,
+          "fn": 186,
+          "fp": 5522,
+          "tn": 8242,
+          "sensitivity": 0.504,
+          "specificity": 0.5988084859052601,
+          "precision": 0.03309402906671336
+        },
+        {
+          "point_n": 14139,
+          "positive_fraction": 0.026522384892849565,
+          "ap": 0.039110821268171385,
+          "roc_auc": 0.5954952048823017,
+          "brier": 0.1715875703611226,
+          "single_class": false,
+          "subject": "04",
+          "feature_set": "wearable_time",
+          "threshold": 0.5512343255239867,
+          "selected_learner": "hgb",
+          "reference_n": 14139,
+          "coverage": 1.0,
+          "tp": 79,
+          "fn": 296,
+          "fp": 2025,
+          "tn": 11739,
+          "sensitivity": 0.21066666666666667,
+          "specificity": 0.8528770706190061,
+          "precision": 0.03754752851711027
+        },
+        {
+          "point_n": 13750,
+          "positive_fraction": 0.03636363636363636,
+          "ap": 0.03386197693225797,
+          "roc_auc": 0.4142506415094339,
+          "brier": 0.24933399314684773,
+          "single_class": false,
+          "subject": "07",
+          "feature_set": "clock",
+          "threshold": 0.5553994845692293,
+          "selected_learner": "logistic",
+          "reference_n": 13750,
+          "coverage": 1.0,
+          "tp": 100,
+          "fn": 400,
+          "fp": 2300,
+          "tn": 10950,
+          "sensitivity": 0.2,
+          "specificity": 0.8264150943396227,
+          "precision": 0.041666666666666664
+        },
+        {
+          "point_n": 13750,
+          "positive_fraction": 0.03636363636363636,
+          "ap": 0.04364844928271545,
+          "roc_auc": 0.5170232452830188,
+          "brier": 0.27686379141768136,
+          "single_class": false,
+          "subject": "07",
+          "feature_set": "wearable",
+          "threshold": 0.7745654025964217,
+          "selected_learner": "random_forest",
+          "reference_n": 13750,
+          "coverage": 1.0,
+          "tp": 56,
+          "fn": 444,
+          "fp": 1969,
+          "tn": 11281,
+          "sensitivity": 0.112,
+          "specificity": 0.8513962264150944,
+          "precision": 0.027654320987654323
+        },
+        {
+          "point_n": 13750,
+          "positive_fraction": 0.03636363636363636,
+          "ap": 0.041958970472583276,
+          "roc_auc": 0.5034102641509434,
+          "brier": 0.2599253306166861,
+          "single_class": false,
+          "subject": "07",
+          "feature_set": "wearable_time",
+          "threshold": 0.6465846281587359,
+          "selected_learner": "random_forest",
+          "reference_n": 13750,
+          "coverage": 1.0,
+          "tp": 122,
+          "fn": 378,
+          "fp": 3597,
+          "tn": 9653,
+          "sensitivity": 0.244,
+          "specificity": 0.7285283018867924,
+          "precision": 0.03280451734337187
+        },
+        {
+          "point_n": 13217,
+          "positive_fraction": 0.01883937353408489,
+          "ap": 0.014354385858910683,
+          "roc_auc": 0.3185758146713938,
+          "brier": 0.24876453296224693,
+          "single_class": false,
+          "subject": "08",
+          "feature_set": "clock",
+          "threshold": 0.551646394591554,
+          "selected_learner": "logistic",
+          "reference_n": 13217,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 249,
+          "fp": 2160,
+          "tn": 10808,
+          "sensitivity": 0.0,
+          "specificity": 0.8334361505243677,
+          "precision": 0.0
+        },
+        {
+          "point_n": 13217,
+          "positive_fraction": 0.01883937353408489,
+          "ap": 0.026681851715936414,
+          "roc_auc": 0.5556744250289251,
+          "brier": 0.07981133919398527,
+          "single_class": false,
+          "subject": "08",
+          "feature_set": "wearable",
+          "threshold": 0.8114917680684125,
+          "selected_learner": "hgb",
+          "reference_n": 13217,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 249,
+          "fp": 0,
+          "tn": 12968,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 13217,
+          "positive_fraction": 0.01883937353408489,
+          "ap": 0.0564181469633475,
+          "roc_auc": 0.5295512710930087,
+          "brier": 0.07272689997560396,
+          "single_class": false,
+          "subject": "08",
+          "feature_set": "wearable_time",
+          "threshold": 0.5324970829237851,
+          "selected_learner": "hgb",
+          "reference_n": 13217,
+          "coverage": 1.0,
+          "tp": 26,
+          "fn": 223,
+          "fp": 207,
+          "tn": 12761,
+          "sensitivity": 0.10441767068273092,
+          "specificity": 0.9840376310919186,
+          "precision": 0.11158798283261803
+        },
+        {
+          "point_n": 14151,
+          "positive_fraction": 0.00847996608013568,
+          "ap": 0.011156345530051627,
+          "roc_auc": 0.4394768726391562,
+          "brier": 0.23713916949384142,
+          "single_class": false,
+          "subject": "10",
+          "feature_set": "clock",
+          "threshold": 0.6301857046451996,
+          "selected_learner": "random_forest",
+          "reference_n": 14151,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 120,
+          "fp": 1123,
+          "tn": 12908,
+          "sensitivity": 0.0,
+          "specificity": 0.9199629392060438,
+          "precision": 0.0
+        },
+        {
+          "point_n": 14151,
+          "positive_fraction": 0.00847996608013568,
+          "ap": 0.04927990822089817,
+          "roc_auc": 0.6253213123322168,
+          "brier": 0.2336677743547947,
+          "single_class": false,
+          "subject": "10",
+          "feature_set": "wearable",
+          "threshold": 0.5360931863820096,
+          "selected_learner": "logistic",
+          "reference_n": 14151,
+          "coverage": 1.0,
+          "tp": 44,
+          "fn": 76,
+          "fp": 2384,
+          "tn": 11647,
+          "sensitivity": 0.36666666666666664,
+          "specificity": 0.8300905138621624,
+          "precision": 0.018121911037891267
+        },
+        {
+          "point_n": 14151,
+          "positive_fraction": 0.00847996608013568,
+          "ap": 0.028648145034608323,
+          "roc_auc": 0.6040116527688689,
+          "brier": 0.23249941685388567,
+          "single_class": false,
+          "subject": "10",
+          "feature_set": "wearable_time",
+          "threshold": 0.5725972165532117,
+          "selected_learner": "hgb",
+          "reference_n": 14151,
+          "coverage": 1.0,
+          "tp": 61,
+          "fn": 59,
+          "fp": 3471,
+          "tn": 10560,
+          "sensitivity": 0.5083333333333333,
+          "specificity": 0.7526192003420996,
+          "precision": 0.01727066817667044
+        },
+        {
+          "point_n": 12809,
+          "positive_fraction": 0.031618393317198845,
+          "ap": 0.05145145214745968,
+          "roc_auc": 0.5728423925376521,
+          "brier": 0.2508504483928001,
+          "single_class": false,
+          "subject": "13",
+          "feature_set": "clock",
+          "threshold": 0.553695568497132,
+          "selected_learner": "logistic",
+          "reference_n": 12809,
+          "coverage": 1.0,
+          "tp": 54,
+          "fn": 351,
+          "fp": 546,
+          "tn": 11858,
+          "sensitivity": 0.13333333333333333,
+          "specificity": 0.9559819413092551,
+          "precision": 0.09
+        },
+        {
+          "point_n": 12809,
+          "positive_fraction": 0.031618393317198845,
+          "ap": 0.027907798963976247,
+          "roc_auc": 0.39997840202881585,
+          "brier": 0.21256723235907354,
+          "single_class": false,
+          "subject": "13",
+          "feature_set": "wearable",
+          "threshold": 0.5815830453248829,
+          "selected_learner": "random_forest",
+          "reference_n": 12809,
+          "coverage": 1.0,
+          "tp": 29,
+          "fn": 376,
+          "fp": 1907,
+          "tn": 10497,
+          "sensitivity": 0.07160493827160494,
+          "specificity": 0.8462592712028378,
+          "precision": 0.014979338842975207
+        },
+        {
+          "point_n": 12809,
+          "positive_fraction": 0.031618393317198845,
+          "ap": 0.027111102434231787,
+          "roc_auc": 0.378950736719736,
+          "brier": 0.22112709952528697,
+          "single_class": false,
+          "subject": "13",
+          "feature_set": "wearable_time",
+          "threshold": 0.49281543810329,
+          "selected_learner": "random_forest",
+          "reference_n": 12809,
+          "coverage": 1.0,
+          "tp": 100,
+          "fn": 305,
+          "fp": 3936,
+          "tn": 8468,
+          "sensitivity": 0.24691358024691357,
+          "specificity": 0.6826830054821026,
+          "precision": 0.024777006937561942
+        },
+        {
+          "point_n": 9173,
+          "positive_fraction": 0.11283113485228388,
+          "ap": 0.10094695963860775,
+          "roc_auc": 0.43971770770631724,
+          "brier": 0.25166115466598254,
+          "single_class": false,
+          "subject": "14",
+          "feature_set": "clock",
+          "threshold": 0.5535589515243164,
+          "selected_learner": "logistic",
+          "reference_n": 9173,
+          "coverage": 1.0,
+          "tp": 69,
+          "fn": 966,
+          "fp": 1587,
+          "tn": 6551,
+          "sensitivity": 0.06666666666666667,
+          "specificity": 0.8049889407716884,
+          "precision": 0.041666666666666664
+        },
+        {
+          "point_n": 9173,
+          "positive_fraction": 0.11283113485228388,
+          "ap": 0.1482222575030705,
+          "roc_auc": 0.637040697722737,
+          "brier": 0.19061056782053207,
+          "single_class": false,
+          "subject": "14",
+          "feature_set": "wearable",
+          "threshold": 0.8460095055096728,
+          "selected_learner": "hgb",
+          "reference_n": 9173,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 1035,
+          "fp": 22,
+          "tn": 8116,
+          "sensitivity": 0.0,
+          "specificity": 0.9972966330793807,
+          "precision": 0.0
+        },
+        {
+          "point_n": 9173,
+          "positive_fraction": 0.11283113485228388,
+          "ap": 0.1771104812909951,
+          "roc_auc": 0.667531459141405,
+          "brier": 0.18047646465489453,
+          "single_class": false,
+          "subject": "14",
+          "feature_set": "wearable_time",
+          "threshold": 0.5536293259124817,
+          "selected_learner": "hgb",
+          "reference_n": 9173,
+          "coverage": 1.0,
+          "tp": 258,
+          "fn": 777,
+          "fp": 834,
+          "tn": 7304,
+          "sensitivity": 0.2492753623188406,
+          "specificity": 0.8975178176456132,
+          "precision": 0.23626373626373626
+        },
+        {
+          "point_n": 14282,
+          "positive_fraction": 0.019255006301638428,
+          "ap": 0.02423801112731594,
+          "roc_auc": 0.5689200854118395,
+          "brier": 0.24759949144095572,
+          "single_class": false,
+          "subject": "15",
+          "feature_set": "clock",
+          "threshold": 0.5408724444356585,
+          "selected_learner": "logistic",
+          "reference_n": 14282,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 275,
+          "fp": 2400,
+          "tn": 11607,
+          "sensitivity": 0.0,
+          "specificity": 0.8286571000214179,
+          "precision": 0.0
+        },
+        {
+          "point_n": 14282,
+          "positive_fraction": 0.019255006301638428,
+          "ap": 0.01732671564392023,
+          "roc_auc": 0.4545810211777228,
+          "brier": 0.23965946578866976,
+          "single_class": false,
+          "subject": "15",
+          "feature_set": "wearable",
+          "threshold": 0.5502043695611176,
+          "selected_learner": "logistic",
+          "reference_n": 14282,
+          "coverage": 1.0,
+          "tp": 23,
+          "fn": 252,
+          "fp": 1921,
+          "tn": 12086,
+          "sensitivity": 0.08363636363636363,
+          "specificity": 0.8628542871421432,
+          "precision": 0.011831275720164609
+        },
+        {
+          "point_n": 14282,
+          "positive_fraction": 0.019255006301638428,
+          "ap": 0.030963448033271675,
+          "roc_auc": 0.4814947071918586,
+          "brier": 0.24124430850728198,
+          "single_class": false,
+          "subject": "15",
+          "feature_set": "wearable_time",
+          "threshold": 0.546753812713192,
+          "selected_learner": "random_forest",
+          "reference_n": 14282,
+          "coverage": 1.0,
+          "tp": 97,
+          "fn": 178,
+          "fp": 4845,
+          "tn": 9162,
+          "sensitivity": 0.3527272727272727,
+          "specificity": 0.6541015206682373,
+          "precision": 0.01962768110076892
+        },
+        {
+          "point_n": 11826,
+          "positive_fraction": 0.02748181971926264,
+          "ap": 0.022475101029062028,
+          "roc_auc": 0.32363406526522775,
+          "brier": 0.24734834563217922,
+          "single_class": false,
+          "subject": "17",
+          "feature_set": "clock",
+          "threshold": 0.5519245188796469,
+          "selected_learner": "logistic",
+          "reference_n": 11826,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 325,
+          "fp": 1440,
+          "tn": 10061,
+          "sensitivity": 0.0,
+          "specificity": 0.8747934962177202,
+          "precision": 0.0
+        },
+        {
+          "point_n": 11826,
+          "positive_fraction": 0.02748181971926264,
+          "ap": 0.027914517533715794,
+          "roc_auc": 0.5094447974423629,
+          "brier": 0.19558677324661158,
+          "single_class": false,
+          "subject": "17",
+          "feature_set": "wearable",
+          "threshold": 0.5455427375198385,
+          "selected_learner": "hgb",
+          "reference_n": 11826,
+          "coverage": 1.0,
+          "tp": 61,
+          "fn": 264,
+          "fp": 2413,
+          "tn": 9088,
+          "sensitivity": 0.18769230769230769,
+          "specificity": 0.7901921572037214,
+          "precision": 0.02465642683912692
+        },
+        {
+          "point_n": 11826,
+          "positive_fraction": 0.02748181971926264,
+          "ap": 0.0405323288554209,
+          "roc_auc": 0.6240248005190185,
+          "brier": 0.19697363991247796,
+          "single_class": false,
+          "subject": "17",
+          "feature_set": "wearable_time",
+          "threshold": 0.5316742570198731,
+          "selected_learner": "random_forest",
+          "reference_n": 11826,
+          "coverage": 1.0,
+          "tp": 85,
+          "fn": 240,
+          "fp": 1994,
+          "tn": 9507,
+          "sensitivity": 0.26153846153846155,
+          "specificity": 0.8266237718459264,
+          "precision": 0.040885040885040885
+        }
+      ],
+      "audit": [
+        {
+          "subject": "01",
+          "source_rows": 13463,
+          "unknown_reference_rows": 1355,
+          "known_positive_fraction": 0.11983812355467459,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "02",
+          "source_rows": 14079,
+          "unknown_reference_rows": 181,
+          "known_positive_fraction": 0.11239027198158008,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "03",
+          "source_rows": 14731,
+          "unknown_reference_rows": 449,
+          "known_positive_fraction": 0.005251365354992298,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "04",
+          "source_rows": 14312,
+          "unknown_reference_rows": 173,
+          "known_positive_fraction": 0.026522384892849565,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "07",
+          "source_rows": 14077,
+          "unknown_reference_rows": 327,
+          "known_positive_fraction": 0.03636363636363636,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "08",
+          "source_rows": 13486,
+          "unknown_reference_rows": 269,
+          "known_positive_fraction": 0.01883937353408489,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "10",
+          "source_rows": 14467,
+          "unknown_reference_rows": 316,
+          "known_positive_fraction": 0.00847996608013568,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "13",
+          "source_rows": 14328,
+          "unknown_reference_rows": 1519,
+          "known_positive_fraction": 0.031618393317198845,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "14",
+          "source_rows": 9540,
+          "unknown_reference_rows": 367,
+          "known_positive_fraction": 0.11283113485228388,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "15",
+          "source_rows": 14936,
+          "unknown_reference_rows": 654,
+          "known_positive_fraction": 0.019255006301638428,
+          "no_wearable_rows": 0
+        },
+        {
+          "subject": "17",
+          "source_rows": 11874,
+          "unknown_reference_rows": 48,
+          "known_positive_fraction": 0.02748181971926264,
+          "no_wearable_rows": 0
+        }
+      ],
+      "limitations": [
+        "Processed source CSVs lack timestamp and day identifiers; no verified chronological order, event matching, alarm/day or true time coverage claims.",
+        "Labels follow source <4 mmol/L plus duration rules and backfilled reference, unlike PhysioCGM native <70mg/dL.",
+        "Precomputed wearable feature causality is based on source code review, not full raw-data reconstruction.",
+        "No clinical or prospective efficacy conclusion; input sensors differ from PhysioCGM.",
+        "Patient-specific calibration not used; training/validation row partition is descriptive within other subjects and test subject is entirely unseen."
+      ]
+    },
+    "COHORT_SW_PERSONAL1": {
+      "stage": "COHORT_SW_PERSONAL1",
+      "engineering_status": "passed",
+      "evaluation_status": "independent_rank_metrics_confusions_and_split_checks_passed",
+      "effect_status": "inconclusive",
+      "scope": "Exploratory personalized source-row holdout, temporal order conditional on source",
+      "groups_verified": 33,
+      "subject_count": 11,
+      "maximum_metric_difference": 1.1102230246251565e-16,
+      "summary": {
+        "clock": {
+          "roc_auc": {
+            "n": 8,
+            "mean": 0.5114970361604569,
+            "95_interval": [
+              0.3208929011347497,
+              0.7132011297845303
+            ]
+          },
+          "ap": {
+            "n": 8,
+            "mean": 0.09801994265943918,
+            "95_interval": [
+              0.03339192160699712,
+              0.17778928041123002
+            ]
+          },
+          "sensitivity": {
+            "n": 8,
+            "mean": 0.17430555555555555,
+            "95_interval": [
+              0.0,
+              0.42430555555555555
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": 0.9113579692279731,
+            "95_interval": [
+              0.870339574610049,
+              0.9537756897123608
+            ]
+          },
+          "coverage": {
+            "n": 11,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "positive_fraction": {
+            "n": 11,
+            "mean": 0.02634212739273998,
+            "95_interval": [
+              0.010580371352945265,
+              0.04916174966044372
+            ]
+          }
+        },
+        "wearable": {
+          "roc_auc": {
+            "n": 8,
+            "mean": 0.5330417987224285,
+            "95_interval": [
+              0.3474251713926696,
+              0.7235688323648483
+            ]
+          },
+          "ap": {
+            "n": 8,
+            "mean": 0.15179566165999747,
+            "95_interval": [
+              0.03748241860687509,
+              0.29552520070157795
+            ]
+          },
+          "sensitivity": {
+            "n": 8,
+            "mean": 0.2479166666666667,
+            "95_interval": [
+              0.04375,
+              0.5041666666666667
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": 0.8848108247070765,
+            "95_interval": [
+              0.814902872611072,
+              0.9517807721394821
+            ]
+          },
+          "coverage": {
+            "n": 11,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "positive_fraction": {
+            "n": 11,
+            "mean": 0.02634212739273998,
+            "95_interval": [
+              0.010580371352945265,
+              0.04916174966044372
+            ]
+          }
+        },
+        "wearable_time": {
+          "roc_auc": {
+            "n": 8,
+            "mean": 0.6131225612888407,
+            "95_interval": [
+              0.417264472397444,
+              0.7783136853566605
+            ]
+          },
+          "ap": {
+            "n": 8,
+            "mean": 0.18870115399698992,
+            "95_interval": [
+              0.030866817391851698,
+              0.34735488336683434
+            ]
+          },
+          "sensitivity": {
+            "n": 8,
+            "mean": 0.21160714285714285,
+            "95_interval": [
+              0.030357142857142857,
+              0.45446428571428565
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": 0.9230861910697861,
+            "95_interval": [
+              0.8765715217356136,
+              0.9660743139998946
+            ]
+          },
+          "coverage": {
+            "n": 11,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "positive_fraction": {
+            "n": 11,
+            "mean": 0.02634212739273998,
+            "95_interval": [
+              0.010580371352945265,
+              0.04916174966044372
+            ]
+          }
+        }
+      },
+      "paired_gain": {
+        "clock__to__wearable": {
+          "roc_auc": {
+            "n": 8,
+            "mean": 0.021544762561971582,
+            "95_interval": [
+              -0.2187617297413714,
+              0.25520125382759207
+            ]
+          },
+          "ap": {
+            "n": 8,
+            "mean": 0.05377571900055829,
+            "95_interval": [
+              -0.02767915041208777,
+              0.1459715404217459
+            ]
+          },
+          "sensitivity": {
+            "n": 8,
+            "mean": 0.0736111111111111,
+            "95_interval": [
+              -0.09027777777777778,
+              0.26875
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": -0.02654714452089647,
+            "95_interval": [
+              -0.11241577113094653,
+              0.05800827969371771
+            ]
+          }
+        },
+        "clock__to__wearable_time": {
+          "roc_auc": {
+            "n": 8,
+            "mean": 0.10162552512838385,
+            "95_interval": [
+              -0.09621876044270683,
+              0.2951203685725865
+            ]
+          },
+          "ap": {
+            "n": 8,
+            "mean": 0.09068121133755074,
+            "95_interval": [
+              0.002424793034793528,
+              0.1844866456762589
+            ]
+          },
+          "sensitivity": {
+            "n": 8,
+            "mean": 0.0373015873015873,
+            "95_interval": [
+              -0.09255952380952379,
+              0.1875
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": 0.011728221841813224,
+            "95_interval": [
+              -0.050744846304426064,
+              0.07353430417262903
+            ]
+          }
+        },
+        "wearable__to__wearable_time": {
+          "roc_auc": {
+            "n": 8,
+            "mean": 0.08008076256641225,
+            "95_interval": [
+              -0.04163786619792548,
+              0.21915837352678558
+            ]
+          },
+          "ap": {
+            "n": 8,
+            "mean": 0.03690549233699246,
+            "95_interval": [
+              -0.010877609184354504,
+              0.10610661311074553
+            ]
+          },
+          "sensitivity": {
+            "n": 8,
+            "mean": -0.036309523809523805,
+            "95_interval": [
+              -0.2062723214285714,
+              0.08067708333333322
+            ]
+          },
+          "specificity": {
+            "n": 11,
+            "mean": 0.038275366362709694,
+            "95_interval": [
+              -0.012677698664362077,
+              0.090018402663351
+            ]
+          }
+        }
+      },
+      "metrics_by_subject": [
+        {
+          "point_n": 1359,
+          "positive_fraction": 0.13245033112582782,
+          "ap": 0.20289859329737844,
+          "roc_auc": 0.6030958439355386,
+          "brier": 0.2332596405449206,
+          "single_class": false,
+          "subject": "01",
+          "feature_set": "clock",
+          "threshold": 0.7104742167298629,
+          "selected_learner": "hgb",
+          "reference_n": 1359,
+          "coverage": 1.0,
+          "tp": 71,
+          "fn": 109,
+          "fp": 169,
+          "tn": 1010,
+          "sensitivity": 0.39444444444444443,
+          "specificity": 0.8566581849024597,
+          "precision": 0.29583333333333334
+        },
+        {
+          "point_n": 1359,
+          "positive_fraction": 0.13245033112582782,
+          "ap": 0.08168923007174819,
+          "roc_auc": 0.2312034680991424,
+          "brier": 0.2910300292263328,
+          "single_class": false,
+          "subject": "01",
+          "feature_set": "wearable",
+          "threshold": 0.6335685503292485,
+          "selected_learner": "logistic",
+          "reference_n": 1359,
+          "coverage": 1.0,
+          "tp": 6,
+          "fn": 174,
+          "fp": 188,
+          "tn": 991,
+          "sensitivity": 0.03333333333333333,
+          "specificity": 0.8405428329092451,
+          "precision": 0.030927835051546393
+        },
+        {
+          "point_n": 1359,
+          "positive_fraction": 0.13245033112582782,
+          "ap": 0.35286837354256556,
+          "roc_auc": 0.7463740458015267,
+          "brier": 0.13615698922665528,
+          "single_class": false,
+          "subject": "01",
+          "feature_set": "wearable_time",
+          "threshold": 0.6666910743185397,
+          "selected_learner": "random_forest",
+          "reference_n": 1359,
+          "coverage": 1.0,
+          "tp": 18,
+          "fn": 162,
+          "fp": 26,
+          "tn": 1153,
+          "sensitivity": 0.1,
+          "specificity": 0.9779474130619169,
+          "precision": 0.4090909090909091
+        },
+        {
+          "point_n": 2692,
+          "positive_fraction": 0.022288261515601784,
+          "ap": 0.02162006885438693,
+          "roc_auc": 0.30440729483282675,
+          "brier": 0.24914891643841594,
+          "single_class": false,
+          "subject": "02",
+          "feature_set": "clock",
+          "threshold": 0.6790501956734342,
+          "selected_learner": "logistic",
+          "reference_n": 2692,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 60,
+          "fp": 480,
+          "tn": 2152,
+          "sensitivity": 0.0,
+          "specificity": 0.817629179331307,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2692,
+          "positive_fraction": 0.022288261515601784,
+          "ap": 0.012112436497549221,
+          "roc_auc": 0.09206560283687945,
+          "brier": 0.30475379283969506,
+          "single_class": false,
+          "subject": "02",
+          "feature_set": "wearable",
+          "threshold": 0.8969970266207984,
+          "selected_learner": "logistic",
+          "reference_n": 2692,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 60,
+          "fp": 0,
+          "tn": 2632,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2692,
+          "positive_fraction": 0.022288261515601784,
+          "ap": 0.012155322197445173,
+          "roc_auc": 0.09713779128672745,
+          "brier": 0.290356583736386,
+          "single_class": false,
+          "subject": "02",
+          "feature_set": "wearable_time",
+          "threshold": 0.8912652469380227,
+          "selected_learner": "logistic",
+          "reference_n": 2692,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 60,
+          "fp": 0,
+          "tn": 2632,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2518,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.22315807895585915,
+          "single_class": true,
+          "subject": "03",
+          "feature_set": "clock",
+          "threshold": 1.001,
+          "selected_learner": "logistic",
+          "reference_n": 2518,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 2518,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2518,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.10895834326173397,
+          "single_class": true,
+          "subject": "03",
+          "feature_set": "wearable",
+          "threshold": 1.001,
+          "selected_learner": "logistic",
+          "reference_n": 2518,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 2518,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2518,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.11458844155555746,
+          "single_class": true,
+          "subject": "03",
+          "feature_set": "wearable_time",
+          "threshold": 1.001,
+          "selected_learner": "logistic",
+          "reference_n": 2518,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 2518,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2743,
+          "positive_fraction": 0.025519504192489974,
+          "ap": 0.01811665175472841,
+          "roc_auc": 0.19221848110737,
+          "brier": 0.2501158871483904,
+          "single_class": false,
+          "subject": "04",
+          "feature_set": "clock",
+          "threshold": 0.5956144027376545,
+          "selected_learner": "logistic",
+          "reference_n": 2743,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 70,
+          "fp": 480,
+          "tn": 2193,
+          "sensitivity": 0.0,
+          "specificity": 0.8204264870931538,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2743,
+          "positive_fraction": 0.025519504192489974,
+          "ap": 0.07168622940687139,
+          "roc_auc": 0.5755117310672866,
+          "brier": 0.06796683689272998,
+          "single_class": false,
+          "subject": "04",
+          "feature_set": "wearable",
+          "threshold": 0.8487247097433495,
+          "selected_learner": "random_forest",
+          "reference_n": 2743,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 70,
+          "fp": 0,
+          "tn": 2673,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2743,
+          "positive_fraction": 0.025519504192489974,
+          "ap": 0.028969697372737933,
+          "roc_auc": 0.38759553203997654,
+          "brier": 0.22297105642407397,
+          "single_class": false,
+          "subject": "04",
+          "feature_set": "wearable_time",
+          "threshold": 0.8386911461740303,
+          "selected_learner": "logistic",
+          "reference_n": 2743,
+          "coverage": 1.0,
+          "tp": 10,
+          "fn": 60,
+          "fp": 189,
+          "tn": 2484,
+          "sensitivity": 0.14285714285714285,
+          "specificity": 0.9292929292929293,
+          "precision": 0.05025125628140704
+        },
+        {
+          "point_n": 2696,
+          "positive_fraction": 0.01298219584569733,
+          "ap": 0.014982876712328766,
+          "roc_auc": 0.1512589252160842,
+          "brier": 0.25625801359236017,
+          "single_class": false,
+          "subject": "07",
+          "feature_set": "clock",
+          "threshold": 0.6307020276077732,
+          "selected_learner": "logistic",
+          "reference_n": 2696,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 35,
+          "fp": 396,
+          "tn": 2265,
+          "sensitivity": 0.0,
+          "specificity": 0.8511837655016911,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2696,
+          "positive_fraction": 0.01298219584569733,
+          "ap": 0.01952278226434663,
+          "roc_auc": 0.6167606163096581,
+          "brier": 0.0523202631842827,
+          "single_class": false,
+          "subject": "07",
+          "feature_set": "wearable",
+          "threshold": 0.43064120019074403,
+          "selected_learner": "random_forest",
+          "reference_n": 2696,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 35,
+          "fp": 216,
+          "tn": 2445,
+          "sensitivity": 0.0,
+          "specificity": 0.9188275084554679,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2696,
+          "positive_fraction": 0.01298219584569733,
+          "ap": 0.029737235340306895,
+          "roc_auc": 0.7619208675578462,
+          "brier": 0.047395958700035414,
+          "single_class": false,
+          "subject": "07",
+          "feature_set": "wearable_time",
+          "threshold": 0.5678628273690557,
+          "selected_learner": "hgb",
+          "reference_n": 2696,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 35,
+          "fp": 128,
+          "tn": 2533,
+          "sensitivity": 0.0,
+          "specificity": 0.9518977827884254,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2575,
+          "positive_fraction": 0.015533980582524271,
+          "ap": 0.3333333333333333,
+          "roc_auc": 0.9842209072978304,
+          "brier": 0.22976211545158354,
+          "single_class": false,
+          "subject": "08",
+          "feature_set": "clock",
+          "threshold": 0.8386184200723416,
+          "selected_learner": "logistic",
+          "reference_n": 2575,
+          "coverage": 1.0,
+          "tp": 40,
+          "fn": 0,
+          "fp": 80,
+          "tn": 2455,
+          "sensitivity": 1.0,
+          "specificity": 0.9684418145956607,
+          "precision": 0.3333333333333333
+        },
+        {
+          "point_n": 2575,
+          "positive_fraction": 0.015533980582524271,
+          "ap": 0.5820885251160076,
+          "roc_auc": 0.991819526627219,
+          "brier": 0.026403284937141655,
+          "single_class": false,
+          "subject": "08",
+          "feature_set": "wearable",
+          "threshold": 0.01798948698825051,
+          "selected_learner": "hgb",
+          "reference_n": 2575,
+          "coverage": 1.0,
+          "tp": 40,
+          "fn": 0,
+          "fp": 504,
+          "tn": 2031,
+          "sensitivity": 1.0,
+          "specificity": 0.8011834319526627,
+          "precision": 0.07352941176470588
+        },
+        {
+          "point_n": 2575,
+          "positive_fraction": 0.015533980582524271,
+          "ap": 0.6384201914276583,
+          "roc_auc": 0.9915976331360947,
+          "brier": 0.033512061706202335,
+          "single_class": false,
+          "subject": "08",
+          "feature_set": "wearable_time",
+          "threshold": 0.7452076443640131,
+          "selected_learner": "hgb",
+          "reference_n": 2575,
+          "coverage": 1.0,
+          "tp": 38,
+          "fn": 2,
+          "fp": 66,
+          "tn": 2469,
+          "sensitivity": 0.95,
+          "specificity": 0.9739644970414201,
+          "precision": 0.36538461538461536
+        },
+        {
+          "point_n": 2687,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.2460179949485796,
+          "single_class": true,
+          "subject": "10",
+          "feature_set": "clock",
+          "threshold": 1.001,
+          "selected_learner": "logistic",
+          "reference_n": 2687,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 2687,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2687,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.13484790316987863,
+          "single_class": true,
+          "subject": "10",
+          "feature_set": "wearable",
+          "threshold": 1.001,
+          "selected_learner": "logistic",
+          "reference_n": 2687,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 2687,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2687,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.13565193251415092,
+          "single_class": true,
+          "subject": "10",
+          "feature_set": "wearable_time",
+          "threshold": 1.001,
+          "selected_learner": "logistic",
+          "reference_n": 2687,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 2687,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "precision": null
+        },
+        {
+          "point_n": 2721,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.23489611316570036,
+          "single_class": true,
+          "subject": "13",
+          "feature_set": "clock",
+          "threshold": 0.7154658145471354,
+          "selected_learner": "logistic",
+          "reference_n": 2721,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 120,
+          "tn": 2601,
+          "sensitivity": null,
+          "specificity": 0.9558985667034179,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2721,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.22861198307289915,
+          "single_class": true,
+          "subject": "13",
+          "feature_set": "wearable",
+          "threshold": 0.6140574268576824,
+          "selected_learner": "logistic",
+          "reference_n": 2721,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 931,
+          "tn": 1790,
+          "sensitivity": null,
+          "specificity": 0.6578463800073502,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2721,
+          "positive_fraction": 0.0,
+          "ap": null,
+          "roc_auc": null,
+          "brier": 0.18621597291967534,
+          "single_class": true,
+          "subject": "13",
+          "feature_set": "wearable_time",
+          "threshold": 0.5916394561734795,
+          "selected_learner": "logistic",
+          "reference_n": 2721,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 0,
+          "fp": 578,
+          "tn": 2143,
+          "sensitivity": null,
+          "specificity": 0.7875780962881294,
+          "precision": 0.0
+        },
+        {
+          "point_n": 1634,
+          "positive_fraction": 0.030599755201958383,
+          "ap": 0.03422419705775771,
+          "roc_auc": 0.33223484848484847,
+          "brier": 0.20492991657157308,
+          "single_class": false,
+          "subject": "14",
+          "feature_set": "clock",
+          "threshold": 0.866128377058999,
+          "selected_learner": "hgb",
+          "reference_n": 1634,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 50,
+          "fp": 60,
+          "tn": 1524,
+          "sensitivity": 0.0,
+          "specificity": 0.9621212121212122,
+          "precision": 0.0
+        },
+        {
+          "point_n": 1634,
+          "positive_fraction": 0.030599755201958383,
+          "ap": 0.06882841885542057,
+          "roc_auc": 0.7949873737373738,
+          "brier": 0.15388342340789235,
+          "single_class": false,
+          "subject": "14",
+          "feature_set": "wearable",
+          "threshold": 0.43428117429973145,
+          "selected_learner": "random_forest",
+          "reference_n": 1634,
+          "coverage": 1.0,
+          "tp": 30,
+          "fn": 20,
+          "fp": 385,
+          "tn": 1199,
+          "sensitivity": 0.6,
+          "specificity": 0.7569444444444444,
+          "precision": 0.07228915662650602
+        },
+        {
+          "point_n": 1634,
+          "positive_fraction": 0.030599755201958383,
+          "ap": 0.052450181274866045,
+          "roc_auc": 0.7224494949494951,
+          "brier": 0.10556636827604086,
+          "single_class": false,
+          "subject": "14",
+          "feature_set": "wearable_time",
+          "threshold": 0.41607846354937533,
+          "selected_learner": "random_forest",
+          "reference_n": 1634,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 50,
+          "fp": 228,
+          "tn": 1356,
+          "sensitivity": 0.0,
+          "specificity": 0.8560606060606061,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2347,
+          "positive_fraction": 0.014912654452492544,
+          "ap": 0.06292536483214449,
+          "roc_auc": 0.8219537815126051,
+          "brier": 0.15338848846355577,
+          "single_class": false,
+          "subject": "15",
+          "feature_set": "clock",
+          "threshold": 0.6796166940619244,
+          "selected_learner": "random_forest",
+          "reference_n": 2347,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 35,
+          "fp": 352,
+          "tn": 1960,
+          "sensitivity": 0.0,
+          "specificity": 0.8477508650519031,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2347,
+          "positive_fraction": 0.014912654452492544,
+          "ap": 0.016977687895248224,
+          "roc_auc": 0.32619871478002965,
+          "brier": 0.0418665368522781,
+          "single_class": false,
+          "subject": "15",
+          "feature_set": "wearable",
+          "threshold": 0.09726544839138557,
+          "selected_learner": "hgb",
+          "reference_n": 2347,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 35,
+          "fp": 451,
+          "tn": 1861,
+          "sensitivity": 0.0,
+          "specificity": 0.8049307958477508,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2347,
+          "positive_fraction": 0.014912654452492544,
+          "ap": 0.018497098863745436,
+          "roc_auc": 0.43712926347009384,
+          "brier": 0.051088777772130646,
+          "single_class": false,
+          "subject": "15",
+          "feature_set": "wearable_time",
+          "threshold": 0.14210334111674686,
+          "selected_learner": "hgb",
+          "reference_n": 2347,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 35,
+          "fp": 370,
+          "tn": 1942,
+          "sensitivity": 0.0,
+          "specificity": 0.8399653979238755,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2255,
+          "positive_fraction": 0.03547671840354767,
+          "ap": 0.09605845543345544,
+          "roc_auc": 0.7025862068965517,
+          "brier": 0.2717643004792403,
+          "single_class": false,
+          "subject": "17",
+          "feature_set": "clock",
+          "threshold": 0.7638846273779487,
+          "selected_learner": "logistic",
+          "reference_n": 2255,
+          "coverage": 1.0,
+          "tp": 0,
+          "fn": 80,
+          "fp": 120,
+          "tn": 2055,
+          "sensitivity": 0.0,
+          "specificity": 0.9448275862068966,
+          "precision": 0.0
+        },
+        {
+          "point_n": 2255,
+          "positive_fraction": 0.03547671840354767,
+          "ap": 0.3614599831727879,
+          "roc_auc": 0.635787356321839,
+          "brier": 0.16033259015163273,
+          "single_class": false,
+          "subject": "17",
+          "feature_set": "wearable",
+          "threshold": 0.8790008805512807,
+          "selected_learner": "logistic",
+          "reference_n": 2255,
+          "coverage": 1.0,
+          "tp": 28,
+          "fn": 52,
+          "fp": 103,
+          "tn": 2072,
+          "sensitivity": 0.35,
+          "specificity": 0.9526436781609195,
+          "precision": 0.21374045801526717
+        },
+        {
+          "point_n": 2255,
+          "positive_fraction": 0.03547671840354767,
+          "ap": 0.376511131956594,
+          "roc_auc": 0.7607758620689655,
+          "brier": 0.13449685054615854,
+          "single_class": false,
+          "subject": "17",
+          "feature_set": "wearable_time",
+          "threshold": 0.5506385277227186,
+          "selected_learner": "logistic",
+          "reference_n": 2255,
+          "coverage": 1.0,
+          "tp": 40,
+          "fn": 40,
+          "fp": 354,
+          "tn": 1821,
+          "sensitivity": 0.5,
+          "specificity": 0.8372413793103448,
+          "precision": 0.10152284263959391
+        }
+      ],
+      "audit": [
+        {
+          "subject": "01",
+          "source_rows": 13463,
+          "unknown_reference_rows": 1355,
+          "known_positive_fraction": 0.11983812355467459,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 1.0
+        },
+        {
+          "subject": "02",
+          "source_rows": 14079,
+          "unknown_reference_rows": 181,
+          "known_positive_fraction": 0.11239027198158008,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 0.9958093614603309
+        },
+        {
+          "subject": "03",
+          "source_rows": 14731,
+          "unknown_reference_rows": 449,
+          "known_positive_fraction": 0.005251365354992298,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 1.0
+        },
+        {
+          "subject": "04",
+          "source_rows": 14312,
+          "unknown_reference_rows": 173,
+          "known_positive_fraction": 0.026522384892849565,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 0.9988820570150923
+        },
+        {
+          "subject": "07",
+          "source_rows": 14077,
+          "unknown_reference_rows": 327,
+          "known_positive_fraction": 0.03636363636363636,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 0.9904098884705548
+        },
+        {
+          "subject": "08",
+          "source_rows": 13486,
+          "unknown_reference_rows": 269,
+          "known_positive_fraction": 0.01883937353408489,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 1.0
+        },
+        {
+          "subject": "10",
+          "source_rows": 14467,
+          "unknown_reference_rows": 316,
+          "known_positive_fraction": 0.00847996608013568,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 1.0
+        },
+        {
+          "subject": "13",
+          "source_rows": 14328,
+          "unknown_reference_rows": 1519,
+          "known_positive_fraction": 0.031618393317198845,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 1.0
+        },
+        {
+          "subject": "14",
+          "source_rows": 9540,
+          "unknown_reference_rows": 367,
+          "known_positive_fraction": 0.11283113485228388,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 0.15241090146750524
+        },
+        {
+          "subject": "15",
+          "source_rows": 14936,
+          "unknown_reference_rows": 654,
+          "known_positive_fraction": 0.019255006301638428,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 1.0
+        },
+        {
+          "subject": "17",
+          "source_rows": 11874,
+          "unknown_reference_rows": 48,
+          "known_positive_fraction": 0.02748181971926264,
+          "no_wearable_rows": 0,
+          "minute_row_hour_agreement": 1.0
+        }
+      ],
+      "limitations": [
+        "Processed source CSVs lack timestamp and day identifiers; no verified chronological order, event matching, alarm/day or true time coverage claims.",
+        "Labels follow source <4 mmol/L plus duration rules and backfilled reference, unlike PhysioCGM native <70mg/dL.",
+        "Precomputed wearable feature causality is based on source code review, not full raw-data reconstruction.",
+        "No clinical or prospective efficacy conclusion; input sensors differ from PhysioCGM.",
+        "Patient-specific calibration not used; training/validation row partition is descriptive within other subjects and test subject is entirely unseen."
+      ],
+      "hour_agreement_subgroup": {
+        "clock": {
+          "roc_auc": {
+            "n": 7,
+            "mean": 0.5371059201141152,
+            "95_interval": [
+              0.3185442243033999,
+              0.7432487115218588
+            ]
+          },
+          "ap": {
+            "n": 7,
+            "mean": 0.10713362060253655,
+            "95_interval": [
+              0.03381449157360929,
+              0.19240942495948507
+            ]
+          },
+          "sensitivity": {
+            "n": 7,
+            "mean": 0.1992063492063492,
+            "95_interval": [
+              0.0,
+              0.4849206349206349
+            ]
+          },
+          "specificity": {
+            "n": 10,
+            "mean": 0.906281644938649,
+            "95_interval": [
+              0.8637884199853548,
+              0.9497069939834432
+            ]
+          }
+        },
+        "wearable": {
+          "roc_auc": {
+            "n": 7,
+            "mean": 0.49562100229172196,
+            "95_interval": [
+              0.28442692653500273,
+              0.7003668748330392
+            ]
+          },
+          "ap": {
+            "n": 7,
+            "mean": 0.16364812491779415,
+            "95_interval": [
+              0.032632717245427316,
+              0.32544736338715974
+            ]
+          },
+          "sensitivity": {
+            "n": 7,
+            "mean": 0.1976190476190476,
+            "95_interval": [
+              0.0,
+              0.48333333333333334
+            ]
+          },
+          "specificity": {
+            "n": 10,
+            "mean": 0.8975974627333396,
+            "95_interval": [
+              0.8237299824807752,
+              0.9617301375847471
+            ]
+          }
+        },
+        "wearable_time": {
+          "roc_auc": {
+            "n": 7,
+            "mean": 0.5975044279087474,
+            "95_interval": [
+              0.37676549617696004,
+              0.792024232199633
+            ]
+          },
+          "ap": {
+            "n": 7,
+            "mean": 0.20816557867157906,
+            "95_interval": [
+              0.025397761911199704,
+              0.38619243035645406
+            ]
+          },
+          "sensitivity": {
+            "n": 7,
+            "mean": 0.24183673469387754,
+            "95_interval": [
+              0.028571428571428574,
+              0.5
+            ]
+          },
+          "specificity": {
+            "n": 10,
+            "mean": 0.9297887495707041,
+            "95_interval": [
+              0.8788144192313163,
+              0.9723063275881899
+            ]
+          }
+        }
+      }
+    }
+  }
+}
