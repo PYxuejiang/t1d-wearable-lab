@@ -10,22 +10,22 @@ def incident_labels(glucose, nominal_minutes):
     times=glucose.index
     events=reference_events(glucose,nominal_minutes)
     _, confirmation=nearest_future_reference(glucose,times,45,2.5)
-    bad=np.r_[False,np.diff(times.asi8)/60e9>1.5*nominal_minutes]
+    bad=np.r_[False,np.diff(times.as_unit('ns').asi8)/60e9>1.5*nominal_minutes]
     cumulative=np.cumsum(bad)
     current=np.arange(len(times))
-    ending=np.searchsorted(times.asi8,confirmation.astype('int64').to_numpy()).clip(0,len(times)-1)
+    ending=np.searchsorted(times.as_unit('ns').asi8,pd.DatetimeIndex(confirmation).as_unit('ns').asi8).clip(0,len(times)-1)
     future_known=confirmation.notna().to_numpy() & (cumulative[ending]==cumulative[current])
-    beginning=np.searchsorted(times.asi8,times.asi8-pd.Timedelta(minutes=15).value,side='right')-1
+    beginning=np.searchsorted(times.as_unit('ns').asi8,times.as_unit('ns').asi8-pd.Timedelta(minutes=15).value,side='right')-1
     safe=np.maximum(beginning,0)
-    past_known=(beginning>=0)&((times.asi8-times.asi8[safe])/60e9<=15+1.5*nominal_minutes)&(cumulative[current]==cumulative[safe])
+    past_known=(beginning>=0)&((times.as_unit('ns').asi8-times.as_unit('ns').asi8[safe])/60e9<=15+1.5*nominal_minutes)&(cumulative[current]==cumulative[safe])
     normal=glucose.rolling('15min',closed='both').min().ge(3.9).to_numpy()
     eligible=future_known&past_known&normal
     starts=np.array([e.start.value for e in events if not e.left_censored],dtype=np.int64)
     target=np.zeros(len(times),dtype=float)
     if len(starts):
-        positions=np.searchsorted(starts,times.asi8,side='right')
+        positions=np.searchsorted(starts,times.as_unit('ns').asi8,side='right')
         safe_positions=np.minimum(positions,len(starts)-1)
-        target=((positions<len(starts))&(starts[safe_positions]-times.asi8<=pd.Timedelta(minutes=30).value)).astype(float)
+        target=((positions<len(starts))&(starts[safe_positions]-times.as_unit('ns').asi8<=pd.Timedelta(minutes=30).value)).astype(float)
     target[~eligible]=np.nan
     return pd.DataFrame({'incident_y':target,'future_known':future_known,'incident_eligible':eligible},index=times),events
 
@@ -49,7 +49,7 @@ def timeline_metrics(frame,events,task,threshold,nominal_minutes):
         return None
     t=pd.DatetimeIndex(frame.decision_time)
     scores=frame.score.to_numpy(dtype=float)
-    gaps=np.r_[True,np.diff(t.asi8)/60e9>1.5*nominal_minutes]
+    gaps=np.r_[True,np.diff(t.as_unit('ns').asi8)/60e9>1.5*nominal_minutes]
     groups=np.cumsum(gaps)
     alarms=[]
     for group in np.unique(groups):

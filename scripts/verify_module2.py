@@ -48,7 +48,7 @@ def evaluate(frame,events):
         for i,alarm in enumerate(alarms):
             if i not in taken and start<=alarm<=end:
                 taken.add(i);offsets.append((alarm-start).total_seconds()/60);break
-    intervals=np.diff(t.asi8)/60e9
+    intervals=np.diff(t.as_unit('ns').asi8)/60e9
     observed=(intervals>0)&(intervals<=7.5)
     weights=intervals[observed]
     supported=(np.isfinite(scores[:-1])&np.isfinite(scores[1:]))[observed]

@@ -47,7 +47,7 @@ def independent_score(frame,events,nominal):
             if i not in taken and 0<(start-alarm).total_seconds()<=1800:
                 hits+=1;taken.add(i);break
     known_times=times[frame.future_known.to_numpy()]
-    gaps=np.diff(known_times.asi8)/60e9
+    gaps=np.diff(known_times.as_unit('ns').asi8)/60e9
     hours=float(gaps[(gaps>0)&(gaps<=1.5*nominal)].sum()/60)
     return len(eligible_events),hits,len(alerts)-hits,hours
 

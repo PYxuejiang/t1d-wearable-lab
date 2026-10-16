@@ -76,7 +76,7 @@ def match_events(events, alarms, task, horizon_minutes=30):
 
 
 def reference_hours(index, nominal_minutes):
-    gaps = np.diff(pd.DatetimeIndex(index).sort_values().unique().asi8) / 60e9
+    gaps = np.diff(pd.DatetimeIndex(index).sort_values().unique().as_unit('ns').asi8) / 60e9
     return float(gaps[(gaps > 0) & (gaps <= 1.5 * nominal_minutes)].sum() / 60)
 
 
@@ -101,12 +101,12 @@ def nearest_future_reference(series, times, horizon_minutes=30, tolerance_minute
         raise ValueError('Duplicate reference timestamps')
     times = pd.DatetimeIndex(times)
     desired = times + pd.Timedelta(minutes=horizon_minutes)
-    source = series.index.asi8
-    insertion = np.searchsorted(source, desired.asi8)
+    source = series.index.as_unit('ns').asi8
+    insertion = np.searchsorted(source, desired.as_unit('ns').asi8)
     before = np.clip(insertion - 1, 0, len(source) - 1)
     after = np.clip(insertion, 0, len(source) - 1)
-    indices = np.where(abs(source[before] - desired.asi8) <= abs(source[after] - desired.asi8), before, after)
-    distances = abs(source[indices] - desired.asi8) / 60e9
+    indices = np.where(abs(source[before] - desired.as_unit('ns').asi8) <= abs(source[after] - desired.as_unit('ns').asi8), before, after)
+    distances = abs(source[indices] - desired.as_unit('ns').asi8) / 60e9
     valid = distances <= tolerance_minutes
     values = series.to_numpy(dtype=float)[indices].copy()
     values[~valid] = np.nan

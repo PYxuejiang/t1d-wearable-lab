@@ -32,7 +32,7 @@ def read_subject(path):
     if len(g) < 100 or (g <= 0).any():
         raise ValueError(f'Insufficient or nonpositive glucose: {path}')
     training_end = g.index[0] + (g.index[-1] - g.index[0]) * .6
-    gaps = np.diff(g.loc[:training_end].index.asi8) / 60e9
+    gaps = np.diff(g.loc[:training_end].index.as_unit('ns').asi8) / 60e9
     nominal = float(np.median(gaps[(gaps > 0) & (gaps < 30)]))
     report.update(first_time=str(g.index[0]), last_time=str(g.index[-1]), nominal_cgm_minutes=nominal,
                   low_readings=int((g < 3.9).sum()), events=len(reference_events(g, nominal)),
@@ -45,9 +45,9 @@ def backward_values(series, times, max_age_minutes):
     times = pd.DatetimeIndex(times)
     if series.empty:
         return np.full(len(times), np.nan)
-    positions = np.searchsorted(series.index.asi8, times.asi8, side='right') - 1
+    positions = np.searchsorted(series.index.as_unit('ns').asi8, times.as_unit('ns').asi8, side='right') - 1
     safe = np.maximum(positions, 0)
-    age = (times.asi8 - series.index.asi8[safe]) / 60e9
+    age = (times.as_unit('ns').asi8 - series.index.as_unit('ns').asi8[safe]) / 60e9
     valid = (positions >= 0) & (age >= 0) & (age <= max_age_minutes)
     return np.where(valid, series.to_numpy(dtype=float)[safe], np.nan)
 
@@ -56,9 +56,9 @@ def trailing_sum(series, times, minutes):
     times = pd.DatetimeIndex(times)
     if series.empty:
         return np.zeros(len(times))
-    x = series.index.asi8
+    x = series.index.as_unit('ns').asi8
     cumulative = np.r_[0., np.cumsum(series.to_numpy(dtype=float))]
-    end = np.searchsorted(x, times.asi8, side='right')
-    start = np.searchsorted(x, times.asi8 - pd.Timedelta(minutes=minutes).value, side='right')
+    end = np.searchsorted(x, times.as_unit('ns').asi8, side='right')
+    start = np.searchsorted(x, times.as_unit('ns').asi8 - pd.Timedelta(minutes=minutes).value, side='right')
     return cumulative[end] - cumulative[start]
 
