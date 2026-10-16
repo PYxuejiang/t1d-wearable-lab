@@ -1,0 +1,22 @@
+{
+  "stage": "S1a",
+  "engineering_status": "passed",
+  "evaluation_status": "data_adapter_audit_passed",
+  "effect_status": "not_tested",
+  "source_files_verified": 20,
+  "subjects_audited": 20,
+  "raw_rows": 2875613,
+  "observed_low_readings": 15555,
+  "observed_low_runs_including_censored": 1885,
+  "conflicting_channel_timestamps_excluded": 418,
+  "invalid_numeric_values": 0,
+  "nominal_cgm_intervals_minutes": [
+    5.0,
+    15.0
+  ],
+  "limitations": [
+    "Event-run count is not the final incident prediction denominator.",
+    "Sampling is 5 or 15 minutes; no uniform 5-minute assumption.",
+    "Data are retrospective processed records with no arrival timestamps."
+  ]
+}

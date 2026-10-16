@@ -3,7 +3,8 @@
 | Stage | Status | Evidence |
 |---|---|---|
 | S0 frozen protocol, repository and evaluation primitives | Passed | `configs/protocol.yaml`, 11 boundary tests; `S0.json` |
-| S1 public data acquisition and cohort audit | Pending | Local source manifests |
+| S1a BrisT1D acquisition and cohort audit | Passed | 20 verified source files, channel-specific duplicate handling; `S1a.json` |
+| S1b PhysioCGM acquisition and clock audit | In progress | Per-subject raw ZIPs, source clock and censored-label audit |
 | S2 module 1 forecasting and information ablation | Pending | Frozen held-out predictions |
 | S3 module 2 physiological signal and sensor comparison | Pending | Source ZIP audit and held-out predictions |
 | S4 uncertainty, calibration and independent evaluation | Pending | Subject-level reports and acceptance JSON |
