@@ -6,7 +6,7 @@
 | S1a BrisT1D acquisition and cohort audit | Passed | 20 verified source files, channel-specific duplicate handling; `S1a.json` |
 | S1b PhysioCGM acquisition and clock audit | In progress | Per-subject raw ZIPs, source clock and censored-label audit |
 | S2a module 1 numeric forecasting and information ablation | Passed engineering/evaluation; wearable effect failed/inconclusive | `S2a.json`, independent recomputation of 5,080,095 test predictions |
-| S2b module 1 incident-event prediction | In progress | Separate event targets, validation-only calibration and alarm threshold |
+| S2b module 1 incident-event prediction | Passed engineering/evaluation; effect failed | `S2b.json`, 80 independently reconstructed test groups |
 | S3 module 2 physiological signal and sensor comparison | Pending | Source ZIP audit and held-out predictions |
 | S4 uncertainty, calibration and independent evaluation | Pending | Subject-level reports and acceptance JSON |
 | S5 interactive showcase and publication checks | Pending | Actual result exports, UI checks |

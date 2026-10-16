@@ -1,0 +1,131 @@
+{
+  "stage": "S2b",
+  "engineering_status": "passed",
+  "evaluation_status": "independently_reconstructed_events_and_alarms_passed",
+  "effect_status": {
+    "temporal": {
+      "context": "failed",
+      "fusion": "failed"
+    },
+    "loso": {
+      "context": "failed",
+      "fusion": "failed"
+    }
+  },
+  "groups_verified": 80,
+  "count_mismatches": 0,
+  "observation_hours_max_difference": 0,
+  "results": {
+    "temporal": {
+      "context": {
+        "event_recall": 0.39216544848309626,
+        "event_precision": 0.32710590970394887,
+        "coverage": 1.0,
+        "ap": 0.21954282428196578,
+        "roc_auc": 0.8994604562501536,
+        "brier": 0.008967925995527506,
+        "offset_median_minutes": 15.0,
+        "subjects": 20,
+        "event_subjects": 20,
+        "reference_events": 378,
+        "matched_events": 152,
+        "observation_hours": 16920.79888888889,
+        "unmatched_alarms": 374,
+        "offset_iqr_minutes": [
+          5.0,
+          20.0
+        ],
+        "false_alerts_per_person_day": 0.5304714073455554,
+        "effect_status": "failed"
+      },
+      "fusion": {
+        "event_recall": 0.37028341211728766,
+        "event_precision": 0.2714279368595228,
+        "coverage": 1.0,
+        "ap": 0.20659204166324732,
+        "roc_auc": 0.9165384099012905,
+        "brier": 0.009021643183941812,
+        "offset_median_minutes": 15.0,
+        "subjects": 20,
+        "event_subjects": 20,
+        "reference_events": 378,
+        "matched_events": 136,
+        "observation_hours": 16920.79888888889,
+        "unmatched_alarms": 349,
+        "offset_iqr_minutes": [
+          5.0,
+          15.0
+        ],
+        "false_alerts_per_person_day": 0.49501208867272417,
+        "effect_status": "failed"
+      }
+    },
+    "loso": {
+      "context": {
+        "event_recall": 0.4944935457208407,
+        "event_precision": 0.34024839262244083,
+        "coverage": 1.0,
+        "ap": 0.21609887075238196,
+        "roc_auc": 0.9550471008099395,
+        "brier": 0.008915403033307324,
+        "offset_median_minutes": 10.0,
+        "subjects": 20,
+        "event_subjects": 20,
+        "reference_events": 1842,
+        "matched_events": 896,
+        "observation_hours": 81700.55111111111,
+        "unmatched_alarms": 1739,
+        "offset_iqr_minutes": [
+          5.0,
+          15.0
+        ],
+        "false_alerts_per_person_day": 0.5108411073413676,
+        "effect_status": "failed"
+      },
+      "fusion": {
+        "event_recall": 0.47535684306700093,
+        "event_precision": 0.33520516764218133,
+        "coverage": 1.0,
+        "ap": 0.21508352726491514,
+        "roc_auc": 0.9549883382595871,
+        "brier": 0.008960104813350248,
+        "offset_median_minutes": 10.0,
+        "subjects": 20,
+        "event_subjects": 20,
+        "reference_events": 1842,
+        "matched_events": 873,
+        "observation_hours": 81700.55111111111,
+        "unmatched_alarms": 1818,
+        "offset_iqr_minutes": [
+          5.0,
+          15.0
+        ],
+        "false_alerts_per_person_day": 0.5340478051446845,
+        "effect_status": "failed"
+      }
+    }
+  },
+  "paired_sensor_gain": {
+    "temporal": {
+      "recall_difference_percentage_points": -2.1882036365808615,
+      "95_interval_percentage_points": [
+        -6.3730698471252385,
+        2.131620783881181
+      ],
+      "subjects": 20
+    },
+    "loso": {
+      "recall_difference_percentage_points": -1.9136702653839797,
+      "95_interval_percentage_points": [
+        -6.5063792340823365,
+        4.07740868511985
+      ],
+      "subjects": 20
+    }
+  },
+  "limitations": [
+    "Retrospective event definition with 5/15-minute reference sampling.",
+    "Coverage is conditional on a reference-observable eligible decision opportunity.",
+    "Not a clinical alarm or an intervention benefit study."
+  ]
+}
