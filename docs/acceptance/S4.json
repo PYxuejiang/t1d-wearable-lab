@@ -1,0 +1,4183 @@
+{
+  "stage": "S4",
+  "engineering_status": "passed",
+  "evaluation_status": "fixed_test_predictions_uncertainty_and_sensitivity_reported",
+  "effect_status": "inconclusive",
+  "bootstrap_repetitions": 2000,
+  "bootstrap_unit": "subject",
+  "uncertainty": {
+    "incident": {
+      "temporal": {
+        "context": {
+          "event_recall": {
+            "subjects": 20,
+            "mean": 0.39216544848309626,
+            "95_interval": [
+              0.28613902232666594,
+              0.4922478875291375
+            ]
+          },
+          "coverage": {
+            "subjects": 20,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "ap": {
+            "subjects": 20,
+            "mean": 0.21954282428196578,
+            "95_interval": [
+              0.16018304933679453,
+              0.28485385383554257
+            ]
+          },
+          "brier": {
+            "subjects": 20,
+            "mean": 0.008967925995527506,
+            "95_interval": [
+              0.007006040119414023,
+              0.0110177937125518
+            ]
+          }
+        },
+        "fusion": {
+          "event_recall": {
+            "subjects": 20,
+            "mean": 0.37028341211728766,
+            "95_interval": [
+              0.26729772836016685,
+              0.47577953116762634
+            ]
+          },
+          "coverage": {
+            "subjects": 20,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "ap": {
+            "subjects": 20,
+            "mean": 0.20659204166324732,
+            "95_interval": [
+              0.15044499196715444,
+              0.26618290842253095
+            ]
+          },
+          "brier": {
+            "subjects": 20,
+            "mean": 0.009021643183941812,
+            "95_interval": [
+              0.007027143868886536,
+              0.011112348827863673
+            ]
+          }
+        }
+      },
+      "loso": {
+        "context": {
+          "event_recall": {
+            "subjects": 20,
+            "mean": 0.4944935457208407,
+            "95_interval": [
+              0.4206307326468953,
+              0.5649072613877572
+            ]
+          },
+          "coverage": {
+            "subjects": 20,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "ap": {
+            "subjects": 20,
+            "mean": 0.21609887075238196,
+            "95_interval": [
+              0.18180544547543437,
+              0.24841978768857542
+            ]
+          },
+          "brier": {
+            "subjects": 20,
+            "mean": 0.008915403033307324,
+            "95_interval": [
+              0.006997314604836607,
+              0.010900260287926624
+            ]
+          }
+        },
+        "fusion": {
+          "event_recall": {
+            "subjects": 20,
+            "mean": 0.47535684306700093,
+            "95_interval": [
+              0.3848219865687074,
+              0.559564400928719
+            ]
+          },
+          "coverage": {
+            "subjects": 20,
+            "mean": 1.0,
+            "95_interval": [
+              1.0,
+              1.0
+            ]
+          },
+          "ap": {
+            "subjects": 20,
+            "mean": 0.21508352726491514,
+            "95_interval": [
+              0.17927684302956745,
+              0.24890057259489073
+            ]
+          },
+          "brier": {
+            "subjects": 20,
+            "mean": 0.008960104813350248,
+            "95_interval": [
+              0.007043434542230904,
+              0.010947916939537401
+            ]
+          }
+        }
+      }
+    },
+    "detection": {
+      "temporal": {
+        "all": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6544876555042229,
+            "95_interval": [
+              0.5598345614647575,
+              0.7505964476830159
+            ]
+          },
+          "ap": {
+            "subjects": 6,
+            "mean": 0.08077983663759462,
+            "95_interval": [
+              0.03973298930539316,
+              0.12030723279771886
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.06105896516893888,
+            "95_interval": [
+              0.025184905887621612,
+              0.09934510274864393
+            ]
+          }
+        },
+        "ecg": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7537798093004489,
+            "95_interval": [
+              0.6632528128676904,
+              0.842046315718802
+            ]
+          },
+          "ap": {
+            "subjects": 6,
+            "mean": 0.0669436781632584,
+            "95_interval": [
+              0.037928573278465605,
+              0.09673034093077146
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.05505419769705498,
+            "95_interval": [
+              0.023416106555601217,
+              0.08938361039121692
+            ]
+          }
+        },
+        "ppg": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7314627740757469,
+            "95_interval": [
+              0.6079192349695163,
+              0.8373350852295905
+            ]
+          },
+          "ap": {
+            "subjects": 7,
+            "mean": 0.07898703128292636,
+            "95_interval": [
+              0.03425222647205479,
+              0.1282257194065964
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.059029242668857104,
+            "95_interval": [
+              0.026253476010649708,
+              0.09424414025705098
+            ]
+          }
+        },
+        "wrist": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7314627740757469,
+            "95_interval": [
+              0.6079192349695163,
+              0.8373350852295905
+            ]
+          },
+          "ap": {
+            "subjects": 7,
+            "mean": 0.07590795750777495,
+            "95_interval": [
+              0.03674287935318876,
+              0.11508425392519414
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.05906989352842194,
+            "95_interval": [
+              0.026292608206412407,
+              0.09436307944160535
+            ]
+          }
+        },
+        "wrist_eda_temp": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7309808916160312,
+            "95_interval": [
+              0.6075895920929648,
+              0.836571271693685
+            ]
+          },
+          "ap": {
+            "subjects": 7,
+            "mean": 0.07258205236698369,
+            "95_interval": [
+              0.03677657300662185,
+              0.1086846338122503
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.05940525921897148,
+            "95_interval": [
+              0.026552544853646227,
+              0.09457704279037253
+            ]
+          }
+        }
+      },
+      "loso": {
+        "all": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.6501805162148242,
+            "95_interval": [
+              0.5587424607015984,
+              0.7392229534633427
+            ]
+          },
+          "ap": {
+            "subjects": 7,
+            "mean": 0.036730260314477854,
+            "95_interval": [
+              0.022739105856103215,
+              0.05083062196529598
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.03972331886506108,
+            "95_interval": [
+              0.025587329842649487,
+              0.052906727224683356
+            ]
+          }
+        },
+        "ecg": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.697610357867204,
+            "95_interval": [
+              0.6005796098424998,
+              0.7858674356577668
+            ]
+          },
+          "ap": {
+            "subjects": 7,
+            "mean": 0.0450908703425929,
+            "95_interval": [
+              0.0275422007330768,
+              0.060075236512613456
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.041466050626359476,
+            "95_interval": [
+              0.024618874345662622,
+              0.055225900364900195
+            ]
+          }
+        },
+        "ppg": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7577974645436198,
+            "95_interval": [
+              0.6600406400416331,
+              0.8427085176672432
+            ]
+          },
+          "ap": {
+            "subjects": 7,
+            "mean": 0.04264378557259326,
+            "95_interval": [
+              0.02636758280705189,
+              0.056940677898595256
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.04250559207525166,
+            "95_interval": [
+              0.02615420563440428,
+              0.05752062683617733
+            ]
+          }
+        },
+        "wrist": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7577974645436198,
+            "95_interval": [
+              0.6600406400416331,
+              0.8427085176672432
+            ]
+          },
+          "ap": {
+            "subjects": 7,
+            "mean": 0.049200248951522085,
+            "95_interval": [
+              0.027923051689069885,
+              0.06945093128732499
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.04248259942994751,
+            "95_interval": [
+              0.026144243060153134,
+              0.05742134128020756
+            ]
+          }
+        },
+        "wrist_eda_temp": {
+          "event_recall": {
+            "subjects": 7,
+            "mean": 0.0,
+            "95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "subjects": 7,
+            "mean": 0.7571516168296094,
+            "95_interval": [
+              0.6595573105106391,
+              0.8418950780694692
+            ]
+          },
+          "ap": {
+            "subjects": 7,
+            "mean": 0.04107146442423113,
+            "95_interval": [
+              0.025003385052648187,
+              0.05635440921588116
+            ]
+          },
+          "brier": {
+            "subjects": 7,
+            "mean": 0.04252395227589746,
+            "95_interval": [
+              0.0261526017689584,
+              0.057553661493859494
+            ]
+          }
+        }
+      }
+    }
+  },
+  "calibration": {
+    "incident": {
+      "loso/context": {
+        "point_metrics": {
+          "point_n": 795274,
+          "positive_fraction": 0.00976770270372224,
+          "ap": 0.20691677077570278,
+          "roc_auc": 0.9567139369455195,
+          "brier": 0.008333324849167847,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 769733,
+            "mean_score": 0.0038329453240644657,
+            "observed_fraction": 0.003827301155075851
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 15116,
+            "mean_score": 0.14215026047231416,
+            "observed_fraction": 0.13555173326276793
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 7320,
+            "mean_score": 0.2475947034719063,
+            "observed_fraction": 0.24959016393442623
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 3099,
+            "mean_score": 0.3238576187081852,
+            "observed_fraction": 0.30493707647628265
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 6,
+            "mean_score": 0.41912441080172186,
+            "observed_fraction": 0.16666666666666666
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "loso/fusion": {
+        "point_metrics": {
+          "point_n": 795274,
+          "positive_fraction": 0.00976770270372224,
+          "ap": 0.20357748952080576,
+          "roc_auc": 0.956045357778426,
+          "brier": 0.008368060037023683,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 769817,
+            "mean_score": 0.0038651471064848697,
+            "observed_fraction": 0.00387494690296525
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 15086,
+            "mean_score": 0.14254560719951104,
+            "observed_fraction": 0.1376773167174864
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 7389,
+            "mean_score": 0.24636415518104218,
+            "observed_fraction": 0.24685343077547706
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 2974,
+            "mean_score": 0.3250870066939486,
+            "observed_fraction": 0.2962340282447882
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 8,
+            "mean_score": 0.4198941684910974,
+            "observed_fraction": 0.375
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "temporal/context": {
+        "point_metrics": {
+          "point_n": 168033,
+          "positive_fraction": 0.009480280659156237,
+          "ap": 0.1865412643141407,
+          "roc_auc": 0.9213002376263734,
+          "brier": 0.008426767130979153,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 164226,
+            "mean_score": 0.0044500760009235215,
+            "observed_fraction": 0.005127080973780035
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 1905,
+            "mean_score": 0.14195972924572606,
+            "observed_fraction": 0.13543307086614173
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 900,
+            "mean_score": 0.24487528001209455,
+            "observed_fraction": 0.2011111111111111
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 532,
+            "mean_score": 0.34440432569073154,
+            "observed_fraction": 0.2894736842105263
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 287,
+            "mean_score": 0.4457504423005087,
+            "observed_fraction": 0.313588850174216
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 124,
+            "mean_score": 0.5394667072635075,
+            "observed_fraction": 0.4032258064516129
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 38,
+            "mean_score": 0.6386656038157044,
+            "observed_fraction": 0.42105263157894735
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 15,
+            "mean_score": 0.7503175722805877,
+            "observed_fraction": 0.13333333333333333
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 6,
+            "mean_score": 0.875517067867142,
+            "observed_fraction": 0.0
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "temporal/fusion": {
+        "point_metrics": {
+          "point_n": 168033,
+          "positive_fraction": 0.009480280659156237,
+          "ap": 0.17879470237158301,
+          "roc_auc": 0.9289630337937561,
+          "brier": 0.008481406546429088,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 164410,
+            "mean_score": 0.0044279627037189144,
+            "observed_fraction": 0.005297731281552217
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 1856,
+            "mean_score": 0.14141471282892074,
+            "observed_fraction": 0.1476293103448276
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 815,
+            "mean_score": 0.244393875490941,
+            "observed_fraction": 0.18773006134969325
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 477,
+            "mean_score": 0.346141559699024,
+            "observed_fraction": 0.3018867924528302
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 281,
+            "mean_score": 0.4434545760860715,
+            "observed_fraction": 0.3202846975088968
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 131,
+            "mean_score": 0.5415425884489621,
+            "observed_fraction": 0.35877862595419846
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 49,
+            "mean_score": 0.631632717036817,
+            "observed_fraction": 0.24489795918367346
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 11,
+            "mean_score": 0.7427574945174733,
+            "observed_fraction": 0.18181818181818182
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 3,
+            "mean_score": 0.8742696508897213,
+            "observed_fraction": 0.0
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      }
+    },
+    "detection": {
+      "loso/all": {
+        "point_metrics": {
+          "point_n": 21921,
+          "positive_fraction": 0.04069157428949409,
+          "ap": 0.030480532863247572,
+          "roc_auc": 0.3909928089908725,
+          "brier": 0.03965661336814705,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 21921,
+            "mean_score": 0.02141157830413711,
+            "observed_fraction": 0.04069157428949409
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "loso/ecg": {
+        "point_metrics": {
+          "point_n": 23495,
+          "positive_fraction": 0.042349436050223455,
+          "ap": 0.03633144441768866,
+          "roc_auc": 0.4407241541038526,
+          "brier": 0.04113577382633258,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 23495,
+            "mean_score": 0.019817173684403968,
+            "observed_fraction": 0.042349436050223455
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "loso/ppg": {
+        "point_metrics": {
+          "point_n": 25498,
+          "positive_fraction": 0.04267001333437917,
+          "ap": 0.037447915251696856,
+          "roc_auc": 0.46337316176470583,
+          "brier": 0.04148282446790669,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 25498,
+            "mean_score": 0.020217512341672145,
+            "observed_fraction": 0.04267001333437917
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "loso/wrist": {
+        "point_metrics": {
+          "point_n": 25498,
+          "positive_fraction": 0.04267001333437917,
+          "ap": 0.03761307836480803,
+          "roc_auc": 0.46736111947851655,
+          "brier": 0.04145891118910641,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 25498,
+            "mean_score": 0.020216562556258134,
+            "observed_fraction": 0.04267001333437917
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "loso/wrist_eda_temp": {
+        "point_metrics": {
+          "point_n": 25477,
+          "positive_fraction": 0.04270518506888566,
+          "ap": 0.03509906744780721,
+          "roc_auc": 0.4284362390349555,
+          "brier": 0.041497719378689873,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 25477,
+            "mean_score": 0.020433461277859475,
+            "observed_fraction": 0.04270518506888566
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "temporal/all": {
+        "point_metrics": {
+          "point_n": 4490,
+          "positive_fraction": 0.061247216035634745,
+          "ap": 0.0506768130923662,
+          "roc_auc": 0.3806526474711528,
+          "brier": 0.060199609291079,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 4443,
+            "mean_score": 0.023752254894240793,
+            "observed_fraction": 0.06076975016880486
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 47,
+            "mean_score": 0.12661158990451182,
+            "observed_fraction": 0.10638297872340426
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "temporal/ecg": {
+        "point_metrics": {
+          "point_n": 5172,
+          "positive_fraction": 0.057617942768754836,
+          "ap": 0.04373566402794095,
+          "roc_auc": 0.39381576809422963,
+          "brier": 0.05657351687382524,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 5172,
+            "mean_score": 0.024939440230441354,
+            "observed_fraction": 0.057617942768754836
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "temporal/ppg": {
+        "point_metrics": {
+          "point_n": 5005,
+          "positive_fraction": 0.05614385614385614,
+          "ap": 0.04555036789444138,
+          "roc_auc": 0.42751671633605637,
+          "brier": 0.05512150283510646,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 5005,
+            "mean_score": 0.02176988336444135,
+            "observed_fraction": 0.05614385614385614
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "temporal/wrist": {
+        "point_metrics": {
+          "point_n": 5005,
+          "positive_fraction": 0.05614385614385614,
+          "ap": 0.04532441759423869,
+          "roc_auc": 0.41989944585232974,
+          "brier": 0.055156617052118995,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 4997,
+            "mean_score": 0.021382141309334402,
+            "observed_fraction": 0.056233740244146485
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 8,
+            "mean_score": 0.10947899893288061,
+            "observed_fraction": 0.0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      },
+      "temporal/wrist_eda_temp": {
+        "point_metrics": {
+          "point_n": 5002,
+          "positive_fraction": 0.05617752898840464,
+          "ap": 0.04420989889297005,
+          "roc_auc": 0.38477696006561135,
+          "brier": 0.05548605935719655,
+          "single_class": false
+        },
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 4931,
+            "mean_score": 0.020672752053075207,
+            "observed_fraction": 0.05617521800851754
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 70,
+            "mean_score": 0.1227554912294456,
+            "observed_fraction": 0.05714285714285714
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 1,
+            "mean_score": 0.2106398641579099,
+            "observed_fraction": 0.0
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_score": null,
+            "observed_fraction": null
+          }
+        ],
+        "scope": "Pooled eligible scored test anchors; descriptive, temporally dependent; no test recalibration."
+      }
+    }
+  },
+  "robustness_summary": [
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7314627740757469,
+        "95_interval": [
+          0.6079192349695163,
+          0.8373350852295905
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587818667151031,
+        "95_interval": [
+          0.48999728084202937,
+          0.6733250406369481
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357576510395545,
+        "95_interval": [
+          0.2957938114029241,
+          0.4087500145336954
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7314627740757469,
+        "95_interval": [
+          0.6079192349695163,
+          0.8373350852295905
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587818667151031,
+        "95_interval": [
+          0.48999728084202937,
+          0.6733250406369481
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357576510395545,
+        "95_interval": [
+          0.2957938114029241,
+          0.4087500145336954
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7314627740757469,
+        "95_interval": [
+          0.6079192349695163,
+          0.8373350852295905
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587818667151031,
+        "95_interval": [
+          0.48999728084202937,
+          0.6733250406369481
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357576510395545,
+        "95_interval": [
+          0.2957938114029241,
+          0.4087500145336954
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7314627740757469,
+        "95_interval": [
+          0.6079192349695163,
+          0.8373350852295905
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587818667151031,
+        "95_interval": [
+          0.48999728084202937,
+          0.6733250406369481
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357576510395545,
+        "95_interval": [
+          0.2957938114029241,
+          0.4087500145336954
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7314627740757469,
+        "95_interval": [
+          0.6079192349695163,
+          0.8373350852295905
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587818667151031,
+        "95_interval": [
+          0.48999728084202937,
+          0.6733250406369481
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357576510395545,
+        "95_interval": [
+          0.2957938114029241,
+          0.4087500145336954
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7314627740757469,
+        "95_interval": [
+          0.6079192349695163,
+          0.8373350852295905
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587818667151031,
+        "95_interval": [
+          0.48999728084202937,
+          0.6733250406369481
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357576510395545,
+        "95_interval": [
+          0.2957938114029241,
+          0.4087500145336954
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7309808916160312,
+        "95_interval": [
+          0.6075895920929648,
+          0.836571271693685
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587661685304935,
+        "95_interval": [
+          0.4897602243704246,
+          0.6733211160907957
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357419528549449,
+        "95_interval": [
+          0.2956368295568281,
+          0.40833487053146034
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7309808916160312,
+        "95_interval": [
+          0.6075895920929648,
+          0.836571271693685
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587661685304935,
+        "95_interval": [
+          0.4897602243704246,
+          0.6733211160907957
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357419528549449,
+        "95_interval": [
+          0.2956368295568281,
+          0.40833487053146034
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7309808916160312,
+        "95_interval": [
+          0.6075895920929648,
+          0.836571271693685
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.587661685304935,
+        "95_interval": [
+          0.4897602243704246,
+          0.6733211160907957
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.357419528549449,
+        "95_interval": [
+          0.2956368295568281,
+          0.40833487053146034
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7537798093004489,
+        "95_interval": [
+          0.6632528128676904,
+          0.842046315718802
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.599163193118143,
+        "95_interval": [
+          0.5220099037032191,
+          0.6705102229950506
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.365307434348363,
+        "95_interval": [
+          0.31450544218178705,
+          0.4094261386812697
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7537798093004489,
+        "95_interval": [
+          0.6632528128676904,
+          0.842046315718802
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.599163193118143,
+        "95_interval": [
+          0.5220099037032191,
+          0.6705102229950506
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.365307434348363,
+        "95_interval": [
+          0.31450544218178705,
+          0.4094261386812697
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7530044233313195,
+        "95_interval": [
+          0.6622952828495643,
+          0.8415843701690443
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5983878071490137,
+        "95_interval": [
+          0.5210860126037039,
+          0.6699589708787183
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.36464724580990715,
+        "95_interval": [
+          0.3138158879609794,
+          0.4087722578313021
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6544876555042229,
+        "95_interval": [
+          0.5598345614647575,
+          0.7505964476830159
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5240750638147428,
+        "95_interval": [
+          0.44945203607220435,
+          0.6025359466877603
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.3206920788929476,
+        "95_interval": [
+          0.2700144975067077,
+          0.373745461999897
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6544876555042229,
+        "95_interval": [
+          0.5598345614647575,
+          0.7505964476830159
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5240750638147428,
+        "95_interval": [
+          0.44945203607220435,
+          0.6025359466877603
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.3206920788929476,
+        "95_interval": [
+          0.2700144975067077,
+          0.373745461999897
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6537122695350935,
+        "95_interval": [
+          0.5595211210453856,
+          0.749857198696413
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5232996778456135,
+        "95_interval": [
+          0.4488896242513817,
+          0.6025281106772761
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.32003189035449175,
+        "95_interval": [
+          0.2700135367986543,
+          0.37329977333806186
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7577974645436198,
+        "95_interval": [
+          0.6600406400416331,
+          0.8427085176672432
+        ]
+      },
+      "false_alerts_per_person_day": 0.08462761839957224
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6158713917078658,
+        "95_interval": [
+          0.537229670474186,
+          0.6850056236013192
+        ]
+      },
+      "false_alerts_per_person_day": 0.0677020947196578
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37434223621664614,
+        "95_interval": [
+          0.32383512197277503,
+          0.4165201339543586
+        ]
+      },
+      "false_alerts_per_person_day": 0.04231380919978612
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7577974645436198,
+        "95_interval": [
+          0.6600406400416331,
+          0.8427085176672432
+        ]
+      },
+      "false_alerts_per_person_day": 0.08462761839957224
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6158713917078658,
+        "95_interval": [
+          0.537229670474186,
+          0.6850056236013192
+        ]
+      },
+      "false_alerts_per_person_day": 0.0677020947196578
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37434223621664614,
+        "95_interval": [
+          0.32383512197277503,
+          0.4165201339543586
+        ]
+      },
+      "false_alerts_per_person_day": 0.04231380919978612
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7577974645436198,
+        "95_interval": [
+          0.6600406400416331,
+          0.8427085176672432
+        ]
+      },
+      "false_alerts_per_person_day": 0.08462761839957224
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6158713917078658,
+        "95_interval": [
+          0.537229670474186,
+          0.6850056236013192
+        ]
+      },
+      "false_alerts_per_person_day": 0.0677020947196578
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37434223621664614,
+        "95_interval": [
+          0.32383512197277503,
+          0.4165201339543586
+        ]
+      },
+      "false_alerts_per_person_day": 0.04231380919978612
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7577974645436198,
+        "95_interval": [
+          0.6600406400416331,
+          0.8427085176672432
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6158713917078658,
+        "95_interval": [
+          0.537229670474186,
+          0.6850056236013192
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37434223621664614,
+        "95_interval": [
+          0.32383512197277503,
+          0.4165201339543586
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7577974645436198,
+        "95_interval": [
+          0.6600406400416331,
+          0.8427085176672432
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6158713917078658,
+        "95_interval": [
+          0.537229670474186,
+          0.6850056236013192
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37434223621664614,
+        "95_interval": [
+          0.32383512197277503,
+          0.4165201339543586
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7577974645436198,
+        "95_interval": [
+          0.6600406400416331,
+          0.8427085176672432
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6158713917078658,
+        "95_interval": [
+          0.537229670474186,
+          0.6850056236013192
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37434223621664614,
+        "95_interval": [
+          0.32383512197277503,
+          0.4165201339543586
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7571516168296094,
+        "95_interval": [
+          0.6595573105106391,
+          0.8418950780694692
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6154103416845501,
+        "95_interval": [
+          0.536977288070414,
+          0.6843460365201928
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37405764856472423,
+        "95_interval": [
+          0.32366311728519354,
+          0.4161143783677588
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7571516168296094,
+        "95_interval": [
+          0.6595573105106391,
+          0.8418950780694692
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6154103416845501,
+        "95_interval": [
+          0.536977288070414,
+          0.6843460365201928
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37405764856472423,
+        "95_interval": [
+          0.32366311728519354,
+          0.4161143783677588
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.7571516168296094,
+        "95_interval": [
+          0.6595573105106391,
+          0.8418950780694692
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6154103416845501,
+        "95_interval": [
+          0.536977288070414,
+          0.6843460365201928
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.37405764856472423,
+        "95_interval": [
+          0.32366311728519354,
+          0.4161143783677588
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.697610357867204,
+        "95_interval": [
+          0.6005796098424998,
+          0.7858674356577668
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5657359351665775,
+        "95_interval": [
+          0.48413140119994197,
+          0.6397080193507316
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.3446052581750906,
+        "95_interval": [
+          0.294243173595084,
+          0.38853029762975694
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.697610357867204,
+        "95_interval": [
+          0.6005796098424998,
+          0.7858674356577668
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5657359351665775,
+        "95_interval": [
+          0.48413140119994197,
+          0.6397080193507316
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.3446052581750906,
+        "95_interval": [
+          0.294243173595084,
+          0.38853029762975694
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6924717642098004,
+        "95_interval": [
+          0.5928708507123237,
+          0.7822349689573442
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5618592543789237,
+        "95_interval": [
+          0.4784111023076552,
+          0.6374521017548339
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.3423638325304733,
+        "95_interval": [
+          0.29093337939782277,
+          0.38759513700456644
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 0.9,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6501805162148242,
+        "95_interval": [
+          0.5587424607015984,
+          0.7392229534633427
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 0.9,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5275632912837863,
+        "95_interval": [
+          0.4514708618980637,
+          0.601287584912615
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 0.9,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.32174350065411245,
+        "95_interval": [
+          0.27438199929903184,
+          0.36832041059067366
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 0.95,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6501805162148242,
+        "95_interval": [
+          0.5587424607015984,
+          0.7392229534633427
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 0.95,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5275632912837863,
+        "95_interval": [
+          0.4514708618980637,
+          0.601287584912615
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 0.95,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.32174350065411245,
+        "95_interval": [
+          0.27438199929903184,
+          0.36832041059067366
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 1.0,
+      "dropout": 0.0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.6451134512213723,
+        "95_interval": [
+          0.5510109891492926,
+          0.7363832827640783
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 1.0,
+      "dropout": 0.1,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.5237581391600841,
+        "95_interval": [
+          0.4454405801810381,
+          0.5989182634849453
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "quality": 1.0,
+      "dropout": 0.3,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "subjects": 7,
+        "mean": 0.3195020750094951,
+        "95_interval": [
+          0.2711341572322902,
+          0.36695530378497254
+        ]
+      },
+      "false_alerts_per_person_day": 0.0
+    }
+  ],
+  "clock_sensitivity_summary": [
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "ppg",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "wrist_eda_temp",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "ecg",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "temporal",
+      "model": "all",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "ppg",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "wrist_eda_temp",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "ecg",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "label_shift_minutes": -5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "label_shift_minutes": 0,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "protocol": "loso",
+      "model": "all",
+      "label_shift_minutes": 5,
+      "recall": {
+        "subjects": 7,
+        "mean": 0.0,
+        "95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "pulse_agreement": [
+    {
+      "subject": "c1s01",
+      "paired_windows": 2104,
+      "mae_bpm": 8.217238270068043,
+      "bias_bpm": 4.1940465886522365
+    },
+    {
+      "subject": "c1s02",
+      "paired_windows": 2821,
+      "mae_bpm": 6.6123423410953555,
+      "bias_bpm": -1.840258324269922
+    },
+    {
+      "subject": "c1s03",
+      "paired_windows": 1402,
+      "mae_bpm": 13.775352567507404,
+      "bias_bpm": -1.3565916904916473
+    },
+    {
+      "subject": "c1s05",
+      "paired_windows": 2525,
+      "mae_bpm": 11.829797011354946,
+      "bias_bpm": -6.9972492101603425
+    },
+    {
+      "subject": "c2s02",
+      "paired_windows": 1152,
+      "mae_bpm": 15.668137331540553,
+      "bias_bpm": -5.315711619660853
+    },
+    {
+      "subject": "c2s04",
+      "paired_windows": 3465,
+      "mae_bpm": 5.962622004883666,
+      "bias_bpm": -1.1399728408289154
+    },
+    {
+      "subject": "c2s05",
+      "paired_windows": 3359,
+      "mae_bpm": 12.108548213770844,
+      "bias_bpm": 4.514184669429762
+    }
+  ],
+  "limitations": [
+    "No test-driven parameter selection; these analyses do not upgrade failed primary targets.",
+    "Pooled reliability bins are descriptive and mix dependent observations.",
+    "PPG/ECG rates both use heuristic peak detection; ECG is not manually adjudicated ground truth.",
+    "No external independent cohort or prospective intervention validation.",
+    "Wall-clock strata are not validated sleep stages.",
+    "Quality thresholds 0.9/0.95/1 and deterministic score dropout 0/10/30% are post-primary engineering stress tests, not a second validation dataset."
+  ],
+  "analysis_scope": "exploratory_stress_tests"
+}
