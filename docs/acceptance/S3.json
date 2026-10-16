@@ -1,0 +1,479 @@
+{
+  "stage": "S3",
+  "engineering_status": "passed",
+  "evaluation_status": "independent_counts_source_labels_and_fold_checks_passed",
+  "effect_status": {
+    "temporal": {
+      "ppg": "failed",
+      "wrist": "failed",
+      "wrist_eda_temp": "failed",
+      "ecg": "failed",
+      "all": "failed"
+    },
+    "loso": {
+      "ppg": "failed",
+      "wrist": "failed",
+      "wrist_eda_temp": "failed",
+      "ecg": "failed",
+      "all": "failed"
+    }
+  },
+  "verified_groups": 140,
+  "future_input_violations": 0,
+  "count_mismatches": 0,
+  "observation_hours_max_difference": 0,
+  "results": {
+    "temporal": {
+      "end_to_end": {
+        "ppg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7314627740757469,
+          "ap": 0.07898703128292636,
+          "roc_auc": 0.5380045191537866,
+          "brier": 0.059029242668857104,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7314627740757469,
+          "ap": 0.07590795750777495,
+          "roc_auc": 0.5643066305591941,
+          "brier": 0.05906989352842194,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist_eda_temp": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7309808916160312,
+          "ap": 0.07258205236698369,
+          "roc_auc": 0.5319956763394836,
+          "brier": 0.05940525921897148,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "ecg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7537798093004489,
+          "ap": 0.0669436781632584,
+          "roc_auc": 0.5374255565043495,
+          "brier": 0.05505419769705498,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "all": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.08077983663759462,
+          "roc_auc": 0.4899959772250441,
+          "brier": 0.06105896516893888,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        }
+      },
+      "paired_common": {
+        "ppg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.0941076878157945,
+          "roc_auc": 0.5584206773201225,
+          "brier": 0.06095974138441101,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.09032187689732211,
+          "roc_auc": 0.5579129526255423,
+          "brier": 0.06100355026958266,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist_eda_temp": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.08283608546019557,
+          "roc_auc": 0.5126184854023806,
+          "brier": 0.061328925013661474,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "ecg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.07423135792111364,
+          "roc_auc": 0.5421557900820284,
+          "brier": 0.060994415143375336,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "all": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6544876555042229,
+          "ap": 0.08077983663759462,
+          "roc_auc": 0.4899959772250441,
+          "brier": 0.06105896516893888,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 31,
+          "matched_events": 0,
+          "observation_hours": 574.6741666666667,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        }
+      }
+    },
+    "loso": {
+      "end_to_end": {
+        "ppg": {
+          "event_recall": 0.0,
+          "event_precision": 0.0,
+          "coverage": 0.7577974645436198,
+          "ap": 0.04264378557259326,
+          "roc_auc": 0.47204655266512796,
+          "brier": 0.04250559207525166,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 10,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.08462761839957224,
+          "effect_status": "failed"
+        },
+        "wrist": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7577974645436198,
+          "ap": 0.049200248951522085,
+          "roc_auc": 0.47814180365031816,
+          "brier": 0.04248259942994751,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist_eda_temp": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.7571516168296094,
+          "ap": 0.04107146442423113,
+          "roc_auc": 0.44507368699813643,
+          "brier": 0.04252395227589746,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "ecg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.697610357867204,
+          "ap": 0.0450908703425929,
+          "roc_auc": 0.5114927860542395,
+          "brier": 0.041466050626359476,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "all": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.036730260314477854,
+          "roc_auc": 0.4216858659839363,
+          "brier": 0.03972331886506108,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        }
+      },
+      "paired_common": {
+        "ppg": {
+          "event_recall": 0.0,
+          "event_precision": 0.0,
+          "coverage": 0.6501805162148242,
+          "ap": 0.03892826373952516,
+          "roc_auc": 0.4726226239766918,
+          "brier": 0.03969256199705695,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 10,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.08462761839957224,
+          "effect_status": "failed"
+        },
+        "wrist": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.044717536464773736,
+          "roc_auc": 0.48142706111678246,
+          "brier": 0.03966658825923353,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "wrist_eda_temp": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.03570086493673035,
+          "roc_auc": 0.41537063885959524,
+          "brier": 0.039680848514605835,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "ecg": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.04306862096827697,
+          "roc_auc": 0.5148569630879603,
+          "brier": 0.039618020196498134,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        },
+        "all": {
+          "event_recall": 0.0,
+          "event_precision": null,
+          "coverage": 0.6501805162148242,
+          "ap": 0.036730260314477854,
+          "roc_auc": 0.4216858659839363,
+          "brier": 0.03972331886506108,
+          "offset_median_minutes": null,
+          "subjects": 7,
+          "event_subjects": 7,
+          "reference_events": 146,
+          "matched_events": 0,
+          "observation_hours": 2835.953611111111,
+          "unmatched_alarms": 0,
+          "offset_iqr_minutes": null,
+          "false_alerts_per_person_day": 0.0,
+          "effect_status": "failed"
+        }
+      }
+    }
+  },
+  "paired_gain": {
+    "temporal": {
+      "ppg__to__wrist": {
+        "subjects": 7,
+        "recall_difference_percentage_points": 0.0,
+        "95_interval_percentage_points": [
+          0.0,
+          0.0
+        ],
+        "end_to_end_coverage_loss_percentage_points": 0.0,
+        "comparison_false_alerts_per_person_day": 0.0,
+        "status": "failed"
+      },
+      "wrist__to__wrist_eda_temp": {
+        "subjects": 7,
+        "recall_difference_percentage_points": 0.0,
+        "95_interval_percentage_points": [
+          0.0,
+          0.0
+        ],
+        "end_to_end_coverage_loss_percentage_points": 0.0481882459715699,
+        "comparison_false_alerts_per_person_day": 0.0,
+        "status": "failed"
+      },
+      "wrist__to__all": {
+        "subjects": 7,
+        "recall_difference_percentage_points": 0.0,
+        "95_interval_percentage_points": [
+          0.0,
+          0.0
+        ],
+        "end_to_end_coverage_loss_percentage_points": 7.697511857152395,
+        "comparison_false_alerts_per_person_day": 0.0,
+        "status": "failed"
+      }
+    },
+    "loso": {
+      "ppg__to__wrist": {
+        "subjects": 7,
+        "recall_difference_percentage_points": 0.0,
+        "95_interval_percentage_points": [
+          0.0,
+          0.0
+        ],
+        "end_to_end_coverage_loss_percentage_points": 0.0,
+        "comparison_false_alerts_per_person_day": 0.0,
+        "status": "failed"
+      },
+      "wrist__to__wrist_eda_temp": {
+        "subjects": 7,
+        "recall_difference_percentage_points": 0.0,
+        "95_interval_percentage_points": [
+          0.0,
+          0.0
+        ],
+        "end_to_end_coverage_loss_percentage_points": 0.0645847714010439,
+        "comparison_false_alerts_per_person_day": 0.0,
+        "status": "failed"
+      },
+      "wrist__to__all": {
+        "subjects": 7,
+        "recall_difference_percentage_points": 0.0,
+        "95_interval_percentage_points": [
+          0.0,
+          0.0
+        ],
+        "end_to_end_coverage_loss_percentage_points": 10.761694832879565,
+        "comparison_false_alerts_per_person_day": 0.0,
+        "status": "failed"
+      }
+    }
+  },
+  "skipped_folds": [],
+  "coverage_definition": "Supported elapsed intervals with finite scores at BOTH endpoints / observed elapsed reference intervals (gaps <=7.5 minutes); macro over subjects.",
+  "limitations": [
+    "CGM versus chest clock remains a source assumption; +/-5 minute sensitivity is separate.",
+    "Low/High censored values are classification labels only.",
+    "Quality screening is an engineering heuristic, not a clinically validated SQI.",
+    "Common-channel validation conditions threshold selection; missing test data count against end-to-end event recall and coverage."
+  ]
+}
