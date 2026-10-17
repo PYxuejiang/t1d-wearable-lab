@@ -22,3 +22,9 @@
 
 Advance only after recording the current stage's engineering/evaluation checks. Predictive-effect targets may fail or be inconclusive; report that separately rather than changing the test protocol.
 
+
+
+| Additional stage | Evaluation | Effect |
+|---|---|---|
+| CONTEXT_V1_ABORTED | Original120-row-purge attempt quarantined by support audit | No efficacy claim |
+| CONTEXT_V1_1 |132 groups independently verified; source-row limits retained | Context AP gain inconclusive; calibration improves raw Brier but not stable versus simple prior |

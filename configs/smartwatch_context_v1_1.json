@@ -1,0 +1,38 @@
+{
+  "id": "smartwatch-context-calibration-v1.1",
+  "dataset": "Zenodo15309060, all11 published processed CSVs; no new data download",
+  "scope": "Exploratory reuse, source-row holdout with unverified complete timestamps; not prospective or event-alarm validation",
+  "protocol": "personalized_row_holdout",
+  "seed": 20261016,
+  "purge_rows": 150,
+  "fractions": [
+    0.6,
+    0.8
+  ],
+  "feature_sets": [
+    "clock",
+    "context_time",
+    "wearable_time",
+    "combined"
+  ],
+  "context_columns": [
+    "IOB",
+    "time_since_lastmeal_ord"
+  ],
+  "learners": [
+    "logistic",
+    "random_forest",
+    "hgb"
+  ],
+  "model_selection": "highest validation AP within each feature set; earlier learner wins ties; all candidates saved",
+  "threshold": "validation Youden J with specificity>=0.8; single-class validation disables classification operating point",
+  "calibration": "validation-only sigmoid on clipped logits, C=1, no class weights; nonpositive slope falls back to validation prevalence",
+  "reference_baseline": "constant training-prevalence score on identical test anchors",
+  "primary_comparison": "raw combined versus raw wearable_time, paired per-subject AP; same reference rows and wearable opportunity mask",
+  "secondary": "calibrated versus raw Brier and training-prior Brier; AUC, AP, point sensitivity, specificity, reliability and per-subject directions",
+  "missingness": "absent context columns inserted as NA; model imputation training-only; source zeros retained with uncertainty flag, not proof of no real injections",
+  "safety_scope": "CGM and hypoglycemia excluded from inputs; IOB is a source unitless injection-activity index, not remaining insulin units; no dose recommendations",
+  "acceptance": "engineering checks, independent point metric reconstruction and source-row split audit must pass. Positive primary AP contrast requires paired 95% interval lower>0, exploratory/unadjusted. Calibration improvement alone is not detection improvement.",
+  "output_directory": "smartwatch_context_v1_1",
+  "support_audit": "Source IOB up to240min plus reference confirmation15; nominal 1min-row assumption, >=301row separation; source timestamps still unverified."
+}

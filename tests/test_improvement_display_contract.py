@@ -19,3 +19,16 @@ def test_improvement_display_uses_all_original_acceptance_records():
     # A positive AP contrast cannot turn the failed event alarm into a pass.
     assert public['stages']['V2_1']['effect_status']=='failed'
     assert public['stages']['V2_2']['effect_status']=='failed'
+
+
+def test_context_card_and_ledger_preserve_unfavorable_and_calibration_baselines():
+    record=json.loads((ROOT/'docs/acceptance/CONTEXT_V1_1.json').read_text(encoding='utf-8'))
+    public=json.loads((ROOT/'showcase/public/demo/improvement_data.json').read_text(encoding='utf-8'))
+    assert public['stages']['CONTEXT_V1_1']==record
+    assert record['groups_verified']==132 and record['subject_count']==11
+    assert record['summary']['combined']['raw']['ap']['mean'] < record['summary']['wearable_time']['raw']['ap']['mean']
+    assert record['summary']['wearable_time']['training_prior']['brier']['mean'] < record['summary']['wearable_time']['calibrated']['brier']['mean']
+    assert record['effect_status']=='inconclusive'
+    manifest=json.loads((ROOT/'showcase/public/cards/context-manifest.json').read_text())
+    assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+    assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/context-calibration.png').read_bytes()).hexdigest()

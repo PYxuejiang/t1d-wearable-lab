@@ -1,0 +1,4488 @@
+{
+  "stage": "CONTEXT_V1_1",
+  "engineering_status": "passed",
+  "evaluation_status": "source_rows_feature_whitelist_candidate_selection_calibration_and_independent_metrics_passed",
+  "effect_status": "inconclusive",
+  "effect_scope": "Exploratory primary contextual AP contrast only; no event-alarm acceptance",
+  "groups_verified": 132,
+  "subject_count": 11,
+  "maximum_metric_difference": 1.1102230246251565e-16,
+  "maximum_calibration_difference": 0.0,
+  "summary": {
+    "clock": {
+      "raw": {
+        "ap": {
+          "n": 8,
+          "mean": 0.10057135005436266,
+          "95_interval": [
+            0.035366302726739116,
+            0.17981575393740387
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.5197697186796801,
+          "95_interval": [
+            0.3286070832564292,
+            0.7195850595699329
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.2304987443508426,
+          "95_interval": [
+            0.21016408764475958,
+            0.24774849833842746
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.17430555555555555,
+          "95_interval": [
+            0.0,
+            0.42430555555555555
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 0.91250862465299,
+          "95_interval": [
+            0.8720889119972667,
+            0.954139437215998
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      },
+      "calibrated": {
+        "ap": {
+          "n": 8,
+          "mean": 0.059980461450947035,
+          "95_interval": [
+            0.024036980605820296,
+            0.10863204104225982
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.4725813637293492,
+          "95_interval": [
+            0.31178954957110616,
+            0.623516087368694
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.02690910214138886,
+          "95_interval": [
+            0.011927914584638467,
+            0.04818065766882966
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.049305555555555554,
+          "95_interval": [
+            0.0,
+            0.14791666666666667
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 0.9189219125034036,
+          "95_interval": [
+            0.8742158920865977,
+            0.9650321171165679
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      },
+      "training_prior": {
+        "ap": {
+          "n": 8,
+          "mean": 0.03685744509360789,
+          "95_interval": [
+            0.018638089640350113,
+            0.0664568547363183
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.5,
+          "95_interval": [
+            0.5,
+            0.5
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.02777771296445917,
+          "95_interval": [
+            0.012086085047351086,
+            0.0487628411545455
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.0,
+          "95_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      }
+    },
+    "context_time": {
+      "raw": {
+        "ap": {
+          "n": 8,
+          "mean": 0.12174450181657484,
+          "95_interval": [
+            0.055414491360084334,
+            0.19987457913164003
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.6709221475817841,
+          "95_interval": [
+            0.5748426032980863,
+            0.7616990852397942
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.17314125776223924,
+          "95_interval": [
+            0.1397853081172876,
+            0.20448770987899736
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.14543650793650795,
+          "95_interval": [
+            0.022222222222222223,
+            0.3125
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 0.9133060684684644,
+          "95_interval": [
+            0.8633139570686313,
+            0.9577897008099344
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      },
+      "calibrated": {
+        "ap": {
+          "n": 8,
+          "mean": 0.08407762703774778,
+          "95_interval": [
+            0.041541201102987355,
+            0.13997472045180348
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.610348557293402,
+          "95_interval": [
+            0.5345320271534153,
+            0.7007283103653913
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.027964183844342492,
+          "95_interval": [
+            0.012312108723599566,
+            0.04942264613986344
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.12321428571428572,
+          "95_interval": [
+            0.0,
+            0.3035714285714286
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 0.9338308534590958,
+          "95_interval": [
+            0.8804252662145025,
+            0.979134311860322
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      },
+      "training_prior": {
+        "ap": {
+          "n": 8,
+          "mean": 0.03685744509360789,
+          "95_interval": [
+            0.018638089640350113,
+            0.0664568547363183
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.5,
+          "95_interval": [
+            0.5,
+            0.5
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.02777771296445917,
+          "95_interval": [
+            0.012086085047351086,
+            0.0487628411545455
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.0,
+          "95_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      }
+    },
+    "wearable_time": {
+      "raw": {
+        "ap": {
+          "n": 8,
+          "mean": 0.1560976105777407,
+          "95_interval": [
+            0.03320688460326119,
+            0.2789267996109731
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.6013353586676398,
+          "95_interval": [
+            0.3981166435019548,
+            0.7778633520025229
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.1306125511850566,
+          "95_interval": [
+            0.08631333816632063,
+            0.18002234315071153
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.24389880952380955,
+          "95_interval": [
+            0.059375000000000004,
+            0.4818154761904755
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 0.9245441694803884,
+          "95_interval": [
+            0.8781657229098833,
+            0.9679747987960433
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      },
+      "calibrated": {
+        "ap": {
+          "n": 8,
+          "mean": 0.11742169067071798,
+          "95_interval": [
+            0.024895795692751292,
+            0.2148511358177682
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.592250810623068,
+          "95_interval": [
+            0.48014701148968475,
+            0.7000414431885248
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.02951181039986871,
+          "95_interval": [
+            0.014562153337680251,
+            0.05076358089828474
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.12202380952380952,
+          "95_interval": [
+            0.025,
+            0.2470238095238095
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 0.9275563269835639,
+          "95_interval": [
+            0.8798696733797741,
+            0.9718361510157671
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      },
+      "training_prior": {
+        "ap": {
+          "n": 8,
+          "mean": 0.03685744509360789,
+          "95_interval": [
+            0.018638089640350113,
+            0.0664568547363183
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.5,
+          "95_interval": [
+            0.5,
+            0.5
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.02777771296445917,
+          "95_interval": [
+            0.012086085047351086,
+            0.0487628411545455
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.0,
+          "95_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      }
+    },
+    "combined": {
+      "raw": {
+        "ap": {
+          "n": 8,
+          "mean": 0.10317306074196886,
+          "95_interval": [
+            0.048098048932484545,
+            0.1608550314295877
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.6034778190811609,
+          "95_interval": [
+            0.4405785295802783,
+            0.757166481233182
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.12313803264642596,
+          "95_interval": [
+            0.0847234093336968,
+            0.16799515658795394
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.41485119047619046,
+          "95_interval": [
+            0.20614880952380954,
+            0.648723958333333
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 0.8882671474107565,
+          "95_interval": [
+            0.824348392312145,
+            0.947135265880103
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      },
+      "calibrated": {
+        "ap": {
+          "n": 8,
+          "mean": 0.07983871559350234,
+          "95_interval": [
+            0.033230046603251163,
+            0.13365095489192297
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.547484805109105,
+          "95_interval": [
+            0.40947645808124095,
+            0.6676602038397269
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.03078768910060166,
+          "95_interval": [
+            0.015296049439633344,
+            0.05186984965426236
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.2961011904761905,
+          "95_interval": [
+            0.11797619047619048,
+            0.4967492559523807
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 0.898174605222406,
+          "95_interval": [
+            0.8304038257410978,
+            0.9610947904985383
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      },
+      "training_prior": {
+        "ap": {
+          "n": 8,
+          "mean": 0.03685744509360789,
+          "95_interval": [
+            0.018638089640350113,
+            0.0664568547363183
+          ]
+        },
+        "roc_auc": {
+          "n": 8,
+          "mean": 0.5,
+          "95_interval": [
+            0.5,
+            0.5
+          ]
+        },
+        "brier": {
+          "n": 11,
+          "mean": 0.02777771296445917,
+          "95_interval": [
+            0.012086085047351086,
+            0.0487628411545455
+          ]
+        },
+        "sensitivity": {
+          "n": 8,
+          "mean": 0.0,
+          "95_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "specificity": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "coverage": {
+          "n": 11,
+          "mean": 1.0,
+          "95_interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "positive_fraction": {
+          "n": 11,
+          "mean": 0.02680541461353301,
+          "95_interval": [
+            0.010726969105947202,
+            0.050134077064072725
+          ]
+        }
+      }
+    }
+  },
+  "paired_gain": {
+    "clock__to__context_time": {
+      "ap": {
+        "n": 8,
+        "mean": 0.02117315176221219,
+        "95_interval": [
+          -0.07243441534278583,
+          0.10851116714506344
+        ]
+      },
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.151152428902104,
+        "95_interval": [
+          -0.00864146018914533,
+          0.34775465512822357
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": -0.028869047619047614,
+        "95_interval": [
+          -0.3449404761904762,
+          0.2464285714285714
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": 0.0007974438154743888,
+        "95_interval": [
+          -0.04322557790967541,
+          0.04382980496778557
+        ]
+      }
+    },
+    "clock__to__wearable_time": {
+      "ap": {
+        "n": 8,
+        "mean": 0.05552626052337804,
+        "95_interval": [
+          -0.008074003690260052,
+          0.13318342996304483
+        ]
+      },
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.0815656399879595,
+        "95_interval": [
+          -0.12735534225262124,
+          0.2735781169130694
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": 0.06959325396825397,
+        "95_interval": [
+          -0.055059523809523794,
+          0.22013392857142833
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": 0.012035544827398437,
+        "95_interval": [
+          -0.05122702472194616,
+          0.07485991955870573
+        ]
+      }
+    },
+    "wearable_time__to__combined": {
+      "ap": {
+        "n": 8,
+        "mean": -0.05292454983577182,
+        "95_interval": [
+          -0.11512717224518246,
+          0.010402231536804266
+        ]
+      },
+      "roc_auc": {
+        "n": 8,
+        "mean": 0.0021424604135211016,
+        "95_interval": [
+          -0.12182795075142339,
+          0.15861829150804485
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": 0.17095238095238094,
+        "95_interval": [
+          -0.012540178571428575,
+          0.41582961309523747
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": -0.03627702206963186,
+        "95_interval": [
+          -0.06773412550683598,
+          -0.0052856659442456835
+        ]
+      }
+    },
+    "context_time__to__combined": {
+      "ap": {
+        "n": 8,
+        "mean": -0.018571441074605972,
+        "95_interval": [
+          -0.08887763826802476,
+          0.04925104319203122
+        ]
+      },
+      "roc_auc": {
+        "n": 8,
+        "mean": -0.06744432850062337,
+        "95_interval": [
+          -0.18744937151865082,
+          0.045730331502639145
+        ]
+      },
+      "sensitivity": {
+        "n": 8,
+        "mean": 0.2694146825396825,
+        "95_interval": [
+          -0.026572172619047617,
+          0.5718601190476188
+        ]
+      },
+      "specificity": {
+        "n": 11,
+        "mean": -0.025038921057707816,
+        "95_interval": [
+          -0.09092824044254864,
+          0.05669144318287627
+        ]
+      }
+    }
+  },
+  "calibration_brier_reductions": {
+    "clock": {
+      "calibrated_vs_raw": {
+        "n": 11,
+        "mean": 0.2035896422094538,
+        "95_interval": [
+          0.17476640199968774,
+          0.2284909143405901
+        ]
+      },
+      "calibrated_vs_prior": {
+        "n": 11,
+        "mean": 0.0008686108230703045,
+        "95_interval": [
+          -0.0020648665448461025,
+          0.004528540697022118
+        ]
+      }
+    },
+    "context_time": {
+      "calibrated_vs_raw": {
+        "n": 11,
+        "mean": 0.14517707391789675,
+        "95_interval": [
+          0.1105459722101134,
+          0.17808013500549302
+        ]
+      },
+      "calibrated_vs_prior": {
+        "n": 11,
+        "mean": -0.00018647087988332415,
+        "95_interval": [
+          -0.004188032948619829,
+          0.004096110084947986
+        ]
+      }
+    },
+    "wearable_time": {
+      "calibrated_vs_raw": {
+        "n": 11,
+        "mean": 0.10110074078518788,
+        "95_interval": [
+          0.056586989267513675,
+          0.15089783917806637
+        ]
+      },
+      "calibrated_vs_prior": {
+        "n": 11,
+        "mean": -0.0017340974354095456,
+        "95_interval": [
+          -0.00933887387002853,
+          0.004701902135251629
+        ]
+      }
+    },
+    "combined": {
+      "calibrated_vs_raw": {
+        "n": 11,
+        "mean": 0.09235034354582429,
+        "95_interval": [
+          0.05559379107320139,
+          0.13620196176383795
+        ]
+      },
+      "calibrated_vs_prior": {
+        "n": 11,
+        "mean": -0.003009976136142498,
+        "95_interval": [
+          -0.010637875559624107,
+          0.0034632137260171255
+        ]
+      }
+    }
+  },
+  "calibration_audit": [
+    {
+      "subject": "01",
+      "feature_set": "clock",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2393,
+      "validation_positives": 100
+    },
+    {
+      "subject": "01",
+      "feature_set": "context_time",
+      "type": "constant",
+      "reason": "nonpositive_validation_slope_no_ranking_flip",
+      "validation_rows": 2393,
+      "validation_positives": 100
+    },
+    {
+      "subject": "01",
+      "feature_set": "wearable_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2393,
+      "validation_positives": 100
+    },
+    {
+      "subject": "01",
+      "feature_set": "combined",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2393,
+      "validation_positives": 100
+    },
+    {
+      "subject": "02",
+      "feature_set": "clock",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2516,
+      "validation_positives": 260
+    },
+    {
+      "subject": "02",
+      "feature_set": "context_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2516,
+      "validation_positives": 260
+    },
+    {
+      "subject": "02",
+      "feature_set": "wearable_time",
+      "type": "constant",
+      "reason": "nonpositive_validation_slope_no_ranking_flip",
+      "validation_rows": 2516,
+      "validation_positives": 260
+    },
+    {
+      "subject": "02",
+      "feature_set": "combined",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2516,
+      "validation_positives": 260
+    },
+    {
+      "subject": "03",
+      "feature_set": "clock",
+      "type": "constant",
+      "reason": "single_class_or_empty_validation",
+      "validation_rows": 2646,
+      "validation_positives": 0
+    },
+    {
+      "subject": "03",
+      "feature_set": "context_time",
+      "type": "constant",
+      "reason": "single_class_or_empty_validation",
+      "validation_rows": 2646,
+      "validation_positives": 0
+    },
+    {
+      "subject": "03",
+      "feature_set": "wearable_time",
+      "type": "constant",
+      "reason": "single_class_or_empty_validation",
+      "validation_rows": 2646,
+      "validation_positives": 0
+    },
+    {
+      "subject": "03",
+      "feature_set": "combined",
+      "type": "constant",
+      "reason": "single_class_or_empty_validation",
+      "validation_rows": 2646,
+      "validation_positives": 0
+    },
+    {
+      "subject": "04",
+      "feature_set": "clock",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2524,
+      "validation_positives": 70
+    },
+    {
+      "subject": "04",
+      "feature_set": "context_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2524,
+      "validation_positives": 70
+    },
+    {
+      "subject": "04",
+      "feature_set": "wearable_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2524,
+      "validation_positives": 70
+    },
+    {
+      "subject": "04",
+      "feature_set": "combined",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2524,
+      "validation_positives": 70
+    },
+    {
+      "subject": "07",
+      "feature_set": "clock",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2515,
+      "validation_positives": 15
+    },
+    {
+      "subject": "07",
+      "feature_set": "context_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2515,
+      "validation_positives": 15
+    },
+    {
+      "subject": "07",
+      "feature_set": "wearable_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2515,
+      "validation_positives": 15
+    },
+    {
+      "subject": "07",
+      "feature_set": "combined",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2515,
+      "validation_positives": 15
+    },
+    {
+      "subject": "08",
+      "feature_set": "clock",
+      "type": "constant",
+      "reason": "nonpositive_validation_slope_no_ranking_flip",
+      "validation_rows": 2253,
+      "validation_positives": 25
+    },
+    {
+      "subject": "08",
+      "feature_set": "context_time",
+      "type": "constant",
+      "reason": "nonpositive_validation_slope_no_ranking_flip",
+      "validation_rows": 2253,
+      "validation_positives": 25
+    },
+    {
+      "subject": "08",
+      "feature_set": "wearable_time",
+      "type": "constant",
+      "reason": "nonpositive_validation_slope_no_ranking_flip",
+      "validation_rows": 2253,
+      "validation_positives": 25
+    },
+    {
+      "subject": "08",
+      "feature_set": "combined",
+      "type": "constant",
+      "reason": "nonpositive_validation_slope_no_ranking_flip",
+      "validation_rows": 2253,
+      "validation_positives": 25
+    },
+    {
+      "subject": "10",
+      "feature_set": "clock",
+      "type": "constant",
+      "reason": "single_class_or_empty_validation",
+      "validation_rows": 2529,
+      "validation_positives": 0
+    },
+    {
+      "subject": "10",
+      "feature_set": "context_time",
+      "type": "constant",
+      "reason": "single_class_or_empty_validation",
+      "validation_rows": 2529,
+      "validation_positives": 0
+    },
+    {
+      "subject": "10",
+      "feature_set": "wearable_time",
+      "type": "constant",
+      "reason": "single_class_or_empty_validation",
+      "validation_rows": 2529,
+      "validation_positives": 0
+    },
+    {
+      "subject": "10",
+      "feature_set": "combined",
+      "type": "constant",
+      "reason": "single_class_or_empty_validation",
+      "validation_rows": 2529,
+      "validation_positives": 0
+    },
+    {
+      "subject": "13",
+      "feature_set": "clock",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2566,
+      "validation_positives": 105
+    },
+    {
+      "subject": "13",
+      "feature_set": "context_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2566,
+      "validation_positives": 105
+    },
+    {
+      "subject": "13",
+      "feature_set": "wearable_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2566,
+      "validation_positives": 105
+    },
+    {
+      "subject": "13",
+      "feature_set": "combined",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2566,
+      "validation_positives": 105
+    },
+    {
+      "subject": "14",
+      "feature_set": "clock",
+      "type": "constant",
+      "reason": "nonpositive_validation_slope_no_ranking_flip",
+      "validation_rows": 1608,
+      "validation_positives": 105
+    },
+    {
+      "subject": "14",
+      "feature_set": "context_time",
+      "type": "constant",
+      "reason": "nonpositive_validation_slope_no_ranking_flip",
+      "validation_rows": 1608,
+      "validation_positives": 105
+    },
+    {
+      "subject": "14",
+      "feature_set": "wearable_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 1608,
+      "validation_positives": 105
+    },
+    {
+      "subject": "14",
+      "feature_set": "combined",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 1608,
+      "validation_positives": 105
+    },
+    {
+      "subject": "15",
+      "feature_set": "clock",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2687,
+      "validation_positives": 100
+    },
+    {
+      "subject": "15",
+      "feature_set": "context_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2687,
+      "validation_positives": 100
+    },
+    {
+      "subject": "15",
+      "feature_set": "wearable_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2687,
+      "validation_positives": 100
+    },
+    {
+      "subject": "15",
+      "feature_set": "combined",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2687,
+      "validation_positives": 100
+    },
+    {
+      "subject": "17",
+      "feature_set": "clock",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2051,
+      "validation_positives": 65
+    },
+    {
+      "subject": "17",
+      "feature_set": "context_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2051,
+      "validation_positives": 65
+    },
+    {
+      "subject": "17",
+      "feature_set": "wearable_time",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2051,
+      "validation_positives": 65
+    },
+    {
+      "subject": "17",
+      "feature_set": "combined",
+      "type": "sigmoid",
+      "reason": null,
+      "validation_rows": 2051,
+      "validation_positives": 65
+    }
+  ],
+  "metrics_by_subject": [
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.21482195748236294,
+      "roc_auc": 0.6136930664345808,
+      "brier": 0.22515628473523278,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 0.7071374410807326,
+      "tp": 71,
+      "tn": 995,
+      "fp": 154,
+      "fn": 109,
+      "sensitivity": 0.39444444444444443,
+      "specificity": 0.865970409051349,
+      "precision": 0.31555555555555553,
+      "subject": "01",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.21482195748236294,
+      "roc_auc": 0.6136930664345808,
+      "brier": 0.12413858241963495,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 0.06098590826677228,
+      "tp": 71,
+      "tn": 995,
+      "fp": 154,
+      "fn": 109,
+      "sensitivity": 0.39444444444444443,
+      "specificity": 0.865970409051349,
+      "precision": 0.31555555555555553,
+      "subject": "01",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.13544018058690746,
+      "roc_auc": 0.5,
+      "brier": 0.11709734035274659,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1149,
+      "fp": 0,
+      "fn": 180,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "01",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.3567164633897404,
+      "roc_auc": 0.7357412242529736,
+      "brier": 0.22480102392119972,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 0.6938946676794269,
+      "tp": 32,
+      "tn": 1120,
+      "fp": 29,
+      "fn": 148,
+      "sensitivity": 0.17777777777777778,
+      "specificity": 0.9747606614447345,
+      "precision": 0.5245901639344263,
+      "subject": "01",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.13544018058690746,
+      "roc_auc": 0.5,
+      "brier": 0.12586676599282062,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1149,
+      "fp": 0,
+      "fn": 180,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "01",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.13544018058690746,
+      "roc_auc": 0.5,
+      "brier": 0.11709734035274659,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1149,
+      "fp": 0,
+      "fn": 180,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "01",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.3861329084600803,
+      "roc_auc": 0.7446886181220385,
+      "brier": 0.1380672379982633,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 0.6614412096759215,
+      "tp": 24,
+      "tn": 1124,
+      "fp": 25,
+      "fn": 156,
+      "sensitivity": 0.13333333333333333,
+      "specificity": 0.9782419495213229,
+      "precision": 0.4897959183673469,
+      "subject": "01",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.3861329084600803,
+      "roc_auc": 0.7446886181220385,
+      "brier": 0.12337601659645969,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 0.07266854831957514,
+      "tp": 24,
+      "tn": 1124,
+      "fp": 25,
+      "fn": 156,
+      "sensitivity": 0.13333333333333333,
+      "specificity": 0.9782419495213229,
+      "precision": 0.4897959183673469,
+      "subject": "01",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.13544018058690746,
+      "roc_auc": 0.5,
+      "brier": 0.11709734035274659,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1149,
+      "fp": 0,
+      "fn": 180,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "01",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.22828008278113143,
+      "roc_auc": 0.5228266125132965,
+      "brier": 0.1503471364358043,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 0.546666366636924,
+      "tp": 30,
+      "tn": 1064,
+      "fp": 85,
+      "fn": 150,
+      "sensitivity": 0.16666666666666666,
+      "specificity": 0.9260226283724978,
+      "precision": 0.2608695652173913,
+      "subject": "01",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.22828008278113143,
+      "roc_auc": 0.5228266125132965,
+      "brier": 0.12563144287944303,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 0.05548315211903527,
+      "tp": 30,
+      "tn": 1064,
+      "fp": 85,
+      "fn": 150,
+      "sensitivity": 0.16666666666666666,
+      "specificity": 0.9260226283724978,
+      "precision": 0.2608695652173913,
+      "subject": "01",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 1329,
+      "positive_fraction": 0.13544018058690746,
+      "ap": 0.13544018058690746,
+      "roc_auc": 0.5,
+      "brier": 0.11709734035274659,
+      "single_class": false,
+      "reference_n": 1329,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1149,
+      "fp": 0,
+      "fn": 180,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "01",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.02162006885438693,
+      "roc_auc": 0.2963873943120677,
+      "brier": 0.2510634084701965,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 0.6774268768969125,
+      "tp": 0,
+      "tn": 2122,
+      "fp": 480,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 0.8155265180630284,
+      "precision": 0.0,
+      "subject": "02",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.02162006885438693,
+      "roc_auc": 0.2963873943120677,
+      "brier": 0.028595628030180172,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 0.10501263779025381,
+      "tp": 0,
+      "tn": 2122,
+      "fp": 480,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 0.8155265180630284,
+      "precision": 0.0,
+      "subject": "02",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.022539444027047332,
+      "roc_auc": 0.5,
+      "brier": 0.039039808189289406,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2602,
+      "fp": 0,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "02",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.02790707464557369,
+      "roc_auc": 0.508195618754804,
+      "brier": 0.24377805259164476,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 0.7136322676437037,
+      "tp": 0,
+      "tn": 2245,
+      "fp": 357,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 0.8627978478093774,
+      "precision": 0.0,
+      "subject": "02",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.02790707464557369,
+      "roc_auc": 0.508195618754804,
+      "brier": 0.028832661794632657,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 0.12245497938653693,
+      "tp": 0,
+      "tn": 2245,
+      "fp": 357,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 0.8627978478093774,
+      "precision": 0.0,
+      "subject": "02",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.022539444027047332,
+      "roc_auc": 0.5,
+      "brier": 0.039039808189289406,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2602,
+      "fp": 0,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "02",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.012228771728423446,
+      "roc_auc": 0.09016141429669486,
+      "brier": 0.2948372856442224,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 0.8936081244663174,
+      "tp": 0,
+      "tn": 2602,
+      "fp": 0,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "02",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.022539444027047332,
+      "roc_auc": 0.5,
+      "brier": 0.028559926388350483,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2602,
+      "fp": 0,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "02",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.022539444027047332,
+      "roc_auc": 0.5,
+      "brier": 0.039039808189289406,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2602,
+      "fp": 0,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "02",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.012549194586513709,
+      "roc_auc": 0.1462016397642839,
+      "brier": 0.2669705183474188,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 0.9131987498467123,
+      "tp": 0,
+      "tn": 2597,
+      "fp": 5,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 0.9980784012298232,
+      "precision": 0.0,
+      "subject": "02",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.012549194586513709,
+      "roc_auc": 0.1462016397642839,
+      "brier": 0.02874251419128988,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 0.11591651664522364,
+      "tp": 0,
+      "tn": 2597,
+      "fp": 5,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 0.9980784012298232,
+      "precision": 0.0,
+      "subject": "02",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2662,
+      "positive_fraction": 0.022539444027047332,
+      "ap": 0.022539444027047332,
+      "roc_auc": 0.5,
+      "brier": 0.039039808189289406,
+      "single_class": false,
+      "reference_n": 2662,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2602,
+      "fp": 0,
+      "fn": 60,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "02",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.2210157850510598,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 7.698276396288055e-05,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.1863103547273958,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 7.698276396288055e-05,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.11319242547038791,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 7.698276396288055e-05,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.04519835621268738,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2488,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 7.698276396288055e-05,
+      "single_class": true,
+      "reference_n": 2488,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2488,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "03",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.01820233646917488,
+      "roc_auc": 0.18640073509540026,
+      "brier": 0.25119512469518024,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 0.5949250542273952,
+      "tp": 0,
+      "tn": 2163,
+      "fp": 480,
+      "fn": 70,
+      "sensitivity": 0.0,
+      "specificity": 0.8183881952326901,
+      "precision": 0.0,
+      "subject": "04",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.01820233646917488,
+      "roc_auc": 0.18640073509540026,
+      "brier": 0.027372290739647698,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 0.06856256912805093,
+      "tp": 0,
+      "tn": 2163,
+      "fp": 480,
+      "fn": 70,
+      "sensitivity": 0.0,
+      "specificity": 0.8183881952326901,
+      "precision": 0.0,
+      "subject": "04",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.025801695539992626,
+      "roc_auc": 0.5,
+      "brier": 0.025136224676556452,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2643,
+      "fp": 0,
+      "fn": 70,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "04",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.2452099681666592,
+      "roc_auc": 0.6188800605372683,
+      "brier": 0.23033349322627275,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 0.5129035636919194,
+      "tp": 37,
+      "tn": 1917,
+      "fp": 726,
+      "fn": 33,
+      "sensitivity": 0.5285714285714286,
+      "specificity": 0.7253121452894438,
+      "precision": 0.04849279161205767,
+      "subject": "04",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.2452099681666592,
+      "roc_auc": 0.6188800605372683,
+      "brier": 0.026601912797445035,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 0.043542363715249825,
+      "tp": 37,
+      "tn": 1917,
+      "fp": 726,
+      "fn": 33,
+      "sensitivity": 0.5285714285714286,
+      "specificity": 0.7253121452894438,
+      "precision": 0.04849279161205767,
+      "subject": "04",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.025801695539992626,
+      "roc_auc": 0.5,
+      "brier": 0.025136224676556452,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2643,
+      "fp": 0,
+      "fn": 70,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "04",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.029026608692956972,
+      "roc_auc": 0.38467109885952105,
+      "brier": 0.22457901975579508,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 0.8380268761404243,
+      "tp": 10,
+      "tn": 2454,
+      "fp": 189,
+      "fn": 60,
+      "sensitivity": 0.14285714285714285,
+      "specificity": 0.9284903518728718,
+      "precision": 0.05025125628140704,
+      "subject": "04",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.029026608692956972,
+      "roc_auc": 0.38467109885952105,
+      "brier": 0.025508374094018963,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 0.044479831359452715,
+      "tp": 10,
+      "tn": 2454,
+      "fp": 189,
+      "fn": 60,
+      "sensitivity": 0.14285714285714285,
+      "specificity": 0.9284903518728718,
+      "precision": 0.05025125628140704,
+      "subject": "04",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.025801695539992626,
+      "roc_auc": 0.5,
+      "brier": 0.025136224676556452,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2643,
+      "fp": 0,
+      "fn": 70,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "04",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.06244572836780794,
+      "roc_auc": 0.4707313118209827,
+      "brier": 0.20180547567821608,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 0.991984881421123,
+      "tp": 8,
+      "tn": 2604,
+      "fp": 39,
+      "fn": 62,
+      "sensitivity": 0.11428571428571428,
+      "specificity": 0.985244040862656,
+      "precision": 0.1702127659574468,
+      "subject": "04",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.06244572836780794,
+      "roc_auc": 0.4707313118209827,
+      "brier": 0.025109995226766907,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 0.038660963507289245,
+      "tp": 8,
+      "tn": 2604,
+      "fp": 39,
+      "fn": 62,
+      "sensitivity": 0.11428571428571428,
+      "specificity": 0.985244040862656,
+      "precision": 0.1702127659574468,
+      "subject": "04",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2713,
+      "positive_fraction": 0.025801695539992626,
+      "ap": 0.025801695539992626,
+      "roc_auc": 0.5,
+      "brier": 0.025136224676556452,
+      "single_class": false,
+      "reference_n": 2713,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2643,
+      "fp": 0,
+      "fn": 70,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "04",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.015177797051170859,
+      "roc_auc": 0.15298365640440897,
+      "brier": 0.2553564817819475,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 0.629099480073885,
+      "tp": 0,
+      "tn": 2235,
+      "fp": 396,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.8494868871151653,
+      "precision": 0.0,
+      "subject": "07",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.015177797051170859,
+      "roc_auc": 0.15298365640440897,
+      "brier": 0.01318330025408574,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 0.015043422917231146,
+      "tp": 0,
+      "tn": 2235,
+      "fp": 396,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.8494868871151653,
+      "precision": 0.0,
+      "subject": "07",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.01312828207051763,
+      "roc_auc": 0.5,
+      "brier": 0.013360969115163226,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2631,
+      "fp": 0,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "07",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.09981657660292513,
+      "roc_auc": 0.8139925069229517,
+      "brier": 0.14063540215402615,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 0.8566319182900161,
+      "tp": 16,
+      "tn": 2532,
+      "fp": 99,
+      "fn": 19,
+      "sensitivity": 0.45714285714285713,
+      "specificity": 0.9623717217787914,
+      "precision": 0.1391304347826087,
+      "subject": "07",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.09981657660292513,
+      "roc_auc": 0.8139925069229517,
+      "brier": 0.012778460220762913,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 0.02381769139341189,
+      "tp": 16,
+      "tn": 2532,
+      "fp": 99,
+      "fn": 19,
+      "sensitivity": 0.45714285714285713,
+      "specificity": 0.9623717217787914,
+      "precision": 0.1391304347826087,
+      "subject": "07",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.01312828207051763,
+      "roc_auc": 0.5,
+      "brier": 0.013360969115163226,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2631,
+      "fp": 0,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "07",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.023944317930552593,
+      "roc_auc": 0.705972742574795,
+      "brier": 0.04583020594982759,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 0.6140823128260323,
+      "tp": 0,
+      "tn": 2553,
+      "fp": 78,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.9703534777651083,
+      "precision": 0.0,
+      "subject": "07",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.023944317930552593,
+      "roc_auc": 0.705972742574795,
+      "brier": 0.013016792074163912,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 0.011212254696283957,
+      "tp": 0,
+      "tn": 2553,
+      "fp": 78,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.9703534777651083,
+      "precision": 0.0,
+      "subject": "07",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.01312828207051763,
+      "roc_auc": 0.5,
+      "brier": 0.013360969115163226,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2631,
+      "fp": 0,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "07",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.036238614654027765,
+      "roc_auc": 0.7529022099147527,
+      "brier": 0.04272265187058264,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 0.258280133134926,
+      "tp": 16,
+      "tn": 2353,
+      "fp": 278,
+      "fn": 19,
+      "sensitivity": 0.45714285714285713,
+      "specificity": 0.8943367540858989,
+      "precision": 0.05442176870748299,
+      "subject": "07",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.036238614654027765,
+      "roc_auc": 0.7529022099147527,
+      "brier": 0.012983664552053771,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 0.007444530015038845,
+      "tp": 16,
+      "tn": 2353,
+      "fp": 278,
+      "fn": 19,
+      "sensitivity": 0.45714285714285713,
+      "specificity": 0.8943367540858989,
+      "precision": 0.05442176870748299,
+      "subject": "07",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2666,
+      "positive_fraction": 0.01312828207051763,
+      "ap": 0.01312828207051763,
+      "roc_auc": 0.5,
+      "brier": 0.013360969115163226,
+      "single_class": false,
+      "reference_n": 2666,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2631,
+      "fp": 0,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "07",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.3333333333333333,
+      "roc_auc": 0.9840319361277445,
+      "brier": 0.23078817150170805,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 0.8377206803709569,
+      "tp": 40,
+      "tn": 2425,
+      "fp": 80,
+      "fn": 0,
+      "sensitivity": 1.0,
+      "specificity": 0.9680638722554891,
+      "precision": 0.3333333333333333,
+      "subject": "08",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.015717092337917484,
+      "roc_auc": 0.5,
+      "brier": 0.015491416920110615,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2505,
+      "fp": 0,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "08",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.015717092337917484,
+      "roc_auc": 0.5,
+      "brier": 0.01553114470885704,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2505,
+      "fp": 0,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "08",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.0837880291005291,
+      "roc_auc": 0.8247355289421157,
+      "brier": 0.0989037812304871,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 0.9196400912700208,
+      "tp": 0,
+      "tn": 2425,
+      "fp": 80,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 0.9680638722554891,
+      "precision": 0.0,
+      "subject": "08",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.015717092337917484,
+      "roc_auc": 0.5,
+      "brier": 0.015491416920110615,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2505,
+      "fp": 0,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "08",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.015717092337917484,
+      "roc_auc": 0.5,
+      "brier": 0.01553114470885704,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2505,
+      "fp": 0,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "08",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.3354351238927229,
+      "roc_auc": 0.9825149700598802,
+      "brier": 0.023698246311236862,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 0.3528838614404969,
+      "tp": 39,
+      "tn": 2422,
+      "fp": 83,
+      "fn": 1,
+      "sensitivity": 0.975,
+      "specificity": 0.9668662674650699,
+      "precision": 0.319672131147541,
+      "subject": "08",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.015717092337917484,
+      "roc_auc": 0.5,
+      "brier": 0.015491416920110615,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2505,
+      "fp": 0,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "08",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.015717092337917484,
+      "roc_auc": 0.5,
+      "brier": 0.01553114470885704,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2505,
+      "fp": 0,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "08",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.20239185352564965,
+      "roc_auc": 0.9479441117764471,
+      "brier": 0.10063293896681558,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 0.6698391177027447,
+      "tp": 38,
+      "tn": 2232,
+      "fp": 273,
+      "fn": 2,
+      "sensitivity": 0.95,
+      "specificity": 0.8910179640718563,
+      "precision": 0.12218649517684887,
+      "subject": "08",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.015717092337917484,
+      "roc_auc": 0.5,
+      "brier": 0.015491416920110615,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2505,
+      "fp": 0,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "08",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2545,
+      "positive_fraction": 0.015717092337917484,
+      "ap": 0.015717092337917484,
+      "roc_auc": 0.5,
+      "brier": 0.01553114470885704,
+      "single_class": false,
+      "reference_n": 2545,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2505,
+      "fp": 0,
+      "fn": 40,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "08",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.2471529417807606,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.00020579300153737384,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.17939998448499161,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.00020579300153737384,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.13687779880222942,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.00020579300153737384,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.08272376815241761,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2657,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.00020579300153737384,
+      "single_class": true,
+      "reference_n": 2657,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2657,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "10",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.23456896913093636,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 0.7135870713445787,
+      "tp": 0,
+      "tn": 2596,
+      "fp": 120,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 0.9558173784977909,
+      "precision": 0.0,
+      "subject": "13",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0024373579103580474,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 0.09302934730223605,
+      "tp": 0,
+      "tn": 2596,
+      "fp": 120,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 0.9558173784977909,
+      "precision": 0.0,
+      "subject": "13",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0018000345246621825,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2716,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "13",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.23456896913093636,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 0.7135870713445787,
+      "tp": 0,
+      "tn": 2596,
+      "fp": 120,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 0.9558173784977909,
+      "precision": 0.0,
+      "subject": "13",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0024373579103580474,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 0.09302934730223605,
+      "tp": 0,
+      "tn": 2596,
+      "fp": 120,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 0.9558173784977909,
+      "precision": 0.0,
+      "subject": "13",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0018000345246621825,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2716,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "13",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.1866273796156656,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 0.5904585535843975,
+      "tp": 0,
+      "tn": 2136,
+      "fp": 580,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 0.7864506627393225,
+      "precision": 0.0,
+      "subject": "13",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.03841048597975841,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 0.10964532109167248,
+      "tp": 0,
+      "tn": 2136,
+      "fp": 580,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 0.7864506627393225,
+      "precision": 0.0,
+      "subject": "13",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0018000345246621825,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2716,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "13",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.18662737961666148,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 0.5904585535811357,
+      "tp": 0,
+      "tn": 2136,
+      "fp": 580,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 0.7864506627393225,
+      "precision": 0.0,
+      "subject": "13",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.03841048597989755,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 0.10964532109058735,
+      "tp": 0,
+      "tn": 2136,
+      "fp": 580,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 0.7864506627393225,
+      "precision": 0.0,
+      "subject": "13",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2716,
+      "positive_fraction": 0.0,
+      "ap": null,
+      "roc_auc": null,
+      "brier": 0.0018000345246621825,
+      "single_class": true,
+      "reference_n": 2716,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2716,
+      "fp": 0,
+      "fn": 0,
+      "sensitivity": null,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "13",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.038282937657345494,
+      "roc_auc": 0.39347490347490344,
+      "brier": 0.19614881609217732,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 0.8783204584605597,
+      "tp": 0,
+      "tn": 1494,
+      "fp": 60,
+      "fn": 50,
+      "sensitivity": 0.0,
+      "specificity": 0.9613899613899614,
+      "precision": 0.0,
+      "subject": "14",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.03117206982543641,
+      "roc_auc": 0.5,
+      "brier": 0.03136498563404364,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1554,
+      "fp": 0,
+      "fn": 50,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "14",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.03117206982543641,
+      "roc_auc": 0.5,
+      "brier": 0.04366452499544094,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1554,
+      "fp": 0,
+      "fn": 50,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "14",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.04315984849060827,
+      "roc_auc": 0.4241119691119691,
+      "brier": 0.17600945299765397,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 0.5030068253773877,
+      "tp": 0,
+      "tn": 1292,
+      "fp": 262,
+      "fn": 50,
+      "sensitivity": 0.0,
+      "specificity": 0.8314028314028314,
+      "precision": 0.0,
+      "subject": "14",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.03117206982543641,
+      "roc_auc": 0.5,
+      "brier": 0.03136498563404364,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1554,
+      "fp": 0,
+      "fn": 50,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "14",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.03117206982543641,
+      "roc_auc": 0.5,
+      "brier": 0.04366452499544094,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1554,
+      "fp": 0,
+      "fn": 50,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "14",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.06790441990685156,
+      "roc_auc": 0.7842535392535392,
+      "brier": 0.08883420817001224,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 0.37822431550966173,
+      "tp": 10,
+      "tn": 1338,
+      "fp": 216,
+      "fn": 40,
+      "sensitivity": 0.2,
+      "specificity": 0.861003861003861,
+      "precision": 0.04424778761061947,
+      "subject": "14",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.06790441990685156,
+      "roc_auc": 0.7842535392535392,
+      "brier": 0.031104247597186847,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 0.09625750816645612,
+      "tp": 10,
+      "tn": 1338,
+      "fp": 216,
+      "fn": 40,
+      "sensitivity": 0.2,
+      "specificity": 0.861003861003861,
+      "precision": 0.04424778761061947,
+      "subject": "14",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.03117206982543641,
+      "roc_auc": 0.5,
+      "brier": 0.04366452499544094,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1554,
+      "fp": 0,
+      "fn": 50,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "14",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.04757574192863459,
+      "roc_auc": 0.621048906048906,
+      "brier": 0.10104970255040487,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 0.33024556982994324,
+      "tp": 16,
+      "tn": 1286,
+      "fp": 268,
+      "fn": 34,
+      "sensitivity": 0.32,
+      "specificity": 0.8275418275418276,
+      "precision": 0.056338028169014086,
+      "subject": "14",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.04757574192863459,
+      "roc_auc": 0.621048906048906,
+      "brier": 0.03172250440090287,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 0.0884125757710684,
+      "tp": 16,
+      "tn": 1286,
+      "fp": 268,
+      "fn": 34,
+      "sensitivity": 0.32,
+      "specificity": 0.8275418275418276,
+      "precision": 0.056338028169014086,
+      "subject": "14",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 1604,
+      "positive_fraction": 0.03117206982543641,
+      "ap": 0.03117206982543641,
+      "roc_auc": 0.5,
+      "brier": 0.04366452499544094,
+      "single_class": false,
+      "reference_n": 1604,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 1554,
+      "fp": 0,
+      "fn": 50,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "14",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.06707391415367132,
+      "roc_auc": 0.8327594841617629,
+      "brier": 0.14801821198414236,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 0.6793277365157756,
+      "tp": 0,
+      "tn": 1960,
+      "fp": 322,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.8588957055214724,
+      "precision": 0.0,
+      "subject": "15",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.06707391415367132,
+      "roc_auc": 0.8327594841617629,
+      "brier": 0.019274394632464244,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 0.0722486614922676,
+      "tp": 0,
+      "tn": 1960,
+      "fp": 322,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.8588957055214724,
+      "precision": 0.0,
+      "subject": "15",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.015105740181268883,
+      "roc_auc": 0.5,
+      "brier": 0.014878611542947536,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2282,
+      "fp": 0,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "15",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "random_forest"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.05094292776161733,
+      "roc_auc": 0.7680605984725178,
+      "brier": 0.08832202952904594,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 0.633049619803263,
+      "tp": 0,
+      "tn": 2070,
+      "fp": 212,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.9070990359333918,
+      "precision": 0.0,
+      "subject": "15",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.05094292776161733,
+      "roc_auc": 0.7680605984725178,
+      "brier": 0.029384339041016044,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 0.18951590777606867,
+      "tp": 0,
+      "tn": 2070,
+      "fp": 212,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.9070990359333918,
+      "precision": 0.0,
+      "subject": "15",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.015105740181268883,
+      "roc_auc": 0.5,
+      "brier": 0.014878611542947536,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2282,
+      "fp": 0,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "15",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.017809964983748202,
+      "roc_auc": 0.3605358707900338,
+      "brier": 0.04804685039015812,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 0.12782227707448346,
+      "tp": 0,
+      "tn": 1923,
+      "fp": 359,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.8426818580192813,
+      "precision": 0.0,
+      "subject": "15",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.017809964983748202,
+      "roc_auc": 0.3605358707900338,
+      "brier": 0.021202424778851613,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 0.07191975624677825,
+      "tp": 0,
+      "tn": 1923,
+      "fp": 359,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 0.8426818580192813,
+      "precision": 0.0,
+      "subject": "15",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.015105740181268883,
+      "roc_auc": 0.5,
+      "brier": 0.014878611542947536,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2282,
+      "fp": 0,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "15",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.05672735405358362,
+      "roc_auc": 0.7938775510204081,
+      "brier": 0.027964558380444562,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 0.05291778022820833,
+      "tp": 31,
+      "tn": 1757,
+      "fp": 525,
+      "fn": 4,
+      "sensitivity": 0.8857142857142857,
+      "specificity": 0.7699386503067485,
+      "precision": 0.05575539568345324,
+      "subject": "15",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.05672735405358362,
+      "roc_auc": 0.7938775510204081,
+      "brier": 0.024906444582742403,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 0.05722708427642073,
+      "tp": 31,
+      "tn": 1757,
+      "fp": 525,
+      "fn": 4,
+      "sensitivity": 0.8857142857142857,
+      "specificity": 0.7699386503067485,
+      "precision": 0.05575539568345324,
+      "subject": "15",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2317,
+      "positive_fraction": 0.015105740181268883,
+      "ap": 0.015105740181268883,
+      "roc_auc": 0.5,
+      "brier": 0.014878611542947536,
+      "single_class": false,
+      "reference_n": 2317,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2282,
+      "fp": 0,
+      "fn": 35,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "15",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.09605845543345544,
+      "roc_auc": 0.6984265734265734,
+      "brier": 0.27502199263592747,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 0.7630774719025589,
+      "tp": 0,
+      "tn": 2025,
+      "fp": 120,
+      "fn": 80,
+      "sensitivity": 0.0,
+      "specificity": 0.9440559440559441,
+      "precision": 0.0,
+      "subject": "17",
+      "feature_set": "clock",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.09605845543345544,
+      "roc_auc": 0.6984265734265734,
+      "brier": 0.03414216701475239,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 0.07327816694771551,
+      "tp": 0,
+      "tn": 2025,
+      "fp": 120,
+      "fn": 80,
+      "sensitivity": 0.0,
+      "specificity": 0.9440559440559441,
+      "precision": 0.0,
+      "subject": "17",
+      "feature_set": "clock",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.035955056179775284,
+      "roc_auc": 0.5,
+      "brier": 0.03476340873788722,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2145,
+      "fp": 0,
+      "fn": 80,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "17",
+      "feature_set": "clock",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.06641512637494557,
+      "roc_auc": 0.6736596736596737,
+      "brier": 0.10149129139097753,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 0.29520807090435186,
+      "tp": 0,
+      "tn": 1842,
+      "fp": 303,
+      "fn": 80,
+      "sensitivity": 0.0,
+      "specificity": 0.8587412587412587,
+      "precision": 0.0,
+      "subject": "17",
+      "feature_set": "context_time",
+      "view": "raw",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.06641512637494557,
+      "roc_auc": 0.6736596736596737,
+      "brier": 0.034848121976577835,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 0.04070518601427869,
+      "tp": 0,
+      "tn": 1842,
+      "fp": 303,
+      "fn": 80,
+      "sensitivity": 0.0,
+      "specificity": 0.8587412587412587,
+      "precision": 0.0,
+      "subject": "17",
+      "feature_set": "context_time",
+      "view": "calibrated",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.035955056179775284,
+      "roc_auc": 0.5,
+      "brier": 0.03476340873788722,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2145,
+      "fp": 0,
+      "fn": 80,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "17",
+      "feature_set": "context_time",
+      "view": "training_prior",
+      "selected_learner": "hgb"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.3762987690265895,
+      "roc_auc": 0.7578846153846154,
+      "brier": 0.13614740492782418,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 0.5522918720004538,
+      "tp": 40,
+      "tn": 1793,
+      "fp": 352,
+      "fn": 40,
+      "sensitivity": 0.5,
+      "specificity": 0.8358974358974359,
+      "precision": 0.10204081632653061,
+      "subject": "17",
+      "feature_set": "wearable_time",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.37629876902658943,
+      "roc_auc": 0.7578846153846154,
+      "brier": 0.027960229969655317,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 0.05050094923994487,
+      "tp": 40,
+      "tn": 1793,
+      "fp": 352,
+      "fn": 40,
+      "sensitivity": 0.5,
+      "specificity": 0.8358974358974359,
+      "precision": 0.10204081632653061,
+      "subject": "17",
+      "feature_set": "wearable_time",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.035955056179775284,
+      "roc_auc": 0.5,
+      "brier": 0.03476340873788722,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2145,
+      "fp": 0,
+      "fn": 80,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "17",
+      "feature_set": "wearable_time",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.1791759160384022,
+      "roc_auc": 0.5722902097902098,
+      "brier": 0.14847587289923217,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 0.2620381719359241,
+      "tp": 34,
+      "tn": 1485,
+      "fp": 660,
+      "fn": 46,
+      "sensitivity": 0.425,
+      "specificity": 0.6923076923076923,
+      "precision": 0.04899135446685879,
+      "subject": "17",
+      "feature_set": "combined",
+      "view": "raw",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.1791759160384022,
+      "roc_auc": 0.5722902097902098,
+      "brier": 0.0356661113734113,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 0.03706209733885288,
+      "tp": 34,
+      "tn": 1485,
+      "fp": 660,
+      "fn": 46,
+      "sensitivity": 0.425,
+      "specificity": 0.6923076923076923,
+      "precision": 0.04899135446685879,
+      "subject": "17",
+      "feature_set": "combined",
+      "view": "calibrated",
+      "selected_learner": "logistic"
+    },
+    {
+      "point_n": 2225,
+      "positive_fraction": 0.035955056179775284,
+      "ap": 0.035955056179775284,
+      "roc_auc": 0.5,
+      "brier": 0.03476340873788722,
+      "single_class": false,
+      "reference_n": 2225,
+      "coverage": 1.0,
+      "threshold": 1.001,
+      "tp": 0,
+      "tn": 2145,
+      "fp": 0,
+      "fn": 80,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": null,
+      "subject": "17",
+      "feature_set": "combined",
+      "view": "training_prior",
+      "selected_learner": "logistic"
+    }
+  ],
+  "source_context_audit": [
+    {
+      "subject": "01",
+      "rows": 13463,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.005570823739136894,
+          "zero_fraction": 0.002673995394785709,
+          "minimum": 0.0,
+          "maximum": 1482.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.005570823739136894,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.46274975859763795,
+          "minimum": 0.0,
+          "maximum": 2.0
+        }
+      }
+    },
+    {
+      "subject": "02",
+      "rows": 14079,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.009233610341643583,
+          "zero_fraction": 0.002699055330634278,
+          "minimum": 0.0,
+          "maximum": 807.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.009233610341643583,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.5286597059450245,
+          "minimum": 0.0,
+          "maximum": 1.75
+        }
+      }
+    },
+    {
+      "subject": "03",
+      "rows": 14731,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.004344579458285249,
+          "zero_fraction": 0.0016292172968569683,
+          "minimum": 0.0,
+          "maximum": 1243.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.004344579458285249,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.6847464530581766,
+          "minimum": 0.0,
+          "maximum": 2.0
+        }
+      }
+    },
+    {
+      "subject": "04",
+      "rows": 14312,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.024734488541084405,
+          "zero_fraction": 0.0027249860257126885,
+          "minimum": 0.0,
+          "maximum": 989.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.024734488541084405,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.5106903297931805,
+          "minimum": 0.0,
+          "maximum": 2.0
+        }
+      }
+    },
+    {
+      "subject": "07",
+      "rows": 14077,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.005398877601761739,
+          "zero_fraction": 0.0031967038431483983,
+          "minimum": 0.0,
+          "maximum": 903.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.005398877601761739,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.5478440008524543,
+          "minimum": 0.0,
+          "maximum": 2.0
+        }
+      }
+    },
+    {
+      "subject": "08",
+      "rows": 13486,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.015645854960699986,
+          "zero_fraction": 0.002743585940975827,
+          "minimum": 0.0,
+          "maximum": 824.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.015645854960699986,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.5220228384991843,
+          "minimum": 0.0,
+          "maximum": 1.25
+        }
+      }
+    },
+    {
+      "subject": "10",
+      "rows": 14467,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.007188774452201562,
+          "zero_fraction": 0.0025575447570332483,
+          "minimum": 0.0,
+          "maximum": 1109.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.007188774452201562,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.7030483168590586,
+          "minimum": 0.0,
+          "maximum": 1.5
+        }
+      }
+    },
+    {
+      "subject": "13",
+      "rows": 14328,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": true
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": true
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 1.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      }
+    },
+    {
+      "subject": "14",
+      "rows": 9540,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.0029350104821802936,
+          "minimum": 0.0,
+          "maximum": 810.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.6031446540880503,
+          "minimum": 0.0,
+          "maximum": 1.5
+        }
+      }
+    },
+    {
+      "subject": "15",
+      "rows": 14936,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.021424745581146223,
+          "zero_fraction": 0.0023433315479378684,
+          "minimum": 0.0,
+          "maximum": 818.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.021424745581146223,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.5006025709694697,
+          "minimum": 0.0,
+          "maximum": 2.0
+        }
+      }
+    },
+    {
+      "subject": "17",
+      "rows": 11874,
+      "context": {
+        "time_since_lastmeal": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.00269496378642412,
+          "minimum": 0.0,
+          "maximum": 899.0
+        },
+        "time_since_lastmeal_ord": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.0,
+          "minimum": 1.0,
+          "maximum": 6.0
+        },
+        "IOB": {
+          "column_absent": false,
+          "missing_fraction": 0.0,
+          "zero_fraction": 0.6582449048340913,
+          "minimum": 0.0,
+          "maximum": 1.5
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Same previously viewed processed cohort; all contrasts exploratory and intervals unadjusted.",
+    "Missing complete timestamps: row support is nominal, not proven temporal or prospective validation; no alarm/day or event metrics.",
+    "Source IOB is a unitless past-injection activity index, not remaining insulin dose.",
+    "Context requires diary entries; missing fields and zeros do not establish true absence of injections or food.",
+    "Personal training and validation require earlier source-reference labels. Calibration uses the same validation segment used in model/threshold selection; no separate calibration cohort.",
+    "Point-level observed-reference opportunity fraction is not true sensor uptime; no actual device measurement-coverage claim."
+  ]
+}

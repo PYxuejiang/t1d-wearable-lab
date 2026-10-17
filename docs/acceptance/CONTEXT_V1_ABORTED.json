@@ -1,0 +1,12 @@
+{
+  "stage": "CONTEXT_V1_ABORTED",
+  "engineering_status": "failed",
+  "evaluation_status": "quarantined_before_effect_analysis",
+  "effect_status": "not_tested",
+  "reason": "Original 120-row purge at each side leaves 241-row separation; source IOB may span240 minutes plus reference confirmation up to15 minutes. This fails the conservative non-overlapping support audit under the nominal minute-row assumption.",
+  "action": "Original process had already completed when interruption was attempted; quarantined its local outputs before effect summarization or result-driven selection. Excluded all effect claims. Replacement v1.1 uses150-row purge per side (301-row separation) and explicitly retains unverified timestamp limitation.",
+  "source_outputs": "outputs/smartwatch_context_v1 (ignored local data)",
+  "limitations": [
+    "Even the wider purge does not establish complete source timestamp provenance."
+  ]
+}

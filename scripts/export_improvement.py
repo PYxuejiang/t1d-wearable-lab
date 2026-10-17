@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     stages={}
-    for stage in ['V2_1','V2_2','COHORT_SW1','COHORT_SW_PERSONAL1']:
+    for stage in ['V2_1','V2_2','COHORT_SW1','COHORT_SW_PERSONAL1','CONTEXT_V1_ABORTED','CONTEXT_V1_1']:
         p=ROOT/'docs/acceptance'/f'{stage}.json'
         if p.exists():stages[stage]=json.loads(p.read_text(encoding='utf-8'))
     run='improve-'+hashlib.sha256(json.dumps(stages,sort_keys=True,separators=(',',':')).encode()).hexdigest()[:12]
@@ -73,12 +73,14 @@ python scripts/export_improvement.py
 ## 下一轮优先级
 
 1. 保留当前AP改善，检查按人方向、早期校准量、概率质量及单类验证折；选择新协议比较正常时间、活动、个体基线与生活情境。
-2. 补齐统一下载CLI和报告测试；不为了提高分数舍弃失败受试者。
+2. 统一下载CLI与报告测试已经补齐；继续保留失败受试者及单类折。
 3. PhysioCGM优先核对CGM—胸带时间语义和心搏/伪影质量；现有摘要增强未解决主事件任务。
 4. 对新的独立数据或新增可信原始时间戳进行方法冻结后的确认。未能确认来源时间时，明确降为点级分类研究，不计算医疗报警效果。
 
 每两小时的当前聊天自动任务 `t1d` 已启用，持续接续并同步GitHub与实验日志。研究目标仍未完成，不能把有一个正向AP结果当作整项低血糖报警研究结束。
 '''
+    if 'CONTEXT_V1_1' in stages:
+        report+='\n\n## 后续批次：情境信息与校准\n\n已完成132组独立复算。新增日记情境未支持稳定AP增益；校准降低原始Brier，但未稳定优于训练期正类概率基线。该批次边界范围不同，上轮0.1887不能与本轮均值直接比较。详见[本轮报告](CONTEXT_REPORT.zh-CN.md)。下一轮优先级转向原始心搏形态、伪影质量与源时钟证据。\n'
     (ROOT/'docs/IMPROVEMENT_REPORT.zh-CN.md').write_text(report,encoding='utf-8')
     print('Exported aggregate improvement ledger, report and card',run)
 

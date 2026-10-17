@@ -41,3 +41,15 @@
 
 
 Final verified publication: `b5b5e35` is pushed; GitHub Python tests and showcase build both passed. Local suite30 passed. Working tree was clean and tracked-data scan found no raw data, individual timelines, waveform excerpts or credentials. Owned preview server51420 stopped after QA. Heartbeat `t1d` remains active; all four experiment batches are complete, so the next run should start a new predeclared study rather than poll/re-run these finished commands.
+
+
+## 2026-10-17 / contextual and calibration follow-up
+
+- No existing completed experiment was re-run for model improvement. Audited source meal/IOB columns first: IOB is a unitless recorded injection-activity index, not insulin units. Subject13 lacks meal columns and has all-zero IOB; retained with explicit uncertainty.
+- Original context120-row-purge attempt completed before the interrupt arrived; output quarantined BEFORE effect summarization/selection because nominal four-hour context plus15-minute label support exceeds241-row separation. No efficacy claim from that attempt. SeeCONTEXT_V1_ABORTED.
+- Replacement `smartwatch_context_v1_1` uses150-row purge each boundary (301-row separation under nominal minute rows). Same full11 people,4 feature sets,3 learners chosen validation-only; raw/calibrated/training-prior test outputs. Missing timestamps remain a limitation; not true continuous-time evaluation.
+- Completed and independently verified132 groups: source labels, same test rows, feature whitelist, candidate selection, validation-only thresholds, calibration refit and mapping, conservative row split. Max metric discrepancy1.2e-16; mapping discrepancy0.
+- Primary combined-context AP0.1032 vs wearable+clock0.1561, paired difference−0.0529 interval[−0.1151,0.0104]; inconclusive, no supported positive contextual gain. Do not compare these means directly to old120-purge AP0.1887 because test ranges and training differ.
+- Wearable+clock Brier raw0.1306 → calibrated0.0295; training-prevalence constant0.0278. Calibration fixes overconfident weighted scores but does not establish useful signal or beat the simple prior. Positive sigmoid maps cannot reverse rankings; clipped logits can create ties; nonpositive fits fall back to validation prevalence.7 sigmoid/4constant, including2 single-class validation subjects.
+- Added protocol guard to reject insufficient four-hour context purge.35 local tests passed. Report/card/plot atdocs/CONTEXT_REPORT.zh-CN.md,showcase/public/cards/context-calibration.png,docs/figures/context-calibration.png. Updated historical personalized record's wording: early subject reference labels ARE used; scientific metrics unchanged. Both old AP positive effect and new negative experiments are retained.
+- Current run `outputs/smartwatch_context_v1_1` is complete; do not re-run to hunt test scores. Next priority is source-clock evidence and signal morphology/SQI under a new predeclared design, not indefinite context/learner stacking. Three-minute live recording remains pending.

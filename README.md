@@ -17,6 +17,8 @@ The separate incident-risk model reaches 47.5% subject-equal event recall at 0.5
 
 **Improvement ledger:** additional PhysioCGM temporal/device-summary experiments still fail the event target. A separate public smartwatch cohort now shows an exploratory personalized **AP increase from 0.098 to 0.189** versus a clock-only baseline (8 positive-test subjects; paired difference 0.091, unadjusted 95% subject-bootstrap interval 0.002–0.184). AUC improvement remains uncertain. Processed source rows lack complete timestamps, so this is point classification with source-row holdout, **not confirmed future-time or event-alarm validation**. All 11 people, single-class test partitions and unseen-subject negative results are retained. See the [improvement report](docs/IMPROVEMENT_REPORT.zh-CN.md) and the site's improvement page.
 
+The next [context and calibration experiment](docs/CONTEXT_REPORT.zh-CN.md) independently verifies 132 groups. On its identical test opportunities, adding diaries gives AP 0.103 versus wearable+clock 0.156, without stable incremental benefit. Validation calibration lowers raw Brier from 0.131 to 0.030, but the simple training-prevalence baseline is 0.028. This is score correction, not evidence that detection is solved. A wider support purge changes the test range, so these numbers must not be directly compared with the earlier 0.189.
+
 ![Research showcase](docs/figures/showcase-overview.jpg)
 
 ## Try the local showcase
