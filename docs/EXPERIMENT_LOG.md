@@ -72,3 +72,7 @@ Final verified publication: `b5b5e35` is pushed; GitHub Python tests and showcas
 3. Investigate originalCGM/chest time provenance without choosing shifts by glucose scores. No clinically reliable event goal can pass while criticaltime semantics remain unsupported.
 4. Only after signal/quality gates, version a new label-independent feature/SQI extraction and compare same-subject test opportunities with all failed baselines. Mark reuse ofseen T1D cohorts exploratory and keep missing-event/falsealarm denominators.
 5. Keep heartbeat `t1d` ACTIVE every2h. Next notification only for meaningful evidence, failure or required action; no unchanged routine status. Do not upload source data, waveforms, individual predictions or credentials.
+
+### Verified publication closeout
+
+Code/result commit `f62e0e0` pushed to public origin; GitHub `tests` and `showcase` both completed successfully. Local suite39 passed. Tracked-file scan found no raw/private outputs. Owned browser tab8 and preview server49604 closed; no analysis/preview session remains to poll. The following journal-only commit records this verification. Heartbeat`t1d` confirmedACTIVE every2h. Main manual updated through§15.3. Next run begins a new frozen signal/quality protocol, not a repeat ofcompleted context or capture experiments.
