@@ -1,0 +1,351 @@
+{
+  "experiment": "ecg_capture_pilot_v1",
+  "engineering_acceptance": "passed",
+  "independently_verified_metric_groups": 48,
+  "scope": "Four-record signal capture pilot; no glucose or clinical alarm claim",
+  "summary": {
+    "existing_energy": {
+      "f1": 0.996641457832592,
+      "sensitivity": 0.9981240046616907,
+      "ppv": 0.9951724708071081,
+      "window_hr_mae_bpm": 0.034675505957726095,
+      "window_hr_bias_bpm": 0.01174918917967993,
+      "pilot_gate_passed": true
+    },
+    "wfdb_xqrs_default": {
+      "f1": 0.9977193074729496,
+      "sensitivity": 0.9992244445721581,
+      "ppv": 0.9962307544403994,
+      "window_hr_mae_bpm": 0.03528926523734792,
+      "window_hr_bias_bpm": 0.02831579155639948,
+      "pilot_gate_passed": true
+    }
+  },
+  "record_summary": [
+    {
+      "record": "100",
+      "method": "existing_energy",
+      "tp": 2233,
+      "fn": 1,
+      "fp": 1,
+      "sensitivity": 0.9995523724261415,
+      "ppv": 0.9995523724261415,
+      "f1": 0.9995523724261415,
+      "window_hr_mae_bpm": 0.0,
+      "window_hr_bias_bpm": 0.0,
+      "valid_hr_windows": 6,
+      "matched_timing_median_ms": 80.55555555555556
+    },
+    {
+      "record": "100",
+      "method": "wfdb_xqrs_default",
+      "tp": 2234,
+      "fn": 0,
+      "fp": 0,
+      "sensitivity": 1.0,
+      "ppv": 1.0,
+      "f1": 1.0,
+      "window_hr_mae_bpm": 0.04479171850893238,
+      "window_hr_bias_bpm": 0.04479171850893238,
+      "valid_hr_windows": 6,
+      "matched_timing_median_ms": 0.0
+    },
+    {
+      "record": "101",
+      "method": "existing_energy",
+      "tp": 1834,
+      "fn": 1,
+      "fp": 5,
+      "sensitivity": 0.9994550408719346,
+      "ppv": 0.9972811310494835,
+      "f1": 0.9983669025585193,
+      "window_hr_mae_bpm": 0.07433815341682977,
+      "window_hr_bias_bpm": -0.01736711369535489,
+      "valid_hr_windows": 6,
+      "matched_timing_median_ms": 69.44444444444444
+    },
+    {
+      "record": "101",
+      "method": "wfdb_xqrs_default",
+      "tp": 1834,
+      "fn": 1,
+      "fp": 4,
+      "sensitivity": 0.9994550408719346,
+      "ppv": 0.9978237214363439,
+      "f1": 0.9986387149469099,
+      "window_hr_mae_bpm": 0.03200147202638467,
+      "window_hr_bias_bpm": 0.004107577302590926,
+      "valid_hr_windows": 6,
+      "matched_timing_median_ms": 0.0
+    },
+    {
+      "record": "103",
+      "method": "existing_energy",
+      "tp": 2048,
+      "fn": 2,
+      "fp": 1,
+      "sensitivity": 0.9990243902439024,
+      "ppv": 0.9995119570522206,
+      "f1": 0.9992681141741888,
+      "window_hr_mae_bpm": 0.0,
+      "window_hr_bias_bpm": 0.0,
+      "valid_hr_windows": 6,
+      "matched_timing_median_ms": 80.55555555555556
+    },
+    {
+      "record": "103",
+      "method": "wfdb_xqrs_default",
+      "tp": 2048,
+      "fn": 2,
+      "fp": 0,
+      "sensitivity": 0.9990243902439024,
+      "ppv": 1.0,
+      "f1": 0.9995119570522206,
+      "window_hr_mae_bpm": 0.0,
+      "window_hr_bias_bpm": 0.0,
+      "valid_hr_windows": 6,
+      "matched_timing_median_ms": 0.0
+    },
+    {
+      "record": "105",
+      "method": "existing_energy",
+      "tp": 2515,
+      "fn": 14,
+      "fp": 40,
+      "sensitivity": 0.9944642151047846,
+      "ppv": 0.9843444227005871,
+      "f1": 0.9893784421715185,
+      "window_hr_mae_bpm": 0.06436387041407461,
+      "window_hr_bias_bpm": 0.06436387041407461,
+      "valid_hr_windows": 6,
+      "matched_timing_median_ms": 108.33333333333334
+    },
+    {
+      "record": "105",
+      "method": "wfdb_xqrs_default",
+      "tp": 2525,
+      "fn": 4,
+      "fp": 33,
+      "sensitivity": 0.9984183471727955,
+      "ppv": 0.9870992963252541,
+      "f1": 0.9927265578926676,
+      "window_hr_mae_bpm": 0.06436387041407461,
+      "window_hr_bias_bpm": 0.06436387041407461,
+      "valid_hr_windows": 6,
+      "matched_timing_median_ms": 0.0
+    }
+  ],
+  "source_audit": [
+    {
+      "record": "100",
+      "fs": 360.0,
+      "channel": "MLII",
+      "total_samples": 650000,
+      "complete_windows": 6,
+      "unused_tail_samples": 2000,
+      "annotation_symbols": {
+        "+": 1,
+        "A": 33,
+        "N": 2239,
+        "V": 1
+      },
+      "scored_seconds": 1776
+    },
+    {
+      "record": "101",
+      "fs": 360.0,
+      "channel": "MLII",
+      "total_samples": 650000,
+      "complete_windows": 6,
+      "unused_tail_samples": 2000,
+      "annotation_symbols": {
+        "+": 1,
+        "A": 3,
+        "N": 1860,
+        "Q": 2,
+        "|": 4,
+        "~": 4
+      },
+      "scored_seconds": 1776
+    },
+    {
+      "record": "103",
+      "fs": 360.0,
+      "channel": "MLII",
+      "total_samples": 650000,
+      "complete_windows": 6,
+      "unused_tail_samples": 2000,
+      "annotation_symbols": {
+        "+": 1,
+        "A": 2,
+        "N": 2082,
+        "~": 6
+      },
+      "scored_seconds": 1776
+    },
+    {
+      "record": "105",
+      "fs": 360.0,
+      "channel": "MLII",
+      "total_samples": 650000,
+      "complete_windows": 6,
+      "unused_tail_samples": 2000,
+      "annotation_symbols": {
+        "+": 1,
+        "N": 2526,
+        "Q": 5,
+        "V": 41,
+        "|": 30,
+        "~": 88
+      },
+      "scored_seconds": 1776
+    }
+  ],
+  "frozen_protocol": {
+    "experiment": "ecg_capture_pilot_v1",
+    "scope": "Four-record signal capture pilot; no glucose or clinical alarm claim",
+    "source": "https://physionet.org/files/mitdb/1.0.0/",
+    "records": [
+      "100",
+      "101",
+      "103",
+      "105"
+    ],
+    "channel_index": 0,
+    "window_seconds": 300,
+    "edge_exclusion_seconds": 2,
+    "match_tolerance_seconds": 0.15,
+    "beat_symbols": [
+      "N",
+      "L",
+      "R",
+      "B",
+      "A",
+      "a",
+      "J",
+      "S",
+      "V",
+      "r",
+      "F",
+      "e",
+      "j",
+      "n",
+      "E",
+      "/",
+      "f",
+      "Q",
+      "?"
+    ],
+    "methods": [
+      "existing_energy",
+      "wfdb_xqrs_default"
+    ],
+    "wfdb_version": "4.3.1",
+    "hr_definition": "60 / median RR seconds; retain RR in [0.3,2] for both reference and candidate; >=5 intervals",
+    "internal_pilot_gate": {
+      "each_record_sensitivity_min": 0.95,
+      "each_record_ppv_min": 0.95,
+      "window_hr_mae_bpm_max": 3
+    },
+    "interpretation": "Record choice and defaults fixed before scoring; convenience pilot, not complete MIT-BIH validation. End-of-window extraction may use any sample within the past window; no zero-latency claim. Test labels never tune detector settings."
+  },
+  "provenance": {
+    "experiment": "ecg_capture_pilot_v1",
+    "metric_groups": 48,
+    "source_files": [
+      {
+        "file": "100.hea",
+        "bytes": 143,
+        "sha256": "60ebc904c7bf3e04d142638d3fd5c903e8dc9f10f1ea3264e07926aa089ee75e",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "100.dat",
+        "bytes": 1950000,
+        "sha256": "b2ea3c250e56e48f4b7b90697832b8ecd1afa1e0bb31f2dcfea4ed6e1075a639",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "100.atr",
+        "bytes": 4558,
+        "sha256": "8d8a5349fb16638ebbf649f1779d12e96d91b736b2aafe59db43719ae583d471",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "101.hea",
+        "bytes": 131,
+        "sha256": "d5f02fbe8673fa05465442191b98ca0d28a1670e7ef0e83fb9ef8723113a311c",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "101.dat",
+        "bytes": 1950000,
+        "sha256": "698d1ea6f472d23ca50317c72c96cda2698badd8578220ed0380cdf241e39006",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "101.atr",
+        "bytes": 3768,
+        "sha256": "441cdd6486cfdf4c53e344d1048ab81296773e7058d53069022adc68543a0663",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "103.hea",
+        "bytes": 142,
+        "sha256": "3da9706fc27cc5d627a31b04b74b908ac0b6e061843a87cbd57801e5ea0fed7b",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "103.dat",
+        "bytes": 1950000,
+        "sha256": "f7994f0bd196730779998b4bddf26cb47f396599fb370a08b5cb29a3ac4d555d",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "103.atr",
+        "bytes": 4196,
+        "sha256": "392ce37fbc7e89b3f14998e197a844f23cce6a3db6edaa71b4b49bf3ca5b6596",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "105.hea",
+        "bytes": 258,
+        "sha256": "9a024eebf8e9baf630308815e689d7e3eab471ab0069db6aded127c396418d48",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "105.dat",
+        "bytes": 1950000,
+        "sha256": "fcd0153dfea69c749194bb73de7db124588857cfa2f6aecb72754894c8afde02",
+        "source_sha256_verified": true
+      },
+      {
+        "file": "105.atr",
+        "bytes": 5638,
+        "sha256": "278d534c1ad952a6d41db963b6b2b00be070d8dd5fa66545caa5c18edcc36497",
+        "source_sha256_verified": true
+      }
+    ],
+    "frozen_files_sha256": {
+      "configs/ecg_capture_pilot_v1.json": "46001051b38ade15ad6fb7411648084fd3d77542a771d9cb89fc6063c8018773",
+      "scripts/run_ecg_pilot.py": "aea27c4abbc70a2902b62bed191129a615252ba11e9271c96a66ad3b37df888a",
+      "src/t1d_lab/beat_capture.py": "6020c0bbc4a9eea9776b7321f9e60fa1987fe6e6fce2454a1bc25caa36cabafd",
+      "src/t1d_lab/signals.py": "9f6ab0ee091f3aa1cd4ac9644b7ea1508020ea0adc0a84639dd7cfa10f16e1ae"
+    },
+    "runtime": {
+      "wfdb": "4.3.1",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.3.0"
+    },
+    "peaks_sha256": "f6392d75155221eb984fb0137a6884afedc91f218bbb1cac3376db4576bfbafe"
+  },
+  "limitations": [
+    "Four convenience records only; not all48 records or an independent target-device cohort.",
+    "ECG capture validation, not PPG, glucose estimation, hypoglycemia or clinical alarm validation.",
+    "Within-window retrospective defaults may use future samples relative to an individual beat; all samples precede window-end output.",
+    "Two-second edges per five-minute window and incomplete tails unscored for both methods.",
+    "HR uses RR in0.3\u20132s for both methods and expert reference; does not validate abnormal intervals or HRV morphology.",
+    "No detector replacement in PhysioCGM until a separate all-record check and target-domain quality gate."
+  ]
+}

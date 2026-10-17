@@ -1,0 +1,16 @@
+{
+  "experiment": "ecg_capture_pilot_v1",
+  "scope": "Four-record signal capture pilot; no glucose or clinical alarm claim",
+  "source": "https://physionet.org/files/mitdb/1.0.0/",
+  "records": ["100", "101", "103", "105"],
+  "channel_index": 0,
+  "window_seconds": 300,
+  "edge_exclusion_seconds": 2,
+  "match_tolerance_seconds": 0.15,
+  "beat_symbols": ["N", "L", "R", "B", "A", "a", "J", "S", "V", "r", "F", "e", "j", "n", "E", "/", "f", "Q", "?"],
+  "methods": ["existing_energy", "wfdb_xqrs_default"],
+  "wfdb_version": "4.3.1",
+  "hr_definition": "60 / median RR seconds; retain RR in [0.3,2] for both reference and candidate; >=5 intervals",
+  "internal_pilot_gate": {"each_record_sensitivity_min": 0.95, "each_record_ppv_min": 0.95, "window_hr_mae_bpm_max": 3},
+  "interpretation": "Record choice and defaults fixed before scoring; convenience pilot, not complete MIT-BIH validation. End-of-window extraction may use any sample within the past window; no zero-latency claim. Test labels never tune detector settings."
+}

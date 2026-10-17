@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     stages={}
-    for stage in ['V2_1','V2_2','COHORT_SW1','COHORT_SW_PERSONAL1','CONTEXT_V1_ABORTED','CONTEXT_V1_1']:
+    for stage in ['V2_1','V2_2','COHORT_SW1','COHORT_SW_PERSONAL1','CONTEXT_V1_ABORTED','CONTEXT_V1_1','ECG_CAPTURE_PILOT1']:
         p=ROOT/'docs/acceptance'/f'{stage}.json'
         if p.exists():stages[stage]=json.loads(p.read_text(encoding='utf-8'))
     run='improve-'+hashlib.sha256(json.dumps(stages,sort_keys=True,separators=(',',':')).encode()).hexdigest()[:12]
@@ -81,6 +81,8 @@ python scripts/export_improvement.py
 '''
     if 'CONTEXT_V1_1' in stages:
         report+='\n\n## 后续批次：情境信息与校准\n\n已完成132组独立复算。新增日记情境未支持稳定AP增益；校准降低原始Brier，但未稳定优于训练期正类概率基线。该批次边界范围不同，上轮0.1887不能与本轮均值直接比较。详见[本轮报告](CONTEXT_REPORT.zh-CN.md)。下一轮优先级转向原始心搏形态、伪影质量与源时钟证据。\n'
+    if 'ECG_CAPTURE_PILOT1' in stages:
+        report+='\n\n## 信号子任务：专家标注ECG捕获先导\n\n固定四条MIT-BIH记录、24个窗口、48组独立复算。现有能量法与默认XQRS的记录等权F1约99.66%和99.77%，两者通过本次内部捕获门槛。没有改变PhysioCGM检测器，没有低血糖效能结论。详见[信号捕获报告](ECG_CAPTURE_REPORT.zh-CN.md)。下一步扩展参考与噪声覆盖，审计目标波形和源时钟；不要重复这一先导以挑选成绩。\n'
     (ROOT/'docs/IMPROVEMENT_REPORT.zh-CN.md').write_text(report,encoding='utf-8')
     print('Exported aggregate improvement ledger, report and card',run)
 

@@ -19,6 +19,8 @@ The separate incident-risk model reaches 47.5% subject-equal event recall at 0.5
 
 The next [context and calibration experiment](docs/CONTEXT_REPORT.zh-CN.md) independently verifies 132 groups. On its identical test opportunities, adding diaries gives AP 0.103 versus wearable+clock 0.156, without stable incremental benefit. Validation calibration lowers raw Brier from 0.131 to 0.030, but the simple training-prevalence baseline is 0.028. This is score correction, not evidence that detection is solved. A wider support purge changes the test range, so these numbers must not be directly compared with the earlier 0.189.
 
+A separate [expert-annotated ECG capture pilot](docs/ECG_CAPTURE_REPORT.zh-CN.md) verifies 48 groups on four fixed MIT-BIH records: existing energy-peak and default WFDB XQRS macro beat F1 are 99.66% and 99.77%. Both pass the internal capture gate. This is a small front-end signal check, not a PPG, hypoglycemia or clinical-alarm result; PhysioCGM extraction remains unchanged.
+
 ![Research showcase](docs/figures/showcase-overview.jpg)
 
 ## Try the local showcase
@@ -67,6 +69,7 @@ Download commands save data locally under ignored `data/`, verify source checksu
 - [BrisT1D-Open](https://data.bris.ac.uk/data/dataset/33z5jc8fa6tob21ptrugzqog08): processed device data, CC BY 4.0. [Schema](https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/README.txt).
 - [PhysioCGM](https://doi.org/10.6084/m9.figshare.28136294): raw physiological data and CGM, CC0. [Data descriptor](https://doi.org/10.1038/s41597-025-06090-6).
 - [Smartwatch hypoglycemia processed data](https://doi.org/10.5281/zenodo.15309060): 11 published participant CSVs, CC BY 4.0, [Mohamed et al., PLOS ONE 2025](https://doi.org/10.1371/journal.pone.0325956). Download with `python scripts/download_data.py --dataset smartwatch_hypo`; different sensors and endpoints are evaluated separately.
+- [MIT-BIH Arrhythmia v1.0.0](https://physionet.org/content/mitdb/1.0.0/), Moody & Mark, 2005, DOI [10.13026/C2F305](https://doi.org/10.13026/C2F305), ODC Attribution v1.0. Four fixed ECG records used only for capture validation. [WFDB Python 4.3.1](https://github.com/MIT-LCP/wfdb-python) is MIT-licensed; install the optional `signals` extra and follow the capture report.
 - Own implementation: MIT. Public availability of an author's repository does not grant an unspecified code license; this project does not copy the original PhysioCGM implementation.
 
 Published cohort sizes are not treated as counts of eligible test subjects. Each input file and exclusion is audited. CGM is a reference measurement, not a clinical venous-glucose gold standard. Detection is not advance warning; sparse sampling limits event timing precision.

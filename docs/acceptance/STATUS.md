@@ -28,3 +28,4 @@ Advance only after recording the current stage's engineering/evaluation checks. 
 |---|---|---|
 | CONTEXT_V1_ABORTED | Original120-row-purge attempt quarantined by support audit | No efficacy claim |
 | CONTEXT_V1_1 |132 groups independently verified; source-row limits retained | Context AP gain inconclusive; calibration improves raw Brier but not stable versus simple prior |
+| ECG_CAPTURE_PILOT1 |48 groups independently verified on four fixed expert-annotated ECG records | Both methods pass internal capture gate; no glucose/PPG/alarm effect claim |
