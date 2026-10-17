@@ -97,3 +97,7 @@ Code/result commit `f62e0e0` pushed to public origin; GitHub `tests` and `showca
 2. Highest priority: independently audit sourceCGM/chest/wrist temporal semantics, ideally match original and author-processed pairedsegments bysource times/values. Do not optimize clockshifts by glucoseclassification. Checkrecordunits, reference labels and censoring against descriptor.
 3. Only after new alignment/information evidence, freeze an RR/morphology-quality or alternateendpoint study.26/30primarymisses belowthreshold means changing onlycooldown is insufficient; do not keepunbounded parametersearches onseen tests.
 4. Keep positivecoveragegain andoldsmartwatchAPeffect with explicit limits, not clinicalclaims. Mainincident/detection goal stillunachieved. Heartbeat`t1d` ACTIVE every2h; notify meaningful changes only. No patient data/individualwaveforms/predictions/credentials uploads; no personalwatchmigration or messages to others.
+
+### V3 verified publication closeout
+
+Code/results commit`400ecc5` pushed; GitHub`tests`and`showcase`both completed successfully. Local45tests/build passed, trackedraw/private-file scan empty, workingtree clean before this journal-only follow-up. Firstpush hadtransientTLS handshake failure; ordinary retry succeeded without changing TLSverification. Ownedpreview8353 andbrowser tab9 closed. No activeanalysis session remains; completedV3outputs must not be rerun. Next step is source-time/label provenance audit under a new protocol. Heartbeat`t1d` remainsACTIVE.
