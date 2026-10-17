@@ -46,3 +46,21 @@ def test_capture_evidence_stays_separate_from_glucose_efficacy():
     manifest=json.loads((ROOT/'showcase/public/cards/ecg-manifest.json').read_text())
     assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
     assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/ecg-capture.png').read_bytes()).hexdigest()
+
+
+def test_v3_coverage_gain_does_not_pass_failed_detection_or_hide_secondary_budget():
+    record=json.loads((ROOT/'docs/acceptance/V3_MECHANISM1.json').read_text())
+    public=json.loads((ROOT/'showcase/public/demo/improvement_data.json').read_text(encoding='utf-8'))
+    assert public['stages']['V3_MECHANISM1']==record and record['groups_verified']==336
+    primary=record['primary']
+    assert primary['coverage']>.8 and record['effect_status']=='failed' and primary['matched_events']==0
+    assert primary['reference_events']==30 and primary['events_with_input_opportunity']==27
+    diagnostics=[r for r in record['failure_diagnostics'] if r['arm']=='pooled_fallback' and r['budget']==1]
+    assert sum(sum(r['miss_reasons'].values()) for r in diagnostics)==30
+    assert sum(r['unmatched_alert_timing']['within30min_before_onset'] for r in diagnostics)==primary['unmatched_alarms']==1
+    secondary=record['results']['pooled_fallback/pooled_validation/b2/end_to_end']
+    assert secondary['matched_events']==2 and secondary['false_alerts_per_person_day']>1
+    assert 'ap' not in record['paired_differences']['pooled_residual__to__pooled_fallback/end_to_end']
+    manifest=json.loads((ROOT/'showcase/public/cards/mechanism-manifest.json').read_text())
+    assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+    assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/mechanism-v3.png').read_bytes()).hexdigest()

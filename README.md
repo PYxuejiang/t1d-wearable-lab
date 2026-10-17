@@ -21,6 +21,8 @@ The next [context and calibration experiment](docs/CONTEXT_REPORT.zh-CN.md) inde
 
 A separate [expert-annotated ECG capture pilot](docs/ECG_CAPTURE_REPORT.zh-CN.md) verifies 48 groups on four fixed MIT-BIH records: existing energy-peak and default WFDB XQRS macro beat F1 are 99.66% and 99.77%. Both pass the internal capture gate. This is a small front-end signal check, not a PPG, hypoglycemia or clinical-alarm result; PhysioCGM extraction remains unchanged.
 
+**Method/parameter follow-up:** six fixed regimes add activity residuals, nested chronological hyperparameter tuning, shared models, explicit alert policies and ECG failover. All336 test groups are independently verified. Supported-time coverage increases from72.8% to82.8%, but the predeclared primary detector still matches0/30 events. The secondary2/day validation budget matches2/30 at1.858 unmatched alerts/reference-person-day; it does not pass the primary target. Miss decomposition:3 events without input,26 never above the selected threshold,1 without an event-time alert. See the [design rationale](docs/METHOD_CHANGE_V3.zh-CN.md) and [complete v3 report](docs/MECHANISM_REPORT.zh-CN.md).
+
 ![Research showcase](docs/figures/showcase-overview.jpg)
 
 ## Try the local showcase
