@@ -36,3 +36,5 @@ Advance only after recording the current stage's engineering/evaluation checks. 
 | V5_PPG_MORPH1 |42 groups,9 inner candidates,6 validation selections independently verified; old coarse scores reproduced| Morphology1/30 versus coarse3/30; same72.8% coverage; no AP or alarm gain; effect FAILED |
 
 Interactive product homepage has a separate engineering acceptance report: [WATCH_EXPERIENCE](../WATCH_EXPERIENCE.zh-CN.md). Visual completion does not change scientific effect status.
+
+PPG_DALIA_AUDIT1: two published MAT checksums and29activity records audited; scoring not started, source indexing/delay and licensing differences retained. See [source audit](../PPG_DALIA_AUDIT.zh-CN.md). No efficacy pass.

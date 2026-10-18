@@ -88,3 +88,5 @@ The homepage is now an original three-dimensional concept watch: work/life/sleep
 Run `npm ci` then `npm run dev` in `showcase`; rebuild original models with `node scripts/export-watch.mjs` from that directory. This is a local showcase, not a deployed medical service. The existing automation now continues hourly.
 
 Latest algorithm result: [V5 PPG morphology](docs/PPG_MORPHOLOGY_REPORT.zh-CN.md),42 groups independently verified. Morphology detects1/30 versus coarse3/30 at identical72.8% coverage and0.718 unmatched alarms/reference-person-day. No detection improvement; next work validates PPG beat extraction and quality, not additional coarse-feature grid search.
+
+Next signal validation: [PPG-DaLiA source audit](docs/PPG_DALIA_AUDIT.zh-CN.md),29 static/walking records with ECG beat references downloaded and checked; no PPG detector performance has been scored. Source licensing discrepancy and indexing limits are retained.

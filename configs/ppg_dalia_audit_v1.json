@@ -1,0 +1,31 @@
+{
+  "protocol_id": "PPG_DALIA_AUDIT1",
+  "purpose": "Audit two fixed activity files before scoring any PPG detector. No glucose endpoint.",
+  "record": "https://zenodo.org/records/12793711",
+  "original_doi": "10.24432/C53890",
+  "license": "CC-BY-4.0 (original data; derivative record credits same source)",
+  "selection": "sitting and walking fixed before analysis, all available subjects retained",
+  "files": [
+    {
+      "activity": "sitting",
+      "file": "ppg_dalia_sitting_data.mat",
+      "bytes": 35095812,
+      "md5": "f4740c0a43923588f15d1bde7d4accd3"
+    },
+    {
+      "activity": "walking",
+      "file": "ppg_dalia_walking_data.mat",
+      "bytes": 40273752,
+      "md5": "b8237bb6358208b99a2dd9be22150996"
+    }
+  ],
+  "directory": "data/ppg_dalia_mat",
+  "scores_allowed": false,
+  "reference_caveats": [
+    "ECG R peaks provide cardiac beat reference, not expert-labelled PPG peaks.",
+    "Pulse transit delay and annotation indexing need explicit treatment before detector scoring.",
+    "Activity conversion retains first episode and lacks exact HR-window offset; do not use HR summaries as precise pulse labels.",
+    "Neither activities nor reference annotations provide hypoglycemia labels.",
+    "UCI and Zenodo describe CC BY 4.0; the older original university page states scientific non-commercial use. This project retains raw files locally and makes no commercial redistribution claim."
+  ]
+}
