@@ -153,3 +153,8 @@ V5_PPG_MORPH1已完成提取、训练、独立复算与导出，**不要重跑�
 用户要求接续间隔改为每1小时；原t1d自动任务已更新为ACTIVE，每小时推进算法和交互展示。首页改为原创三维概念手表与五步感知流程；复杂指标和历史证据保留在#research。动画是合成示意，不代表PPG血糖测量、已验证心律/呼吸异常或真实医疗通知。公开资产为自写模型、汇总验收和截图，患者数据仍仅本地。三分钟现场录屏尚未完成。
 
 Independent verifier recheck passed; run ppgmorph-12455c7357cf, aggregate ledger improve-32b0b8f73297. No extraction/training process remains. Native automation update succeeded for existing t1d, interval1h.
+
+
+### V5 + watch experience publication closeout
+
+Code/results/assets commit `d79ab3870a52ff34375f804c5f1ac79286f9f776` pushed to existing public main. GitHub `tests` and `showcase` both completed SUCCESS. Local56tests and final production build passed (large lazy JS bundle warning retained). Public staging scan contained no raw/private data paths. V5card and 1280×900/375×812 product views visually reviewed; evidence navigation style leak fixed, auto journey/reminder/color/scenario controls checked; browser console errors empty. Details and limitations in WATCH_EXPERIENCE.zh-CN.md. Owned Vite session35700 stopped with Ctrl-C; owned QA tab2 closed and viewport reset. No model rerun was started. Global psutil network enumeration was unavailable on this host; server-session termination was confirmed directly. Manual v1.7 updated outside repository. Existing hourly heartbeat is ACTIVE. Next continuation starts annotated PPG quality/beat benchmark audit, not completed V5 extraction or model jobs; recording still pending. This final journal-only change does not change tested implementation or results.
