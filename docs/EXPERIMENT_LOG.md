@@ -120,3 +120,7 @@ Code/results commit`400ecc5` pushed; GitHub`tests`and`showcase`both completed su
 2. Freeze nextrawPPGshortwindow morphology/RR/SQI study. Sourcealignmentconsistency nowdocumented butphysicalclockstillunresolved; no scoreoptimizedshifts. No expert reference means agreement only, notaccuracy.
 3. Preserve7people,allmissinginputevents andonlytrain/validationselection. PPGsuccessin2people doesnotjustify dropping5failures. Avoid unboundedcoarsefeaturesearch; independentdata ornewqualityvalidatedfeatures needed.
 4. KeepAPimprovement andnegativealarmevidence separate. Module1 CGM-assistedwork can be a separatelyversioned study, notclaim wrist-onlyachievement. Heartbeat remainsactive; meaningfulupdatesonly; rawdata/predictions/authorsource/credentials notuploaded.
+
+### V4 verified publication closeout
+
+Code/resultscommit`ad0102f` pushed; GitHub`tests`and`showcase`both completed success.51localtests passed; productionbuild passed. Ownedpreview20339 stopped, no5173listener; browser2/tab2closed andviewportreset. Trackeddata/privateoutputscanempty; workingtreecleanbeforethisjournal-onlycommit. No training orverification process remains. Mainmanualversion1.5 updated, heartbeat`t1d` stillACTIVE every2h. Next run begins the frozen newinformation/quality study rather than rerunningV4 or downloadingfinishedprobes.
