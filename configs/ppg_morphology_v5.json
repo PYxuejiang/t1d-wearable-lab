@@ -1,0 +1,42 @@
+{
+  "id": "V5_PPG_MORPH1",
+  "date": "2026-10-18",
+  "scope": "User restricted next work to PPG morphology, pulse intervals and quality. Exploratory seen seven-person cohort; no ECG/EDA fusion or endpoint change.",
+  "source_features": "outputs/improvement_v2/features.parquet",
+  "output_directory": "ppg_morphology_v5",
+  "extraction_directory": "outputs/ppg_morphology_features_v5",
+  "input": "Trailing300s of raw64HzE4 BVP; same independently audited shifts; no samples after anchor",
+  "short_windows": "Ten nonoverlapping30s windows within trailing300s; causal0.5-5HzButterworth order3; first2seconds excluded per shortwindow for peak/morphology summaries",
+  "features": "Pulse interval median,SD,adjacency-preservingRMSSD,validpairfraction; pulsewidth/asymmetry/normalizedarea;templatecorrelation;bandpowerfraction,autocorrelation,skew;median/IQR across30s windows. No true ECG RR or HRV accuracy claim.",
+  "quality": "Soft quality inputs, no quality-based deletion of evaluation anchors/events. Flat/missing input gives NA morphology and explicit support fractions. Same old full-wrist availability mask for allarms to isolate informationgain; coverage cannot exceed old72.8% by design.",
+  "arms": [
+    "coarse",
+    "quality_time",
+    "morphology"
+  ],
+  "primary": "morphology/b1",
+  "training": "Same v4point equalperson/equalclassweights. Same75/25 inner chronological fit/holdout with60/15minpurge inside originalouter60/20/20. Three fixed v4candidates selectedinnerAP; personalnormalization trainonly. Morphology medians/IQR fit perpersontrainonly without labels.",
+  "candidates": [
+    "logistic_C0.1",
+    "hgb_leaves7",
+    "extra_trees_depth5"
+  ],
+  "policies": [
+    "legacy_edge",
+    "confirm2",
+    "smooth_confirm2",
+    "smooth_remind30"
+  ],
+  "budgets": [
+    1,
+    2
+  ],
+  "goal": {
+    "event_macro_recall": 0.8,
+    "false_alerts_per_reference_day_max": 1,
+    "macro_time_coverage": 0.8
+  },
+  "goal_audit": "Old80/1/80 researchaspiration retained and explicitly notregulatory/clinicalstandard. Same-mask signal experiment can never passcoverage80%; judge incrementalinformation separately. Do not retrofit a lowerthreshold aftertest. Clinical/product fit reviewed in separate document.",
+  "seed": 20261018,
+  "secondary_descriptive_metrics": "Before scoring: report number of all30events hit within first15min; micro precision/recall alongside originalmacrometrics. No changes to primaryselection or endpoint."
+}

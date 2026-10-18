@@ -124,3 +124,14 @@ Code/results commit`400ecc5` pushed; GitHub`tests`and`showcase`both completed su
 ### V4 verified publication closeout
 
 Code/resultscommit`ad0102f` pushed; GitHub`tests`and`showcase`both completed success.51localtests passed; productionbuild passed. Ownedpreview20339 stopped, no5173listener; browser2/tab2closed andviewportreset. Trackeddata/privateoutputscanempty; workingtreecleanbeforethisjournal-onlycommit. No training orverification process remains. Mainmanualversion1.5 updated, heartbeat`t1d` stillACTIVE every2h. Next run begins the frozen newinformation/quality study rather than rerunningV4 or downloadingfinishedprobes.
+
+
+## 2026-10-18 / V5 PPG morphology protocol frozen; extraction in progress
+
+Latest human instruction restricts algorithm development to PPG short-window morphology, pulse intervals and signal quality. This overrides older suggestions to work in parallel on module1 or ECG/EDA fusion. No new endpoint or participant selection.
+
+V5_PPG_MORPH1 uses ten causal30s windows inside trailing300s raw64HzBVP,31descriptors and missing indicators. PPI successive differences preserve adjacency across rejected intervals. Three arms coarse/quality_time/morphology; same old wrist mask; fixed v4pointweights and3learners; innerAP then outervalidation4policies and1/2FA budgets;6operating points freeze before test. Same7subjects/all30events. Synthetic tests pass but real beat accuracy unvalidated. Current extraction is sequential, completed subjectparquets have hashmanifests; do not duplicate a live process or overwrite completed outputs.
+
+Goal review docs/GOAL_REVIEW.zh-CN.md distinguishes engineering, information gain, optional future assistance and clinical alarm. Old80/1/80 is self-set research aspiration, notclinicalstandard; fixed72.8%mask makescoveragegate impossible. Future proposed+10ppmacrorecall at≤1FA/day is a project screening proposal, notappliedretrospectively or claimedclinicalmeaning. PLOS2025event60.4%/first15min36.6%, nocturnal2025minuteleveloutcomes andDexcomCGMproduct scope reviewed. No claimV5performance before run/verification.
+
+54localtests passed; productionbuildpassed(existinglargeJSbundlewarning). PPGdisplaycomponent waits for verifiedacceptance data, so no inventedresult shown. Extraction running via session89695, logoutputs/ppg_morphology_extraction_v5.log. Follow extraction→run_ppg_morphology.py→verify_ppg_morphology.py→export_ppg_morphology.py→export_improvement.py, then results/UIacceptance andpublication.

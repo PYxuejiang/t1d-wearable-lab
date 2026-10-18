@@ -8,6 +8,7 @@ import './style.css';
 import './context.css';
 import { MechanismReview } from './MechanismReview';
 import { FusionReview } from './FusionReview';
+import { MorphologyReview } from './MorphologyReview';
 echarts.use([BarChart, LineChart, ScatterChart, GridComponent, TooltipComponent, LegendComponent, MarkLineComponent, CanvasRenderer]);
 
 const REPO='https://github.com/PYxuejiang/t1d-wearable-lab';
@@ -84,6 +85,7 @@ function App(){
           {improvements.stages.ECG_CAPTURE_PILOT1&&<article className="panel context-review ecg-review"><div className="panel-top"><div><div className="eyebrow">SIGNAL CHECK / 心搏捕获先导</div><h3>先检验捕获，再判断生理信息。</h3></div><span className="badge passed">捕获先导通过</span></div><p className="chart-note">固定 4 条专家标注 ECG，24 个五分钟窗口、48 组独立复算；两种方法均通过内部捕获门槛。</p><div className="table-wrap"><table className="result-table"><thead><tr><th>方法</th><th>心搏敏感度</th><th>心搏 PPV</th><th>心搏 F1</th><th>心率 MAE / bpm</th></tr></thead><tbody>{[['existing_energy','现有能量法'],['wfdb_xqrs_default','默认 XQRS']].map(([key,label])=>{const r=improvements.stages.ECG_CAPTURE_PILOT1.summary[key];return <tr key={key}><th>{label}</th><td>{pct(r.sensitivity)}</td><td>{pct(r.ppv)}</td><td>{pct(r.f1)}</td><td>{fmt(r.window_hr_mae_bpm)}</td></tr>;})}</tbody></table></div><p className="chart-note">150 毫秒一对一容差，记录等权。四记录结果不能推广到腕部 PPG；尚未替换目标数据的提取方法。捕获通过不代表低血糖检测或临床报警有效。</p><div className="context-actions"><button className="text-button" onClick={()=>setEvidence({...improvements.stages.ECG_CAPTURE_PILOT1,stage:'ECG_CAPTURE_PILOT1'})}>核对 48 组捕获结果 →</button><a className="secondary" href="/cards/ecg-capture.png" download>导出信号成果卡</a><a className="text-button" href={REPO+'/blob/main/docs/ECG_CAPTURE_REPORT.zh-CN.md'} target="_blank" rel="noreferrer">阅读信号报告 ↗</a></div></article>}
           <MechanismReview record={improvements.stages.V3_MECHANISM1} onEvidence={setEvidence} repo={REPO}/>
           <FusionReview record={improvements.stages.V4_LATE_FUSION1} source={improvements.stages.SOURCE_TIME1} onEvidence={setEvidence} repo={REPO}/>
+          <MorphologyReview record={improvements.stages.V5_PPG_MORPH1} onEvidence={setEvidence} repo={REPO}/>
           <div className="downloads"><a className="secondary" href="/demo/improvement_data.json" download>下载改进汇总证据 JSON</a><a className="secondary" href={REPO+'/blob/main/docs/IMPROVEMENT_REPORT.zh-CN.md'} target="_blank" rel="noreferrer">阅读改进报告 ↗</a></div>
         </>:<article className="panel empty"><h3>改进结果尚待验收</h3><p>完成新实验与独立复算后导出证据，不用预设分数代替结果。</p></article>}
       </>}
