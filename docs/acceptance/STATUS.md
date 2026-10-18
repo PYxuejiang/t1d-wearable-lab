@@ -32,3 +32,7 @@ Advance only after recording the current stage's engineering/evaluation checks. 
 | V3_MECHANISM1 |336 test groups, nested parameter selection and63 selected validation configurations independently checked | ECG failover coverage72.8%→82.8%; primary0/30 hits; detection target failed |
 | SOURCE_TIME1 |34,218 source feature labels and ten fixed processed probes checked; three unique E4 waveform matches | Source consistency supported; physical CGM/chest clocks still unresolved, no offset changes |
 | V4_LATE_FUSION1 |392 groups,30 inner candidates,28 selected validation points and out-of-fit stack refit independently checked | Stack AP0.0755→0.0969 exploratory gain; primary0/30, PPG comparator3/30; event target failed |
+
+| V5_PPG_MORPH1 |42 groups,9 inner candidates,6 validation selections independently verified; old coarse scores reproduced| Morphology1/30 versus coarse3/30; same72.8% coverage; no AP or alarm gain; effect FAILED |
+
+Interactive product homepage has a separate engineering acceptance report: [WATCH_EXPERIENCE](../WATCH_EXPERIENCE.zh-CN.md). Visual completion does not change scientific effect status.

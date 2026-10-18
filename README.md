@@ -25,6 +25,8 @@ A separate [expert-annotated ECG capture pilot](docs/ECG_CAPTURE_REPORT.zh-CN.md
 
 ![Research showcase](docs/figures/showcase-overview.jpg)
 
+**Current scope (2026-10-18):** the next frozen study is limited to causal PPG short-window morphology, pulse intervals and signal quality. See the [protocol](configs/ppg_morphology_v5.json) and [goal suitability review](docs/GOAL_REVIEW.zh-CN.md). Engineering, incremental information and practical alarms are separate gates; revised future proposals never retrospectively turn failed results into success.
+
 ## Try the local showcase
 
 Node 22 is recommended. The checked-in aggregate evidence and PNG/SVG cards work without patient-data downloads:
@@ -78,3 +80,11 @@ Latest follow-up (2026-10-18): [source audit and modality-expert protocol](docs/
 
 Published cohort sizes are not treated as counts of eligible test subjects. Each input file and exclusion is audited. CGM is a reference measurement, not a clinical venous-glucose gold standard. Detection is not advance warning; sparse sampling limits event timing precision.
 
+
+## Interactive watch experience
+
+The homepage is now an original three-dimensional concept watch: work/life/sleep, sensor highlights, synthetic signal processing, capability explanations and an acknowledged example reminder. Three finishes are downloadable as self-contained GLB assets. Detailed experiments remain at `#research`. No real patient trace is embedded in this product animation. [Design, asset provenance and QA](docs/WATCH_EXPERIENCE.zh-CN.md).
+
+Run `npm ci` then `npm run dev` in `showcase`; rebuild original models with `node scripts/export-watch.mjs` from that directory. This is a local showcase, not a deployed medical service. The existing automation now continues hourly.
+
+Latest algorithm result: [V5 PPG morphology](docs/PPG_MORPHOLOGY_REPORT.zh-CN.md),42 groups independently verified. Morphology detects1/30 versus coarse3/30 at identical72.8% coverage and0.718 unmatched alarms/reference-person-day. No detection improvement; next work validates PPG beat extraction and quality, not additional coarse-feature grid search.

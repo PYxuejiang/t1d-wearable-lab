@@ -84,3 +84,21 @@ def test_v4_ranking_gain_keeps_failed_primary_and_source_clock_limit():
     manifest=json.loads((ROOT/'showcase/public/cards/fusion-manifest.json').read_text())
     assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
     assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/late-fusion-v4.png').read_bytes()).hexdigest()
+
+
+def test_v5_display_preserves_same_mask_controls_and_timing_denominators():
+    record=json.loads((ROOT/'docs/acceptance/V5_PPG_MORPH1.json').read_text(encoding='utf-8'))
+    public=json.loads((ROOT/'showcase/public/demo/improvement_data.json').read_text(encoding='utf-8'))
+    assert public['stages']['V5_PPG_MORPH1']==record
+    assert record['groups_verified']==42 and record['inner_candidates_verified']==9
+    assert record['primary_key']=='morphology/b1' and record['coarse_v4_maximum_score_difference']<1e-9
+    assert len(record['results'])==6
+    for r in record['results'].values():
+        assert r['reference_events']==30 and r['events_hit_within15min']<=r['matched_events']
+        assert abs(r['coverage']-record['results']['coarse/b1']['coverage'])<1e-12
+        assert r['micro_event_recall']==r['matched_events']/30
+    # A fixed mask below80% cannot pass the original combined alarm target.
+    assert record['primary']['coverage']<.8 and record['effect_status']=='failed'
+    manifest=json.loads((ROOT/'showcase/public/cards/ppg-morphology-manifest.json').read_text())
+    assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+    assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/ppg-morphology-v5.png').read_bytes()).hexdigest()

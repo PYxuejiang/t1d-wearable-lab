@@ -135,3 +135,21 @@ V5_PPG_MORPH1 uses ten causal30s windows inside trailing300s raw64HzBVP,31descri
 Goal review docs/GOAL_REVIEW.zh-CN.md distinguishes engineering, information gain, optional future assistance and clinical alarm. Old80/1/80 is self-set research aspiration, notclinicalstandard; fixed72.8%mask makescoveragegate impossible. Future proposed+10ppmacrorecall at≤1FA/day is a project screening proposal, notappliedretrospectively or claimedclinicalmeaning. PLOS2025event60.4%/first15min36.6%, nocturnal2025minuteleveloutcomes andDexcomCGMproduct scope reviewed. No claimV5performance before run/verification.
 
 54localtests passed; productionbuildpassed(existinglargeJSbundlewarning). PPGdisplaycomponent waits for verifiedacceptance data, so no inventedresult shown. Extraction running via session89695, logoutputs/ppg_morphology_extraction_v5.log. Follow extraction→run_ppg_morphology.py→verify_ppg_morphology.py→export_ppg_morphology.py→export_improvement.py, then results/UIacceptance andpublication.
+
+
+### V5 extraction checkpoint / same algorithm, independent subject workers
+
+Protocol commit0a144db pushed before model scoring; GitHubtests/showcase bothpassed. First3subjects completed with matching manifests. To reduce wall time, own sequential PID26588 was verified and stopped only after c1s03 manifest/parquet hash passed; no completed files discarded. Remaining4subjects now run separately using new --subjects argument, exactsame featuremodule/hash. Partial nextsubject work can be recomputed; no competing writer remains. Controller session58981/logoutputs/ppg_morphology_parallel_controller.log. Pipeline session48182 waits for all7 complete manifests, then runs model→independentverify→exports, logsoutputs/ppg_morphology_pipeline_v5.log. The old session89695 termination is intentional, not an algorithm failure. Do not launch duplicate jobs. Mainmanualv1.6 has protocol/goalreview and explicitly pending results.
+
+
+## 2026-10-18：V5已完成，交互展示与每小时接续
+
+V5_PPG_MORPH1已完成提取、训练、独立复算与导出，**不要重跑旧控制器或流水线**。42组测试、9个内层候选、6个选中验证工作点全部核对。三路使用同一腕部掩码和全部7人、30次事件；粗特征分数与V4精确复现。
+
+主形态方案1/30命中，前15分钟0/30，17次未匹配报警/18次总报警，误报0.717985次/参考人日，覆盖72.8007%。旧粗特征对照3/30、前15分钟2/30。形态AP0.0770，对照0.0992；配对差−0.0222，按人探索性95%区间[−0.0814,0.0185]。**工程与评价通过，信息增益和原检测目标失败**。5次无输入、22次低于阈值、2次报警状态未触发；不能隐藏这些漏检。新增形态尚无专家搏动准确性验证，源物理时钟仍未解决。
+
+下一阶段仅限PPG：先审计有参考心搏标注的公开基准与许可，冻结跨记录、活动分层的峰值/PPI/质量验证；先确认提取是否可靠，再决定是否回到低血糖模型。候选PPG-DaLiA/PPG-beats不是新疾病标签，也不是低血糖外部验证。无新证据不扩大固定特征参数网格、不按测试改报警阈值。旧80%召回/1次误报/80%覆盖目标保留；其属于内部目标，固定72.8%掩码无法过覆盖门槛。分层研究目标见GOAL_REVIEW，任何新门槛必须前瞻冻结，不能追认本轮成功。
+
+用户要求接续间隔改为每1小时；原t1d自动任务已更新为ACTIVE，每小时推进算法和交互展示。首页改为原创三维概念手表与五步感知流程；复杂指标和历史证据保留在#research。动画是合成示意，不代表PPG血糖测量、已验证心律/呼吸异常或真实医疗通知。公开资产为自写模型、汇总验收和截图，患者数据仍仅本地。三分钟现场录屏尚未完成。
+
+Independent verifier recheck passed; run ppgmorph-12455c7357cf, aggregate ledger improve-32b0b8f73297. No extraction/training process remains. Native automation update succeeded for existing t1d, interval1h.

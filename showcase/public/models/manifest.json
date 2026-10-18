@@ -1,0 +1,26 @@
+{
+  "license": "MIT",
+  "author": "T1D Wearable Lab",
+  "source": "src/watch-model.js",
+  "scope": "Original procedural concept; no clinical hardware validation or Apple affiliation. PBR materials, no baked or third-party textures.",
+  "files": [
+    {
+      "file": "watch-plum.glb",
+      "bytes": 827076,
+      "triangles": 9256,
+      "sha256": "3f814c488307b2dea819cf3f1a55d5f5e818c755cf43b8f9b8d6bad0692b5c9e"
+    },
+    {
+      "file": "watch-pearl.glb",
+      "bytes": 827072,
+      "triangles": 9256,
+      "sha256": "034383718a7ad2dd3e8f2babd7e09de6b09d6d8413f30b76712d8e22d5372949"
+    },
+    {
+      "file": "watch-midnight.glb",
+      "bytes": 827076,
+      "triangles": 9256,
+      "sha256": "3293b5e80bb2dd69e90d2d5ad54e5731254348609b3bcc3428decac58e16263f"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 """Read each source BVP session once; resume only verified complete subject files."""
-import hashlib,json,sys
+import argparse,hashlib,json,sys
 from pathlib import Path
 from zipfile import ZipFile
 import numpy as np
@@ -9,11 +9,13 @@ from t1d_lab.ppg_morphology import window_features,sample_bounds
 
 
 def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--subjects',nargs='+');args=parser.parse_args()
     cfg=json.loads((ROOT/'configs/ppg_morphology_v5.json').read_text());dest=ROOT/cfg['extraction_directory'];dest.mkdir(parents=True,exist_ok=True)
     fingerprint=hashlib.sha256((ROOT/'src/t1d_lab/ppg_morphology.py').read_bytes()).hexdigest()
     raw=pd.read_parquet(ROOT/cfg['source_features']);clock=json.loads((ROOT/'docs/acceptance/S1b.json').read_text())
     offsets={r['subject']:r['clock_shift_hours'] for r in clock['audit'] if r['status']=='extracted'}
     for subject,g in raw.groupby('subject',sort=True):
+        if args.subjects and subject not in args.subjects:continue
         path=dest/f'{subject}.parquet';manifest=dest/f'{subject}.json'
         if path.exists() and manifest.exists():
             m=json.loads(manifest.read_text());assert m['extractor_sha256']==fingerprint and m['features_sha256']==hashlib.sha256(path.read_bytes()).hexdigest();print(subject,'verified cached',flush=True);continue
