@@ -68,6 +68,8 @@ Download commands save data locally under ignored `data/`, verify source checksu
 
 ## Sources and licenses
 
+Latest follow-up (2026-10-18): [source audit and modality-expert protocol](docs/METHOD_CHANGE_V4.zh-CN.md), [all V4 results](docs/LATE_FUSION_REPORT.zh-CN.md). 392 groups independently checked. Low-run weighted stacking improves exploratory macro AP from0.0755 to0.0969, but the registered primary still detects0/30 events. A registered PPG comparator detects3/30 at0.718 unmatched alarms/reference-person-day with72.8% coverage; it does not pass the event goal. All negative and secondary-budget results remain available. Source consistency is checked, while physicalCGM/chest clock calibration remains unresolved.
+
 - [BrisT1D-Open](https://data.bris.ac.uk/data/dataset/33z5jc8fa6tob21ptrugzqog08): processed device data, CC BY 4.0. [Schema](https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/README.txt).
 - [PhysioCGM](https://doi.org/10.6084/m9.figshare.28136294): raw physiological data and CGM, CC0. [Data descriptor](https://doi.org/10.1038/s41597-025-06090-6).
 - [Smartwatch hypoglycemia processed data](https://doi.org/10.5281/zenodo.15309060): 11 published participant CSVs, CC BY 4.0, [Mohamed et al., PLOS ONE 2025](https://doi.org/10.1371/journal.pone.0325956). Download with `python scripts/download_data.py --dataset smartwatch_hypo`; different sensors and endpoints are evaluated separately.

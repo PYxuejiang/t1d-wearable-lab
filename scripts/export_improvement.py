@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     stages={}
-    for stage in ['V2_1','V2_2','COHORT_SW1','COHORT_SW_PERSONAL1','CONTEXT_V1_ABORTED','CONTEXT_V1_1','ECG_CAPTURE_PILOT1','V3_MECHANISM1']:
+    for stage in ['V2_1','V2_2','COHORT_SW1','COHORT_SW_PERSONAL1','CONTEXT_V1_ABORTED','CONTEXT_V1_1','ECG_CAPTURE_PILOT1','V3_MECHANISM1','SOURCE_TIME1','V4_LATE_FUSION1']:
         p=ROOT/'docs/acceptance'/f'{stage}.json'
         if p.exists():stages[stage]=json.loads(p.read_text(encoding='utf-8'))
     run='improve-'+hashlib.sha256(json.dumps(stages,sort_keys=True,separators=(',',':')).encode()).hexdigest()[:12]
@@ -85,6 +85,8 @@ python scripts/export_improvement.py
         report+='\n\n## 信号子任务：专家标注ECG捕获先导\n\n固定四条MIT-BIH记录、24个窗口、48组独立复算。现有能量法与默认XQRS的记录等权F1约99.66%和99.77%，两者通过本次内部捕获门槛。没有改变PhysioCGM检测器，没有低血糖效能结论。详见[信号捕获报告](ECG_CAPTURE_REPORT.zh-CN.md)。下一步扩展参考与噪声覆盖，审计目标波形和源时钟；不要重复这一先导以挑选成绩。\n'
     if 'V3_MECHANISM1' in stages:
         report+='\n\n## 第三轮：有限参数搜索与机制分析\n\n已完成336组独立复算。精简/活动残差、共享模型、嵌套调参、报警确认与胸带ECG后备均分开对照。覆盖从72.8%升至82.8%，但预设主方案0/30事件命中；次要2次预算下2/30命中、宏召回17.1%、误报1.858/参考人日，不替代原目标。漏检分解表明3次无输入、26次分数低于阈值、1次报警未触发。详见[方法解释](METHOD_CHANGE_V3.zh-CN.md)与[本轮报告](MECHANISM_REPORT.zh-CN.md)。不要继续无界调参；下一步优先验证原始时钟/加工对齐和真实生理信息。\n'
+    if 'V4_LATE_FUSION1' in stages:
+        report+='\n\n## 第四轮：来源核对、模态专家与片段权重\n\n来源标签34,218点核对一致，10个固定加工片段与原始CGM对应，物理时钟仍未独立校准。392组独立复算：后期融合AP从0.0755升至0.0969，配对区间[0.0041,0.0437]，探索性排序改善；主方案仍0/30。PPG预设对照3/30、误报0.718/参考人日、覆盖72.8%，不替代主方案或事件验收。全部路线与次预算见[第四轮报告](LATE_FUSION_REPORT.zh-CN.md)，方法见[METHOD_CHANGE_V4](METHOD_CHANGE_V4.zh-CN.md)。\n'
     (ROOT/'docs/IMPROVEMENT_REPORT.zh-CN.md').write_text(report,encoding='utf-8')
     print('Exported aggregate improvement ledger, report and card',run)
 

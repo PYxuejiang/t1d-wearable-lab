@@ -1,0 +1,9 @@
+{
+  "id": "SOURCE_TIME1",
+  "author_commit": "6940f1d587f8f68b131cf129d5a9f65237f61fcc",
+  "scope": "Source provenance only; never optimize offsets against glucose outcomes",
+  "processed_probe": "For each of ten subjects choose the first numeric pickle member in the published archive; no outcome-dependent sampling",
+  "range_integrity": "Require exact HTTP 206 Content-Range; archive member CRC32 and SHA256; not full-archive MD5 verification",
+  "label_audit": "All raw EGV records; units, censoring, duplicate/conflicting timestamps, published source Index and naive timestamp",
+  "clock_boundary": "Agreement with author processed timestamps supports preprocessing consistency, not independent physical clock calibration. Retain previously sensor-validated E4 shifts and quarantine. No automatic clock correction."
+}

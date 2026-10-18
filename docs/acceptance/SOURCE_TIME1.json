@@ -1,0 +1,399 @@
+{
+  "id": "SOURCE_TIME1",
+  "date": "2026-10-18",
+  "status": "provenance_checked_physical_clock_unresolved",
+  "author_commit": "6940f1d587f8f68b131cf129d5a9f65237f61fcc",
+  "source_code_sha256": {
+    "author_hypoglycemia_prediction_libs_dataloader.py": "edf1a3b87c90a710462451ce1ff8c2ccf737dfd0cf2ac7104a04182f5a00c383",
+    "author_hypoglycemia_prediction_notebooks_data_splitting.ipynb": "cb66160a4e2a86d7be08ec7780950446e12421065e0158a60520087bd962a56c",
+    "author_hypoglycemia_prediction_preprocess.py": "19c4654a986226ea1a0b46ee02f3dd4b056893e5f1ebcab11914bb3deadf0f09",
+    "author_libs_combine_data.py": "5f75dc89095b3ac6cb0b9be67ea9fe70075860b027dd58dea03f58bee1128927",
+    "author_preprocess.py": "26c6b091fbe2dbdabc02508063d2249dc1c1e1026d2afa853dcc9417e9f0cf19",
+    "author_tree.json": "36cb9998411a94f766a2de4666b8a4208cdf7080b8da071279eebbafe014bb70"
+  },
+  "subjects": [
+    {
+      "subject": "c1s01",
+      "egv_rows": 25356,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 2,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 53,
+      "censored_high": 0,
+      "feature_anchors_checked": 5566,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 15640,
+      "processed_chest_lag_seconds_min": 0.003,
+      "processed_chest_lag_seconds_max": 62.559,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": "EDA",
+        "sequence_length": 16,
+        "matches": [
+          {
+            "offset_seconds": -18000.0,
+            "source_member_sha256": "9004212c647d14ffc3c34d27d5102995d66fdd84904697d56a56180bb204b7b5"
+          }
+        ],
+        "unique_value_match": true
+      },
+      "probe_integrity": {
+        "subject": "c1s01",
+        "source_url": "https://ndownloader.figshare.com/files/51655652",
+        "archive_expected_md5": "91a1e0eedf59b710cc5a3308dc96f160",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 2704,
+        "member_crc32": 48614001,
+        "member_sha256": "9194fee042c7cdadd72f5ae5f8a3e86031d124832d148fc090dc047a4c1a15ac",
+        "http_bytes_downloaded": 412910,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c1s02",
+      "egv_rows": 21167,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 0,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 13,
+      "censored_high": 13,
+      "feature_anchors_checked": 4839,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 70636,
+      "processed_chest_lag_seconds_min": 0.001,
+      "processed_chest_lag_seconds_max": 282.541,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": null,
+        "matches": [],
+        "unique_value_match": false,
+        "reason": "No nonconstant 16-sample sequence in first fixed probe"
+      },
+      "probe_integrity": {
+        "subject": "c1s02",
+        "source_url": "https://ndownloader.figshare.com/files/51656123",
+        "archive_expected_md5": "62f5ae848f59b2fe42507b3ba5e8619f",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 3287,
+        "member_crc32": 3314782992,
+        "member_sha256": "26f79de452fb6384f843a0ce2f00b9be25894ca8a80a92bba0ee40ed3b919c29",
+        "http_bytes_downloaded": 688458,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c1s03",
+      "egv_rows": 25349,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 5,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 1,
+      "censored_high": 12,
+      "feature_anchors_checked": 4018,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 33888,
+      "processed_chest_lag_seconds_min": 0.003,
+      "processed_chest_lag_seconds_max": 135.551,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": null,
+        "matches": [],
+        "unique_value_match": false,
+        "reason": "No nonconstant 16-sample sequence in first fixed probe"
+      },
+      "probe_integrity": {
+        "subject": "c1s03",
+        "source_url": "https://ndownloader.figshare.com/files/51656129",
+        "archive_expected_md5": "b2b678a6e70a8bcf465649051142f4e9",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 3385,
+        "member_crc32": 3932379026,
+        "member_sha256": "53ac2a0c33f6f297e34322e3e0f3d42f35922af9df854e227806742d0ab8c203",
+        "http_bytes_downloaded": 543631,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c1s04",
+      "egv_rows": 4634,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 0,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 0,
+      "censored_high": 0,
+      "feature_anchors_checked": 0,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 7889,
+      "processed_chest_lag_seconds_min": 0.002,
+      "processed_chest_lag_seconds_max": 31.554,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": null,
+        "matches": [],
+        "unique_value_match": false,
+        "reason": "No nonconstant 16-sample sequence in first fixed probe"
+      },
+      "probe_integrity": {
+        "subject": "c1s04",
+        "source_url": "https://ndownloader.figshare.com/files/51656141",
+        "archive_expected_md5": "0f2b76ac52e6f2e98bf152280c96ea91",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 2928,
+        "member_crc32": 249221139,
+        "member_sha256": "187112064232ce12d96cdb2d1374bcb61dc62b8e5ea778787dec0d0334807980",
+        "http_bytes_downloaded": 328010,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c1s05",
+      "egv_rows": 25260,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 0,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 12,
+      "censored_high": 0,
+      "feature_anchors_checked": 4822,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 11391,
+      "processed_chest_lag_seconds_min": 0.0,
+      "processed_chest_lag_seconds_max": 45.56,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": "EDA",
+        "sequence_length": 16,
+        "matches": [
+          {
+            "offset_seconds": -18000.0,
+            "source_member_sha256": "3d2408b5c716227558eb61b4e391b98750cae38f7fd4d37405430b4bae5a5704"
+          }
+        ],
+        "unique_value_match": true
+      },
+      "probe_integrity": {
+        "subject": "c1s05",
+        "source_url": "https://ndownloader.figshare.com/files/51656147",
+        "archive_expected_md5": "018d3ab4cd24ad1722b7b61694dc1577",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 3765,
+        "member_crc32": 316758011,
+        "member_sha256": "a8e6070644e133ceb8b2f13798382d988e15433a0b729a8470803244f6b11176",
+        "http_bytes_downloaded": 486742,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c2s01",
+      "egv_rows": 25001,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 8,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 38,
+      "censored_high": 0,
+      "feature_anchors_checked": 0,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 18250,
+      "processed_chest_lag_seconds_min": 70.557,
+      "processed_chest_lag_seconds_max": 143.553,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": null,
+        "matches": [],
+        "unique_value_match": false,
+        "reason": "No nonconstant 16-sample sequence in first fixed probe"
+      },
+      "probe_integrity": {
+        "subject": "c2s01",
+        "source_url": "https://ndownloader.figshare.com/files/51656177",
+        "archive_expected_md5": "009540519faaebe12f3e432cbfb7d0e0",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 3498,
+        "member_crc32": 1716500720,
+        "member_sha256": "da558feb9b35d03f111d89bcab15b008cf602e8c0cc20503f13363a143b012e7",
+        "http_bytes_downloaded": 482972,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c2s02",
+      "egv_rows": 25662,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 0,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 60,
+      "censored_high": 0,
+      "feature_anchors_checked": 4642,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 62639,
+      "processed_chest_lag_seconds_min": 0.0,
+      "processed_chest_lag_seconds_max": 250.552,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": null,
+        "matches": [],
+        "unique_value_match": false,
+        "reason": "No nonconstant 16-sample sequence in first fixed probe"
+      },
+      "probe_integrity": {
+        "subject": "c2s02",
+        "source_url": "https://ndownloader.figshare.com/files/51656189",
+        "archive_expected_md5": "5c7eb29c9be3a790dc0cd6137acfb09e",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 3069,
+        "member_crc32": 4115145143,
+        "member_sha256": "8f81f6292dfc49c6916987b73cf256748e589c320031e47926ecc7b216db62a5",
+        "http_bytes_downloaded": 640770,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c2s03",
+      "egv_rows": 24287,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 7,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 40,
+      "censored_high": 0,
+      "feature_anchors_checked": 0,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 13644,
+      "processed_chest_lag_seconds_min": 0.003,
+      "processed_chest_lag_seconds_max": 54.575,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": null,
+        "matches": [],
+        "unique_value_match": false,
+        "reason": "No nonconstant 16-sample sequence in first fixed probe"
+      },
+      "probe_integrity": {
+        "subject": "c2s03",
+        "source_url": "https://ndownloader.figshare.com/files/51656204",
+        "archive_expected_md5": "9829a3a3f241e398b8657449a34e7426",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 3288,
+        "member_crc32": 199207249,
+        "member_sha256": "c2f124d6f7d67489ef561a693659b151be3e8ddb9f288d3b6cc371f2220c3eec",
+        "http_bytes_downloaded": 360410,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c2s04",
+      "egv_rows": 25496,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 10,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 43,
+      "censored_high": 0,
+      "feature_anchors_checked": 6129,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 67138,
+      "processed_chest_lag_seconds_min": 0.002,
+      "processed_chest_lag_seconds_max": 268.55,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": "EDA",
+        "sequence_length": 16,
+        "matches": [
+          {
+            "offset_seconds": -18000.0,
+            "source_member_sha256": "e4e35bb3555b22f14cc25ccb873115798668b6e7c12c0325ffd06c13eaa37808"
+          }
+        ],
+        "unique_value_match": true
+      },
+      "probe_integrity": {
+        "subject": "c2s04",
+        "source_url": "https://ndownloader.figshare.com/files/51656228",
+        "archive_expected_md5": "f9b3beec2c7cc3b5658e64e8ce1a4e02",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 3798,
+        "member_crc32": 1926967964,
+        "member_sha256": "d8c9513122fe0489d8d139ffd345aae2c15723238c6c3213eb87e2d0e5aac234",
+        "http_bytes_downloaded": 870238,
+        "selection": "first numeric member, no glucose selection"
+      }
+    },
+    {
+      "subject": "c2s05",
+      "egv_rows": 24973,
+      "timestamp_tz_explicit": false,
+      "exact_duplicate_rows": 0,
+      "conflicting_timestamps": 52,
+      "unknown_glucose_encoding": 0,
+      "censored_low": 18,
+      "censored_high": 0,
+      "feature_anchors_checked": 4202,
+      "feature_label_mismatches": 0,
+      "processed_index_timestamp_glucose_match": true,
+      "processed_chest_samples": 19889,
+      "processed_chest_lag_seconds_min": 0.001,
+      "processed_chest_lag_seconds_max": 79.553,
+      "processed_chest_all_past_within330s": true,
+      "first_processed_summary_matches_raw": true,
+      "e4_value_sequence": {
+        "channel": null,
+        "matches": [],
+        "unique_value_match": false,
+        "reason": "No nonconstant 16-sample sequence in first fixed probe"
+      },
+      "probe_integrity": {
+        "subject": "c2s05",
+        "source_url": "https://ndownloader.figshare.com/files/51656246",
+        "archive_expected_md5": "d1a849aa7f2da8600d4a404b47d32e7c",
+        "full_archive_verified": false,
+        "member": "0.pkl",
+        "member_count": 3712,
+        "member_crc32": 2830864747,
+        "member_sha256": "ce9d14718e048e9709da1c5ea1d941688766f4fb3031218195463125ae8fb7b2",
+        "http_bytes_downloaded": 498371,
+        "selection": "first numeric member, no glucose selection"
+      }
+    }
+  ],
+  "feature_anchors_checked": 34218,
+  "feature_label_mismatches": 0,
+  "limitations": [
+    "One outcome-independent processed probe per subject, not full archive validation.",
+    "Naive CGM and chest clocks have no independent physical offset calibration.",
+    "Author E4 preprocessing uses host localtime; source-code consistency is not clock ground truth.",
+    "No clock adjustment, new subject inclusion or label change performed."
+  ]
+}

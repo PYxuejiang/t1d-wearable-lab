@@ -64,3 +64,23 @@ def test_v3_coverage_gain_does_not_pass_failed_detection_or_hide_secondary_budge
     manifest=json.loads((ROOT/'showcase/public/cards/mechanism-manifest.json').read_text())
     assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
     assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/mechanism-v3.png').read_bytes()).hexdigest()
+
+
+def test_v4_ranking_gain_keeps_failed_primary_and_source_clock_limit():
+    record=json.loads((ROOT/'docs/acceptance/V4_LATE_FUSION1.json').read_text())
+    source=json.loads((ROOT/'docs/acceptance/SOURCE_TIME1.json').read_text())
+    public=json.loads((ROOT/'showcase/public/demo/improvement_data.json').read_text(encoding='utf-8'))
+    assert public['stages']['V4_LATE_FUSION1']==record and public['stages']['SOURCE_TIME1']==source
+    assert record['groups_verified']==392 and len(record['results'])==56
+    assert record['primary_key']=='late_stack/run/b1/end_to_end'
+    assert record['primary']['matched_events']==0 and record['effect_status']=='failed'
+    assert all(r['reference_events']==30 for r in record['results'].values())
+    assert record['paired_differences']['late_stack/point']['ap']['95_interval'][0]>0
+    assert record['results']['ppg/point/b1/end_to_end']['matched_events']==3
+    assert record['results']['ppg/point/b1/end_to_end']['coverage']<.8
+    assert source['feature_label_mismatches']==0 and 'unresolved' in source['status']
+    assert source['feature_anchors_checked']==34218 and len(source['subjects'])==10
+    assert all(not r['probe_integrity']['full_archive_verified'] for r in source['subjects'])
+    manifest=json.loads((ROOT/'showcase/public/cards/fusion-manifest.json').read_text())
+    assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+    assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/late-fusion-v4.png').read_bytes()).hexdigest()
