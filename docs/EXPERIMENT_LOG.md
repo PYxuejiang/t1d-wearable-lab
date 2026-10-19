@@ -217,3 +217,10 @@ Next onlyPPG: onfixeddevelopmentS1–S5 audit raw/filtered pulse timing and cali
 ### PPG直接人工标注入口已取得（2026-10-19）
 
 在稳定性诊断后进一步核查作者公开pyPPG标注包，已下载v1 PPG-BP_annot.zip 7.17MB并核对官方MD5；Zenodo记录CC-BY-4.0。结构审计确认219唯一信号条目、两套各219汇总标注、1000Hz、2.1–4.2秒；不是连续腕部波形，不能原样套现有30秒检测器。只读结构验收通过，未评分。详情docs/PPG_BP_ANNOT_AUDIT.zh-CN.md与acceptance/PPG_BP_ANNOT_SOURCE1.json；数据留data/ppg_bp_annot，不重复下载。下一步优先审计采集部位、标注预处理、时间/索引、空标签和标注者一致性，冻结短片段定位协议，再做PPG-DaLiA开发集峰/上升沿核查。不得拼接短片段伪造长记录，不把专家边界内定位当连续检出，不将此类信号成绩当疾病效果。
+
+
+## 2026-10-19 PPG_LABEL_AUDIT1完成
+
+预先冻结a9ea490，219条两套标注1752字段独立复核；汇总与merged MAT完全一致。严格单pk解析仅34/219配对，原因主要为邻搏多峰，不能称其余全部缺标。事后数量诊断：自己的os内恰一pk，MG219/219、PC218/219；PC1条os/u数量异常，保留不删。on/off/u均218配对，MAE3.208/3.472/1.119ms，仅标签差不是算法误差。原论文说明高质量指端单搏、12Hz人工标注滤波、>10ms分歧讨论；最终两套差异不应说成未经协商的独立标注可靠性。作者代码以round(t*fs)索引且使用专家边界，不能把其条件定位当连续检出。包内少数峰备注提示不确定性，未据此删记录。
+
+公开docs/PPG_LABEL_AUDIT_REPORT.zh-CN.md、acceptance/PPG_LABEL_AUDIT1.json、成果卡ppglabel-168ed26d5dcf；本地outputs/ppg_label_audit_v1完整，勿重跑主审计。后续先冻结专家边界内单搏条件定位协议（目标峰/上升沿，两套标签和全部219覆盖），再回PPG-DaLiA开发集；不以当前标签MAE宣称新算法、腕部或低血糖效果。事件召回、误报、及时性和疾病PPV均无新结果。网站仍GitHub Pages自动发布。
