@@ -1,0 +1,131 @@
+{
+  "stage": "PPG_LOCAL_DEV1",
+  "scope": "Seen development candidate risk ranking; no rejection or disease validation",
+  "subjects": 5,
+  "windows": 211,
+  "tail_candidates": 5119,
+  "synthetic": {
+    "shape_offset_scale_invariant": true,
+    "interval_time_scale_invariant": true,
+    "constant_and_no_neighbor_defaults": true
+  },
+  "by_activity": {
+    "sitting": {
+      "records": 5,
+      "candidate_count": 3095,
+      "tail_candidates": 1969,
+      "zero_shape": 0,
+      "zero_template": 0,
+      "no_neighbor": 0,
+      "one_side": 204,
+      "auc": {
+        "template": {
+          "mean": 0.8203679678810403,
+          "valid_records": 5
+        },
+        "interval": {
+          "mean": 0.766482662199863,
+          "valid_records": 5
+        },
+        "one_minus_sqi": {
+          "mean": 0.7527641827634477,
+          "valid_records": 5
+        }
+      }
+    },
+    "walking": {
+      "records": 5,
+      "candidate_count": 4859,
+      "tail_candidates": 3150,
+      "zero_shape": 0,
+      "zero_template": 0,
+      "no_neighbor": 0,
+      "one_side": 218,
+      "auc": {
+        "template": {
+          "mean": 0.5107020610506707,
+          "valid_records": 5
+        },
+        "interval": {
+          "mean": 0.563116615390469,
+          "valid_records": 5
+        },
+        "one_minus_sqi": {
+          "mean": 0.5580412747939446,
+          "valid_records": 5
+        }
+      }
+    }
+  },
+  "subject_auc": {
+    "template": {
+      "mean": 0.6655350144658556,
+      "95_interval": [
+        0.6312631567559466,
+        0.7100842670234312
+      ],
+      "subjects": 5
+    },
+    "interval": {
+      "mean": 0.6647996387951661,
+      "95_interval": [
+        0.593492774633009,
+        0.7260742710492512
+      ],
+      "subjects": 5
+    },
+    "one_minus_sqi": {
+      "mean": 0.6554027287786962,
+      "95_interval": [
+        0.6195813520355464,
+        0.6957675521618727
+      ],
+      "subjects": 5
+    }
+  },
+  "difference_vs_sqi": {
+    "template": {
+      "mean": 0.010132285687159404,
+      "95_interval": [
+        -0.0049196094902739015,
+        0.028965682774600664
+      ],
+      "subjects": 5
+    },
+    "interval": {
+      "mean": 0.00939691001646995,
+      "95_interval": [
+        -0.06530401713303871,
+        0.07016636881362519
+      ],
+      "subjects": 5
+    }
+  },
+  "input_sha256": {
+    "outputs/ppg_upstroke_dev_v1/windows_local.json": "576abeebb49f3338cd031afe051898197fe770454dd4fca080834249e46b7bd7",
+    "outputs/ppg_quality_dev_v1/records_local.json": "d9bfda5ee9708856beccfa09360a835e052505330d0d3ccb93215581feb8cd2e",
+    "docs/acceptance/PPG_QUALITY_DEV1.json": "5db9cb968f8ffa754d69e2333bd40152f10f3a2522e5c5fe519c92e9cfb28760",
+    "docs/acceptance/PPG_DALIA_AUDIT1.json": "3dfda15b4dba7933681d1244ca1fc16dc490082c965b31985980e547ea628488"
+  },
+  "data_sha256": {
+    "ppg_dalia_sitting_data.mat": "bc1156ab6e52da2a5698d0b48184b46ac936389f8e7a08a55dc9fb5954b10d55",
+    "ppg_dalia_walking_data.mat": "bc6dd296786c5caf88bdd55c7d997533a1f2e39c9b8f5de7b176accfedafe9e1"
+  },
+  "source_sha256": {
+    "scripts/run_ppg_local_dev.py": "b69ef99c252dafd9200e08c5a8922c47655164bf1388e01a81403e3823f190cd",
+    "scripts/run_ppg_quality_dev.py": "7127ef3afe0e6fb646cc0bd8d26d7c5e5a09fa47b90735e3f6932f49fb8cf825",
+    "docs/METHOD_PPG_LOCAL_DEV1.zh-CN.md": "995c453556dd581505d03182340a041d7773b42f594d7bd0b67f1327132228ec"
+  },
+  "verification": {
+    "status": "passed",
+    "source_windows": 211,
+    "candidate_features": 7954,
+    "tail_candidates": 5119,
+    "record_auc": 30,
+    "subject_intervals": 5,
+    "old_sqi_auc_reproduced": true,
+    "verifier_sha256": "a5c450ae42da0011d635af912d782d3fd8a567e474ec9581bbec8e75036f4f8e",
+    "helper_sha256": "28bd2c702830f1bcf90dd74ddb9a484ee52521b0f5674b8bb10bc6187487c46d",
+    "shared_kernels": "SciPy filter; synthetic controls rerun producer; interpolation, normalization, correlation and pairwise AUC independently reconstructed"
+  }
+}
