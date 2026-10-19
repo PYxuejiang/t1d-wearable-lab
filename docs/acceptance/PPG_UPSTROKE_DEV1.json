@@ -1,0 +1,215 @@
+{
+  "stage": "PPG_UPSTROKE_DEV1",
+  "scope": "Seen development cohort, PPG-only candidates with ECG-assisted evaluation alignment; not external or disease validation",
+  "subjects": 5,
+  "records": 10,
+  "windows": 211,
+  "candidate_count": 7954,
+  "non_strict_order_count": 243,
+  "by_activity": {
+    "sitting": {
+      "records": 5,
+      "core_time_coverage": 0.7308024675555895,
+      "landmarks": {
+        "peak": {
+          "first60": {
+            "f1": 0.3927116655434236,
+            "ppv": 0.38964268313277917,
+            "sensitivity": 0.3958713737046121,
+            "ppi_mae_ms": 35.250334258096,
+            "ppi_pair_coverage": 0.2689513163193204,
+            "ambiguous_records": 0,
+            "cycle_like_ambiguous_records": 0,
+            "boundary_records": 0
+          },
+          "second60": {
+            "f1": 0.5922388902086188,
+            "ppv": 0.5886741967266854,
+            "sensitivity": 0.595966954743969,
+            "ppi_mae_ms": 35.981937432451886,
+            "ppi_pair_coverage": 0.46493677487764906,
+            "ambiguous_records": 1,
+            "cycle_like_ambiguous_records": 1,
+            "boundary_records": 0
+          },
+          "first120": {
+            "f1": 0.5870965486051543,
+            "ppv": 0.582966221583528,
+            "sensitivity": 0.5913861942601442,
+            "ppi_mae_ms": 35.944807627373706,
+            "ppi_pair_coverage": 0.4600161484769858,
+            "ambiguous_records": 0,
+            "cycle_like_ambiguous_records": 0,
+            "boundary_records": 0
+          },
+          "stability": {
+            "within_100ms_records": 2,
+            "median_lag_change_seconds": 0.13,
+            "mean_absolute_tail_f1_change": 0.3615653004667543
+          }
+        },
+        "upstroke": {
+          "first60": {
+            "f1": 0.6553118395206922,
+            "ppv": 0.6504156160715425,
+            "sensitivity": 0.6605111922106929,
+            "ppi_mae_ms": 26.225665792723127,
+            "ppi_pair_coverage": 0.5490642718724794,
+            "ambiguous_records": 0,
+            "cycle_like_ambiguous_records": 0,
+            "boundary_records": 1
+          },
+          "second60": {
+            "f1": 0.6539430549898789,
+            "ppv": 0.6487264677699601,
+            "sensitivity": 0.6594328712837154,
+            "ppi_mae_ms": 27.337011995967792,
+            "ppi_pair_coverage": 0.5589752674780165,
+            "ambiguous_records": 2,
+            "cycle_like_ambiguous_records": 2,
+            "boundary_records": 0
+          },
+          "first120": {
+            "f1": 0.7015841976075884,
+            "ppv": 0.6962176524286072,
+            "sensitivity": 0.7072629408465738,
+            "ppi_mae_ms": 25.654485829163896,
+            "ppi_pair_coverage": 0.6049254302966034,
+            "ambiguous_records": 0,
+            "cycle_like_ambiguous_records": 0,
+            "boundary_records": 1
+          },
+          "stability": {
+            "within_100ms_records": 3,
+            "median_lag_change_seconds": 0.02999999999999997,
+            "mean_absolute_tail_f1_change": 0.10278568115573375
+          }
+        }
+      }
+    },
+    "walking": {
+      "records": 5,
+      "core_time_coverage": 0.7072913087862984,
+      "landmarks": {
+        "peak": {
+          "first60": {
+            "f1": 0.3937397342144068,
+            "ppv": 0.40764211470214134,
+            "sensitivity": 0.38494954936255904,
+            "ppi_mae_ms": 50.468003991414676,
+            "ppi_pair_coverage": 0.2274302512841308,
+            "ambiguous_records": 2,
+            "cycle_like_ambiguous_records": 2,
+            "boundary_records": 0
+          },
+          "second60": {
+            "f1": 0.4918425884363075,
+            "ppv": 0.5110591099503795,
+            "sensitivity": 0.48178539674752824,
+            "ppi_mae_ms": 39.43035845580077,
+            "ppi_pair_coverage": 0.27356576642385977,
+            "ambiguous_records": 4,
+            "cycle_like_ambiguous_records": 4,
+            "boundary_records": 0
+          },
+          "first120": {
+            "f1": 0.47598874433826877,
+            "ppv": 0.4955239812053313,
+            "sensitivity": 0.4643011833494871,
+            "ppi_mae_ms": 44.52917521257606,
+            "ppi_pair_coverage": 0.2754340992879788,
+            "ambiguous_records": 2,
+            "cycle_like_ambiguous_records": 2,
+            "boundary_records": 0
+          },
+          "stability": {
+            "within_100ms_records": 4,
+            "median_lag_change_seconds": 0.050000000000000044,
+            "mean_absolute_tail_f1_change": 0.15595229659198698
+          }
+        },
+        "upstroke": {
+          "first60": {
+            "f1": 0.3754786228751444,
+            "ppv": 0.3931888433422363,
+            "sensitivity": 0.3627793116265687,
+            "ppi_mae_ms": 48.84876648361783,
+            "ppi_pair_coverage": 0.21009987551285908,
+            "ambiguous_records": 2,
+            "cycle_like_ambiguous_records": 1,
+            "boundary_records": 0
+          },
+          "second60": {
+            "f1": 0.48566718095185424,
+            "ppv": 0.5110192983665193,
+            "sensitivity": 0.4697309535121746,
+            "ppi_mae_ms": 40.489844720387325,
+            "ppi_pair_coverage": 0.2682344344401183,
+            "ambiguous_records": 4,
+            "cycle_like_ambiguous_records": 4,
+            "boundary_records": 0
+          },
+          "first120": {
+            "f1": 0.43763060708912976,
+            "ppv": 0.45865543385185215,
+            "sensitivity": 0.4235348671821243,
+            "ppi_mae_ms": 48.3486849194618,
+            "ppi_pair_coverage": 0.25016171843184487,
+            "ambiguous_records": 1,
+            "cycle_like_ambiguous_records": 1,
+            "boundary_records": 0
+          },
+          "stability": {
+            "within_100ms_records": 2,
+            "median_lag_change_seconds": 0.64,
+            "mean_absolute_tail_f1_change": 0.1392998246967239
+          }
+        }
+      }
+    }
+  },
+  "paired": {
+    "f1": {
+      "upstroke_minus_peak": 0.03806475587664758,
+      "95_interval": [
+        -0.02184618433590609,
+        0.10212298565211633
+      ],
+      "subjects": 5
+    },
+    "ppi_pair_coverage": {
+      "upstroke_minus_peak": 0.059818450481741815,
+      "95_interval": [
+        -0.016479005993063393,
+        0.14324016143242224
+      ],
+      "subjects": 5
+    }
+  },
+  "source_sha256": {
+    "scripts/run_ppg_upstroke_dev.py": "b6670ff27ef225c0f9d60e11040aa02ce7e77265cb56d8e3a3bb09c583170b64",
+    "docs/METHOD_PPG_UPSTROKE_DEV1.zh-CN.md": "57abe9c5e32632040b38acaac857af37f42ed4d9185505cf810b6744ed690c80",
+    "scripts/audit_ppg_stability_dev.py": "8258b51acd4d4b53bed885b1cda433d6e8861040db414511fa4c49937295ac02",
+    "src/t1d_lab/ppg_capture.py": "1fab6e7962c216bce59ac28b04fc0f4db7ecfbab68a70ab521759b9052aedc50"
+  },
+  "cache_sha256": "a43a5b048a72a6d0ddef30326111d80be73eb17b3c6587371b19ecef5b79139f",
+  "source_files_sha256": {
+    "ppg_dalia_sitting_data.mat": "bc1156ab6e52da2a5698d0b48184b46ac936389f8e7a08a55dc9fb5954b10d55",
+    "ppg_dalia_walking_data.mat": "bc6dd296786c5caf88bdd55c7d997533a1f2e39c9b8f5de7b176accfedafe9e1"
+  },
+  "verification": {
+    "status": "passed",
+    "windows_reparsed": 211,
+    "candidate_localizations_recomputed": 7954,
+    "calibration_choices": 60,
+    "tail_count_and_ppi_groups": 60,
+    "old_peak_baseline_reproduced": true,
+    "equal_reference_denominators": true,
+    "paired_intervals": 2,
+    "verifier_sha256": "c9790f10116e78eb5709829dfb71fd62127844414756fac63b28bd072872af98",
+    "helper_sha256": {
+      "scripts/verify_ppg_stability_dev.py": "7d6ea50d413446963aa45ccaadc1b686db0e6742cfd8d02e7d482443c51f24f0",
+      "scripts/verify_ppg_fiducial.py": "505f2588811382d966ee3ea88fc540daeece96452644ff69951574a950ef4f57"
+    }
+  }
+}
