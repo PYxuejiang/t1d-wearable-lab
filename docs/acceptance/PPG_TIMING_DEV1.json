@@ -1,0 +1,87 @@
+{
+  "stage": "PPG_TIMING_DEV1",
+  "scope": "Development-only diagnostic; no detector gain or clinical outcome claim",
+  "records": 10,
+  "windows": 211,
+  "reference_count_verified": true,
+  "synthetic": {
+    "known_delays": [
+      {
+        "injected_seconds": -0.9,
+        "recovered_seconds": -0.9
+      },
+      {
+        "injected_seconds": -0.25,
+        "recovered_seconds": -0.25
+      },
+      {
+        "injected_seconds": 0.2,
+        "recovered_seconds": 0.2
+      },
+      {
+        "injected_seconds": 0.85,
+        "recovered_seconds": 0.85
+      }
+    ],
+    "filter_pulse_shapes": [
+      {
+        "gaussian_width_seconds": 0.04,
+        "median_shift_ms": 62.5
+      },
+      {
+        "gaussian_width_seconds": 0.08,
+        "median_shift_ms": 31.25
+      },
+      {
+        "gaussian_width_seconds": 0.12,
+        "median_shift_ms": 0.0
+      }
+    ]
+  },
+  "by_activity": {
+    "sitting": {
+      "records": 5,
+      "old_tail_f1": 0.4112136097441642,
+      "expanded_tail_f1": 0.5870965486051543,
+      "outside_old_range": 3,
+      "near_equal_distant_peak": 0,
+      "median_block_lag_change_seconds": 0.07999999999999996,
+      "filter_median_shift_ms": -187.5,
+      "filter_macro_match_fraction": 0.9385126714704178,
+      "core_time_coverage_after_calibration": 0.7308024675555895
+    },
+    "walking": {
+      "records": 5,
+      "old_tail_f1": 0.381795512883029,
+      "expanded_tail_f1": 0.47598874433826877,
+      "outside_old_range": 5,
+      "near_equal_distant_peak": 2,
+      "median_block_lag_change_seconds": 0.09000000000000008,
+      "filter_median_shift_ms": 46.875,
+      "filter_macro_match_fraction": 0.9073448916365573,
+      "core_time_coverage_after_calibration": 0.7072913087862984
+    }
+  },
+  "source_sha256": {
+    "scripts/audit_ppg_timing_dev.py": "b29eebbf9944110804fd8dc65db6a44fa4d29c46049b4a49304c38eddbc296b6",
+    "docs/METHOD_PPG_TIMING_DEV1.zh-CN.md": "fcc19112d3777ecde3cfd4d00542d563d5e2181829bf0a97c61b21e2b5e08fb6",
+    "src/t1d_lab/ppg_capture.py": "1fab6e7962c216bce59ac28b04fc0f4db7ecfbab68a70ab521759b9052aedc50"
+  },
+  "cache_sha256": "a43a5b048a72a6d0ddef30326111d80be73eb17b3c6587371b19ecef5b79139f",
+  "development_paired_f1_difference": {
+    "subjects": 5,
+    "mean": 0.13503808515811494,
+    "95_interval": [
+      0.011369354161832868,
+      0.2729239074117807
+    ],
+    "interpretation": "Exploratory alignment sensitivity, not detector improvement; five development subjects only"
+  },
+  "verification": {
+    "status": "passed",
+    "calibration_choices": 20,
+    "tail_count_groups": 20,
+    "equal_reference_denominators": true,
+    "verifier_sha256": "4bdcb3d95827a39a1e2d5610038adc8fcc2b68ba72d120efc7845e90f13f294f"
+  }
+}

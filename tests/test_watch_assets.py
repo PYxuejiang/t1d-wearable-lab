@@ -23,7 +23,7 @@ def test_watch_assets_are_self_contained_valid_gltf_with_interactive_nodes():
         gltf = json.loads(raw[20:20+size])
         assert gltf['asset']['version'] == '2.0'
         assert all('uri' not in resource for resource in gltf.get('buffers', []) + gltf.get('images', []))
-        assert {'Case', 'Bezel', 'Display', 'StrapTop', 'StrapBottom'} <= {n.get('name') for n in gltf['nodes']}
-        assert {'OpticalSensor', 'MotionChip', 'CaseFinish', 'BandFinish'} <= {m.get('name') for m in gltf['materials']}
+        assert {'Case', 'Bezel', 'Display', 'SensorHousing', 'MotionSensor'} <= {n.get('name') for n in gltf['nodes']}
+        assert {'OpticalSensor', 'MotionChip', 'CaseFinish'} <= {m.get('name') for m in gltf['materials']}
         triangles = sum(gltf['accessors'][p.get('indices', p['attributes']['POSITION'])]['count'] // 3 for n in gltf['nodes'] if 'mesh' in n for p in gltf['meshes'][n['mesh']]['primitives'])
         assert triangles == entry['triangles'] < 15000
