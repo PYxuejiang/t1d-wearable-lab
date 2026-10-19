@@ -199,3 +199,7 @@ Next onlyPPG: onfixeddevelopmentS1–S5 audit raw/filtered pulse timing and cali
 本轮全套测试首次62过/1失败，原因是前次无表带设计仍被旧GLB测试要求StrapTop/StrapBottom/BandFinish；已同步为实际表体与传感器节点，保留GLB格式、完整性、哈希、材质和三角形检查。不是算法或数值失败。
 
 修正资产验收后63项测试全部通过。评分核心时间覆盖静坐73.08%、步行70.73%（校准后原始时间为分母）。成果卡ppgtime-336a9d5b6e07与报告加入研究证据页；卡片只含群体汇总，已目视核对。
+
+## 2026-10-19 GitHub Pages 上线
+
+用户要求网站放到GitHub。提交2eaf669启用Actions发布与相对资源路径；Pages部署39194417360及CI39194417295均成功。公网地址 https://pyxuejiang.github.io/t1d-wearable-lab/ 。HTTP首页200，手表GLB、三场景图、两公开汇总及新成果卡200；两本地个体回放路径404。浏览器成功读取首页、结果汇总及导航，进一步交互截图调用超时，未声称完成线上视觉/交互复验。仅干净checkout构建发布，禁止上传本地dist（其中可能含ignored个体回放）。主站后续showcase更新自动部署，算法任务范围不变。
