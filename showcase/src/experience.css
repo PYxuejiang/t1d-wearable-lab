@@ -9,3 +9,13 @@
 .experience .demo-disclosure,.experience .small-scope,.experience .method-caption{color:#786773}
 .experience .scene-caption p{font-size:12px}.experience .scene-kicker{font-size:9px;color:#84717e}
 .experience.is-playing .scene-icon{animation:breathe-bar 3s ease-in-out infinite alternate}
+
+/* Scene photographs sit behind the interactive case, never behind body copy. */
+.hero-composition{isolation:isolate}.watch-stage{z-index:0}.scene-caption{position:relative;z-index:3}.lifestyle-backdrop{position:absolute;inset:5% -38% 10% -8%;border-radius:38% 30% 24% 26%;overflow:hidden;isolation:isolate;pointer-events:none;background:#e8e4e0;mask-image:linear-gradient(90deg,#000 0%,#000 48%,#000b 58%,transparent 76%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 48%,#000b 58%,transparent 76%)}
+.lifestyle-backdrop img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:42% center;opacity:0;transition:opacity .8s ease;filter:saturate(.7)}
+.lifestyle-backdrop img.active{opacity:.9}
+.lifestyle-backdrop:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#faf9f7 0%,transparent 30%,#faf9f720 100%);pointer-events:none}
+.scene-photo-label{position:absolute;bottom:22px;left:25px;z-index:1;color:#665b65;font-size:9px;letter-spacing:.12em}
+.watch-shadow{bottom:22%;left:25%;width:50%}.watch-fallback>i{display:none}
+@media(max-width:760px){.lifestyle-backdrop{inset:8% 0 12%;border-radius:38% 38% 24% 24%;mask-image:linear-gradient(90deg,#000 60%,#000c 82%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 60%,#000c 82%,transparent 100%)}.scene-photo-label{left:18px;bottom:21px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.lifestyle-backdrop img{transition:none}}

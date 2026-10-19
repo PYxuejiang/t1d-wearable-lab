@@ -6,21 +6,21 @@
   "files": [
     {
       "file": "watch-plum.glb",
-      "bytes": 827076,
-      "triangles": 9256,
-      "sha256": "3f814c488307b2dea819cf3f1a55d5f5e818c755cf43b8f9b8d6bad0692b5c9e"
+      "bytes": 518768,
+      "triangles": 6360,
+      "sha256": "d4a64ec2522744005681900845137a0f1baab37a4f43261bb00fc9537f4a506a"
     },
     {
       "file": "watch-pearl.glb",
-      "bytes": 827072,
-      "triangles": 9256,
-      "sha256": "034383718a7ad2dd3e8f2babd7e09de6b09d6d8413f30b76712d8e22d5372949"
+      "bytes": 518764,
+      "triangles": 6360,
+      "sha256": "07eb841a1663edebcdc64e09ff9e6ec9f6a4d226dbbb562e5247af11d728eba8"
     },
     {
       "file": "watch-midnight.glb",
-      "bytes": 827076,
-      "triangles": 9256,
-      "sha256": "3293b5e80bb2dd69e90d2d5ad54e5731254348609b3bcc3428decac58e16263f"
+      "bytes": 518764,
+      "triangles": 6360,
+      "sha256": "d96eb6846348a9bb4fa1fd5bacd057a9da8c0d3263e2a7636e99497198292f29"
     }
   ]
 }

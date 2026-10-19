@@ -1,0 +1,21 @@
+{
+  "origin": "Built-in image_gen",
+  "scope": "Synthetic lifestyle imagery; no real participant data",
+  "files": [
+    {
+      "file": "life.png",
+      "bytes": 2672666,
+      "sha256": "aa4ac7237f8d48bef73140d2778be3f865ff79a62048c445cd1cff29c2288016"
+    },
+    {
+      "file": "sleep.png",
+      "bytes": 1959380,
+      "sha256": "5c598e8ae119e6abb4488ad4fdea493cd12912422744e0e7db41a9c67a524e07"
+    },
+    {
+      "file": "work.png",
+      "bytes": 2250388,
+      "sha256": "b96e74b45b906daf013c12b1932510fff4f768ebf46be5111481dbb10aa36dae"
+    }
+  ]
+}

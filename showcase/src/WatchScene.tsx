@@ -34,7 +34,7 @@ export default function WatchScene(props:Props){
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.65));renderer.outputColorSpace=THREE.SRGBColorSpace;
   renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.2;
   renderer.domElement.setAttribute('aria-label','可拖动旋转的原创概念手表');renderer.domElement.setAttribute('role','img');host.appendChild(renderer.domElement);
-  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(32,1,.1,80);camera.position.set(0,0,15.6);
+  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(32,1,.1,80);camera.position.set(0,0,10.8);
   const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment(),environment=pmrem.fromScene(room,.04);scene.environment=environment.texture;room.dispose();pmrem.dispose();
   scene.add(new THREE.HemisphereLight(0xffffff,0x6f5863,2));
   const key=new THREE.DirectionalLight(0xfff6e9,4);key.position.set(-4,5,7);scene.add(key);
@@ -47,7 +47,7 @@ export default function WatchScene(props:Props){
    if(disposed){g.scene.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>m.dispose());}});return;}
    model=g.scene;holder.add(model);model.add(screen);setStatus('ready');
   },undefined,()=>{if(!disposed)setStatus('fallback');});
-  const resize=()=>{const {width,height}=host.getBoundingClientRect();if(!width||!height)return;renderer.setSize(width,height);camera.aspect=width/height;camera.position.z=width/height<.67?19:15.6;camera.updateProjectionMatrix();};
+  const resize=()=>{const {width,height}=host.getBoundingClientRect();if(!width||!height)return;renderer.setSize(width,height);camera.aspect=width/height;camera.position.z=width/height<.67?12.2:10.8;camera.updateProjectionMatrix();};
   const observer=new ResizeObserver(resize);observer.observe(host);resize();
   let drag=false,lastX=0,lastY=0,startX=0,startY=0,userX=0,userY=0,oldReset=-1,oldFace='',oldColor='',id=0;
   const pointerDown=(e:PointerEvent)=>{drag=true;lastX=startX=e.clientX;lastY=startY=e.clientY;renderer.domElement.setPointerCapture(e.pointerId);};

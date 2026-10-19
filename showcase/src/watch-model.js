@@ -17,7 +17,6 @@ function rounded(w,h,r){
 export function makeWatch(finish='plum'){
   const palette=FINISHES[finish],root=new THREE.Group();root.name='T1D_Original_Research_Watch';
   const metal=new THREE.MeshStandardMaterial({name:'CaseFinish',color:palette.case,metalness:.88,roughness:.25});
-  const band=new THREE.MeshStandardMaterial({name:'BandFinish',color:palette.band,roughness:.74,metalness:0});
   const dark=new THREE.MeshStandardMaterial({name:'Ceramic',color:0x11141a,roughness:.23,metalness:.35});
   const glass=new THREE.MeshPhysicalMaterial({name:'ScreenGlass',color:0x090d14,metalness:.15,roughness:.13,clearcoat:1});
   const sensor=new THREE.MeshStandardMaterial({name:'OpticalSensor',color:0x174637,emissive:0x29d88a,emissiveIntensity:.7,roughness:.14,metalness:.35});
@@ -31,12 +30,7 @@ export function makeWatch(finish='plum'){
   slab('Case',2.7,3.28,.61,.59,metal);
   slab('Bezel',2.53,3.1,.13,.55,dark,.33);
   slab('Display',2.37,2.94,.09,.5,glass,.405);
-  slab('StrapTop',1.95,2.55,.20,.28,band,-.13,2.65);
-  slab('StrapBottom',1.95,2.55,.20,.28,band,-.13,-2.65);
-  // Fine raised ribs convey a soft silicone band without expensive textures.
-  for(const side of [-1,1])for(let i=0;i<21;i++){
-    const rib=new THREE.Mesh(new THREE.BoxGeometry(1.73,.012,.018),band);rib.position.set(0,side*(1.67+i*.103),-.015);rib.name='BandRib';root.add(rib);
-  }
+  // Case-only product study: remove the flat extended straps and ribs.
   const crown=new THREE.Mesh(new THREE.CylinderGeometry(.245,.245,.23,48),metal);crown.rotation.z=Math.PI/2;crown.position.set(1.49,.65,0);crown.name='Crown';root.add(crown);
   for(let i=0;i<36;i++){
     const angle=i*Math.PI/18,m=new THREE.Mesh(new THREE.BoxGeometry(.18,.022,.035),metal);
