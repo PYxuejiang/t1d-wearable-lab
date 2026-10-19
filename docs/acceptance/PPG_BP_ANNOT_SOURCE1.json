@@ -1,0 +1,59 @@
+{
+  "stage": "PPG_BP_ANNOT_SOURCE1",
+  "scope": "Acquisition and schema audit only; no algorithm scoring",
+  "record_url": "https://zenodo.org/records/10523285",
+  "pinned_version": "v1",
+  "file": "PPG-BP_annot.zip",
+  "bytes": 7172151,
+  "md5": "1b03371ca9cfad39ab7209425673b351",
+  "sha256": "ea35c29a6afcf494c4f233e0aec94b6d9cb16f39406891e1e910b70fa1779932",
+  "record_license": "CC-BY-4.0",
+  "license_source": "https://zenodo.org/api/records/10523285",
+  "archive_files": 7084,
+  "mat_schema_counts": {
+    "pk_anns,qual,up": 6123,
+    "pk_anns": 10,
+    "pk_anns,up": 2,
+    "annot": 438,
+    "fiducial_annot": 2,
+    "ppg_data": 1
+  },
+  "signal_entries": 219,
+  "annotation_collections": 2,
+  "entries_per_collection": [
+    219,
+    219
+  ],
+  "unique_names_and_cross_collection_join": true,
+  "sampling_rates_hz": [
+    1000
+  ],
+  "duration_seconds_min_max": [
+    2.1,
+    4.2
+  ],
+  "all_signal_samples_finite": true,
+  "annotation_fields": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "dn",
+    "e",
+    "f",
+    "os",
+    "p1",
+    "p2",
+    "pk",
+    "u",
+    "v",
+    "w"
+  ],
+  "pending": [
+    "Annotation index/time conventions and manual preprocessing",
+    "Label completeness and inter-annotator disagreement",
+    "Short-segment protocol; current 30-second detector is not directly applicable",
+    "Origin and acquisition-site applicability to wrist PPG"
+  ],
+  "audit_script_sha256": "e2d071963901104a4e3f8642ab0d5b7dce9a1cec775e3d1439426023f90f724d"
+}

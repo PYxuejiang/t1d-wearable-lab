@@ -212,3 +212,8 @@ Next onlyPPG: onfixeddevelopmentS1–S5 audit raw/filtered pulse timing and cali
 独立复核30次校准选择、30组尾段计数/PPI与群体汇总、按人区间通过；逐记录仅ignored outputs/ppg_stability_dev_v1，勿重复长任务。报告PPG_STABILITY_DEV_REPORT.zh-CN.md；成果卡ppgstable-255be8015c05。下一步仅开发集PPG峰/上升沿、校准平台和残差核查，先冻结协议；不再把靠近200ms的最大匹配数偏移视作唯一物理同步证据，不根据尾段挑规则。尚无新疾病事件、误报、及时性结果，V5及旧对照保持。
 
 本轮完整pytest验收63 passed；新成果卡已目视核对。公开JSON只含群体/活动汇总与合成控制，不含逐记录偏移、波形或峰值数组。
+
+
+### PPG直接人工标注入口已取得（2026-10-19）
+
+在稳定性诊断后进一步核查作者公开pyPPG标注包，已下载v1 PPG-BP_annot.zip 7.17MB并核对官方MD5；Zenodo记录CC-BY-4.0。结构审计确认219唯一信号条目、两套各219汇总标注、1000Hz、2.1–4.2秒；不是连续腕部波形，不能原样套现有30秒检测器。只读结构验收通过，未评分。详情docs/PPG_BP_ANNOT_AUDIT.zh-CN.md与acceptance/PPG_BP_ANNOT_SOURCE1.json；数据留data/ppg_bp_annot，不重复下载。下一步优先审计采集部位、标注预处理、时间/索引、空标签和标注者一致性，冻结短片段定位协议，再做PPG-DaLiA开发集峰/上升沿核查。不得拼接短片段伪造长记录，不把专家边界内定位当连续检出，不将此类信号成绩当疾病效果。
