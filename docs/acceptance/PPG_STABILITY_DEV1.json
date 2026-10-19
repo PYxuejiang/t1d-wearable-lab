@@ -1,0 +1,114 @@
+{
+  "stage": "PPG_STABILITY_DEV1",
+  "subjects": 5,
+  "records": 10,
+  "windows": 211,
+  "scope": "Development-only reference-assisted sensitivity; no detector or disease gain",
+  "synthetic": {
+    "fixed_offset_within_tolerance": true,
+    "periodic_ambiguity_flagged": true,
+    "changed_offset_flagged": true,
+    "scope": "Synthetic software controls only"
+  },
+  "cache_sha256": "a43a5b048a72a6d0ddef30326111d80be73eb17b3c6587371b19ecef5b79139f",
+  "by_activity": {
+    "sitting": {
+      "records": 5,
+      "stable_records": 2,
+      "median_lag_difference_seconds": 0.13,
+      "mean_tail_f1_absolute_difference": 0.3615653004667543,
+      "core_time_coverage": 0.7308024675555895,
+      "arms": {
+        "first60": {
+          "f1": 0.3927116655434236,
+          "ppv": 0.38964268313277917,
+          "sensitivity": 0.3958713737046121,
+          "ppi_mae_ms": 35.250334258096,
+          "ppi_pair_coverage": 0.2689513163193204,
+          "ambiguous_records": 0,
+          "cycle_like_ambiguous_records": 0,
+          "boundary_records": 0
+        },
+        "second60": {
+          "f1": 0.5922388902086188,
+          "ppv": 0.5886741967266854,
+          "sensitivity": 0.595966954743969,
+          "ppi_mae_ms": 35.981937432451886,
+          "ppi_pair_coverage": 0.46493677487764906,
+          "ambiguous_records": 1,
+          "cycle_like_ambiguous_records": 1,
+          "boundary_records": 0
+        },
+        "first120": {
+          "f1": 0.5870965486051543,
+          "ppv": 0.582966221583528,
+          "sensitivity": 0.5913861942601442,
+          "ppi_mae_ms": 35.944807627373706,
+          "ppi_pair_coverage": 0.4600161484769858,
+          "ambiguous_records": 0,
+          "cycle_like_ambiguous_records": 0,
+          "boundary_records": 0
+        }
+      }
+    },
+    "walking": {
+      "records": 5,
+      "stable_records": 4,
+      "median_lag_difference_seconds": 0.050000000000000044,
+      "mean_tail_f1_absolute_difference": 0.15595229659198698,
+      "core_time_coverage": 0.7072913087862984,
+      "arms": {
+        "first60": {
+          "f1": 0.3937397342144068,
+          "ppv": 0.40764211470214134,
+          "sensitivity": 0.38494954936255904,
+          "ppi_mae_ms": 50.468003991414676,
+          "ppi_pair_coverage": 0.2274302512841308,
+          "ambiguous_records": 2,
+          "cycle_like_ambiguous_records": 2,
+          "boundary_records": 0
+        },
+        "second60": {
+          "f1": 0.4918425884363075,
+          "ppv": 0.5110591099503795,
+          "sensitivity": 0.48178539674752824,
+          "ppi_mae_ms": 39.43035845580077,
+          "ppi_pair_coverage": 0.27356576642385977,
+          "ambiguous_records": 4,
+          "cycle_like_ambiguous_records": 4,
+          "boundary_records": 0
+        },
+        "first120": {
+          "f1": 0.47598874433826877,
+          "ppv": 0.4955239812053313,
+          "sensitivity": 0.4643011833494871,
+          "ppi_mae_ms": 44.52917521257606,
+          "ppi_pair_coverage": 0.2754340992879788,
+          "ambiguous_records": 2,
+          "cycle_like_ambiguous_records": 2,
+          "boundary_records": 0
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "scripts/audit_ppg_stability_dev.py": "8258b51acd4d4b53bed885b1cda433d6e8861040db414511fa4c49937295ac02",
+    "docs/METHOD_PPG_STABILITY_DEV1.zh-CN.md": "2bdd6d8589e2d23d408a93d60153996f55e0f20110ae9c56049c55da2aed26ee",
+    "src/t1d_lab/ppg_capture.py": "1fab6e7962c216bce59ac28b04fc0f4db7ecfbab68a70ab521759b9052aedc50"
+  },
+  "tail_f1_sensitivity": {
+    "mean_absolute_difference": 0.2587587985293706,
+    "95_interval": [
+      0.15096762738512437,
+      0.4232537810440696
+    ],
+    "subjects": 5
+  },
+  "verification": {
+    "status": "passed",
+    "calibration_choices": 30,
+    "tail_count_and_ppi_groups": 30,
+    "equal_reference_denominators": true,
+    "verifier_sha256": "7d6ea50d413446963aa45ccaadc1b686db0e6742cfd8d02e7d482443c51f24f0"
+  }
+}
