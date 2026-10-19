@@ -1,0 +1,561 @@
+{
+  "stage": "PPG_RETENTION_DEV1",
+  "scope": "Seen development; fixed calibration SQI quantiles, no operating point selected or deployed",
+  "subjects": 5,
+  "records": 10,
+  "tail_windows": 171,
+  "by_activity": {
+    "sitting": {
+      "records": 5,
+      "tail_windows": 82,
+      "arms": {
+        "baseline": {
+          "kept_windows": 82,
+          "zero_output_records": 0,
+          "counts": {
+            "tp": 1430,
+            "fp": 539,
+            "fn": 512,
+            "ppi_pairs": 1197,
+            "reference_pairs": 1860
+          },
+          "metrics_macro": {
+            "ppv": {
+              "mean": 0.6962176524286072,
+              "valid_records": 5
+            },
+            "sensitivity": {
+              "mean": 0.7072629408465738,
+              "valid_records": 5
+            },
+            "f1": {
+              "mean": 0.7015841976075884,
+              "valid_records": 5
+            },
+            "baseline_tp_retention": {
+              "mean": 1.0,
+              "valid_records": 5
+            },
+            "baseline_fp_removed": {
+              "mean": 0.0,
+              "valid_records": 5
+            },
+            "relative_time_retention": {
+              "mean": 1.0,
+              "valid_records": 5
+            },
+            "core_time_coverage": {
+              "mean": 0.7308024675555895,
+              "valid_records": 5
+            },
+            "ppi_pair_coverage": {
+              "mean": 0.6049254302966034,
+              "valid_records": 5
+            },
+            "ppi_mae_ms": {
+              "mean": 25.654485829163896,
+              "valid_records": 5
+            }
+          },
+          "rejected_original_counts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "ppi_pairs": 0,
+            "reference_pairs": 0
+          },
+          "rejected_original_ppv_macro": {
+            "mean": null,
+            "valid_records": 0
+          }
+        },
+        "q25": {
+          "kept_windows": 58,
+          "zero_output_records": 0,
+          "counts": {
+            "tp": 1000,
+            "fp": 349,
+            "fn": 942,
+            "ppi_pairs": 851,
+            "reference_pairs": 1860
+          },
+          "metrics_macro": {
+            "ppv": {
+              "mean": 0.7701957629263637,
+              "valid_records": 5
+            },
+            "sensitivity": {
+              "mean": 0.513458832313532,
+              "valid_records": 5
+            },
+            "f1": {
+              "mean": 0.5966359056826963,
+              "valid_records": 5
+            },
+            "baseline_tp_retention": {
+              "mean": 0.7556346727120187,
+              "valid_records": 5
+            },
+            "baseline_fp_removed": {
+              "mean": 0.5013839662447257,
+              "valid_records": 5
+            },
+            "relative_time_retention": {
+              "mean": 0.7138157894736843,
+              "valid_records": 5
+            },
+            "core_time_coverage": {
+              "mean": 0.5218662805310449,
+              "valid_records": 5
+            },
+            "ppi_pair_coverage": {
+              "mean": 0.4473016544811482,
+              "valid_records": 5
+            },
+            "ppi_mae_ms": {
+              "mean": 25.031742602299367,
+              "valid_records": 5
+            }
+          },
+          "rejected_original_counts": {
+            "tp": 430,
+            "fp": 190,
+            "fn": 192,
+            "ppi_pairs": 346,
+            "reference_pairs": 598
+          },
+          "rejected_original_ppv_macro": {
+            "mean": 0.691923823603375,
+            "valid_records": 3
+          }
+        },
+        "q50": {
+          "kept_windows": 44,
+          "zero_output_records": 0,
+          "counts": {
+            "tp": 755,
+            "fp": 249,
+            "fn": 1187,
+            "ppi_pairs": 645,
+            "reference_pairs": 1860
+          },
+          "metrics_macro": {
+            "ppv": {
+              "mean": 0.8129618521102359,
+              "valid_records": 5
+            },
+            "sensitivity": {
+              "mean": 0.396219358306459,
+              "valid_records": 5
+            },
+            "f1": {
+              "mean": 0.49658899258679856,
+              "valid_records": 5
+            },
+            "baseline_tp_retention": {
+              "mean": 0.5893576922423455,
+              "valid_records": 5
+            },
+            "baseline_fp_removed": {
+              "mean": 0.6623589479890397,
+              "valid_records": 5
+            },
+            "relative_time_retention": {
+              "mean": 0.5458771929824561,
+              "valid_records": 5
+            },
+            "core_time_coverage": {
+              "mean": 0.3992440264832801,
+              "valid_records": 5
+            },
+            "ppi_pair_coverage": {
+              "mean": 0.34732747624655497,
+              "valid_records": 5
+            },
+            "ppi_mae_ms": {
+              "mean": 25.222858112780933,
+              "valid_records": 5
+            }
+          },
+          "rejected_original_counts": {
+            "tp": 675,
+            "fp": 290,
+            "fn": 283,
+            "ppi_pairs": 552,
+            "reference_pairs": 920
+          },
+          "rejected_original_ppv_macro": {
+            "mean": 0.5528434502368986,
+            "valid_records": 5
+          }
+        },
+        "q75": {
+          "kept_windows": 29,
+          "zero_output_records": 0,
+          "counts": {
+            "tp": 494,
+            "fp": 167,
+            "fn": 1448,
+            "ppi_pairs": 426,
+            "reference_pairs": 1860
+          },
+          "metrics_macro": {
+            "ppv": {
+              "mean": 0.83848399600612,
+              "valid_records": 5
+            },
+            "sensitivity": {
+              "mean": 0.2621572430608206,
+              "valid_records": 5
+            },
+            "f1": {
+              "mean": 0.35863603520547394,
+              "valid_records": 5
+            },
+            "baseline_tp_retention": {
+              "mean": 0.4143391399338272,
+              "valid_records": 5
+            },
+            "baseline_fp_removed": {
+              "mean": 0.7981552217854335,
+              "valid_records": 5
+            },
+            "relative_time_retention": {
+              "mean": 0.3668859649122807,
+              "valid_records": 5
+            },
+            "core_time_coverage": {
+              "mean": 0.2687827133408687,
+              "valid_records": 5
+            },
+            "ppi_pair_coverage": {
+              "mean": 0.23234555595062942,
+              "valid_records": 5
+            },
+            "ppi_mae_ms": {
+              "mean": 24.599908153046254,
+              "valid_records": 5
+            }
+          },
+          "rejected_original_counts": {
+            "tp": 936,
+            "fp": 372,
+            "fn": 353,
+            "ppi_pairs": 771,
+            "reference_pairs": 1236
+          },
+          "rejected_original_ppv_macro": {
+            "mean": 0.6173268409606703,
+            "valid_records": 5
+          }
+        }
+      }
+    },
+    "walking": {
+      "records": 5,
+      "tail_windows": 89,
+      "arms": {
+        "baseline": {
+          "kept_windows": 89,
+          "zero_output_records": 0,
+          "counts": {
+            "tp": 1432,
+            "fp": 1718,
+            "fn": 1901,
+            "ppi_pairs": 836,
+            "reference_pairs": 3244
+          },
+          "metrics_macro": {
+            "ppv": {
+              "mean": 0.45865543385185215,
+              "valid_records": 5
+            },
+            "sensitivity": {
+              "mean": 0.4235348671821243,
+              "valid_records": 5
+            },
+            "f1": {
+              "mean": 0.43763060708912976,
+              "valid_records": 5
+            },
+            "baseline_tp_retention": {
+              "mean": 1.0,
+              "valid_records": 5
+            },
+            "baseline_fp_removed": {
+              "mean": 0.0,
+              "valid_records": 5
+            },
+            "relative_time_retention": {
+              "mean": 1.0,
+              "valid_records": 5
+            },
+            "core_time_coverage": {
+              "mean": 0.7072913087862984,
+              "valid_records": 5
+            },
+            "ppi_pair_coverage": {
+              "mean": 0.25016171843184487,
+              "valid_records": 5
+            },
+            "ppi_mae_ms": {
+              "mean": 48.3486849194618,
+              "valid_records": 5
+            }
+          },
+          "rejected_original_counts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "ppi_pairs": 0,
+            "reference_pairs": 0
+          },
+          "rejected_original_ppv_macro": {
+            "mean": null,
+            "valid_records": 0
+          }
+        },
+        "q25": {
+          "kept_windows": 71,
+          "zero_output_records": 0,
+          "counts": {
+            "tp": 1132,
+            "fp": 1432,
+            "fn": 2201,
+            "ppi_pairs": 644,
+            "reference_pairs": 3244
+          },
+          "metrics_macro": {
+            "ppv": {
+              "mean": 0.4824712189111115,
+              "valid_records": 5
+            },
+            "sensitivity": {
+              "mean": 0.3416860375572531,
+              "valid_records": 5
+            },
+            "f1": {
+              "mean": 0.38970366162037307,
+              "valid_records": 5
+            },
+            "baseline_tp_retention": {
+              "mean": 0.8509871792578331,
+              "valid_records": 5
+            },
+            "baseline_fp_removed": {
+              "mean": 0.24182854472247622,
+              "valid_records": 5
+            },
+            "relative_time_retention": {
+              "mean": 0.8014285714285714,
+              "valid_records": 5
+            },
+            "core_time_coverage": {
+              "mean": 0.5663017616072968,
+              "valid_records": 5
+            },
+            "ppi_pair_coverage": {
+              "mean": 0.19719446039029093,
+              "valid_records": 5
+            },
+            "ppi_mae_ms": {
+              "mean": 48.27758994974699,
+              "valid_records": 5
+            }
+          },
+          "rejected_original_counts": {
+            "tp": 300,
+            "fp": 286,
+            "fn": 412,
+            "ppi_pairs": 192,
+            "reference_pairs": 694
+          },
+          "rejected_original_ppv_macro": {
+            "mean": 0.3638760317537028,
+            "valid_records": 4
+          }
+        },
+        "q50": {
+          "kept_windows": 59,
+          "zero_output_records": 0,
+          "counts": {
+            "tp": 852,
+            "fp": 1300,
+            "fn": 2481,
+            "ppi_pairs": 432,
+            "reference_pairs": 3244
+          },
+          "metrics_macro": {
+            "ppv": {
+              "mean": 0.4960257186330222,
+              "valid_records": 5
+            },
+            "sensitivity": {
+              "mean": 0.26305297785453874,
+              "valid_records": 5
+            },
+            "f1": {
+              "mean": 0.3126451519164709,
+              "valid_records": 5
+            },
+            "baseline_tp_retention": {
+              "mean": 0.7148396360236063,
+              "valid_records": 5
+            },
+            "baseline_fp_removed": {
+              "mean": 0.36497173431827534,
+              "valid_records": 5
+            },
+            "relative_time_retention": {
+              "mean": 0.6707936507936508,
+              "valid_records": 5
+            },
+            "core_time_coverage": {
+              "mean": 0.4737448548785591,
+              "valid_records": 5
+            },
+            "ppi_pair_coverage": {
+              "mean": 0.13639802594306288,
+              "valid_records": 5
+            },
+            "ppi_mae_ms": {
+              "mean": 48.680344515430065,
+              "valid_records": 5
+            }
+          },
+          "rejected_original_counts": {
+            "tp": 580,
+            "fp": 418,
+            "fn": 594,
+            "ppi_pairs": 404,
+            "reference_pairs": 1144
+          },
+          "rejected_original_ppv_macro": {
+            "mean": 0.4630043882220648,
+            "valid_records": 5
+          }
+        },
+        "q75": {
+          "kept_windows": 45,
+          "zero_output_records": 0,
+          "counts": {
+            "tp": 598,
+            "fp": 1066,
+            "fn": 2735,
+            "ppi_pairs": 274,
+            "reference_pairs": 3244
+          },
+          "metrics_macro": {
+            "ppv": {
+              "mean": 0.5015569926719843,
+              "valid_records": 5
+            },
+            "sensitivity": {
+              "mean": 0.18654982900689215,
+              "valid_records": 5
+            },
+            "f1": {
+              "mean": 0.23240482451169092,
+              "valid_records": 5
+            },
+            "baseline_tp_retention": {
+              "mean": 0.5451439104357158,
+              "valid_records": 5
+            },
+            "baseline_fp_removed": {
+              "mean": 0.4998996637702765,
+              "valid_records": 5
+            },
+            "relative_time_retention": {
+              "mean": 0.5068253968253968,
+              "valid_records": 5
+            },
+            "core_time_coverage": {
+              "mean": 0.3585213315113836,
+              "valid_records": 5
+            },
+            "ppi_pair_coverage": {
+              "mean": 0.08834507640863183,
+              "valid_records": 5
+            },
+            "ppi_mae_ms": {
+              "mean": 48.459656166954936,
+              "valid_records": 5
+            }
+          },
+          "rejected_original_counts": {
+            "tp": 834,
+            "fp": 652,
+            "fn": 878,
+            "ppi_pairs": 562,
+            "reference_pairs": 1668
+          },
+          "rejected_original_ppv_macro": {
+            "mean": 0.4411827245224872,
+            "valid_records": 5
+          }
+        }
+      }
+    }
+  },
+  "q50_minus_baseline": {
+    "ppv": {
+      "mean_difference": 0.07705724223139929,
+      "95_interval": [
+        0.03515974394035954,
+        0.12470046800722698
+      ],
+      "subjects": 5
+    },
+    "sensitivity": {
+      "mean_difference": -0.2357627359338502,
+      "95_interval": [
+        -0.31435669764026297,
+        -0.13756979663559094
+      ],
+      "subjects": 5
+    },
+    "ppi_pair_coverage": {
+      "mean_difference": -0.1856808232694152,
+      "95_interval": [
+        -0.2625958824833186,
+        -0.09612209236751809
+      ],
+      "subjects": 5
+    },
+    "core_time_coverage": {
+      "mean_difference": -0.2825524474900244,
+      "95_interval": [
+        -0.35282129213465696,
+        -0.18333780337477285
+      ],
+      "subjects": 5
+    }
+  },
+  "input_sha256": {
+    "outputs/ppg_upstroke_dev_v1/windows_local.json": "576abeebb49f3338cd031afe051898197fe770454dd4fca080834249e46b7bd7",
+    "outputs/ppg_upstroke_dev_v1/records_local.json": "9bd5786e7982f42062961470085915c52628beca6ad0fe6cb7b5826320a87ec4",
+    "docs/acceptance/PPG_QUALITY_DEV1.json": "5db9cb968f8ffa754d69e2333bd40152f10f3a2522e5c5fe519c92e9cfb28760"
+  },
+  "source_sha256": {
+    "scripts/run_ppg_retention_dev.py": "a74d7a73cf3f5b1bd767d02d40fc505694144b68b7dbbb89487e3275bf06706a",
+    "docs/METHOD_PPG_RETENTION_DEV1.zh-CN.md": "c22be83fcd4c1392ad7b12125a5a440b6c84e2d33248d0f9fca082d4b7dcf23b",
+    "src/t1d_lab/ppg_capture.py": "1fab6e7962c216bce59ac28b04fc0f4db7ecfbab68a70ab521759b9052aedc50"
+  },
+  "verification": {
+    "status": "passed",
+    "calibration_thresholds": 30,
+    "tail_windows_recounted": 171,
+    "record_arms": 40,
+    "paired_intervals": 4,
+    "all_reference_denominators_preserved": true,
+    "baseline_reproduced": true,
+    "nested_retention": true,
+    "zero_output_control": true,
+    "verifier_sha256": "681ff1c11984d44f49fd418e558620eb55c05ef7b3e1fae0e445c3b62c7a3edb",
+    "helper_sha256": {
+      "scripts/verify_ppg_stability_dev.py": "7d6ea50d413446963aa45ccaadc1b686db0e6742cfd8d02e7d482443c51f24f0",
+      "scripts/verify_ppg_quality_dev.py": "28bd2c702830f1bcf90dd74ddb9a484ee52521b0f5674b8bb10bc6187487c46d"
+    }
+  }
+}
