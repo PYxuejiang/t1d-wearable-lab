@@ -1,0 +1,145 @@
+{
+  "stage": "SEGADE_SOURCE1",
+  "scope": "Repository metadata and NPY headers only; no complete arrays, training or scoring",
+  "repository": "https://github.com/chengstark/Segade",
+  "commit": "f5b2ad6e180a1474bc47d6c5ec5d482edaed6797",
+  "declared_rows_verified_by_headers": 7306,
+  "groups": {
+    "TROIKA_channel_1": 113,
+    "WESAD_all": 2888,
+    "new_PPG_DaLiA_test": 869,
+    "new_PPG_DaLiA_train": 3436
+  },
+  "files": [
+    {
+      "path": "data/TROIKA_channel_1/processed_dataset/scaled_ppgs.npy",
+      "shape": [
+        113,
+        1920
+      ],
+      "dtype": "<f8",
+      "bytes": 1735808,
+      "git_blob_sha": "48b7a91ed19f2e7fe863370eaa2173a77cb5c6c5",
+      "header_sha256": "89972f066f3d2ed117daaa64b69fc18230f84368658b922277a5e46cc89397cb",
+      "range_http_status": 206
+    },
+    {
+      "path": "data/TROIKA_channel_1/processed_dataset/seg_labels.npy",
+      "shape": [
+        113,
+        1920
+      ],
+      "dtype": "<f8",
+      "bytes": 1735808,
+      "git_blob_sha": "80ebc0ee8c0f747c9bca1f6618740790ef1adfae",
+      "header_sha256": "89972f066f3d2ed117daaa64b69fc18230f84368658b922277a5e46cc89397cb",
+      "range_http_status": 206
+    },
+    {
+      "path": "data/WESAD_all/processed_dataset/scaled_ppgs.npy",
+      "shape": [
+        2888,
+        1920
+      ],
+      "dtype": "<f8",
+      "bytes": 44359808,
+      "git_blob_sha": "0e0e2f4b916c32d00059e827f85d2ce04644dd50",
+      "header_sha256": "b729826920735e6a06fbe6e76f70d1e020cef7dcb3335b2aaa480d770b133bd5",
+      "range_http_status": 206
+    },
+    {
+      "path": "data/WESAD_all/processed_dataset/seg_labels.npy",
+      "shape": [
+        2888,
+        1920
+      ],
+      "dtype": "<f8",
+      "bytes": 44359808,
+      "git_blob_sha": "a448a551a2bea6faf6e2dd3948195911374cbcd7",
+      "header_sha256": "b729826920735e6a06fbe6e76f70d1e020cef7dcb3335b2aaa480d770b133bd5",
+      "range_http_status": 206
+    },
+    {
+      "path": "data/new_PPG_DaLiA_test/processed_dataset/scaled_ppgs.npy",
+      "shape": [
+        869,
+        1920
+      ],
+      "dtype": "<f8",
+      "bytes": 13347968,
+      "git_blob_sha": "ccc618834a250d6fe4ca448cfad14323891ca122",
+      "header_sha256": "d2a7fecf6745f1d4fc19657858ead00d12236fa3cce01f5fcdda49a2513546a8",
+      "range_http_status": 206
+    },
+    {
+      "path": "data/new_PPG_DaLiA_test/processed_dataset/seg_labels.npy",
+      "shape": [
+        869,
+        1920
+      ],
+      "dtype": "<f8",
+      "bytes": 13347968,
+      "git_blob_sha": "0509d4ed2159ceb62d0914f9c99e0b4b15f58655",
+      "header_sha256": "d2a7fecf6745f1d4fc19657858ead00d12236fa3cce01f5fcdda49a2513546a8",
+      "range_http_status": 206
+    },
+    {
+      "path": "data/new_PPG_DaLiA_train/processed_dataset/scaled_ppgs.npy",
+      "shape": [
+        3436,
+        1920
+      ],
+      "dtype": "<f8",
+      "bytes": 52777088,
+      "git_blob_sha": "5a301782390a9f8516174369c3dbcb7942166625",
+      "header_sha256": "8ad0ff1a5edd21f7a0ee75f453db20da7e9d9ebd4c9b7586bada5816ad55a653",
+      "range_http_status": 206
+    },
+    {
+      "path": "data/new_PPG_DaLiA_train/processed_dataset/seg_labels.npy",
+      "shape": [
+        3436,
+        1920
+      ],
+      "dtype": "<f8",
+      "bytes": 52777088,
+      "git_blob_sha": "b6057c6acb9d516d08281bf8e31ece4fff57cd42",
+      "header_sha256": "8ad0ff1a5edd21f7a0ee75f453db20da7e9d9ebd4c9b7586bada5816ad55a653",
+      "range_http_status": 206
+    }
+  ],
+  "github_license": null,
+  "license_filename_candidates": [],
+  "text_license_keyword_hits": {
+    "README.md": [],
+    "data_split.py": [],
+    "db2npy.py": []
+  },
+  "identity_sidecar_in_data_directory": false,
+  "data_directory_blob_count": 8,
+  "fold_code_observation": "Shuffled KFold on X rows; no subject grouping supplied in data_split.py",
+  "conversion_exports": "Two arrays only; no row-to-subject/time mapping exported by db2npy.py",
+  "training_readiness": "not_accepted_pending_license_and_subject_mapping",
+  "not_verified": [
+    "complete_file_hashes",
+    "actual_label_values",
+    "missing_or_duplicate_rows",
+    "per_row_subject_and_time",
+    "source_alignment",
+    "permission_for_code_or_annotation_reuse"
+  ],
+  "local_evidence_sha256": "a1f1ef58970b3a29fe6711096e3249ae8dbe1242944c5a3be4cd7348bfb91cc3",
+  "inspected_text_sha256": {
+    "README.md": "feb69d4c30c1ff445fb2ef40e1dc23b90ae2202d6cfae0f34c5be95c85d92ed9",
+    "data_split.py": "1389b64951a0d8016983a860a1632cd0c0185bc55ae7e68b7f75e8dd69a962ad",
+    "db2npy.py": "e1ad30fba14bf13a0b636ff3e6a5c63fd810520d8f4425199042054fd1dc7247"
+  },
+  "verification": {
+    "status": "passed_for_header_structure_only",
+    "independent_header_parser": "numpy.lib.format compared with initial ast literal parser",
+    "files_checked": 8,
+    "matching_pairs": 4,
+    "header_size_consistency": true,
+    "verifier_sha256": "eac302a96296e87096cabcd0b3cb140e27714fc0f00b2c86c402da5b0f5ff155"
+  }
+}

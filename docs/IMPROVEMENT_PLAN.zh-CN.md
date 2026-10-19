@@ -178,3 +178,14 @@ Next onlyPPG: onfixeddevelopmentS1–S5 audit raw/filtered pulse timing and cali
 独立MAT/插值/相关性复算7954候选、5119尾候选30个AUC与5个区间通过，旧SQI精确复现；共享SciPy内核披露。静坐204、步行218单侧邻间期候选保留；无默认空形状触发。原F1/PPI/时间覆盖与疾病指标不变。输出outputs/ppg_local_dev_v1勿重跑；报告PPG_LOCAL_DEV_REPORT.zh-CN.md、聚合acceptance/PPG_LOCAL_DEV1.json、卡片与研究页已更新。
 
 下一步优先人工质量标签入口审计，避免继续盲调同类手工特征。已查Segade作者仓库https://github.com/chengstark/Segade及2024预印本https://www.medrxiv.org/content/10.1101/2024.06.07.24308621v1.full：腕部逐点伪迹标签、DaLiA/WESAD/TROIKA来源；先核实代码/数据许可、下载可达性、标签语义、受试者映射与已见DaLiA重叠。尚未下载数据或借用代码，不能把整个资源当外部验证；不向作者发消息。先审计/冻结再训练，仍只研究PPG质量。7306段为论文描述，尚非本地核验计数。
+
+
+## 2026-10-20 SEGADE_SOURCE1完成：结构可达，训练准入未通过
+
+固定作者commit f5b2ad6e180a1474bc47d6c5ec5d482edaed6797；Git完整树105blob、data恰8文件。HTTP Range读取8个NPY前缀，均206；只保存128字节头，无完整波形/标签下载。numpy独立核验4组shape与Git文件大小：DaLiA train3436/test869、WESAD2888、TROIKA113，合计7306段×1920。标签dtype为float64，实际0/1取值/重复/对齐尚未核验，不能把结构审计说成数据集验收。
+
+GitHub license为空，树中无许可名称文件，README/两脚本无许可关键词；代码和新增标签复用许可未明确。data无逐行身份/时间sidecar，db2npy顶层只导出两数组；data_split用shuffle KFold对X行分折而非group。外层按人说明不等于内层按人，不直接宣称全论文泄漏。未训练、不执行第三方代码、不联系作者。初版审计器误计SQLite函数内np.save，已改AST仅核顶层，结构验收通过。
+
+公开docs/SEGADE_SOURCE_AUDIT.zh-CN.md、acceptance/SEGADE_SOURCE1.json、fetch_segade_metadata.py和audit_segade_headers.py及卡片。缓存outputs/segade_source_audit_v1完成勿重复下载；头SHA和源码摘要记录，不能冒充全文件SHA。原算法、疾病指标/覆盖不变。
+
+下一步优先审计BUT PPG 2.0官方CC BY4入口的质量标签表、受试者ID与10秒30Hz结构，作为有明确许可的方法校验备用；手机域不等于腕部运动验证，禁止拼10秒为伪30秒。再检查PhysioKit SQA-Phys是否真有可取得且许可明确的腕部训练标签。尚未下载上述两者波形/训练标签。不盲调同类手工参数，不因Segade缺口停整个项目或请求联系他人。
