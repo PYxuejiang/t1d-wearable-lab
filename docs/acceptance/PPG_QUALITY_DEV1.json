@@ -1,0 +1,320 @@
+{
+  "stage": "PPG_QUALITY_DEV1",
+  "scope": "Seen development, ECG-reference unmatched ranking; not artifact truth or disease validation",
+  "subjects": 5,
+  "windows": 211,
+  "by_activity": {
+    "sitting": {
+      "records": 5,
+      "candidate_count": 3095,
+      "bad_count": 34,
+      "counts": {
+        "tp": 1430,
+        "fp": 539,
+        "fn": 512,
+        "tail_candidates": 1969,
+        "tail_bad": 21,
+        "bad_unmatched": 17
+      },
+      "rates_macro": {
+        "bad_fraction": {
+          "mean": 0.011479205139464519,
+          "valid_records": 5
+        },
+        "bad_unmatched_rate": {
+          "mean": 0.8660714285714286,
+          "valid_records": 4
+        },
+        "unmatched_covered_by_bad": {
+          "mean": 0.03379341837197737,
+          "valid_records": 5
+        },
+        "strict_unmatched_rate": {
+          "mean": 0.2978515603279124,
+          "valid_records": 5
+        },
+        "reference_miss_rate": {
+          "mean": 0.2927370591534262,
+          "valid_records": 5
+        }
+      },
+      "auc_macro": {
+        "non_strict_order": {
+          "mean": 0.5153416003875024,
+          "valid_records": 5
+        },
+        "displacement_deviation": {
+          "mean": 0.7204308005315517,
+          "valid_records": 5
+        },
+        "one_minus_sqi": {
+          "mean": 0.7527641827634477,
+          "valid_records": 5
+        }
+      },
+      "displacement_ms_macro": {
+        "median": 96.875,
+        "iqr": 21.875
+      },
+      "unchanged_first120": {
+        "records": 5,
+        "core_time_coverage": 0.7308024675555895,
+        "landmarks": {
+          "peak": {
+            "first60": {
+              "f1": 0.3927116655434236,
+              "ppv": 0.38964268313277917,
+              "sensitivity": 0.3958713737046121,
+              "ppi_mae_ms": 35.250334258096,
+              "ppi_pair_coverage": 0.2689513163193204,
+              "ambiguous_records": 0,
+              "cycle_like_ambiguous_records": 0,
+              "boundary_records": 0
+            },
+            "second60": {
+              "f1": 0.5922388902086188,
+              "ppv": 0.5886741967266854,
+              "sensitivity": 0.595966954743969,
+              "ppi_mae_ms": 35.981937432451886,
+              "ppi_pair_coverage": 0.46493677487764906,
+              "ambiguous_records": 1,
+              "cycle_like_ambiguous_records": 1,
+              "boundary_records": 0
+            },
+            "first120": {
+              "f1": 0.5870965486051543,
+              "ppv": 0.582966221583528,
+              "sensitivity": 0.5913861942601442,
+              "ppi_mae_ms": 35.944807627373706,
+              "ppi_pair_coverage": 0.4600161484769858,
+              "ambiguous_records": 0,
+              "cycle_like_ambiguous_records": 0,
+              "boundary_records": 0
+            },
+            "stability": {
+              "within_100ms_records": 2,
+              "median_lag_change_seconds": 0.13,
+              "mean_absolute_tail_f1_change": 0.3615653004667543
+            }
+          },
+          "upstroke": {
+            "first60": {
+              "f1": 0.6553118395206922,
+              "ppv": 0.6504156160715425,
+              "sensitivity": 0.6605111922106929,
+              "ppi_mae_ms": 26.225665792723127,
+              "ppi_pair_coverage": 0.5490642718724794,
+              "ambiguous_records": 0,
+              "cycle_like_ambiguous_records": 0,
+              "boundary_records": 1
+            },
+            "second60": {
+              "f1": 0.6539430549898789,
+              "ppv": 0.6487264677699601,
+              "sensitivity": 0.6594328712837154,
+              "ppi_mae_ms": 27.337011995967792,
+              "ppi_pair_coverage": 0.5589752674780165,
+              "ambiguous_records": 2,
+              "cycle_like_ambiguous_records": 2,
+              "boundary_records": 0
+            },
+            "first120": {
+              "f1": 0.7015841976075884,
+              "ppv": 0.6962176524286072,
+              "sensitivity": 0.7072629408465738,
+              "ppi_mae_ms": 25.654485829163896,
+              "ppi_pair_coverage": 0.6049254302966034,
+              "ambiguous_records": 0,
+              "cycle_like_ambiguous_records": 0,
+              "boundary_records": 1
+            },
+            "stability": {
+              "within_100ms_records": 3,
+              "median_lag_change_seconds": 0.02999999999999997,
+              "mean_absolute_tail_f1_change": 0.10278568115573375
+            }
+          }
+        }
+      }
+    },
+    "walking": {
+      "records": 5,
+      "candidate_count": 4859,
+      "bad_count": 209,
+      "counts": {
+        "tp": 1432,
+        "fp": 1718,
+        "fn": 1901,
+        "tail_candidates": 3150,
+        "tail_bad": 135,
+        "bad_unmatched": 91
+      },
+      "rates_macro": {
+        "bad_fraction": {
+          "mean": 0.04187537729709699,
+          "valid_records": 5
+        },
+        "bad_unmatched_rate": {
+          "mean": 0.6240689865689866,
+          "valid_records": 5
+        },
+        "unmatched_covered_by_bad": {
+          "mean": 0.05750880840610635,
+          "valid_records": 5
+        },
+        "strict_unmatched_rate": {
+          "mean": 0.5402502278964452,
+          "valid_records": 5
+        },
+        "reference_miss_rate": {
+          "mean": 0.5764651328178758,
+          "valid_records": 5
+        }
+      },
+      "auc_macro": {
+        "non_strict_order": {
+          "mean": 0.5071979909089077,
+          "valid_records": 5
+        },
+        "displacement_deviation": {
+          "mean": 0.5084684550592466,
+          "valid_records": 5
+        },
+        "one_minus_sqi": {
+          "mean": 0.5580412747939446,
+          "valid_records": 5
+        }
+      },
+      "displacement_ms_macro": {
+        "median": 87.5,
+        "iqr": 62.5
+      },
+      "unchanged_first120": {
+        "records": 5,
+        "core_time_coverage": 0.7072913087862984,
+        "landmarks": {
+          "peak": {
+            "first60": {
+              "f1": 0.3937397342144068,
+              "ppv": 0.40764211470214134,
+              "sensitivity": 0.38494954936255904,
+              "ppi_mae_ms": 50.468003991414676,
+              "ppi_pair_coverage": 0.2274302512841308,
+              "ambiguous_records": 2,
+              "cycle_like_ambiguous_records": 2,
+              "boundary_records": 0
+            },
+            "second60": {
+              "f1": 0.4918425884363075,
+              "ppv": 0.5110591099503795,
+              "sensitivity": 0.48178539674752824,
+              "ppi_mae_ms": 39.43035845580077,
+              "ppi_pair_coverage": 0.27356576642385977,
+              "ambiguous_records": 4,
+              "cycle_like_ambiguous_records": 4,
+              "boundary_records": 0
+            },
+            "first120": {
+              "f1": 0.47598874433826877,
+              "ppv": 0.4955239812053313,
+              "sensitivity": 0.4643011833494871,
+              "ppi_mae_ms": 44.52917521257606,
+              "ppi_pair_coverage": 0.2754340992879788,
+              "ambiguous_records": 2,
+              "cycle_like_ambiguous_records": 2,
+              "boundary_records": 0
+            },
+            "stability": {
+              "within_100ms_records": 4,
+              "median_lag_change_seconds": 0.050000000000000044,
+              "mean_absolute_tail_f1_change": 0.15595229659198698
+            }
+          },
+          "upstroke": {
+            "first60": {
+              "f1": 0.3754786228751444,
+              "ppv": 0.3931888433422363,
+              "sensitivity": 0.3627793116265687,
+              "ppi_mae_ms": 48.84876648361783,
+              "ppi_pair_coverage": 0.21009987551285908,
+              "ambiguous_records": 2,
+              "cycle_like_ambiguous_records": 1,
+              "boundary_records": 0
+            },
+            "second60": {
+              "f1": 0.48566718095185424,
+              "ppv": 0.5110192983665193,
+              "sensitivity": 0.4697309535121746,
+              "ppi_mae_ms": 40.489844720387325,
+              "ppi_pair_coverage": 0.2682344344401183,
+              "ambiguous_records": 4,
+              "cycle_like_ambiguous_records": 4,
+              "boundary_records": 0
+            },
+            "first120": {
+              "f1": 0.43763060708912976,
+              "ppv": 0.45865543385185215,
+              "sensitivity": 0.4235348671821243,
+              "ppi_mae_ms": 48.3486849194618,
+              "ppi_pair_coverage": 0.25016171843184487,
+              "ambiguous_records": 1,
+              "cycle_like_ambiguous_records": 1,
+              "boundary_records": 0
+            },
+            "stability": {
+              "within_100ms_records": 2,
+              "median_lag_change_seconds": 0.64,
+              "mean_absolute_tail_f1_change": 0.1392998246967239
+            }
+          }
+        }
+      }
+    }
+  },
+  "paired_subject_auc": {
+    "non_strict_order": {
+      "mean": 0.5112697956482051,
+      "95_interval": [
+        0.502106596688867,
+        0.5206727719483772
+      ],
+      "subjects": 5
+    },
+    "displacement_deviation": {
+      "mean": 0.6144496277953991,
+      "95_interval": [
+        0.5812504168434647,
+        0.6381909464116972
+      ],
+      "subjects": 5
+    },
+    "one_minus_sqi": {
+      "mean": 0.6554027287786962,
+      "95_interval": [
+        0.6195813520355464,
+        0.6957675521618727
+      ],
+      "subjects": 5
+    }
+  },
+  "input_sha256": {
+    "outputs/ppg_upstroke_dev_v1/windows_local.json": "576abeebb49f3338cd031afe051898197fe770454dd4fca080834249e46b7bd7",
+    "outputs/ppg_upstroke_dev_v1/records_local.json": "9bd5786e7982f42062961470085915c52628beca6ad0fe6cb7b5826320a87ec4",
+    "docs/acceptance/PPG_UPSTROKE_DEV1.json": "0ffbbf63681ec0df4a6bec73daa0ebd760c01eaeb2bef7407855ac25acf49c48"
+  },
+  "source_sha256": {
+    "scripts/run_ppg_quality_dev.py": "7127ef3afe0e6fb646cc0bd8d26d7c5e5a09fa47b90735e3f6932f49fb8cf825",
+    "docs/METHOD_PPG_QUALITY_DEV1.zh-CN.md": "02fdd187d6b7f77f1a27ba1b8848d9ee0c56a01859f6a29ccc72030ded7ee542",
+    "src/t1d_lab/ppg_capture.py": "1fab6e7962c216bce59ac28b04fc0f4db7ecfbab68a70ab521759b9052aedc50"
+  },
+  "verification": {
+    "status": "passed",
+    "tail_windows": 171,
+    "tail_candidates": 5119,
+    "record_auc_recomputed": 30,
+    "subject_intervals": 3,
+    "old_counts_reproduced": true,
+    "synthetic_auc_controls": 4,
+    "verifier_sha256": "28bd2c702830f1bcf90dd74ddb9a484ee52521b0f5674b8bb10bc6187487c46d"
+  }
+}
