@@ -90,3 +90,5 @@ Run `npm ci` then `npm run dev` in `showcase`; rebuild original models with `nod
 Latest algorithm result: [V5 PPG morphology](docs/PPG_MORPHOLOGY_REPORT.zh-CN.md),42 groups independently verified. Morphology detects1/30 versus coarse3/30 at identical72.8% coverage and0.718 unmatched alarms/reference-person-day. No detection improvement; next work validates PPG beat extraction and quality, not additional coarse-feature grid search.
 
 Next signal validation: [PPG-DaLiA source audit](docs/PPG_DALIA_AUDIT.zh-CN.md),29 static/walking records with ECG beat references downloaded and checked; no PPG detector performance has been scored. Source licensing discrepancy and indexing limits are retained.
+
+[PPG beat benchmark](docs/PPG_CAPTURE_REPORT.zh-CN.md): reference-assisted heldout F1 47.77% versus47.58%, no improvement. 5/19records hit the prespecified delay bound; this does not establish standalone detector accuracy. Conditional PPI error covers only~30% of adjacent reference intervals. 464groups independently verified; no glucose efficacy claim.

@@ -98,7 +98,8 @@ def main():
             a=summarize([independent(r,'dual_average',meta['lag_seconds']) for r in keep]);scores.append(a['f1']);coverage[meta['activity']].append(len(keep)/len(rr))
         cov={a:float(np.mean(v)) for a,v in coverage.items()};feasible=min(cov.values())>=.7 and all(s is not None for s in scores)
         assert feasible==old['feasible'] and cov==old['coverage_by_activity']
-        score=float(np.mean(scores)) if feasible else None;assert score==old['macro_f1']
+        score=float(np.mean(scores)) if feasible else None
+        assert (score is None and old['macro_f1'] is None) or (score is not None and old['macro_f1'] is not None and abs(score-old['macro_f1'])<1e-12)
         if feasible:checked.append((score,sum(cov.values()),-old['threshold'],old['threshold']))
     assert max(checked)[-1]==threshold
     records=[]
@@ -131,7 +132,15 @@ def main():
             new=macro([r for r in records if (r['phase'],r['view'],r['method'],r['gate'])==('heldout',view,'dual_average','raw')],field)
             contrasts[view+'/'+field]=bootstrap([new[s]-base[s] for s in base if s in new],cfg)
     effect='f1_gain_supported' if contrasts['calibrated/f1']['95_interval'][0]>0 else 'f1_gain_not_supported'
-    report={'stage':cfg['id'],'engineering_status':'passed','effect_status':effect,'clinical_effect_status':'not_evaluated','records_verified':len(metas),'metric_groups_verified':len(records),'windows_verified':len(rows),'development_candidates_verified':len(selection['candidates']),'feasible_candidates':len(checked),'sqi_threshold':threshold,'selection':selection,'results':results,'paired_differences':contrasts,'metrics_by_record':records,'source_sha256':done['source_sha256'],'data_sha256':done['data_sha256'],'limitations':[cfg['scope'],'Calibrated scores use first120s ECG reference; not reference-free deployment.','Only sitting/walking; S6 walking absent; no manual PPG fiducial labels.','Intervals are adjacent-matched only: always interpret alongside PPI pair coverage.','Two origins and fixed/unadjusted delays reported; no heldout-wide alignment tuning.','Exploratory10-person bootstrap; repeated measurements not independent people.']}
-    (ROOT/'docs/acceptance/PPG_CAPTURE1.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf-8')
+    report={'stage':cfg['id'],'engineering_status':'passed','effect_status':effect,'clinical_effect_status':'not_evaluated','records_verified':len(metas),'metric_groups_verified':len(records),'windows_verified':len(rows),'development_candidates_verified':len(selection['candidates']),'feasible_candidates':len(checked),'sqi_threshold':threshold,'lag_upper_boundary_records':{phase:sum(m['phase']==phase and m['lag_seconds']==max(cfg['lag_grid_seconds']) for m in metas) for phase in ['development','heldout']},'selection':selection,'results':results,'paired_differences':contrasts,'metrics_by_record':records,'source_sha256':done['source_sha256'],'data_sha256':done['data_sha256'],'verifier_sha256':sha(Path(__file__)),'limitations':[cfg['scope'],'Calibrated scores use first120s ECG reference; not reference-free deployment.','Only sitting/walking; S6 walking absent; no manual PPG fiducial labels.','Intervals are adjacent-matched only: always interpret alongside PPI pair coverage.','Two origins and fixed/unadjusted delays reported; no heldout-wide alignment tuning.','Exploratory10-person bootstrap; repeated measurements not independent people.']}
+    # Full record-level audit remains local; public evidence is cohort aggregate only.
+    (ROOT/'outputs/ppg_capture_v1/acceptance_local.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf-8')
+    public=json.loads(json.dumps(report))
+    public.pop('metrics_by_record')
+    public['selection'].pop('development_lags')
+    for candidate in public['selection']['candidates']:
+        candidate.pop('records')
+    public['publication_scope']='Cohort and activity aggregates only; record-level audit retained in ignored outputs.'
+    (ROOT/'docs/acceptance/PPG_CAPTURE1.json').write_text(json.dumps(public,indent=2,allow_nan=False),encoding='utf-8')
     print(json.dumps({'effect':effect,'selected_sqi':threshold,'baseline':results['heldout/calibrated/v5_peaks/raw'],'new':results['heldout/calibrated/dual_average/raw'],'contrasts':contrasts},indent=2))
 if __name__=='__main__':main()

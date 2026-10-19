@@ -163,3 +163,21 @@ Code/results/assets commit `d79ab3870a52ff34375f804c5f1ac79286f9f776` pushed to 
 ## 2026-10-19 / PPG_DALIA_AUDIT1 completed
 
 No active PPG jobs; V5 remains complete. Downloaded only fixed sitting/walking MAT files from Zenodo12793711; published MD5+size verified, localSHA256 recorded. Sitting15records/2.5403h/9,263ECG R peaks; walking14records/2.6087h/15,458peaks, S6 absent in source.29records, no detector scoring. Integer increasingRpeaks andfinitePPG do not establish signalaccuracy. HRsummaryoffsetunknown; bothzero/onebasedboundsvalid, indexing andpulse/filterdelay mustbe explicitlyhandledbefore scoring. MATLABconverter preservesfirstactivityepisode, notalltime. UCI/ZenodoCCBY wording differsolderuniversityscientificnoncommercialtext; dataremainlocal, no commercialredistributionclaim. PPG-beatsalignmentGPL distinctfromdocumentationlicense, no copiedcode. Source report docs/PPG_DALIA_AUDIT.zh-CN.md and aggregate acceptance/PPG_DALIA_AUDIT1.json. Next: freeze beat-matching/lag protocol andindependentverifier onfixeddevelopmentS1–S5, evaluateheldoutS6–S15 onlyafterfreeze; no glucoseendpoint. FullV5andwatchcodecommitd79ab38CIalreadygreen. Hourlyautomationactive. No repeat downloadsneeded; audit script validatescachedfiles.
+
+
+## 2026-10-19 / PPG_CAPTURE1 completed; no detector improvement
+
+Frozen code/protocol32c7b1d pushed before scoring. Fixed V5 short-window peak rule versus original dual-moving-average adaptation ofElgendi2013; common causal0.5–5Hz filter,30s windows,27s cardiac-time cores. S1–S5development10records, S6–S15heldout19records (S6walking absent). Eachrecordfirst120s ECGreference selects shared0–0.6s lag; this is offline reference-assisted, not standalonewearable performance. FiveSQI candidates frozen before heldout; threshold0 selected, highergates faildevelopmentwalkingcoverage. No ECGinput to detector andno glucoseendpoint.
+
+607windows and464metricgroups independently checked, including rawsourceRpeakwindows, calibratedlags, allSQIcandidates, one-to-one counts via dynamicprogramming, adjacentPPI and HR errors. Initialverifierexactfloatcomparison failed due5.55e-17 summation-orderdifference; tolerance corrected to1e-12, originalfailedlog retained, no method/prediction/selection changes. Do not rerun extraction; ignoredoutputs/ppg_capture_v1 complete.
+
+HeldoutmacroF1 .4777299→.4758344, paired−.0018955 CI[−.0044216,.0007305]; no stablegain. HRMAE4.809→5.387bpm; matchedadjacentPPIcoverage30.31%→29.93%. The ~41msPPIerror is conditional, notfullreferenceaccuracy. Fixed200ms F1 .1568→.1475; unadjusted .1959→.1880.5/19heldoutrecords calibrate at upper0.6s bound, so F1 mixes detector errors with unresolvedrelative/filterdelay. Do not conclude wristPPGintrinsically48%accurate. Coretimecoverage88.0% is a different benchmark denominator, notPhysioCGM72.8% improvement. V5remains1/30failed. Fullreport docs/PPG_CAPTURE_REPORT.zh-CN.md, cardppgcap-aef624ada333; oldresearchpage linksadded, homepage remainsminimal.
+
+Next onlyPPG: onfixeddevelopmentS1–S5 audit raw/filtered pulse timing and calibrated-lagboundary withknown syntheticdelay andpublishedE4timing. Freeze a newalignmentprotocol before further scoring. Existingheldout is nowseen; furthersamecohortchanges exploratory. No broadercoarsefeaturetuning or ECG/CGMdiseasefusion. Preserve allfailedmethods/SQIcoverage. Hourlyautomationactive; no activeanalysisjob expected after verification.
+
+
+### PPG_CAPTURE1 发布前验收收尾
+
+63项本地测试通过；最终网页生产构建通过，保留两个懒加载包超过500KB的警告。研究证据页新增报告和成果卡入口，桌面及375×812竖屏验证无横向溢出，浏览器错误日志为空；截图保存docs/figures/ppg-capture-links.png。早先自动审批检查因用量限制中断临时页清理，2026-10-19恢复后已重置视口并关闭自建tab4；未关闭用户tab1/tab3。自建Vite session55018已结束，实际进程检查未发现PPG训练/提取任务。本轮未重新提取或重训，下一轮沿用完成文件做开发集时间对齐核查。
+
+发布前自动审批拒绝了包含逐记录指标的初版上传；未发送成功。修订导出边界：逐记录验收、开发集逐记录偏移及候选逐记录指标全部保留在忽略目录outputs/ppg_capture_v1/acceptance_local.json；公开仅群体/活动汇总、候选群体分数、区间、哈希与计数。修订未发布的本地提交后再上传，避免原逐记录文件进入远程提交历史；数值结论不变。独立复核再次通过，增加公开文件无逐记录字段的验收约束。

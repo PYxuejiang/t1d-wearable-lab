@@ -102,3 +102,26 @@ def test_v5_display_preserves_same_mask_controls_and_timing_denominators():
     manifest=json.loads((ROOT/'showcase/public/cards/ppg-morphology-manifest.json').read_text())
     assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
     assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/ppg-morphology-v5.png').read_bytes()).hexdigest()
+
+
+def test_ppg_capture_keeps_reference_denominators_and_conditional_interval_coverage():
+    r=json.loads((ROOT/'docs/acceptance/PPG_CAPTURE1.json').read_text(encoding='utf-8'))
+    assert r['records_verified']==29 and r['metric_groups_verified']==464
+    assert r['clinical_effect_status']=='not_evaluated'
+    assert r['development_candidates_verified']==5
+    assert r['paired_differences']['calibrated/f1']['95_interval'][0]<0<r['paired_differences']['calibrated/f1']['95_interval'][1]
+    primary=r['results']['heldout/calibrated/dual_average/raw']
+    baseline=r['results']['heldout/calibrated/v5_peaks/raw']
+    assert primary['records']==baseline['records']==19
+    assert primary['reference_beats']==baseline['reference_beats']
+    assert 'metrics_by_record' not in r
+    assert 'development_lags' not in r['selection']
+    assert all('records' not in c for c in r['selection']['candidates'])
+    import re
+    assert not re.search(r'\"S\d+/(?:sitting|walking)\"', json.dumps(r))
+    for row in r['results'].values():
+        assert 0<=row['ppi_pair_coverage']<=1 and 0<=row['hr_output_fraction']<=1
+        assert row['covered_reference_time_fraction']<=row['accepted_core_fraction']
+    manifest=json.loads((ROOT/'showcase/public/cards/ppg-capture-manifest.json').read_text())
+    assert manifest['acceptance_sha256']==hashlib.sha256(json.dumps(r,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+    assert manifest['png_sha256']==hashlib.sha256((ROOT/'showcase/public/cards/ppg-capture-v1.png').read_bytes()).hexdigest()
