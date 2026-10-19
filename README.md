@@ -1,5 +1,7 @@
 # T1D Wearable Lab
 
+[**Interactive website / 在线交互展示**](https://PYxuejiang.github.io/t1d-wearable-lab/) · [Deployment guide](docs/GITHUB_PAGES.zh-CN.md)
+
 Two reproducible research modules on public type 1 diabetes cohorts:
 
 1. **CGM + wearable collaboration:** 30-minute glucose forecasting and separately evaluated incident hypoglycemia prediction using BrisT1D-Open.

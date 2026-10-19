@@ -43,7 +43,7 @@ export default function WatchScene(props:Props){
   const canvas=document.createElement('canvas');canvas.width=512;canvas.height=640;face(canvas,0,0);
   const screenTexture=new THREE.CanvasTexture(canvas);screenTexture.colorSpace=THREE.SRGBColorSpace;
   const screen=new THREE.Mesh(new THREE.PlaneGeometry(2.12,2.65),new THREE.MeshBasicMaterial({map:screenTexture,toneMapped:false}));screen.position.z=.467;screen.name='AnimatedDisplay';
-  const loader=new GLTFLoader();loader.load('/models/watch-plum.glb',g=>{
+  const loader=new GLTFLoader();loader.load('./models/watch-plum.glb',g=>{
    if(disposed){g.scene.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>m.dispose());}});return;}
    model=g.scene;holder.add(model);model.add(screen);setStatus('ready');
   },undefined,()=>{if(!disposed)setStatus('fallback');});
