@@ -1,0 +1,103 @@
+{
+  "stage": "BUT_ADAPTER1",
+  "protocol_commit": "96e0162",
+  "scope": "Four fixed PPG records; no feature or model scoring",
+  "verification": {
+    "status": "passed_raw_layout_decode_only",
+    "official_file_hashes_matched": 8,
+    "independent_reader": "wfdb 4.3.1",
+    "numpy": "1.26.4",
+    "script_sha256": "a8c22e20607c130b503f45823b23149aaa7a930d728e423bf9d55ff6cb9de7d0"
+  },
+  "records_checked": 4,
+  "records_expected": 4,
+  "source_sample_selection": "Initial and extension releases: first and last ID, fixed before waveform download",
+  "results": [
+    {
+      "layout": "legacy_header",
+      "shape": [
+        1,
+        300
+      ],
+      "digital_exact": true,
+      "physical_max_abs_error": 0.0,
+      "missing_digital_values": 0,
+      "positive_rail_values": 0,
+      "finite_physical_values": 300,
+      "values": 300,
+      "source_units": [
+        "a.u."
+      ],
+      "wfdb_units": [
+        "a"
+      ],
+      "unit_metadata_equal": false
+    },
+    {
+      "layout": "legacy_header",
+      "shape": [
+        1,
+        300
+      ],
+      "digital_exact": true,
+      "physical_max_abs_error": 0.0,
+      "missing_digital_values": 0,
+      "positive_rail_values": 0,
+      "finite_physical_values": 300,
+      "values": 300,
+      "source_units": [
+        "a.u."
+      ],
+      "wfdb_units": [
+        "a"
+      ],
+      "unit_metadata_equal": false
+    },
+    {
+      "layout": "rgb_time_series",
+      "shape": [
+        300,
+        3
+      ],
+      "digital_exact": true,
+      "physical_max_abs_error": 0.0,
+      "missing_digital_values": 0,
+      "positive_rail_values": 3,
+      "finite_physical_values": 900,
+      "values": 900,
+      "source_units": [
+        "a.u."
+      ],
+      "wfdb_units": [
+        "a"
+      ],
+      "unit_metadata_equal": false
+    },
+    {
+      "layout": "rgb_time_series",
+      "shape": [
+        300,
+        3
+      ],
+      "digital_exact": true,
+      "physical_max_abs_error": 0.0,
+      "missing_digital_values": 0,
+      "positive_rail_values": 3,
+      "finite_physical_values": 900,
+      "values": 900,
+      "source_units": [
+        "a.u."
+      ],
+      "wfdb_units": [
+        "a"
+      ],
+      "unit_metadata_equal": false
+    }
+  ],
+  "rgb_records_with_300_time_samples": 2,
+  "legacy_records_with_one_time_sample": 2,
+  "legacy_reshape_performed": false,
+  "all_corpus_import_validated": false,
+  "clinical_effect_changed": false,
+  "next_gate": "Resolve legacy time-axis evidence; full-corpus adapter coverage; freeze subject grouping before model evaluation"
+}
