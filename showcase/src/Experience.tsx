@@ -1,5 +1,6 @@
 import {lazy,Suspense,useEffect,useState} from 'react';
 import {FINISHES} from './watch-model.js';
+import HomepageAgent from './HomepageAgent';
 const WatchScene=lazy(()=>import('./WatchScene'));
 const REPO='https://github.com/PYxuejiang/t1d-wearable-lab';
 const scenarios=[
@@ -8,9 +9,10 @@ const scenarios=[
  {name:'睡眠',time:'23:08',title:'让夜晚安静。',description:'少一些动作，多一点连续观察。睡眠仅为场景示意，不代表已完成睡眠分期或夜间疾病验证。'}
 ];
 const steps=[
- {name:'日常',en:'LIFE, UNINTERRUPTED',title:'你照常生活。\n感知悄然发生。',copy:'从手腕上的微小变化开始，理解身体的节律。'},
+ {name:'日常',en:'YOUR WATCH SENSES. YOUR AGENT CONNECTS.',title:'你照常生活。\nAgent 理解你。',copy:'手表记录变化，Agent 结合你确认的背景、个人历史和研究依据，整理每日观察。'},
  {name:'采集',en:'SMALL SENSORS. SUBTLE SIGNALS.',title:'一束光。\n读懂一次脉动。',copy:'翻到表背，看光学传感器怎样记录脉搏；运动传感器为变化补上情境。'},
  {name:'处理',en:'FROM SIGNAL TO MEANING',title:'先看清信号。\n再理解变化。',copy:'过滤干扰、检查质量，再把短窗里的形态和脉搏间期变成可比较的信息。'},
+ {name:'Agent',en:'MEMORY. TOOLS. EVIDENCE. A DAILY REPORT.',title:'记得你的不同。\n解释每次变化。',copy:'读取个人记忆，调用分析工具，再核对研究依据。让每份日报都有来处、有边界。'},
  {name:'识别',en:'CONTEXT BEFORE CONCLUSIONS',title:'异常，不只\n看一个数字。',copy:'结合活动情境与个人基线，区分日常波动和需要进一步确认的变化。'},
  {name:'提醒',en:'A MOMENT TO CHECK IN',title:'值得关注时，\n轻轻提醒。',copy:'一个提醒是核对的起点。它应说明证据、数据质量，以及还需要什么确认。'}
 ];
@@ -35,25 +37,28 @@ function Signal({clean=false}:{clean?:boolean}){
 export default function Experience(){
  const [stage,setStage]=useState(0),[scenario,setScenario]=useState(0),[finish,setFinish]=useState('plum'),[sensor,setSensor]=useState('ppg');
  const [playing,setPlaying]=useState(false),[view,setView]=useState('auto'),[reset,setReset]=useState(0),[topic,setTopic]=useState('heart');
- const [evidence,setEvidence]=useState<any>(null),[ack,setAck]=useState(false);
+ const [evidence,setEvidence]=useState<{primary:{matched_events:number;coverage:number;false_alerts_per_person_day:number}}|null>(null),[ack,setAck]=useState(false);
+ const [agentPhase,setAgentPhase]=useState(0);
  useEffect(()=>{fetch('./demo/improvement_data.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>setEvidence(d.stages.V5_PPG_MORPH1)).catch(()=>setEvidence(null));},[]);
- useEffect(()=>{if(!playing)return;const id=window.setInterval(()=>setStage(s=>{if(s===4){setPlaying(false);return s;}return s+1;}),6500);return()=>clearInterval(id);},[playing]);
+ useEffect(()=>{if(!playing)return;const id=window.setInterval(()=>setStage(s=>{if(s===steps.length-1){setPlaying(false);return s;}return s+1;}),6500);return()=>clearInterval(id);},[playing]);
  useEffect(()=>{setView('auto');setReset(r=>r+1);setAck(false);},[stage]);
+ useEffect(()=>{setAgentPhase(0);},[stage,scenario]);
  const select=(n:number)=>{setPlaying(false);setStage(n);document.getElementById('journey')?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});};
  const s=steps[stage],context=scenarios[scenario];
- return <div className={`experience scenario-${scenario} ${playing?'is-playing':'is-paused'}`}>
+ return <div className={`experience has-home-agent scenario-${scenario} ${playing?'is-playing':'is-paused'}`}>
   <header className="experience-nav"><a className="wordmark" href="#" aria-label="T1D Lab 首页"><span className="wordmark-symbol">∿</span> T1D<span className="wordmark-light"> / LAB</span></a><nav aria-label="主导航"><a href="#journey">感知之旅</a><a href="#principles">处理原理</a><a href="#agent">健康 Agent</a><a href="#research">研究证据 <span>↗</span></a></nav><span className="nav-note">WEARABLE RESEARCH</span></header>
   <main>
    <section className="product-hero" id="journey" aria-label="交互式手表研究演示">
-    <div className="product-heading"><span className="edition">CONCEPT 01 / 日常里的健康感知</span><div className="scenario-switch" role="group" aria-label="生活场景">{scenarios.map((v,i)=><button key={v.name} aria-pressed={scenario===i} onClick={()=>setScenario(i)}><Icon kind={['work','life','sleep'][i]}/>{v.name}</button>)}</div></div>
+    <div className="product-heading"><span className="edition">CONCEPT 01 / 智能手表 + 个人健康 AGENT</span><div className="scenario-switch" role="group" aria-label="生活场景">{scenarios.map((v,i)=><button key={v.name} aria-pressed={scenario===i} onClick={()=>setScenario(i)}><Icon kind={['work','life','sleep'][i]}/>{v.name}</button>)}</div></div>
     <div className="hero-composition">
-     <div className="hero-copy" key={stage}><span className="chapter-count">0{stage+1} <i/> 05</span><h1>{s.title.split('\n').map((line,i)=><span key={line} className={i?'soft-title':''}>{line}</span>)}</h1><p>{s.copy}</p><button className="play-story" onClick={()=>{if(stage===4)setStage(0);setPlaying(!playing);}} aria-label={playing?'暂停自动演示':'播放感知流程'}><span>{playing?'Ⅱ':'▷'}</span>{playing?'暂停演示':'播放感知之旅'}</button></div>
-     <div className="watch-stage"><div className="lifestyle-backdrop" aria-hidden="true">{['work','life','sleep'].map((name,i)=><img key={name} src={`./scenes/${name}.png`} alt="" className={scenario===i?'active':''} />)}<span className="scene-photo-label">{context.name} · AI 场景示意</span></div><Suspense fallback={<div className="model-loading">正在载入手表…</div>}><WatchScene finish={finish} stage={stage} scenario={scenario} sensor={sensor} playing={playing} view={view} reset={reset} onSensor={setSensor}/></Suspense><div className="watch-shadow"/><div className="orbit-note">拖动旋转 · 探索每一面</div></div>
+     <div className="hero-copy" key={stage}><span className="hero-agent-kicker"><i/>手表 × 记忆 × 健康 Agent</span><span className="chapter-count">0{stage+1} <i/> 0{steps.length}</span><h1>{s.title.split('\n').map((line,i)=><span key={line} className={i?'soft-title':''}>{line}</span>)}</h1><p>{s.copy}</p><button className="play-story" onClick={()=>{if(stage===steps.length-1)setStage(0);setPlaying(!playing);}} aria-label={playing?'暂停自动演示':'播放感知流程'}><span>{playing?'Ⅱ':'▷'}</span>{playing?'暂停演示':'播放完整感知之旅'}</button><a className="hero-agent-entry" href="#agent">建立档案 · 查看健康日报 <span>↗</span></a></div>
+     <div className="watch-stage"><div className="lifestyle-backdrop" aria-hidden="true">{['work','life','sleep'].map((name,i)=><img key={name} src={`./scenes/${name}.png`} alt="" className={scenario===i?'active':''} />)}<span className="scene-photo-label">{context.name} · AI 场景示意</span></div><Suspense fallback={<div className="model-loading">正在载入手表…</div>}><WatchScene finish={finish} stage={stage>3?stage-1:stage} agentPhase={stage===3?agentPhase:undefined} scenario={scenario} sensor={sensor} playing={playing} view={view} reset={reset} onSensor={setSensor}/></Suspense><div className="home-agent-watch-badge"><span>∿</span>健康 Agent<small>{stage===3?['读取记忆','调用分析工具','核对研究依据','整理示例日报'][agentPhase]:'合成记忆 · 14 天历史'}</small></div><button className="home-agent-watch-link" onClick={()=>select(3)} aria-label="查看从手表信号到 Agent 日报的过程"><span>手表信号</span><i>→</i><span><b/>个人记忆</span><i>→</i><span>工具与依据</span><i>→</i><span>日报 ↗</span></button><div className="watch-shadow"/><div className="orbit-note">拖动旋转 · 探索每一面</div></div>
      <aside className="scene-caption" key={`${stage}-${scenario}`} aria-live="polite"><span className="scene-kicker">{s.en}</span>
-      {stage===0?<><div className="scene-icon"><Icon kind={['work','life','sleep'][scenario]}/></div><h2>{context.title}</h2><p>{context.description}</p><div className="quiet-time">{context.time}<span>场景时间 / 示例</span></div></>:
+      {stage===0?<><div className="home-agent-caption-context"><span><Icon kind={['work','life','sleep'][scenario]}/>{context.title}</span><span>{context.time} · 场景示例</span></div><HomepageAgent scenario={scenario} expanded={false} phase={agentPhase} onPhase={setAgentPhase} onExpand={()=>select(3)} playing={playing}/><details className="home-agent-context-details"><summary>理解{context.name}场景的信号情境</summary><p>{context.description}</p></details></>:
        stage===1?<><h2>让传感器，<br/>走到眼前。</h2><div className="sensor-buttons"><button aria-pressed={sensor==='ppg'} onClick={()=>setSensor('ppg')}><Icon kind="sensor"/>光学 PPG<span>01</span></button><button aria-pressed={sensor==='motion'} onClick={()=>setSensor('motion')}><Icon kind="motion"/>运动 ACC<span>02</span></button></div><p>{sensor==='ppg'?'光照入皮肤，接收反射光的变化，形成脉搏波。亮起的绿色区域是光学组件示意。':'加速度反映活动状态，帮助判断运动干扰。高亮芯片为位置示意，非实际硬件设计。'}</p><span className="small-scope">血糖不由此传感器直接测量</span></>:
        stage===2?<><h2>从波形，<br/>到有效信息。</h2><Signal/><div className="process-divider">质量检查 ↓</div><Signal clean/><p>原始采样 → 带通滤波 → 短窗特征。低质量和缺失会被记录，不会悄悄消失。</p></>:
-       stage===3?<><h2>每一种变化，<br/>需要不同证据。</h2><div className="topic-tabs" role="group" aria-label="查看指标解释">{[['heart','心率'],['lung','呼吸'],['drop','血糖']].map(([id,label])=><button key={id} aria-pressed={topic===id} onClick={()=>setTopic(id)}><Icon kind={id}/>{label}</button>)}</div><p>{topic==='heart'?'脉搏间期可用于估计心率；结合活动和个人基线观察持续偏离。此处演示并非已验证的心律失常检测。':topic==='lung'?'脉搏的幅度、频率调制可作为呼吸估计研究的线索；本项目尚未验证呼吸异常算法。':'研究PPG变化与低血糖的关联，以CGM作参考标签。最新方案1/30命中，尚不支持独立低血糖提醒。'}</p><span className="small-scope">{topic==='drop'?'探索性研究 / 血糖需 CGM 确认':'能力原理示意 / 待专项验证'}</span></>:
+       stage===3?<HomepageAgent scenario={scenario} expanded phase={agentPhase} onPhase={setAgentPhase} onExpand={()=>select(3)} playing={playing}/>:
+       stage===4?<><h2>每一种变化，<br/>需要不同证据。</h2><div className="topic-tabs" role="group" aria-label="查看指标解释">{[['heart','心率'],['lung','呼吸'],['drop','血糖']].map(([id,label])=><button key={id} aria-pressed={topic===id} onClick={()=>setTopic(id)}><Icon kind={id}/>{label}</button>)}</div><p>{topic==='heart'?'脉搏间期可用于估计心率；结合活动和个人基线观察持续偏离。此处演示并非已验证的心律失常检测。':topic==='lung'?'脉搏的幅度、频率调制可作为呼吸估计研究的线索；本项目尚未验证呼吸异常算法。':'研究PPG变化与低血糖的关联，以CGM作参考标签。最新方案1/30命中，尚不支持独立低血糖提醒。'}</p><span className="small-scope">{topic==='drop'?'探索性研究 / 血糖需 CGM 确认':'能力原理示意 / 待专项验证'}</span></>:
        <><h2>提醒，是为了<br/>更好地确认。</h2><div className="gentle-alert"><span className="alert-dot"/>示例提醒<p>检测到偏离基线的变化。<br/>请先检查佩戴和信号质量。</p><button onClick={()=>setAck(true)}>{ack?'已了解 · 演示结束':'我已了解'}</button></div><p>血糖相关判断仍需血糖测量确认。这里展示提示的设计方式，不会发出真实医疗报警。</p></>}
      </aside>
     </div>

@@ -4,13 +4,20 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {FINISHES} from './watch-model.js';
 
-type Props={finish:string;stage:number;scenario:number;sensor:string;playing:boolean;view:string;reset:number;onSensor:(name:string)=>void};
+type Props={finish:string;stage:number;agentPhase?:number;scenario:number;sensor:string;playing:boolean;view:string;reset:number;onSensor:(name:string)=>void};
 
-function face(canvas:HTMLCanvasElement,stage:number,scenario:number){
+function face(canvas:HTMLCanvasElement,stage:number,scenario:number,agentPhase?:number){
  const c=canvas.getContext('2d')!;c.clearRect(0,0,512,640);c.fillStyle='#080e17';c.fillRect(0,0,512,640);
  c.textAlign='left';c.font='500 24px Arial';c.fillStyle='#b5b6c2';c.fillText('T1D / LAB',40,60);
  c.textAlign='right';c.fillText(['09:41','17:26','23:08'][scenario],470,60);
- if(stage===4){
+ if(agentPhase!==undefined){
+  c.textAlign='center';c.fillStyle='#c7adc4';c.font='26px Arial';c.fillText('HEALTH AGENT',256,146);
+  c.font='78px Arial';c.fillText('∿',256,240);
+  c.fillStyle='#f1e7ef';c.font='500 36px sans-serif';c.fillText(['读取个人记忆','比较个人基线','核对研究依据','整理每日观察'][agentPhase],256,318);
+  c.fillStyle='#a89aaa';c.font='23px sans-serif';c.fillText(['目标 · 历史 · 情境','信号质量 · 同设备历史','已审核来源 · 适用边界','需要关注什么 · 下一步'][agentPhase],256,366);
+  for(let index=0;index<4;index++){c.fillStyle=index<=agentPhase?'#b994b0':'#37323e';c.beginPath();c.roundRect(101+index*82,424,64,8,4);c.fill();}
+  c.fillStyle='#a89aaa';c.font='21px sans-serif';c.fillText('合成流程 · 不调用模型',256,495);
+ }else if(stage===4){
   c.textAlign='center';c.fillStyle='#eeb79d';c.font='64px Arial';c.fillText('◎',256,190);
   c.fillStyle='#f4e8e0';c.font='500 39px sans-serif';c.fillText('值得关注的变化',256,278);
   c.fillStyle='#aeb4c2';c.font='26px sans-serif';c.fillText('先核对，再确认',256,328);
@@ -64,7 +71,7 @@ export default function WatchScene(props:Props){
    const targetX=(showBack?.12:-.15)+userX,targetY=(showBack?Math.PI:showSide?1.12:-.43)+userY;
    const lerp=reduced?1:1-Math.exp(-dt*6);holder.rotation.x=THREE.MathUtils.lerp(holder.rotation.x,targetX,lerp);holder.rotation.y=THREE.MathUtils.lerp(holder.rotation.y,targetY,lerp);holder.rotation.z=THREE.MathUtils.lerp(holder.rotation.z,showBack?.13:-.15,lerp);
    holder.position.y=p.playing&&!reduced?Math.sin(time*.00065)*.075:0;
-   const f=`${p.stage}/${p.scenario}`;if(oldFace!==f){face(canvas,p.stage,p.scenario);screenTexture.needsUpdate=true;oldFace=f;}
+   const f=`${p.stage}/${p.scenario}/${p.agentPhase??'-'}`;if(oldFace!==f){face(canvas,p.stage,p.scenario,p.agentPhase);screenTexture.needsUpdate=true;oldFace=f;}
    if(model){
     if(oldColor!==p.finish){const palette=FINISHES[p.finish];model.traverse(o=>{if(o instanceof THREE.Mesh){const mats=Array.isArray(o.material)?o.material:[o.material];for(const m of mats){if(m instanceof THREE.MeshStandardMaterial){if(m.name==='CaseFinish')m.color.setHex(palette.case);if(m.name==='BandFinish')m.color.setHex(palette.band);}}}});oldColor=p.finish;}
     model.traverse(o=>{if(o instanceof THREE.Mesh){const m=o.material as THREE.MeshStandardMaterial;if(m.name==='OpticalSensor')m.emissiveIntensity=p.sensor==='ppg'&&p.stage===1?(reduced||!p.playing?1.2:1.2+Math.sin(time*.003)*.8):.2;
@@ -77,7 +84,7 @@ export default function WatchScene(props:Props){
   return()=>{disposed=true;cancelAnimationFrame(id);observer.disconnect();intersection.disconnect();renderer.domElement.removeEventListener('pointerdown',pointerDown);renderer.domElement.removeEventListener('pointermove',pointerMove);renderer.domElement.removeEventListener('pointerup',pointerUp);renderer.domElement.removeEventListener('pointercancel',pointerUp);scene.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});screenTexture.dispose();environment.dispose();renderer.dispose();renderer.domElement.remove();};
  },[]);
  return <div className="watch-viewport" ref={mount} data-renderer={status}>
-  {status!=='ready'&&<div className="watch-fallback" role="img" aria-label="概念手表静态示意"><i/><div><small>T1D / LAB</small><strong>72</strong><span>BPM · 合成示意</span><b>∿</b></div><i/></div>}
+  {status!=='ready'&&<div className="watch-fallback" role="img" aria-label="概念手表静态示意"><i/><div><small>{props.agentPhase===undefined?'T1D / LAB':'HEALTH AGENT'}</small><strong>{props.agentPhase===undefined?'72':'∿'}</strong><span>{props.agentPhase===undefined?'BPM · 合成示意':['读取个人记忆','比较个人基线','核对研究依据','整理每日观察'][props.agentPhase]}</span><b>∿</b></div><i/></div>}
   {status==='loading'&&<span className="model-loading">正在展开产品视角…</span>}
   {status==='fallback'&&<span className="model-loading">静态视图 · 本设备未启用 3D，流程仍可操作</span>}
  </div>;

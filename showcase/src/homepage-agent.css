@@ -1,0 +1,67 @@
+.experience.has-home-agent .hero-composition{grid-template-columns:minmax(240px,1fr) minmax(360px,1.55fr) minmax(265px,.95fr);gap:22px;min-height:580px}
+.experience.has-home-agent .scene-caption{max-width:300px;padding-left:0}
+.experience .hero-agent-kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid #d9c9d3;border-radius:20px;padding:7px 12px;font-size:10px;color:#826272;margin-bottom:18px;background:#fff9}
+.hero-agent-kicker i{height:5px;width:5px;border-radius:50%;background:#9c7d8f}
+.experience .hero-agent-entry{display:inline-flex;gap:20px;align-items:center;font-size:11px;color:#805c70;border-bottom:1px solid #cdb9c6;margin-top:16px;padding:6px 0}
+.home-agent-card{padding:21px 18px;background:linear-gradient(150deg,#ffffffeb,#f3edf1e8);border:1px solid #e2d6de;border-radius:22px;box-shadow:0 18px 50px #5e3e5109;backdrop-filter:blur(12px);text-align:left}
+.home-agent-identity{display:flex;align-items:center;gap:9px;margin-bottom:22px;color:#745264}
+.home-agent-mark{display:grid;place-items:center;height:31px;width:31px;flex-shrink:0;border:1px solid #d8c8d3;border-radius:10px;font-size:26px;background:#fff9}
+.home-agent-identity strong{display:block;font-size:12px;font-weight:500}
+.home-agent-identity small{display:block;font-size:7px;letter-spacing:.06em;color:#9b8494;margin-top:5px}
+.home-agent-demo{font-size:7px;white-space:nowrap;color:#9c8294;border:1px solid #ddced8;border-radius:12px;padding:4px 6px;margin-left:auto}
+.experience .home-agent-card h2{font-size:23px;line-height:1.5;font-weight:500;letter-spacing:-.04em;margin:0 0 18px;color:#674b5d}
+.home-agent-memory{padding:13px 12px;border-left:2px solid #bfa5b6;background:#e9dfe64d;border-radius:0 8px 8px 0;margin:15px 0}
+.home-agent-memory>span,.home-agent-observation>span{font-size:8px;color:#a38a9c;display:block;letter-spacing:.04em}
+.home-agent-memory>strong{font-size:12px;color:#79586d;font-weight:400;display:block;margin:8px 0}
+.home-agent-memory>small{font-size:8px;color:#9c8394;line-height:1.7}
+.experience .home-agent-card p{font-size:10px;line-height:1.9;color:#8d7586;margin-top:8px}
+.home-agent-observation{margin-top:19px}
+.home-agent-capabilities{display:flex;align-items:center;justify-content:space-between;margin-top:23px;font-size:9px;color:#876a7e}
+.home-agent-capabilities>span{padding:6px 9px;background:#eee5eb;border-radius:12px}
+.home-agent-capabilities>i{font-size:10px;font-style:normal;color:#c0aab9}
+.experience .home-agent-expand{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 14px;background:#7a5a6f;border-radius:20px;color:white;font-size:10px;margin:18px 0 10px}
+.experience .home-agent-disclosure{display:block;font-size:7px;line-height:1.8;color:#9f8597}
+.home-agent-phase-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:21px}
+.experience .home-agent-phase-buttons button{font-size:8px;color:#a48a9c;display:flex;flex-direction:column;align-items:center;gap:7px;padding:0 0 10px;border-bottom:1px solid #dfd2dc}
+.home-agent-phase-buttons i{width:22px;height:22px;border:1px solid #d7c5d1;border-radius:50%;font-size:7px;display:grid;place-items:center;font-style:normal}
+.experience .home-agent-phase-buttons button[aria-pressed=true]{color:#735168;border-bottom-color:#947187}
+.home-agent-phase-buttons button[aria-pressed=true] i{color:white;background:#89687e;border-color:#89687e}
+.home-agent-step-label{font-size:7px;color:#a48a9b;letter-spacing:.12em;display:block;margin-bottom:13px}
+.home-agent-step-content{min-height:255px;animation:copy-in .35s ease both}
+.home-agent-expanded .home-agent-identity{margin-bottom:19px}
+.experience .home-agent-expanded h2{font-size:21px;margin-bottom:14px}
+.home-agent-comparison{margin:15px 0}
+.home-agent-comparison>div{display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid #e2d7df;padding:11px 0}
+.home-agent-comparison dt{font-size:9px;color:#a0879a}
+.home-agent-comparison dd{font-size:13px;color:#7d5c71;margin:0;white-space:nowrap}
+.home-agent-comparison dd small{font-size:8px;color:#a78e9f}
+.home-agent-sources{display:flex;flex-direction:column;margin:15px 0}
+.home-agent-sources>a{position:relative;padding:11px 10px;border-top:1px solid #e1d4de;display:block}
+.home-agent-sources span{font-size:7px;color:#aa8e9f}
+.home-agent-sources strong{display:block;font-size:9px;color:#7e5c72;margin-top:6px;padding-right:12px;font-weight:400;line-height:1.7}
+.home-agent-sources i{position:absolute;right:0;top:23px;font-size:10px;color:#a68a9f;font-style:normal}
+.home-agent-report{border:1px solid #ddcdd8;border-radius:10px;padding:12px;background:#fff9;margin-top:15px}
+.home-agent-report>span{display:block;font-size:8px;color:#a08499;padding-bottom:9px;border-bottom:1px solid #eee4eb}
+.home-agent-report>div{margin-top:12px}
+.home-agent-report strong{font-size:10px;font-weight:500;color:#7c586f;line-height:1.7;display:block}
+.experience .home-agent-report p{font-size:9px;line-height:1.8;margin:5px 0 0}
+.home-agent-report>small{display:block;font-size:7px;color:#ab8e9f;margin-top:13px}
+.experience .home-agent-report-link{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#78516d;margin:14px 0 8px}
+.experience .home-agent-play{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:9px;border-top:1px solid #dfd0db;padding:13px 0 10px;margin-top:15px;color:#87677d}
+.home-agent-play:disabled{opacity:.65;cursor:default}
+.home-agent-watch-badge{position:absolute;left:7%;top:10%;z-index:4;display:flex;align-items:center;gap:7px;border:1px solid #dfd1d9;background:#fff9;backdrop-filter:blur(10px);border-radius:18px;padding:8px 12px;font-size:9px;color:#7f5e72;pointer-events:none;box-shadow:0 5px 18px #70546609}
+.home-agent-watch-badge>span{font-size:21px;line-height:1}
+.home-agent-watch-badge>small{font-size:7px;color:#a68a9d;border-left:1px solid #dbcbd6;padding-left:7px}
+.experience .home-agent-watch-link{position:absolute;left:12%;right:5%;bottom:38px;z-index:4;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-radius:22px;border:1px solid #dfd0db;background:#fffc;backdrop-filter:blur(10px);font-size:8px;color:#927185;box-shadow:0 8px 25px #71546709}
+.home-agent-watch-link>i{font-style:normal;color:#bda4b5;font-size:10px}
+.home-agent-watch-link>span{display:flex;align-items:center;gap:5px}
+.home-agent-watch-link b{display:block;width:5px;height:5px;border-radius:50%;background:#b495a8;box-shadow:0 0 0 3px #baa0b01a}
+.home-agent-caption-context{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:9px;color:#9b8592;margin:0 5px 12px}
+.home-agent-caption-context>span{display:flex;align-items:center;gap:6px}
+.home-agent-caption-context svg{height:14px;width:14px}
+.home-agent-context-details{font-size:8px;color:#a18b9a;line-height:1.9;margin:12px 5px 0}
+.home-agent-context-details summary{cursor:pointer}
+.experience .home-agent-context-details p{font-size:10px;margin-top:8px}
+@media(max-width:1150px) and (min-width:761px){.experience.has-home-agent .hero-composition{grid-template-columns:minmax(200px,1fr) minmax(280px,1.35fr) minmax(245px,.95fr);gap:12px}.experience.has-home-agent .hero-copy h1{font-size:35px}.experience.has-home-agent .watch-stage{height:535px}.home-agent-card{padding:18px 14px}.home-agent-watch-badge{left:0;top:6%;font-size:8px}.home-agent-watch-badge>small{display:none}.experience .home-agent-watch-link{left:0;right:0;bottom:37px;padding:10px}.home-agent-card .home-agent-capabilities{font-size:8px}}
+@media(max-width:760px){.experience.has-home-agent .hero-composition{display:grid;grid-template-columns:1fr;min-height:0;gap:0}.experience.has-home-agent .scene-caption{display:block;max-width:none;margin:16px 0 0;border-top:0;padding:0}.experience .hero-agent-kicker{font-size:8px;margin-bottom:13px;padding:6px 10px}.experience .hero-agent-entry{font-size:10px;margin-top:13px}.experience .hero-copy .play-story{margin-top:10px}.home-agent-card{max-width:440px;margin:auto;padding:22px;border-radius:19px}.home-agent-identity{margin-bottom:17px}.experience .home-agent-card h2{font-size:24px;line-height:1.45}.home-agent-overview h2 br{display:none}.home-agent-memory{margin-top:17px;padding:13px}.home-agent-memory>strong{font-size:12px}.home-agent-memory>span,.home-agent-observation>span{font-size:9px}.home-agent-memory>small{font-size:9px}.experience .home-agent-card p{font-size:11px;line-height:1.9}.home-agent-observation{margin-top:16px}.home-agent-capabilities{margin-top:18px;font-size:10px}.home-agent-capabilities>span{padding:7px 13px}.experience .home-agent-expand{font-size:11px;min-height:42px;margin-top:17px}.experience .home-agent-disclosure{font-size:8px}.home-agent-phase-buttons{gap:8px}.experience .home-agent-phase-buttons button{font-size:10px;gap:9px}.home-agent-phase-buttons i{width:25px;height:25px;font-size:8px}.home-agent-step-content{min-height:260px}.experience .home-agent-expanded h2{font-size:23px}.home-agent-step-label{font-size:8px}.home-agent-comparison dt{font-size:10px}.home-agent-comparison dd{font-size:16px}.home-agent-comparison dd small{font-size:9px}.home-agent-sources span{font-size:8px}.home-agent-sources strong{font-size:11px}.home-agent-report>span{font-size:9px}.home-agent-report strong{font-size:12px}.experience .home-agent-report p{font-size:10px}.home-agent-report>small{font-size:8px}.experience .home-agent-report-link{font-size:11px}.experience .home-agent-play{font-size:10px;padding-top:16px}.home-agent-watch-badge{left:2%;top:9%;font-size:9px}.home-agent-watch-badge>small{font-size:7px}.experience .home-agent-watch-link{left:3%;right:3%;bottom:27px;font-size:8px;padding:10px 12px}.home-agent-caption-context{max-width:440px;margin:0 auto 12px;font-size:9px}.home-agent-context-details{max-width:430px;margin:13px auto 0;font-size:9px}.experience .home-agent-context-details p{font-size:10px}.experience.has-home-agent .step-track button{padding:11px 8px;font-size:10px}.experience.has-home-agent .watch-stage{height:410px}}
+@media(prefers-reduced-motion:reduce){.home-agent-step-content{animation:none}}
