@@ -1,0 +1,36 @@
+{
+  "dataset": "BIG IDEAs glycemic wearable 1.1.2",
+  "url": "https://physionet.org/content/big-ideas-glycemic-wearable/1.1.2/",
+  "license": "ODC-By",
+  "metadata_sha256": {
+    "big_demographics.csv": "995ece21fd29be689c67aee8fd22659dea6755a28c4f84e07c28605fef80b9ac",
+    "big_license.txt": "86c0ad300f6d380591298bc03652e30b81f65954bbf22435812bcfd46812ab06"
+  },
+  "demographic_rows": 16,
+  "matching_subject_directories": 16,
+  "columns": [
+    "ID",
+    "Gender",
+    "HbA1c"
+  ],
+  "age_column_present": false,
+  "sample_directory_channels": [
+    "ACC",
+    "BVP",
+    "Dexcom",
+    "EDA",
+    "Food",
+    "HR",
+    "IBI",
+    "TEMP"
+  ],
+  "waveform_content_audited": false,
+  "background_available_at_verified": false,
+  "training_admitted": false,
+  "limits": [
+    "Metadata IDs match directories; full BVP/CGM time alignment remains unverified.",
+    "No per-person age in this file.",
+    "Population is not this T1D cohort.",
+    "HbA1c must not become target leakage; observation time needs verification."
+  ]
+}

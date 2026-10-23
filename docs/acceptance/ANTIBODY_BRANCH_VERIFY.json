@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "saved OOF metrics and selection ledger only; donor identity unresolved",
+  "runs": [
+    {
+      "protocol": "ANTIBODY_ARRAY1",
+      "oof_rows": 149,
+      "recomputed_metrics_equal": true,
+      "all_inner_selections_match": true
+    },
+    {
+      "protocol": "ANTIBODY_ARRAY1_DIAGNOSTIC_annotated",
+      "oof_rows": 149,
+      "recomputed_metrics_equal": true,
+      "all_inner_selections_match": true
+    },
+    {
+      "protocol": "ANTIBODY_ARRAY1_DIAGNOSTIC_pNA_only",
+      "oof_rows": 149,
+      "recomputed_metrics_equal": true,
+      "all_inner_selections_match": true
+    }
+  ]
+}

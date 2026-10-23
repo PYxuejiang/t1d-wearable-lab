@@ -20,8 +20,10 @@ from t1d_lab.pretrained_ppg import file_sha256
 from t1d_lab.finetune_protocol import fit_normalization, apply_normalization, validate_subject_split
 
 
-def partition(subjects, cache, source):
-    sequences, labels, people, counts = [], [], [], []
+def partition(subjects, cache, source, tolerance_seconds=0):
+    if not 0 <= tolerance_seconds <= 5:
+        raise ValueError('History tolerance must be predeclared within 0..5 seconds')
+    sequences, labels, people, counts, elapsed = [], [], [], [], []
     for subject in subjects:
         path = cache / f'{subject}.npz'
         audit = json.loads((cache / f'{subject}.json').read_text())
@@ -35,7 +37,7 @@ def partition(subjects, cache, source):
         reference = dict(zip(rows.decision_time.astype('int64'), rows.glucose_mg_dl))
         used, missing_reference, incomplete_history = 0, 0, 0
         for i, stamp in enumerate(times):
-            if i < 2 or not np.all(np.diff(times[i - 2:i + 1]) == 300_000_000_000):
+            if i < 2 or not np.all(np.abs(np.diff(times[i - 2:i + 1]) - 300_000_000_000) <= tolerance_seconds * 1e9):
                 incomplete_history += 1
                 continue
             label = reference.get(stamp, np.nan)
@@ -43,6 +45,7 @@ def partition(subjects, cache, source):
                 missing_reference += 1
                 continue
             sequences.append(embedding[i - 2:i + 1])
+            elapsed.append((times[i - 2:i + 1] - times[i - 2]) / 600e9)
             labels.append(float(label < 70))
             people.append(subject)
             used += 1
@@ -51,15 +54,15 @@ def partition(subjects, cache, source):
     x, y = np.stack(sequences), np.array(labels, dtype=np.float32)
     if len(np.unique(y)) != 2:
         raise ValueError('Both classes required; do not silently change participants')
-    return x, y, counts, people
+    return x, y, counts, people, np.array(elapsed, dtype=np.float32)[:, :, None]
 
 
-def inputs(values, stats):
+def inputs(values, stats, elapsed):
     observed = np.ones_like(values, dtype=bool)
     x = torch.tensor(apply_normalization(values, observed, stats))
     n = len(x)
     return (x, torch.ones_like(x, dtype=torch.bool),
-            torch.tensor([0., .5, 1.])[None, :, None].expand(n, -1, -1),
+            torch.tensor(elapsed),
             torch.zeros(n, 3), torch.zeros(n, 3, dtype=torch.bool))
 
 
@@ -72,10 +75,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--cache', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--protocol', type=Path, default=ROOT / 'configs/pulse_temporal_fit_v1.json')
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError('Use a fresh output directory')
-    cfg_path = ROOT / 'configs/pulse_temporal_fit_v1.json'
+    cfg_path = args.protocol
     cfg = json.loads(cfg_path.read_text())
     split = cfg['subjects']
     validate_subject_split(split['train'], split['validation'], split['test'])
@@ -83,16 +87,17 @@ def main():
     source_sha = file_sha256(source_path)
     for subject in split['train'] + split['validation']:
         cache_meta = json.loads((args.cache / f'{subject}.json').read_text())
-        if cache_meta['source_hashes']['configs/pulse_temporal_fit_v1.json'] != file_sha256(cfg_path) or cache_meta['source_hashes']['anchor_source'] != source_sha:
+        if cache_meta['source_hashes']['configs/pulse_temporal_fit_v1.json'] != cfg.get('embedding_protocol_sha256', file_sha256(cfg_path)) or cache_meta['source_hashes']['anchor_source'] != source_sha:
             raise ValueError('Embedding/source/protocol mismatch')
     # Projection and predicate prevent loading held-out labels into this study.
     source = pd.read_parquet(source_path,
             columns=['subject', 'decision_time', 'glucose_mg_dl'],
             filters=[('subject', 'in', split['train'] + split['validation'])])
-    train, y, train_counts, _ = partition(split['train'], args.cache, source)
-    validation, vy, validation_counts, _ = partition(split['validation'], args.cache, source)
+    tolerance = cfg.get('history_tolerance_seconds', 0)
+    train, y, train_counts, _, train_elapsed = partition(split['train'], args.cache, source, tolerance)
+    validation, vy, validation_counts, _, validation_elapsed = partition(split['validation'], args.cache, source, tolerance)
     stats = fit_normalization(train, np.ones_like(train, dtype=bool))
-    tx, vx = inputs(train, stats), inputs(validation, stats)
+    tx, vx = inputs(train, stats, train_elapsed), inputs(validation, stats, validation_elapsed)
     labels = torch.from_numpy(y)
     torch.set_num_threads(4)
     torch.manual_seed(cfg['seed'])

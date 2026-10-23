@@ -4,7 +4,7 @@
 
 ## 已接入的真实预训练表示
 
-采用 [Pulse-PPG 作者代码](https://github.com/maxxu05/pulseppg) 和 [Zenodo 17345536 权重](https://zenodo.org/records/17345536)。代码固定提交 `716eaf9cf966e8f76436f2263872ef38b1f90166`；权重记录明确 MIT，保留作者许可。下载归档 315,300,817 字节，MD5 `2d0ebda9afeb9648674464098a698c37`；选中检查点 SHA256 `485ade5033b3baa9b82e252fc131042dda897d7bdfc0d1a030d9746a1e98857c`。README DOI 与下载脚本版本不同，明确固定实际脚本所指版本。
+采用 [Pulse-PPG 作者代码](https://github.com/maxxu05/pulseppg) 和 [Zenodo 17345536 权重](https://zenodo.org/records/17345536)。代码固定提交 `716eaf9cf966e8f76436f2263872ef38b1f90166`；权重记录明确 MIT，保留作者许可。下载归档 315,300,817 字节，MD5 `2d0ebda9afeb9648674464098a698c37`；选中检查点 SHA256 `485ade5033b3baa9b82e252fc131042dda897d7bdfc0d1a030d9746a1e98857c`。README引用概念DOI，下载脚本指向具体版本，本项目固定实际版本。作者说明源预训练为另外的现场队列，但未提供可与本项目逐人联结的身份键；不声称已经证明全预训练来源与目标人员零重叠。
 
 只导入经过哈希核对的架构文件，使用 `torch.load(weights_only=True)` 和严格键校验，不运行上游训练程序，不装载原优化器。本地模型与数组均在忽略目录。原架构保留 InstanceNorm 的 `num_features` 与输入通道不一致警告；其 `affine=False`，PyTorch 明确提示该参数不使用。本次未为消除警告改写作者网络。
 
@@ -56,13 +56,18 @@ Agent反馈分开处理：用户纠正用于可追溯背景记录；核实后的
 ## 复现与发布边界
 
 ```powershell
+python scripts/fetch_pulse_encoder.py
 python scripts/evaluate_antibody_branch.py --source outputs/multimodal_source_v1/GSE45515_family.soft.gz --output outputs/new_antibody_run
 python scripts/audit_pretrained_ppg.py --output outputs/new_ppg_pilot
 python scripts/extract_pulse_embeddings.py --output outputs/pulse_temporal_embeddings_v1
 python scripts/compare_pulse_lora.py --cache outputs/pulse_temporal_embeddings_v1 --output outputs/new_temporal_run
+python scripts/compare_pulse_lora.py --cache outputs/pulse_temporal_embeddings_v1 --output outputs/new_temporal_run2 --protocol configs/pulse_temporal_fit_v2.json
+python scripts/verify_pulse_comparison.py --cache outputs/pulse_temporal_embeddings_v1 --run outputs/new_temporal_run2
 ```
 
 使用项目可选torch环境和已核对的本地来源。后三条要求官方权重与指定架构已按上述哈希放入本地缓存。所有训练命令使用新输出目录；提取只复用哈希一致的已完成缓存。
+
+`fetch_pulse_encoder.py` 不执行模型代码；固定官方提交、归档和检查点校验，只读取指定ZIP成员。架构文件先核对规范LF内容的SHA，再统一为本轮审计的CRLF字节，避免跨操作系统换行造成虚假的哈希不一致。`.[finetune]` 补齐官方架构导入所需matplotlib/tqdm。
 
 公开内容限协议、代码、测试、聚合报告、网站卡片和机制来源。原始芯片、波形、个体表示、逐点预测、模型权重和用户数据不上传；保留v1–v5所有原始失败证据。QLoRA尚未实现，尚无部署医疗报警服务。
 
@@ -83,3 +88,27 @@ python scripts/compare_pulse_lora.py --cache outputs/pulse_temporal_embeddings_v
 时间审计发现大量299/301秒正常间隔：严格300秒规则仅保留1836/4642参考点（39.55%），而原始表示3774/4642（81.30%）。这不是原PPG模型覆盖下降，也不是删事件换取成绩；是新历史构造的额外损失。后续固定5秒容差、显式真实间隔，并保留本轮结果；不能直接把两个覆盖集合的分数当作同集合增益。
 
 完整候选：[FIT1](acceptance/PULSE_TEMPORAL_FIT1.json)；独立复核：[FIT1_VERIFY](acceptance/PULSE_TEMPORAL_FIT1_VERIFY.json)。
+
+## 时钟抖动修订：PULSE_TEMPORAL_FIT2
+
+保留FIT1提交dcb6e10和全部结果。源时间审计不读取模型分数：各训练/验证人都有大量299/301秒间隔。新协议接受每段300±5秒，输入真实时间间隔/600，仍不跨越缺失的5分钟记录。提取缓存不变，训练/验证人员与18候选预算不变，单独重训与保存；此修订是探索性开发，不是独立确认。
+
+训练14039窗、405阳性；验证3719窗、254阳性。验证参考机会4642，表示3774，最终历史3719（80.12%）；38个历史不完整、17个参考缺失，均记入台账。训练参考19245点中可用历史14039（72.95%）。分母是本轮参考决策点，不是全部设备在线时长，也不同于原30事件测试分母。
+
+| 验证内选择的分支 | AP | AUC | Brier | 可训练参数 |
+|---|---:|---:|---:|---:|
+| 训练病例比例 | 0.0683 | 0.5000 | 0.0652 | 0 |
+| 线性头 | 0.0955 | 0.6220 | 0.0843 | 513 |
+| 冻结时序底座分类头 | 0.0540 | 0.4243 | 0.0654 | 33 |
+| 全量时序微调 | 0.0931 | 0.5956 | 0.0645 | 50369 |
+| LoRA r4/alpha8/lr0.001 | 0.0781 | 0.5526 | 0.0654 | 1281 |
+
+结论：存在有限的验证集排序信息，但LoRA尚未超过线性头/全量微调，且其Brier未优于病例比例。原默认r4/alpha8在这轮固定搜索内被选中，FIT1却选r8/alpha16，说明选择依赖数据支持；不能称为全局最优。线性头虽然AP最高，概率误差仍较大，不可直接作为风险提醒。
+
+独立构造验证窗口、重载18个检查点、复算三项指标，最大差0；12个LoRA候选冻结权重逐值一致。两个测试人员不评分。测试事件召回、误报、人日、PPV、及时性和按人区间仍未评价，不能据点级验证成绩宣布临床目标完成。只有1个验证人，不给伪精确的按人置信区间。
+
+完整证据：[FIT2](acceptance/PULSE_TEMPORAL_FIT2.json)、[独立复核](acceptance/PULSE_TEMPORAL_FIT2_VERIFY.json)、[新增背景源](acceptance/BIG_BACKGROUND_SOURCE1.json)。两份可分享研究卡置于网站研究页，原始波形、个体预测和权重未公开。
+
+下一阶段优先在训练人员内部设计按人交叉验证，检查表示/时序/背景的独立贡献及概率校准；参数候选保持有界。固定跨人验证方案和报警阈值流程后才开启测试，不继续围绕当前唯一验证人无限搜索。抗体分支先追查身份/阵列批次及pNA来源，机制证据可继续检索，但不据此生成患者蛋白特征。
+
+工程验收：91项Python测试通过；19项Agent测试及前端生产构建通过。已有大分块提示保留。浏览器工具显示本机浏览器使用已关闭，因此本轮未声称完成网页目视验收；静态卡片另行渲染检查。首次脚本运行缺少源码搜索路径、目录索引含锚点的问题已修正，失败未计为训练结果。自动任务保持原PAUSED状态。

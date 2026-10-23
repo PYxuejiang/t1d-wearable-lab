@@ -28,24 +28,31 @@ def main():
     frame = pd.read_parquet(ROOT / 'outputs/improvement_v2/features.parquet',
             columns=['subject', 'decision_time', 'glucose_mg_dl'],
             filters=[('subject', 'in', cfg['subjects']['validation'])])
-    windows, labels = [], []
+    windows, labels, elapsed = [], [], []
     for subject in cfg['subjects']['validation']:
         reference = frame[frame.subject == subject].set_index('decision_time').glucose_mg_dl
         with np.load(args.cache / f'{subject}.npz', allow_pickle=False) as data:
             lookup = {int(t): e for t, e in zip(data['decision_ns'], data['embedding'])}
-        for stamp in sorted(lookup):
-            history = [stamp - 600_000_000_000, stamp - 300_000_000_000, stamp]
+        ordered = sorted(lookup)
+        for index, stamp in enumerate(ordered):
+            if index < 2:
+                continue
+            history = ordered[index - 2:index + 1]
+            tolerance = cfg.get('history_tolerance_seconds', 0) * 1e9
+            if any(abs(history[j + 1] - history[j] - 300e9) > tolerance for j in [0, 1]):
+                continue
             label = reference.get(pd.Timestamp(stamp), np.nan)
             if all(t in lookup for t in history) and np.isfinite(label):
                 windows.append([lookup[t] for t in history])
                 labels.append(int(label < 70))
+                elapsed.append([(t - history[0]) / 600e9 for t in history])
     stats = base['provenance']['normalization']
     values = torch.tensor(((np.array(windows) - np.array(stats['mean'])) /
                             np.array(stats['scale'])).astype(np.float32))
     n = len(values)
     assert n == report['validation_windows'] and sum(labels) == report['validation_positive']
     tensors = (values, torch.ones_like(values, dtype=torch.bool),
-               torch.tensor([0., .5, 1.])[None, :, None].expand(n, -1, -1),
+               torch.tensor(np.array(elapsed, dtype=np.float32)[:, :, None]),
                torch.zeros(n, 3), torch.zeros(n, 3, dtype=torch.bool))
     verified, maximum_error = [], 0.
     for row in report['candidates']:
@@ -78,7 +85,7 @@ def main():
                          'metrics_match': True, 'frozen_base_checked': kind == 'lora'})
     selected = max(report['candidates'], key=lambda r: (r['selected']['AP'], -r['selected']['Brier'], -r['trainable']))
     assert selected['candidate'] == report['selected_candidate']
-    result = {'protocol_id': 'PULSE_TEMPORAL_FIT1_VERIFY', 'status': 'passed',
+    result = {'protocol_id': cfg['protocol_id'] + '_VERIFY', 'status': 'passed',
               'validation_windows': n, 'candidates_verified': len(verified),
               'maximum_metric_difference': maximum_error, 'test_opened': False,
               'clinical_validation': False, 'verified': verified,

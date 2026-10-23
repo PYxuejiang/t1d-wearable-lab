@@ -3,6 +3,12 @@ import type { Evidence } from '../shared/health.ts';
 // Aggregate study findings only. Never personal model scores or training labels.
 export const RESEARCH_EVIDENCE: Evidence[] = [
   {
+    id: 'lab-pulse-temporal-fit2', title: '本项目：真实 T1D 时序微调与 LoRA 对照',
+    url: 'https://github.com/PYxuejiang/t1d-wearable-lab/blob/main/docs/acceptance/PULSE_TEMPORAL_FIT2.json',
+    published: '2026-10-23', reviewedAt: '2026-10-23', status: 'reviewed', kind: 'research',
+    note: '4人训练、1人验证，18个候选全部保留并复核。验证AP：线性头0.0955、全量时序微调0.0931、LoRA0.0781、病例比例基线0.0683。LoRA本轮选择r4/alpha8/lr0.001；不是全局最优。参考决策点覆盖80.1%，未评估测试集或事件报警，也未证明配对背景增益。验证分数已用于选模型，不能作为个人风险或独立泛化结果。不得改变今天的异常等级或自动触发再训练。',
+  },
+  {
     id: 'lab-pulse-transfer1', title: '本项目：真实 PPG 预训练表示接入',
     url: 'https://github.com/PYxuejiang/t1d-wearable-lab/blob/main/docs/MULTIMODAL_BRANCHES.zh-CN.md',
     published: '2026-10-23', reviewedAt: '2026-10-23', status: 'reviewed', kind: 'method',

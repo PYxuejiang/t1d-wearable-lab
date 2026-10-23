@@ -105,3 +105,5 @@ node --env-file=.env --experimental-strip-types agent/worker.ts --once
 - [PHIA 原始研究](https://arxiv.org/abs/2406.06464)：工具分析和检索的系统设计参考，不是本产品临床效能证据。
 - [PhysioLLM 原始研究](https://arxiv.org/abs/2406.19283)：将生理数据、统计分析和个人情境结合的方法参考。
 - [Europe PMC 官方 REST 文档](https://europepmc.org/RestfulWebService)：有界检索与元数据来源。
+
+新增公开研究摘要经research-evidence/knowledge进入原retrieve_evidence，包含PPG工程验收、真实时序微调对照及独立抗体混杂诊断。个人模型推理、诊断和自动再训练仍未启用，原三工具和回退保持。详见[实施记录](MULTIMODAL_BRANCHES.zh-CN.md)。
