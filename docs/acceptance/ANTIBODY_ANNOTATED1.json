@@ -1,0 +1,308 @@
+{
+  "protocol": {
+    "protocol_id": "ANTIBODY_ARRAY1_DIAGNOSTIC_annotated",
+    "source_sha256": "ce78d46c8dcc64598d6a8b5777bff148b1b1f661715551521cbef9802807b6f9",
+    "scope": "exploratory-array-classification-only",
+    "grouping": "numeric title family ignoring Patient/Control prefix; not confirmed donor",
+    "seed": 20261023,
+    "outer_folds": 5,
+    "inner_folds": 3,
+    "logistic_C": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "selection": "maximum mean inner validation average precision; ties first C",
+    "preprocessing": "log2; training-only median imputation and standard scaling",
+    "metrics": [
+      "average_precision",
+      "roc_auc",
+      "brier"
+    ],
+    "bootstrap_replicates": 1000,
+    "bootstrap_unit": "title family; conditional on fitted OOF predictions, not a full refit interval",
+    "clinical_threshold_selection": false,
+    "transformer_scoring": false,
+    "wearable_fusion": false,
+    "feature_mode": "annotated",
+    "analysis_role": "Post-baseline feature provenance diagnostic, not independent confirmation; same fixed nested splits"
+  },
+  "protocol_sha256": "847043518eeffba16495e9dfddb1b70c22a6af3243356c7a123146a399bae0d3",
+  "audit": {
+    "dataset": "GSE45515",
+    "source_sha256": "ce78d46c8dcc64598d6a8b5777bff148b1b1f661715551521cbef9802807b6f9",
+    "arrays": 149,
+    "features": 774,
+    "sample_labels": {
+      "T1D": 75,
+      "Control": 74
+    },
+    "overview_labels": {
+      "T1D": 74,
+      "Control": 75
+    },
+    "overview_count_discrepancy": true,
+    "missing_values": 788,
+    "exact_duplicate_array_rows": 0,
+    "title_family_groups": 104,
+    "group_sizes": {
+      "1": 59,
+      "2": 45
+    },
+    "mixed_label_title_families": 24,
+    "donor_identity_verified": false,
+    "wearable_pairing": false,
+    "scope": "exploratory-array-classification-only",
+    "limitations": [
+      "Title families are conservative blocks, not confirmed donors.",
+      "Series overview and sample label counts disagree.",
+      "T1D vs control is not current hypoglycemia.",
+      "Source-normalized intensities; upstream batch handling is not independently reproduced."
+    ],
+    "selected_features": 757,
+    "pNA_features": 17,
+    "feature_mode": "annotated"
+  },
+  "oof": {
+    "average_precision": 0.882875875177205,
+    "roc_auc": 0.889009009009009,
+    "brier": 0.13853931974366565
+  },
+  "constant_oof": {
+    "average_precision": 0.4881427574487188,
+    "roc_auc": 0.47594594594594586,
+    "brier": 0.25026790211109107
+  },
+  "interval_95": {
+    "average_precision": [
+      0.8100027392442852,
+      0.9376752373980306
+    ],
+    "roc_auc": [
+      0.8332359049287066,
+      0.9364932142609489
+    ],
+    "brier": [
+      0.10222862299912491,
+      0.1804179268608324
+    ]
+  },
+  "paired_difference_95": {
+    "average_precision": [
+      0.30960129177235013,
+      0.47675694582928224
+    ],
+    "roc_auc": [
+      0.3180741065969377,
+      0.5102391418374211
+    ],
+    "brier": [
+      -0.1479688860478853,
+      -0.06936954023001723
+    ]
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "train_arrays": 119,
+      "heldout_arrays": 30,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.8853253535393628,
+            0.8518401772247464,
+            0.7998742141930997
+          ],
+          "mean_AP": 0.8456799149857362
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.8990773898425501,
+            0.8762450816934987,
+            0.8496203830569156
+          ],
+          "mean_AP": 0.8749809515309881
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.9059126162222138,
+            0.8726191281836443,
+            0.8365954467165541
+          ],
+          "mean_AP": 0.8717090637074706
+        }
+      ],
+      "selected_C": 0.1,
+      "heldout": {
+        "average_precision": 0.9003138456723015,
+        "roc_auc": 0.8705357142857143,
+        "brier": 0.1598263588985897
+      }
+    },
+    {
+      "fold": 1,
+      "train_arrays": 119,
+      "heldout_arrays": 30,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.7336627913398943,
+            0.879064676772261,
+            0.8979689416157111
+          ],
+          "mean_AP": 0.836898803242622
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.7513903866733743,
+            0.9107957647145988,
+            0.9152233116491191
+          ],
+          "mean_AP": 0.8591364876790307
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.7711551175976725,
+            0.901637068150779,
+            0.9215052241810318
+          ],
+          "mean_AP": 0.8647658033098278
+        }
+      ],
+      "selected_C": 1.0,
+      "heldout": {
+        "average_precision": 0.9383398083398082,
+        "roc_auc": 0.9288888888888889,
+        "brier": 0.10777854784076925
+      }
+    },
+    {
+      "fold": 2,
+      "train_arrays": 119,
+      "heldout_arrays": 30,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.8212439664271506,
+            0.6614029695719694,
+            0.744839191062453
+          ],
+          "mean_AP": 0.7424953756871909
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.8327879452176128,
+            0.6879673562471593,
+            0.8624126209239339
+          ],
+          "mean_AP": 0.794389307462902
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.8268124171225194,
+            0.6844017836234151,
+            0.9008273441736361
+          ],
+          "mean_AP": 0.8040138483065234
+        }
+      ],
+      "selected_C": 1.0,
+      "heldout": {
+        "average_precision": 0.9326548451548451,
+        "roc_auc": 0.9464285714285714,
+        "brier": 0.08656537616744577
+      }
+    },
+    {
+      "fold": 3,
+      "train_arrays": 121,
+      "heldout_arrays": 28,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.771183131498358,
+            0.8878644239056138,
+            0.885238351008432
+          ],
+          "mean_AP": 0.8480953021374679
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.793371582005307,
+            0.8694339803714803,
+            0.9218813940688264
+          ],
+          "mean_AP": 0.8615623188152046
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.7980335866673116,
+            0.8767585575973734,
+            0.9277238988815829
+          ],
+          "mean_AP": 0.8675053477154226
+        }
+      ],
+      "selected_C": 1.0,
+      "heldout": {
+        "average_precision": 0.8326902089507131,
+        "roc_auc": 0.8265306122448979,
+        "brier": 0.17885933202405555
+      }
+    },
+    {
+      "fold": 4,
+      "train_arrays": 118,
+      "heldout_arrays": 31,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.6479715164441948,
+            0.8907274079687875,
+            0.7186890227027335
+          ],
+          "mean_AP": 0.7524626490385719
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.6521522456376574,
+            0.9040641160635601,
+            0.7518729481081529
+          ],
+          "mean_AP": 0.7693631032697902
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.6464355684809648,
+            0.8960751466498593,
+            0.7519838260515431
+          ],
+          "mean_AP": 0.7648315137274557
+        }
+      ],
+      "selected_C": 0.1,
+      "heldout": {
+        "average_precision": 0.7452716064129107,
+        "roc_auc": 0.8208333333333333,
+        "brier": 0.1615867373525319
+      }
+    }
+  ],
+  "clinical_validation": false,
+  "patient_predictions_supported": false
+}

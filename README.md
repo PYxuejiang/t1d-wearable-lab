@@ -19,6 +19,8 @@ This repository is a retrospective research project. Protocol compliance, predic
 
 ## Status
 
+**Real pretrained PPG + independent antibody branch:** [implementation and limitations](docs/MULTIMODAL_BRANCHES.zh-CN.md). A pinned MIT Pulse-PPG CNN now feeds the temporal Transformer; 150 real PPG windows pass the representation interface checks. GSE45515 grouped array classification has an exploratory logistic baseline (AUC 0.882), with unresolved donor identity and a pNA-feature signal requiring batch/confound investigation. These are separate endpoints, not proof of wearable hypoglycemia improvement. Aggregate research findings enter the existing Harness evidence tool.
+
 **2026-10-23 research extension:** [Transformer + LoRA and mechanism knowledge](docs/TRANSFORMER_LORA.zh-CN.md). An original masked time-series encoder accepts observed wearable channels and structured context. Q/V adapters, context projection and a task head train in an isolated offline pipeline. Synthetic engineering acceptance is complete; real-cohort predictive improvement and QLoRA are not established. SPAID/STING summaries enter the existing evidence tool, not patient-level protein features. The existing pi AgentHarness and clinical negative results are preserved.
 
 Both initial research pipelines have run on real public data and passed independent evaluation checks. See [stage acceptance](docs/acceptance/STATUS.md), the [Chinese validation report](docs/VALIDATION_REPORT.zh-CN.md), [metric definitions](docs/METRICS.zh-CN.md), and the [new improvement plan](docs/IMPROVEMENT_PLAN.zh-CN.md). Passing engineering checks does **not** mean the alarm targets passed.

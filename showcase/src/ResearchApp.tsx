@@ -8,6 +8,7 @@ import contextCss from './context.css?inline';
 import { MechanismReview } from './MechanismReview';
 import { FusionReview } from './FusionReview';
 import { MorphologyReview } from './MorphologyReview';
+import { MultimodalReview } from './MultimodalReview';
 echarts.use([BarChart, LineChart, ScatterChart, GridComponent, TooltipComponent, LegendComponent, MarkLineComponent, CanvasRenderer]);
 
 const REPO='https://github.com/PYxuejiang/t1d-wearable-lab';
@@ -75,6 +76,7 @@ export default function ResearchApp(){
         <article className="panel"><div className="panel-top"><div><div className="eyebrow">SOURCE SIGNALS</div><h3>看看真正的原始信号。</h3></div><button className="secondary" onClick={loadSignals}>载入本地波形</button></div>{localMessage&&<p className="notice">{localMessage}</p>}{signals?<><p className="chart-note">{signals.scope}</p><Chart height={280} option={{animation:false,tooltip:{trigger:'axis'},legend:{bottom:0},grid:{left:50,right:25,top:25,bottom:45},xAxis:{type:'value',name:'秒'},yAxis:{type:'value',name:'显示归一化幅度'},series:['ppg','ecg'].map((k,i)=>({name:k.toUpperCase(),type:'line',showSymbol:false,data:signals[k],lineStyle:{width:1.4,color:colors[i]}}))}}/></>:<div className="empty small"><p>选择来自公开队列的真实短片段。网页只做显示抽样，算法继续使用原始记录。</p></div>}</article>
       </>}
       {tab==='improve'&&<>
+        <MultimodalReview/>
         <div className="page-title"><div className="eyebrow">IMPROVEMENT LEDGER / 持续实验</div><h1>沿着证据，继续改进。</h1><p>从覆盖、排序到信号质量，记录已完成的验证、当前差距与下一步。完整指标和原始实验结论可展开核对。</p></div>
         {improvements?.stages.COHORT_SW_PERSONAL1?<>
           <div className="toolbar"><span className="small-note">{improvements.run_id} · 新公开手表队列 · 源行顺序留出</span><a className="secondary" href="./cards/improvement.png" download>导出改进成果卡 PNG ↗</a></div>

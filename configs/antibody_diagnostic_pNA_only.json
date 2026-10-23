@@ -1,0 +1,28 @@
+{
+  "protocol_id": "ANTIBODY_ARRAY1_DIAGNOSTIC_pNA_only",
+  "source_sha256": "ce78d46c8dcc64598d6a8b5777bff148b1b1f661715551521cbef9802807b6f9",
+  "scope": "exploratory-array-classification-only",
+  "grouping": "numeric title family ignoring Patient/Control prefix; not confirmed donor",
+  "seed": 20261023,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "logistic_C": [
+    0.01,
+    0.1,
+    1.0
+  ],
+  "selection": "maximum mean inner validation average precision; ties first C",
+  "preprocessing": "log2; training-only median imputation and standard scaling",
+  "metrics": [
+    "average_precision",
+    "roc_auc",
+    "brier"
+  ],
+  "bootstrap_replicates": 1000,
+  "bootstrap_unit": "title family; conditional on fitted OOF predictions, not a full refit interval",
+  "clinical_threshold_selection": false,
+  "transformer_scoring": false,
+  "wearable_fusion": false,
+  "feature_mode": "pNA_only",
+  "analysis_role": "Post-baseline feature provenance diagnostic, not independent confirmation; same fixed nested splits"
+}

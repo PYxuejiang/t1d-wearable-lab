@@ -1,0 +1,303 @@
+{
+  "protocol": {
+    "protocol_id": "ANTIBODY_ARRAY1",
+    "source_sha256": "ce78d46c8dcc64598d6a8b5777bff148b1b1f661715551521cbef9802807b6f9",
+    "scope": "exploratory-array-classification-only",
+    "grouping": "numeric title family ignoring Patient/Control prefix; not confirmed donor",
+    "seed": 20261023,
+    "outer_folds": 5,
+    "inner_folds": 3,
+    "logistic_C": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "selection": "maximum mean inner validation average precision; ties first C",
+    "preprocessing": "log2; training-only median imputation and standard scaling",
+    "metrics": [
+      "average_precision",
+      "roc_auc",
+      "brier"
+    ],
+    "bootstrap_replicates": 1000,
+    "bootstrap_unit": "title family; conditional on fitted OOF predictions, not a full refit interval",
+    "clinical_threshold_selection": false,
+    "transformer_scoring": false,
+    "wearable_fusion": false
+  },
+  "protocol_sha256": "8e6eee4aca7562ee944eefd8e01d051338dc28d6c78d9613660f01a218436ef7",
+  "audit": {
+    "dataset": "GSE45515",
+    "source_sha256": "ce78d46c8dcc64598d6a8b5777bff148b1b1f661715551521cbef9802807b6f9",
+    "arrays": 149,
+    "features": 774,
+    "sample_labels": {
+      "T1D": 75,
+      "Control": 74
+    },
+    "overview_labels": {
+      "T1D": 74,
+      "Control": 75
+    },
+    "overview_count_discrepancy": true,
+    "missing_values": 788,
+    "exact_duplicate_array_rows": 0,
+    "title_family_groups": 104,
+    "group_sizes": {
+      "1": 59,
+      "2": 45
+    },
+    "mixed_label_title_families": 24,
+    "donor_identity_verified": false,
+    "wearable_pairing": false,
+    "scope": "exploratory-array-classification-only",
+    "limitations": [
+      "Title families are conservative blocks, not confirmed donors.",
+      "Series overview and sample label counts disagree.",
+      "T1D vs control is not current hypoglycemia.",
+      "Source-normalized intensities; upstream batch handling is not independently reproduced."
+    ]
+  },
+  "oof": {
+    "average_precision": 0.871807670624998,
+    "roc_auc": 0.8823423423423423,
+    "brier": 0.1420770540167797
+  },
+  "constant_oof": {
+    "average_precision": 0.4881427574487188,
+    "roc_auc": 0.47594594594594586,
+    "brier": 0.25026790211109107
+  },
+  "interval_95": {
+    "average_precision": [
+      0.7901143428051741,
+      0.9361898835271667
+    ],
+    "roc_auc": [
+      0.8265042207224353,
+      0.9300719719447597
+    ],
+    "brier": [
+      0.10512291441595145,
+      0.18455924174493304
+    ]
+  },
+  "paired_difference_95": {
+    "average_precision": [
+      0.28796265978536806,
+      0.47378738879580123
+    ],
+    "roc_auc": [
+      0.3112236399148856,
+      0.5032069038099961
+    ],
+    "brier": [
+      -0.14498598527946194,
+      -0.06562136974937535
+    ]
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "train_arrays": 119,
+      "heldout_arrays": 30,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.8869557883219716,
+            0.8472042335330752,
+            0.7956061911944265
+          ],
+          "mean_AP": 0.8432554043498245
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.9041771490444765,
+            0.8861336551249446,
+            0.8483152848487032
+          ],
+          "mean_AP": 0.8795420296727081
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.9171639778779872,
+            0.8810200435458158,
+            0.8524709154632428
+          ],
+          "mean_AP": 0.8835516456290152
+        }
+      ],
+      "selected_C": 1.0,
+      "heldout": {
+        "average_precision": 0.8960298671236171,
+        "roc_auc": 0.8616071428571429,
+        "brier": 0.1668354044282324
+      }
+    },
+    {
+      "fold": 1,
+      "train_arrays": 119,
+      "heldout_arrays": 30,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.7125561701107241,
+            0.8783020865359865,
+            0.8990458785213464
+          ],
+          "mean_AP": 0.8299680450560191
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.7544150460749922,
+            0.9103540495670013,
+            0.9239655416413493
+          ],
+          "mean_AP": 0.8629115457611144
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.7561639359398241,
+            0.9025807137151676,
+            0.9289990517515856
+          ],
+          "mean_AP": 0.8625812338021923
+        }
+      ],
+      "selected_C": 0.1,
+      "heldout": {
+        "average_precision": 0.9245116719029762,
+        "roc_auc": 0.9111111111111112,
+        "brier": 0.11186672133803705
+      }
+    },
+    {
+      "fold": 2,
+      "train_arrays": 119,
+      "heldout_arrays": 30,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.8204932156763998,
+            0.6543898226696259,
+            0.7481928748587207
+          ],
+          "mean_AP": 0.7410253044015821
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.8327879452176128,
+            0.6645223801706044,
+            0.8714823555371468
+          ],
+          "mean_AP": 0.7895975603084547
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.8269382897483921,
+            0.6950835318536397,
+            0.8990280244172353
+          ],
+          "mean_AP": 0.8070166153397557
+        }
+      ],
+      "selected_C": 1.0,
+      "heldout": {
+        "average_precision": 0.9592872405372403,
+        "roc_auc": 0.9598214285714286,
+        "brier": 0.08655567417469534
+      }
+    },
+    {
+      "fold": 3,
+      "train_arrays": 121,
+      "heldout_arrays": 28,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.772964115972841,
+            0.8900574063617541,
+            0.8831919310365997
+          ],
+          "mean_AP": 0.8487378177903983
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.7950589336321747,
+            0.8928917725792727,
+            0.9263128321959166
+          ],
+          "mean_AP": 0.8714211794691215
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.8051963632912953,
+            0.8873683131955191,
+            0.9371632618115994
+          ],
+          "mean_AP": 0.8765759794328046
+        }
+      ],
+      "selected_C": 1.0,
+      "heldout": {
+        "average_precision": 0.8656248182011117,
+        "roc_auc": 0.8571428571428571,
+        "brier": 0.1786505803059108
+      }
+    },
+    {
+      "fold": 4,
+      "train_arrays": 118,
+      "heldout_arrays": 31,
+      "candidates": [
+        {
+          "C": 0.01,
+          "inner_AP": [
+            0.6650771918859397,
+            0.8952439440642708,
+            0.7223171406165657
+          ],
+          "mean_AP": 0.7608794255222587
+        },
+        {
+          "C": 0.1,
+          "inner_AP": [
+            0.6712866967128981,
+            0.9015789356681412,
+            0.7538310320462145
+          ],
+          "mean_AP": 0.7755655548090846
+        },
+        {
+          "C": 1.0,
+          "inner_AP": [
+            0.6685394439656454,
+            0.8995693824021598,
+            0.76158180502808
+          ],
+          "mean_AP": 0.7765635437986284
+        }
+      ],
+      "selected_C": 1.0,
+      "heldout": {
+        "average_precision": 0.7549241934092478,
+        "roc_auc": 0.8166666666666667,
+        "brier": 0.16804938070018474
+      }
+    }
+  ],
+  "clinical_validation": false,
+  "patient_predictions_supported": false
+}

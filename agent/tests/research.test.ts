@@ -3,6 +3,7 @@ import { test } from 'node:test';
 import { buildResearchSnapshot, type ResearchInput } from '../research-snapshot.ts';
 import { MECHANISM_EVIDENCE, withMechanismEvidence } from '../mechanism-knowledge.ts';
 import { syntheticHistory } from '../../shared/health.ts';
+import { RESEARCH_EVIDENCE, withResearchEvidence } from '../research-evidence.ts';
 
 function input(): ResearchInput {
   return {
@@ -54,4 +55,15 @@ test('explicit evidence review overrides bundled summaries', () => {
   const evidence = withMechanismEvidence([pending]);
   assert.equal(evidence.filter(e => e.id === pending.id).length, 1);
   assert.equal(evidence.find(e => e.id === pending.id)!.status, 'pending');
+});
+
+test('research findings retain endpoint boundaries and permit review withdrawal', () => {
+  const antibody = RESEARCH_EVIDENCE.find(item => item.id === 'lab-antibody-array1')!;
+  assert.match(antibody.note, /不是个人患病概率/);
+  assert.match(antibody.note, /无配对可穿戴/);
+  assert.match(antibody.note, /pNA/);
+  const pending = { ...antibody, status: 'pending' as const };
+  const merged = withResearchEvidence([pending]);
+  assert.equal(merged.filter(item => item.id === antibody.id).length, 1);
+  assert.equal(merged.find(item => item.id === antibody.id)?.status, 'pending');
 });

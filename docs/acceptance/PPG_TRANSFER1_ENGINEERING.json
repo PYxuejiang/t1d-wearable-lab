@@ -1,0 +1,31 @@
+{
+  "protocol_id": "PPG_TRANSFER1_ENGINEERING",
+  "data_kind": "real",
+  "source": "PPG-DaLiA development S1-S5, sitting and walking",
+  "subjects": 5,
+  "records": 10,
+  "windows": 150,
+  "window_seconds": 8,
+  "embedding_width": 512,
+  "finite_fraction": 1.0,
+  "batch_single_max_abs_difference": 4.100799560546875e-05,
+  "repeat_max_abs_difference": 0.0,
+  "encoder_seconds": 1.4512072999496013,
+  "seconds_per_window": 0.009674715332997342,
+  "checkpoint_sha256": "485ade5033b3baa9b82e252fc131042dda897d7bdfc0d1a030d9746a1e98857c",
+  "upstream_commit": "716eaf9cf966e8f76436f2263872ef38b1f90166",
+  "encoder_frozen": true,
+  "temporal_lora_trainable_parameters": 1281,
+  "temporal_adapter_initial_delta": 0.0,
+  "temporal_training_completed": false,
+  "background_measured": false,
+  "clinical_validation": false,
+  "limitations": [
+    "Real pretrained CNN, but newly initialized temporal Transformer.",
+    "Source model used PPG-DaLiA in downstream evaluation; this pilot is not independent validation.",
+    "No patient background was invented; all context masks missing.",
+    "Bounded-window preprocessing differs from author whole-record preprocessing.",
+    "No heart-rate, glucose, disease or activity accuracy measured."
+  ],
+  "protocol_sha256": "2fe8095322868764ee751df4bdc9ff0f49c81e8d8ba95253a16db77f543ddd47"
+}

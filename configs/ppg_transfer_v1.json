@@ -1,0 +1,31 @@
+{
+  "protocol_id": "PPG_TRANSFER1",
+  "phase": "representation engineering followed by separately gated clinical comparison",
+  "encoder": "Pulse-PPG ResNet1D (not a Transformer)",
+  "upstream_commit": "716eaf9cf966e8f76436f2263872ef38b1f90166",
+  "weights_record": "https://zenodo.org/records/17345536",
+  "archive_md5": "2d0ebda9afeb9648674464098a698c37",
+  "license": "MIT",
+  "pilot_source": "previously inspected PPG-DaLiA development S1-S5, sitting and walking",
+  "pilot_seconds_per_record": 120,
+  "segment_seconds": 8,
+  "source_rate_hz": 64,
+  "encoder_rate_hz": 50,
+  "preprocessing": "per-segment mean/std, fourth-order Chebyshev-II 20dB 0.5-12Hz filtfilt within past 8s only, resample_poly 25/32",
+  "preprocessing_limitation": "bounded-window adaptation, not reproduction of authors whole-record normalization/filtering",
+  "pilot_evaluation": "finite representations, determinism, batch consistency, actual runtime; no clinical claims",
+  "next_comparison": {
+    "frozen_encoder": true,
+    "temporal_model": "WearableTransformer on consecutive 512-dimensional PPG embeddings",
+    "arms": ["existing morphology comparator", "pretrained encoder plus linear head", "training-only pretrained temporal model head-only", "full temporal model finetune", "temporal Q/V LoRA signal-only", "temporal Q/V LoRA paired background"],
+    "lora_rank": [2, 4, 8],
+    "lora_alpha_over_rank": [1, 2],
+    "learning_rate": [0.0001, 0.001],
+    "seeds": [11, 23, 47],
+    "selection": "mean subject validation AP; event threshold on validation only",
+    "test_use": "once per locked comparison; already-seen PhysioCGM remains exploratory",
+    "background_gate": "verified same-subject linkage and available-before-cutoff; otherwise absent, never imputed from another cohort",
+    "model_gate": "temporal pretraining uses training subjects only; do not call random frozen temporal layers pretrained",
+    "required_before_training": ["source overlap audit", "complete window and label manifest", "fixed partitions and history purge", "compute budget measured on pilot", "background observation audit"]
+  }
+}

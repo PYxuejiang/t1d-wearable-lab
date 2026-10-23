@@ -1,0 +1,26 @@
+{
+  "protocol_id": "PULSE_TEMPORAL_FIT1",
+  "scope": "exploratory training-validation study; no test scoring or new alarm claims",
+  "subjects": {
+    "train": ["c1s01", "c1s02", "c1s03", "c1s05"],
+    "validation": ["c2s02"],
+    "test": ["c2s04", "c2s05"]
+  },
+  "raw_input": "last 8 seconds of BVP at each existing available 5-minute decision anchor",
+  "history": "three consecutive available 5-minute anchors, maximum 10-minute past span; gaps omitted and accounted separately",
+  "labels": "source glucose_mg_dl < 70; nonfinite reference omitted with counts",
+  "context": "all missing; no person-level demographics verified in this source",
+  "encoder": "pinned frozen Pulse-PPG, bounded-window preprocessing PPG_TRANSFER1",
+  "pretrain_epochs": 10,
+  "finetune_epochs": 15,
+  "batch_size": 128,
+  "seed": 20261023,
+  "pretrain_selection": "lowest fixed-mask validation reconstruction MSE",
+  "arms": ["linear embedding head", "temporal head-only", "temporal full", "temporal LoRA"],
+  "lora_rank": [2, 4, 8],
+  "lora_alpha_over_rank": [1, 2],
+  "learning_rate": [0.0001, 0.001],
+  "selection": "highest validation AP, tie lowest Brier then fewer trainable parameters; all candidates retained",
+  "test_opened": false,
+  "limits": ["Single validation participant, not optimal global hyperparameters", "All source subjects historically inspected, not independent external validation", "No paired protein input", "Diagnostic comparison does not replace original 30-event evaluation", "No clinical alert threshold selected"]
+}
