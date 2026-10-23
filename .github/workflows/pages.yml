@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'showcase/**'
+      - 'shared/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -25,7 +26,7 @@ jobs:
           cache: npm
           cache-dependency-path: showcase/package-lock.json
       - uses: actions/configure-pages@v5
-      - run: npm ci
+      - run: npm ci --ignore-scripts
         working-directory: showcase
       - run: npm run build
         working-directory: showcase
@@ -39,6 +40,12 @@ jobs:
           assert not any(root.rglob('*.parquet'))
           assert not any(root.rglob('*.pkl'))
           assert not any(root.rglob('.env*'))
+          assert not any(root.rglob('*.sqlite'))
+          assert not any(root.rglob('*.key'))
+          import re
+          for path in root.rglob('*'):
+            if path.suffix in {'.js', '.json', '.html', '.css'}:
+              assert not re.search(r'sk-[A-Za-z0-9_-]{16,}', path.read_text(encoding='utf-8')), path
       - uses: actions/upload-pages-artifact@v4
         with:
           path: showcase/dist

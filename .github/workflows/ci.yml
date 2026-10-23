@@ -22,5 +22,22 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: showcase/package-lock.json
-      - run: npm ci
+      - run: npm ci --ignore-scripts
       - run: npm run build
+  health-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            showcase/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm ci --ignore-scripts
+        working-directory: showcase
+      - run: npm run check
+        env:
+          HEALTH_LLM_ENABLED: 'false'

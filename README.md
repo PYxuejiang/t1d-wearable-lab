@@ -7,6 +7,14 @@ Two reproducible research modules on public type 1 diabetes cohorts:
 1. **CGM + wearable collaboration:** 30-minute glucose forecasting and separately evaluated incident hypoglycemia prediction using BrisT1D-Open.
 2. **Sensor evaluation:** current hypoglycemia detection, signal quality, and paired sensor ablations using PhysioCGM.
 
+## Personal health agent
+
+[**Try the health-agent experience**](https://PYxuejiang.github.io/t1d-wearable-lab/#agent) · [Implementation, privacy and private-backend setup](docs/HEALTH_AGENT.zh-CN.md)
+
+The new phone-friendly workspace connects user-confirmed health profiles, daily wearable summaries, causal personal baselines, reviewed research and a daily report inbox. A private Node service uses the existing **pi AgentHarness** with scoped profile/analysis/evidence tools. A worker refreshes recent literature into a review queue and generates reports in each user's timezone. New papers do not automatically become medical advice or modify model weights. Reports contain trend observations, not validated disease probabilities.
+
+GitHub Pages uses synthetic data and requires no API key. Real profiles and daily summaries belong in the separate authenticated, encrypted backend; provider keys stay in server environment variables. Native watch synchronization, email/background Web Push, clinical diagnosis and medical alarms are not implemented. Run `npm ci --ignore-scripts` in both the root and `showcase`, then `npm run check` from the root. The original scientific pipelines and negative results remain unchanged.
+
 This repository is a retrospective research project. Protocol compliance, predictive effect, and presentation readiness are separate acceptance decisions. Negative results are retained. No original participant records or credentials are published here.
 
 ## Status
