@@ -5,6 +5,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+plt.rcParams['svg.hashsalt'] = 't1d-multimodal-cards-v1'
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'showcase/public/cards'
@@ -30,7 +31,9 @@ def card(name, title, subtitle, labels, values, baseline, metric, notes):
     fig.text(.07, .77, subtitle, fontsize=10, color='#526764')
     fig.text(.07, .13, notes, fontsize=9, color='#526764', linespacing=1.7)
     DEST.mkdir(parents=True, exist_ok=True)
-    fig.savefig(DEST / f'{name}.svg')
+    svg_path = DEST / f'{name}.svg'
+    fig.savefig(svg_path, metadata={'Date': None})
+    svg_path.write_text('\n'.join(line.rstrip() for line in svg_path.read_text(encoding='utf-8').splitlines()) + '\n', encoding='utf-8')
     fig.savefig(DEST / f'{name}.png', dpi=150)
     plt.close(fig)
 
