@@ -14,13 +14,14 @@ runner = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(runner)
 
 
-def test_history_never_bridges_gap_or_uses_next_waveform(tmp_path):
+@pytest.mark.parametrize('datetime_unit', ['s', 'us', 'ns'])
+def test_history_never_bridges_gap_or_uses_next_waveform(tmp_path, datetime_unit):
     seconds = np.array([0, 300, 600, 900, 1500, 1800, 2100], dtype=np.int64)
     vectors = np.arange(len(seconds), dtype=np.float32)[:, None].repeat(512, 1)
     path = tmp_path / 'person.npz'
     np.savez(path, decision_ns=seconds * 10**9, embedding=vectors)
     (tmp_path / 'person.json').write_text(json.dumps({'embedding_sha256': file_sha256(path)}))
-    frame = pd.DataFrame({'subject': 'person', 'decision_time': pd.to_datetime(seconds, unit='s'),
+    frame = pd.DataFrame({'subject': 'person', 'decision_time': pd.to_datetime(seconds, unit='s').as_unit(datetime_unit),
                           'glucose_mg_dl': [80, 80, 60, 80, 60, 60, 80]})
     x, y, counts, _, elapsed = runner.partition(['person'], tmp_path, frame)
     assert x[:, :, 0].tolist() == [[0, 1, 2], [1, 2, 3], [4, 5, 6]]
@@ -33,12 +34,13 @@ def test_history_never_bridges_gap_or_uses_next_waveform(tmp_path):
     assert yy.tolist() == [1, 0, 1]
 
 
-def test_clock_jitter_uses_real_elapsed_time_without_bridging_missing_samples(tmp_path):
+@pytest.mark.parametrize('datetime_unit', ['s', 'us', 'ns'])
+def test_clock_jitter_uses_real_elapsed_time_without_bridging_missing_samples(tmp_path, datetime_unit):
     seconds = np.array([0, 299, 600, 899, 1500, 1799, 2100], dtype=np.int64)
     path = tmp_path / 'person.npz'
     np.savez(path, decision_ns=seconds * 10**9, embedding=np.arange(7, dtype=np.float32)[:, None].repeat(512, 1))
     (tmp_path / 'person.json').write_text(json.dumps({'embedding_sha256': file_sha256(path)}))
-    frame = pd.DataFrame({'subject': 'person', 'decision_time': pd.to_datetime(seconds, unit='s'),
+    frame = pd.DataFrame({'subject': 'person', 'decision_time': pd.to_datetime(seconds, unit='s').as_unit(datetime_unit),
                           'glucose_mg_dl': [80, 80, 60, 80, 60, 60, 80]})
     x, y, counts, _, elapsed = runner.partition(['person'], tmp_path, frame, tolerance_seconds=5)
     assert counts[0]['usable_history'] == 3

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "explicit epoch-nanosecond conversion; no retraining or metric changes",
+  "source_datetime_unit": "datetime64[ns]",
+  "checks": {
+    "train": {
+      "windows": 14039,
+      "positive": 405,
+      "coverage_unchanged": true
+    },
+    "validation": {
+      "windows": 3719,
+      "positive": 254,
+      "coverage_unchanged": true
+    }
+  }
+}

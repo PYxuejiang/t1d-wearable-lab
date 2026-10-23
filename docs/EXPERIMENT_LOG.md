@@ -351,3 +351,9 @@ FIT2：4人训练14039窗、1人验证3719窗；18候选独立复核差0。修�
 抗体149张芯片按104保守命名组：AUC0.882/AP0.872，但患者身份、总说明标签冲突、pNA条目AUC0.735的混杂尚未解决；不能作个人风险或低血糖增益。BIG IDEAs16个背景ID与目录相符，只有Gender/HbA1c，没有逐人年龄；波形时钟/背景取得时间未验收，暂不准入训练。
 
 完整文档：https://github.com/PYxuejiang/t1d-wearable-lab/blob/main/docs/MULTIMODAL_BRANCHES.zh-CN.md 。真实PPG表示、两轮全部候选和复核存本地outputs，不重复长任务。下一步训练人员内分组验证与背景数据审计；不扩大单个验证人参数搜索，不自动用Agent输出当标签。91项Python、19项Agent和生产构建通过，个人数据和权重不公开，定时仍PAUSED。
+
+## 2026-10-23 跨版本时间单位回归修复
+
+首轮远端CI的LoRA作业两项新测试失败：pandas保留秒/微秒时间精度时，直接astype(int64)并不是纳秒。现显式转为epoch纳秒再关联标签，增加s/us/ns三种精度回归测试，并对空对齐结果清晰报错。实际源Parquet为datetime64[ns]，重新审计仍为训练14039/405阳性、验证3719/254阳性及相同覆盖台账，模型结果不变；没有为通过CI重标标签、重训或修改指标。[复核](acceptance/PULSE_TIME_UNIT_REGRESSION.json)。Pages此前已部署成功，公开研究卡SHA与本地一致。远端CI修复后另行确认。
+
+修复后本地完整Python测试95项通过（新增三种时间精度回归），Agent19项与构建结果保持。失败环境为pandas3.1.0；实际训练环境为pandas2.3，已确认缓存分组和标签未变。

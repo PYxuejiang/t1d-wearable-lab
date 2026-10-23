@@ -34,7 +34,9 @@ def partition(subjects, cache, source, tolerance_seconds=0):
         rows = source[source.subject == subject].copy()
         if rows.decision_time.duplicated().any():
             raise ValueError('Duplicate reference anchor')
-        reference = dict(zip(rows.decision_time.astype('int64'), rows.glucose_mg_dl))
+        # pandas may preserve seconds/microseconds; int64 alone is not epoch ns.
+        reference_ns = pd.DatetimeIndex(rows.decision_time).as_unit('ns').asi8
+        reference = dict(zip(reference_ns, rows.glucose_mg_dl))
         used, missing_reference, incomplete_history = 0, 0, 0
         for i, stamp in enumerate(times):
             if i < 2 or not np.all(np.abs(np.diff(times[i - 2:i + 1]) - 300_000_000_000) <= tolerance_seconds * 1e9):
@@ -51,6 +53,8 @@ def partition(subjects, cache, source, tolerance_seconds=0):
             used += 1
         counts.append({'reference_anchors': len(rows), 'embedded': len(times), 'usable_history': used,
                        'missing_reference': missing_reference, 'incomplete_history': incomplete_history})
+    if not sequences:
+        raise ValueError('No aligned historical windows; inspect time units and coverage')
     x, y = np.stack(sequences), np.array(labels, dtype=np.float32)
     if len(np.unique(y)) != 2:
         raise ValueError('Both classes required; do not silently change participants')
