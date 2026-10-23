@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 
 const commands = [
   ['node_modules/typescript/bin/tsc', '-p', 'tsconfig.agent.json'],
-  ['--experimental-strip-types', '--test', 'agent/tests/health.test.ts', 'agent/tests/service.test.ts', 'agent/tests/harness.test.ts'],
+  ['--experimental-strip-types', '--test', 'agent/tests/health.test.ts', 'agent/tests/service.test.ts', 'agent/tests/harness.test.ts', 'agent/tests/research.test.ts'],
   ['node_modules/typescript/bin/tsc', '-p', 'showcase/tsconfig.json'],
   ['showcase/node_modules/vite/bin/vite.js', 'build', 'showcase'],
 ];

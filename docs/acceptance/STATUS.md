@@ -40,3 +40,5 @@ Interactive product homepage has a separate engineering acceptance report: [WATC
 PPG_DALIA_AUDIT1: two published MAT checksums and29activity records audited; scoring not started, source indexing/delay and licensing differences retained. See [source audit](../PPG_DALIA_AUDIT.zh-CN.md). No efficacy pass.
 
 PPG_CAPTURE1: 607windows/464metricgroups, calibration and5SQIcandidates verified; engineering passed. HeldoutF1 gain not supported, shared reference alignment remains limited, clinical effect not evaluated. [Report](../PPG_CAPTURE_REPORT.zh-CN.md).
+
+LORA_ENGINEERING1 (2026-10-23): synthetic pretraining and Q/V adapter fitting, frozen-weight invariance, hash-bound checkpoint roundtrip, missingness/consent/subject/time boundaries verified. 78 Python and18 Agent tests pass; frontend build passes. Real-cohort disease performance, paired protein fusion and QLoRA are **not evaluated/implemented**. See [implementation report](../TRANSFORMER_LORA.zh-CN.md) and [aggregate acceptance](LORA_ENGINEERING1.json). Original Harness and clinical evidence remain in place.

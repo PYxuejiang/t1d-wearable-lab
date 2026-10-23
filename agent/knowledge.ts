@@ -1,9 +1,10 @@
 import { SEED_EVIDENCE, type Evidence } from '../shared/health.ts';
 import type { HealthStore } from './store.ts';
+import { withMechanismEvidence } from './mechanism-knowledge.ts';
 
 export function knowledge(store: HealthStore): Evidence[] {
   const stored = store.list<Evidence>('knowledge', 'paper');
-  return [...new Map([...SEED_EVIDENCE, ...stored].map(paper => [paper.id, paper])).values()];
+  return withMechanismEvidence([...new Map([...SEED_EVIDENCE, ...stored].map(paper => [paper.id, paper])).values()]);
 }
 
 export async function refreshKnowledge(store: HealthStore, fetcher: typeof fetch = fetch, now = new Date()): Promise<{ added: number; checkedAt: string }> {

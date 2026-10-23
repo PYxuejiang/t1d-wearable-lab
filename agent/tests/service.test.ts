@@ -80,6 +80,9 @@ test('literature refresh deduplicates candidates, review is explicit and errors 
   const store = new HealthStore(directory, randomBytes(32).toString('hex'));
   const fetcher: typeof fetch = async () => new Response(JSON.stringify({ resultList: { result: [{ id: '123456', source: 'MED', title: 'Wearable study', firstPublicationDate: '2026-10-21' }] } }));
   try {
+    const initialCount = knowledge(store).length;
+    assert.ok(knowledge(store).some(paper => paper.id === 'spaid-evidence-tiers-2026'));
+    assert.ok(knowledge(store).some(paper => paper.id === 'sting-palmitoylation-2016'));
     assert.equal((await refreshKnowledge(store, fetcher)).added, 1);
     assert.equal((await refreshKnowledge(store, fetcher)).added, 0);
     assert.equal(knowledge(store).find(paper => paper.id === 'MED:123456')?.status, 'pending');
@@ -87,6 +90,6 @@ test('literature refresh deduplicates candidates, review is explicit and errors 
     reviewEvidence(store, 'MED:123456', 'Study population and limitations checked; methods reference only, no clinical recommendation.');
     assert.equal(knowledge(store).find(paper => paper.id === 'MED:123456')?.status, 'reviewed');
     await assert.rejects(refreshKnowledge(store, async () => new Response('unavailable', { status: 503 })));
-    assert.equal(knowledge(store).length, 4);
+    assert.equal(knowledge(store).length, initialCount + 1);
   } finally { store.close(); rmSync(directory, { recursive: true, force: true }); }
 });

@@ -97,6 +97,8 @@ node --env-file=.env --experimental-strip-types agent/worker.ts --once
 
 ## 验证与参考
 
+2026-10-23 增加 [Transformer/LoRA 离线研究模块](TRANSFORMER_LORA.zh-CN.md)。`knowledge` 入口加入带局限的 SPAID/STING 公开机制摘要，原 Harness 三工具与日报排序不变。`research-snapshot` 仅提供显式训练授权后的纯函数桥接，首版背景只编码年龄段，未开放数据库训练导出接口；`shareWithModel` 不代表同意训练。研究模型当前不进入线上报告，不输出新的疾病概率。
+
 `npm run check` 检查后端类型、离线 Node 测试、真实 harness + faux provider 工具调用、前端类型、生产静态产物与疑似凭据扫描。测试不使用真实用户健康数据、真实 provider 或付费 token。公开产物仅保留原有聚合证据与新增合成演示代码，发布工作流继续禁止患者数据和凭据。
 
 - [FDA 官方血糖设备提醒](https://www.fda.gov/medical-devices/safety-communications/do-not-use-smartwatches-or-smart-rings-measure-blood-glucose-levels-fda-safety-communication)：独立手表估算血糖不可作为本项目能力。

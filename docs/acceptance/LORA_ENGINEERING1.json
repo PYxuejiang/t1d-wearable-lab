@@ -1,0 +1,32 @@
+{
+  "scope": "synthetic-engineering-only",
+  "clinical_performance_evaluated": false,
+  "real_paired_protein_data_used": false,
+  "qlora_used": false,
+  "seed": 2301,
+  "pretraining_steps": 60,
+  "finetuning_steps": 80,
+  "validation_selected_step": 7,
+  "synthetic_pretraining_loss_initial": 0.7980042099952698,
+  "synthetic_pretraining_loss_final": 0.13329344987869263,
+  "parameters_total": 21159,
+  "parameters_trainable": 1281,
+  "trainable_scope": [
+    "Q/V LoRA",
+    "context projection",
+    "classification head"
+  ],
+  "initial_adapter_output_max_delta": 0.0,
+  "frozen_parameters_unchanged": true,
+  "adapters_updated": true,
+  "restore_output_max_error": 0.0,
+  "base_sha256": "d40cb1d2826ec2c1d78ddd3794127ff986e20fa242a98c9fbb03e75047d0bce6",
+  "passed": true,
+  "stage": "LORA_ENGINEERING1",
+  "date": "2026-10-23",
+  "python_tests_passed": 78,
+  "agent_tests_passed": 18,
+  "frontend_build_passed": true,
+  "harness_runtime_preserved": true,
+  "real_cohort_training": "pending-source-and-label-audit"
+}

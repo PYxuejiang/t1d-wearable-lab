@@ -19,6 +19,8 @@ This repository is a retrospective research project. Protocol compliance, predic
 
 ## Status
 
+**2026-10-23 research extension:** [Transformer + LoRA and mechanism knowledge](docs/TRANSFORMER_LORA.zh-CN.md). An original masked time-series encoder accepts observed wearable channels and structured context. Q/V adapters, context projection and a task head train in an isolated offline pipeline. Synthetic engineering acceptance is complete; real-cohort predictive improvement and QLoRA are not established. SPAID/STING summaries enter the existing evidence tool, not patient-level protein features. The existing pi AgentHarness and clinical negative results are preserved.
+
 Both initial research pipelines have run on real public data and passed independent evaluation checks. See [stage acceptance](docs/acceptance/STATUS.md), the [Chinese validation report](docs/VALIDATION_REPORT.zh-CN.md), [metric definitions](docs/METRICS.zh-CN.md), and the [new improvement plan](docs/IMPROVEMENT_PLAN.zh-CN.md). Passing engineering checks does **not** mean the alarm targets passed.
 
 The initial **20-subject LOSO** numeric comparison finds CGM-only MAE 1.0261 mmol/L versus 1.1710 for the validation-selected simple baseline. Adding wearable summaries to the context model did **not** improve this held-out comparison (1.0290 versus 1.0252 mmol/L). Temporal results differ and are reported separately. These are retrospective fixed-model results, not medical efficacy or a general impossibility claim. See [S2a evidence](docs/acceptance/S2a.json).
